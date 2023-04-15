@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Miłosz Gilga</title>
+    <%- include('../partials/_head-includes.partial.ejs') %>
+</head>
+<body>
+    <%- include('../partials/header.partial.ejs') %>
+    <main class="my-4">
+        <%- body %>
+    </main>
+    <%- include('../partials/footer.partial.ejs') %>
+    <%- include('../partials/_scripts-includes.partial.ejs') %>
+    <script type="module" src="/assets/js/common-public.js"></script>
+</body>
+</html>

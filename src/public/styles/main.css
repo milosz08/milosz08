@@ -1,0 +1,117 @@
+/*
+ * Copyright (c) 2023 by MILOSZ GILGA <http://miloszgilga.pl>
+ *
+ * File name: main.css
+ * Last modified: 14/04/2023, 18:11
+ * Project name: personal-website
+ *
+ * LICENSE NOT SPECIFIED.
+ *
+ * For more info about use this code in your project, make contact with
+ * original author. Project created only for personal purposes.
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.disable-animations * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.primary-text-color {
+    color: var(--text-color);
+}
+
+.anchor-link,
+.anchor-link:hover {
+    text-decoration: none;
+}
+
+.anchor-link:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.standard-font {
+    font-size: .9rem;
+}
+
+.standard-icon-size {
+    font-size: 1.7rem;
+}
+
+.footer-icon {
+    color: var(--anchor-link-icon-color);
+    font-size: 1rem;
+}
+
+.secondary-text-color,
+.secondary-text-color:hover {
+    color: var(--anchor-link-icon-color);
+}
+
+.standard-icon {
+    color: var(--text-inverse-color);
+    background-color: var(--background-inverse-color);
+    border-radius: 5px;
+    padding: 5px 5px 4px 5px;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 35px;
+}
+
+.text-container {
+    max-width: 600px;
+    line-height: 1.3;
+    font-size: .9rem;
+    color: var(--anchor-link-icon-color);
+}
+
+.gth-button {
+    color: var(--button-foreground);
+    font-weight: 500;
+    background-color: var(--button-backgound);
+    font-size: .8rem;
+    padding: 5px 30px;
+    border-radius: 5px;
+    border: .15em solid var(--button-border-color);
+    transition: .3s;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(27,31,36,0.04), 0 1px 0 rgba(27,31,36,0.04);
+    text-decoration: none;
+    width: fit-content;
+}
+
+.gth-button:hover {
+    color: var(--button-foreground);
+    border-color: var(--button-hover-border-color);
+    background-color: var(--button-hover-background);
+}
+
+.gth-project-container {
+    border: .05em solid var(--button-border-color);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    font-size: .9rem;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 768px) {
+    .gth-button {
+        width: 100%;
+    }
+}
