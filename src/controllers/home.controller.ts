@@ -13,19 +13,23 @@
 
 import { Request, Response } from "express";
 
+import * as View from "../utils/constants";
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class HomeController {
 
     homePage(req: Request, res: Response): void {
-        res.render('public/projects', {
-            title: 'Projects',
+        res.render(View.PUBLIC_PROJECTS_EJS, {
+            title: "Projects",
         });
     };
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     projectDetailsPage(req: Request, res: Response): void {
-        res.render('public/project-details', {
-            title: 'Project',
+        res.render(View.PUBLIC_PROJECT_DETAILS_EJS, {
+            title: "Project",
         });
     };
 }

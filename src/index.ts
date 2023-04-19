@@ -16,7 +16,7 @@ import expressEjsLayouts from "express-ejs-layouts";
 import dotenv from "dotenv";
 
 import utilities from "./utils/utilities";
-import router from "./routes/web-routes";
+import { DEFAULT_LAYOUT } from "./utils/constants";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -26,7 +26,7 @@ const app: Express = express();
 const port = process.env.EXPRESS_PORT || 4041;
 
 app.use(expressEjsLayouts);
-app.set("layout", "layouts/header-footer-layout");
+app.set("layout", DEFAULT_LAYOUT);
 
 app.set("view engine", "ejs");
 app.set("views", utilities.getProjectRootPath("/views"));
