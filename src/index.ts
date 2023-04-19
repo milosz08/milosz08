@@ -34,6 +34,4 @@ app.set("views", utilities.getProjectRootPath("/views"));
 app.use('/assets', express.static(utilities.getProjectRootPath("public")));
 app.use(router);
 
-app.listen(port, () => {
-    console.log(`[server]: Server is running at http://127.0.0.1:${port}`);
-});
+app.listen(port, () => logger.info(`Server is up and running at @ http://127.0.0.1:${port}`));
