@@ -13,17 +13,21 @@
 
 import express, { Express } from "express";
 import expressEjsLayouts from "express-ejs-layouts";
-import dotenv from "dotenv";
 
+import dbInit from "./db/db-config";
+import router from "./routes/web-routes";
+
+import config from "./utils/config";
+import logger from "./utils/logger";
 import utilities from "./utils/utilities";
 import { DEFAULT_LAYOUT } from "./utils/constants";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-dotenv.config();
-
 const app: Express = express();
-const port = process.env.EXPRESS_PORT || 4041;
+const port = config.PORT;
+
+dbInit();
 
 app.use(expressEjsLayouts);
 app.set("layout", DEFAULT_LAYOUT);
