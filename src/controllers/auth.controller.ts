@@ -14,53 +14,62 @@
 import { Request, Response } from "express";
 
 import * as View from "../utils/constants";
-import { EMPTY_LAYOUT } from "../utils/constants";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class AuthController {
 
-    loginPage(req: Request, res: Response): void {
-        res.render(View.AUTH_LOGIN_EJS, {
-            title: "Login",
-            layout: EMPTY_LAYOUT,
-        });
+    getLoginPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.AUTH_LOGIN_EJS;
+        res.render(path, { title, layout });
+    };
+
+    async postLoginPage(req: Request, res: Response): Promise<void> {
+        const { path, title, layout } = View.AUTH_LOGIN_EJS;
+        res.render(path, { title, layout });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    logoutPage(req: Request, res: Response): void {
-        res.render(View.AUTH_LOGOUT_EJS, {
-            title: "Logout",
-            layout: EMPTY_LAYOUT,
-        });
+    getLogoutPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.AUTH_LOGOUT_EJS;
+        res.render(path, { title, layout });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    firstLoginPage(req: Request, res: Response): void {
-        res.render(View.AUTH_FIRST_LOGIN_EJS, {
-            title: "First login",
-            layout: EMPTY_LAYOUT,
-        });
+    getFirstLoginPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.AUTH_FIRST_LOGIN_EJS;
+        res.render(path, { title, layout });
+    };
+
+    async postFirstLoginPage(req: Request, res: Response): Promise<void> {
+        const { path, title, layout } = View.AUTH_FIRST_LOGIN_EJS;
+        res.render(path, { title, layout });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    requestChangePasswordPage(req: Request, res: Response): void {
-        res.render(View.AUTH_REQUEST_CHANGE_PASSWORD_EJS, {
-            title: "Send request to change password",
-            layout: EMPTY_LAYOUT,
-        });
+    getRequestChangePasswordPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.AUTH_REQUEST_CHANGE_PASSWORD_EJS;
+        res.render(path, { title, layout });
+    };
+
+    async postRequestChangePasswordPage(req: Request, res: Response): Promise<void> {
+        const { path, title, layout } = View.AUTH_REQUEST_CHANGE_PASSWORD_EJS;
+        res.render(path, { title, layout });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    changePasswordPage(req: Request, res: Response): void {
-        res.render(View.AUTH_CHANGE_PASSWORD_EJS, {
-            title: "Change password",
-            layout: EMPTY_LAYOUT,
-        });
+    getChangePasswordPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.AUTH_CHANGE_PASSWORD_EJS;
+        res.render(path, { title, layout });
+    };
+
+    async postChangePasswordPage(req: Request, res: Response): Promise<void> {
+        const { path, title, layout } = View.AUTH_CHANGE_PASSWORD_EJS;
+        res.render(path, { title, layout });
     };
 }
 

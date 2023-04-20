@@ -14,52 +14,55 @@
 import { Request, Response } from "express";
 
 import * as View from "../utils/constants";
-import { CMS_LAYOUT } from "../utils/constants";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class CmsController {
 
-    personalsDataPage(req: Request, res: Response): void {
-        res.render(View.CMS_PERSONAL_DATA_EJS, {
-            title: "Personal data",
-            layout: CMS_LAYOUT,
-        });
+    getPersonalsDataPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.CMS_PERSONAL_DATA_EJS;
+        res.render(path, { title, layout });
+    };
+
+    async postPersonalsDataPage(req: Request, res: Response): Promise<void> {
+        const { path, title, layout } = View.CMS_PERSONAL_DATA_EJS;
+        res.render(path, { title, layout });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    projectsPage(req: Request, res: Response): void {
-        res.render(View.CMS_PROJECTS_EJS, {
-            title: "Projects",
-            layout: CMS_LAYOUT,
-        });
+    getProjectsPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.CMS_PROJECTS_EJS;
+        res.render(path, { title, layout });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    addProjectPage(req: Request, res: Response): void {
-        res.render(View.CMS_ADD_UPDATE_PROJECT_EJS, {
-            title: "Add projects",
-            layout: CMS_LAYOUT,
-        });
+    getAddProjectPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.CMS_ADD_PROJECT_EJS;
+        res.render(path, { title, layout });
+    };
+
+    async postAddProjectPage(req: Request, res: Response): Promise<void> {
+        const { path, title, layout } = View.CMS_ADD_PROJECT_EJS;
+        res.render(path, { title, layout });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    updateProjectPage(req: Request, res: Response): void {
-        res.render(View.CMS_ADD_UPDATE_PROJECT_EJS, {
-            title: "Update projects",
-            layout: CMS_LAYOUT,
-        });
+    getUpdateProjectPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.CMS_UPDATE_PROJECT_EJS;
+        res.render(path, { title, layout });
+    };
+
+    async postUpdateProjectPage(req: Request, res: Response): Promise<void> {
+        const { path, title, layout } = View.CMS_UPDATE_PROJECT_EJS;
+        res.render(path, { title, layout });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    deleteProjectRedirect(req: Request, res: Response): void {
-
-
-
+    async getDeleteProjectRedirect(req: Request, res: Response): Promise<void> {
         res.redirect("/cms/projects");
     };
 }

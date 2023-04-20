@@ -17,21 +17,23 @@ export const CMS_LAYOUT                             = "layouts/cms-layout";
 export const DEFAULT_LAYOUT                         = "layouts/default-layout";
 
 // views
-export const ACCOUNT_ACCOUNTS_EJS                   = "account/accounts";
-export const ACCOUNT_ADD_UPDATE_ACCOUNT_EJS         = "account/add-update-account";
+export const ACCOUNT_ACCOUNTS_EJS                   = { title: "Accounts", path: "account/accounts", layout: CMS_LAYOUT };
+export const ACCOUNT_ADD_ACCOUNT_EJS                = { title: "Add account", path: "account/add-update-account", layout: CMS_LAYOUT };
+export const ACCOUNT_UPDATE_ACCOUNT_EJS             = { title: "Update account", path: "account/add-update-account", layout: CMS_LAYOUT };
 
-export const AUTH_CHANGE_PASSWORD_EJS               = "auth/change-password";
-export const AUTH_REQUEST_CHANGE_PASSWORD_EJS       = "auth/request-change-password";
-export const AUTH_LOGIN_EJS                         = "auth/login";
-export const AUTH_LOGOUT_EJS                        = "auth/logout";
-export const AUTH_FIRST_LOGIN_EJS                   = "auth/first-login";
+export const AUTH_CHANGE_PASSWORD_EJS               = { title: "Change password", path: "auth/change-password", layout: EMPTY_LAYOUT };
+export const AUTH_REQUEST_CHANGE_PASSWORD_EJS       = { title: "Request change password", path: "auth/request-change-password", layout: EMPTY_LAYOUT };
+export const AUTH_LOGIN_EJS                         = { title: "Login", path: "auth/login", layout: EMPTY_LAYOUT };
+export const AUTH_LOGOUT_EJS                        = { title: "Logout", path: "auth/logout", layout: EMPTY_LAYOUT };
+export const AUTH_FIRST_LOGIN_EJS                   = { title: "First login", path: "auth/first-login", layout: EMPTY_LAYOUT };
 
-export const CMS_PROJECTS_EJS                       = "cms/projects";
-export const CMS_ADD_UPDATE_PROJECT_EJS             = "cms/add-update-project";
-export const CMS_PERSONAL_DATA_EJS                  = "cms/personal-data";
+export const CMS_PROJECTS_EJS                       = { title: "Projects", path: "cms/projects", layout: CMS_LAYOUT };
+export const CMS_ADD_PROJECT_EJS                    = { title: "Add project", path: "cms/add-update-project", layout: CMS_LAYOUT };
+export const CMS_UPDATE_PROJECT_EJS                 = { title: "Update project", path: "cms/add-update-project", layout: CMS_LAYOUT };
+export const CMS_PERSONAL_DATA_EJS                  = { title: "Personal", path: "cms/personal-data", layout: CMS_LAYOUT };
 
-export const PUBLIC_PROJECTS_EJS                    = "public/projects";
-export const PUBLIC_PROJECT_DETAILS_EJS             = "public/project-details";
+export const PUBLIC_PROJECTS_EJS                    = { title: "Projects", path: "public/projects" };
+export const PUBLIC_PROJECT_DETAILS_EJS             = { path: "public/project-details" };
 
 // roles
 export const ADMIN                                  = "ADMIN";

@@ -14,40 +14,43 @@
 import { Request, Response } from "express";
 
 import * as View from "../utils/constants";
-import { CMS_LAYOUT } from "../utils/constants";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class AccountController {
 
-    accountsPage(req: Request, res: Response): void {
-        res.render(View.ACCOUNT_ACCOUNTS_EJS, {
-            title: "Accounts",
-            layout: CMS_LAYOUT
-        });
+    getAccountsPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.ACCOUNT_ACCOUNTS_EJS;
+        res.render(path, { title, layout });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    createAccountPage(req: Request, res: Response): void {
-        res.render(View.ACCOUNT_ADD_UPDATE_ACCOUNT_EJS, {
-            title: "Create account",
-            layout: CMS_LAYOUT
-        });
+    getCreateAccountPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.ACCOUNT_ADD_ACCOUNT_EJS;
+        res.render(path, { title, layout });
+    };
+
+    async postCreateAccountPage(req: Request, res: Response): Promise<void> {
+        const { path, title, layout } = View.ACCOUNT_ADD_ACCOUNT_EJS;
+        res.render(path, { title, layout });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    updateAccountPage(req: Request, res: Response): void {
-        res.render(View.ACCOUNT_ADD_UPDATE_ACCOUNT_EJS, {
-            title: "Update account",
-            layout: CMS_LAYOUT
-        });
+    getUpdateAccountPage(req: Request, res: Response): void {
+        const { path, title, layout } = View.ACCOUNT_UPDATE_ACCOUNT_EJS;
+        res.render(path, { title, layout });
+    };
+
+    async postUpdateAccountPage(req: Request, res: Response): Promise<void> {
+        const { path, title, layout } = View.ACCOUNT_UPDATE_ACCOUNT_EJS;
+        res.render(path, { title, layout });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    deleteAccountRedirect(req: Request, res: Response): void {
+    async getDeleteAccountRedirect(req: Request, res: Response): Promise<void> {
         res.redirect("/cms/accounts");
     };
 }

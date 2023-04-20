@@ -19,17 +19,18 @@ import * as View from "../utils/constants";
 
 class HomeController {
 
-    homePage(req: Request, res: Response): void {
-        res.render(View.PUBLIC_PROJECTS_EJS, {
-            title: "Projects",
-        });
+    getHomePage(req: Request, res: Response): void {
+        const { path, title } = View.PUBLIC_PROJECTS_EJS;
+        res.render(path, { title });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    projectDetailsPage(req: Request, res: Response): void {
-        res.render(View.PUBLIC_PROJECT_DETAILS_EJS, {
-            title: "Project",
+    getProjectDetailsPage(req: Request, res: Response): void {
+        const projectName = "Testing project"
+
+        res.render(View.PUBLIC_PROJECT_DETAILS_EJS.path, {
+            title: projectName,
         });
     };
 }
