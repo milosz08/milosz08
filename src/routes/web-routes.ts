@@ -18,43 +18,47 @@ import authController from "../controllers/auth.controller";
 import homeController from "../controllers/home.controller";
 import accountController from "../controllers/account.controller";
 
+import isAuthMiddleware from "../middleware/is-auth.middleware";
+import isAuthAdminMiddleware from "../middleware/is-auth-admin.middleware";
+import isNotLoggedAdminMiddleware from "../middleware/is-not-logged.middleware";
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const router: Router = Router();
 
-router.get("/",                                     homeController.getHomePage);
-router.get("/project/:name",                        homeController.getProjectDetailsPage);
+router.get("/",                                                                     homeController.getHomePage);
+router.get("/project/:name",                                                        homeController.getProjectDetailsPage);
 
-router.get("/login",                                authController.getLoginPage);
-router.get("/logout",                               authController.getLogoutPage);
-router.get("/request-change-password",              authController.getRequestChangePasswordPage);
-router.get("/change-password",                      authController.getChangePasswordPage);
-router.get("/first-login",                          authController.getFirstLoginPage);
+router.get("/login",                                isNotLoggedAdminMiddleware,     authController.getLoginPage);
+router.get("/logout",                               isAuthMiddleware,               authController.getLogoutRedirect);
+router.get("/request-change-password",              isNotLoggedAdminMiddleware,     authController.getRequestChangePasswordPage);
+router.get("/change-password",                      isNotLoggedAdminMiddleware,     authController.getChangePasswordPage);
+router.get("/first-login",                          isAuthMiddleware,               authController.getFirstLoginPage);
 
-router.get("/cms/accounts",                         accountController.getAccountsPage);
-router.get("/cms/create-account",                   accountController.getCreateAccountPage);
-router.get("/cms/update-account/:accountId",        accountController.getUpdateAccountPage);
-router.get("/cms/delete-account/:accountId",        accountController.getDeleteAccountRedirect);
+router.get("/cms/accounts",                         isAuthAdminMiddleware,          accountController.getAccountsPage);
+router.get("/cms/account/add",                      isAuthAdminMiddleware,          accountController.getCreateAccountPage);
+router.get("/cms/account/update/:accountId",        isAuthAdminMiddleware,          accountController.getUpdateAccountPage);
+router.get("/cms/account/delete/:accountId",        isAuthAdminMiddleware,          accountController.getDeleteAccountRedirect);
 
-router.get("/cms/personals",                        cmsController.getPersonalsDataPage);
-router.get("/cms/projects",                         cmsController.getProjectsPage);
-router.get("/cms/projects/add",                     cmsController.getAddProjectPage);
-router.get("/cms/projects/update/:projectId",       cmsController.getUpdateProjectPage);
-router.get("/cms/projects/delete/:projectId",       cmsController.getDeleteProjectRedirect);
+router.get("/cms/personals",                        isAuthAdminMiddleware,          cmsController.getPersonalsDataPage);
+router.get("/cms/projects",                         isAuthMiddleware,               cmsController.getProjectsPage);
+router.get("/cms/project/add",                      isAuthMiddleware,               cmsController.getAddProjectPage);
+router.get("/cms/project/update/:projectId",        isAuthMiddleware,               cmsController.getUpdateProjectPage);
+router.get("/cms/project/delete/:projectId",        isAuthMiddleware,               cmsController.getDeleteProjectRedirect);
 
-router.post("/login",                               authController.postLoginPage);
-router.post("/request-change-password",             authController.postRequestChangePasswordPage);
-router.post("/change-password",                     authController.postChangePasswordPage);
-router.post("/first-login",                         authController.postFirstLoginPage);
+router.post("/login",                               isNotLoggedAdminMiddleware,     authController.postLoginPage);
+router.post("/request-change-password",             isNotLoggedAdminMiddleware,     authController.postRequestChangePasswordPage);
+router.post("/change-password",                     isNotLoggedAdminMiddleware,     authController.postChangePasswordPage);
+router.post("/first-login",                         isAuthMiddleware,               authController.postFirstLoginPage);
 
-router.post("/cms/create-account",                  accountController.postCreateAccountPage);
-router.post("/cms/update-account/:accountId",       accountController.postUpdateAccountPage);
+router.post("/cms/account/add",                     isNotLoggedAdminMiddleware,     accountController.postCreateAccountPage);
+router.post("/cms/account/update/:accountId",       isNotLoggedAdminMiddleware,     accountController.postUpdateAccountPage);
 
-router.post("/cms/personals",                       cmsController.postPersonalsDataPage);
-router.post("/cms/projects/add",                    cmsController.postAddProjectPage);
-router.post("/cms/projects/update/:projectId",      cmsController.postUpdateProjectPage);
+router.post("/cms/personals",                       isNotLoggedAdminMiddleware,     cmsController.postPersonalsDataPage);
+router.post("/cms/project/add",                     isAuthMiddleware,               cmsController.postAddProjectPage);
+router.post("/cms/project/update/:projectId",       isAuthMiddleware,               cmsController.postUpdateProjectPage);
 
-router.get("/cms",                                  (req, res) => res.redirect("/cms/personals"));
+router.get("/cms",                                  (req, res) => res.redirect("/cms/projects"));
 router.get("*",                                     (req, res) => res.redirect("/"));
 
 export default router;

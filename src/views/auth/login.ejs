@@ -1,1 +1,19 @@
-<h1>login</h1>
+<%- include("../partials/session-alert.partial.ejs") %>
+<% if (errors) { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        Invalid email and/or password. Try again with another credentials.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<form method="post">
+    <label>
+        <input type="text" name="loginOrEmail" placeholder="Login or email" value="<%= form.loginOrEmail %>">
+    </label>
+    <label>
+        <input type="password" name="password" placeholder="Password">
+    </label>
+    <button>Log in</button>
+</form>
+
+

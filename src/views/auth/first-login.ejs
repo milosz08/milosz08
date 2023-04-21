@@ -1,1 +1,20 @@
-<h1>first login</h1>
+<div class="alert alert-warning" role="alert">
+    You successfully logged into <strong><%= loggedUser.role.toLowerCase() %></strong> account, but for full access,
+    change default password for your account.
+</div>
+<% if (generalError) { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%- generalError %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<form method="post">
+    <input type="password" name="newPassword" placeholder="New password" value="<%= form.newPassword %>">
+    <%= errors?.password %>
+
+    <input type="password" name="repeatNewPassword" placeholder="Repeat new password" value="<%= form.repeatNewPassword %>">
+
+
+    <button>Change password</button>
+</form>

@@ -13,7 +13,9 @@
 
 import { Request, Response } from "express";
 
+import utilities from "../utils/utilities";
 import * as View from "../utils/constants";
+import { AlertTypeId } from "../utils/session";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -33,7 +35,9 @@ class CmsController {
 
     getProjectsPage(req: Request, res: Response): void {
         const { path, title, layout } = View.CMS_PROJECTS_EJS;
-        res.render(path, { title, layout });
+        res.render(path, { title, layout,
+            pageAlert: utilities.extractAlertAndDestroy(req, AlertTypeId.CMS_PROJECTS_PAGE),
+        });
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -11,15 +11,26 @@
  * original author. Project created only for personal purposes.
  */
 
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Schema, Model } from "mongoose";
 import uniqueValidator from "mongoose-unique-validator";
+import bcrypt from "bcrypt";
 
 import dbValidators from "../db-validators";
 import dbMiddleware from "../db-middlewares";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const userSchema: Schema = new Schema({
+interface User {
+    login: string;
+    email: string;
+    password: string;
+    role: string;
+    firstLogin: boolean;
+
+    compareHash(password: string): boolean;
+}
+
+const UserSchema: Schema<User> = new Schema<User>({
     login: {
         type: String,
         lowercase: true,
@@ -46,11 +57,22 @@ const userSchema: Schema = new Schema({
         uppercase: true,
         validate: [ dbValidators.validateRole, "Role must be ADMIN or MODERATOR" ],
     },
+    firstLogin: {
+        type: Boolean,
+        default: true,
+        required: true,
+    },
 });
 
-userSchema.plugin(uniqueValidator, "Error, user with followed {PATH} already exist.");
-userSchema.path("password").set(dbMiddleware.hashPassword);
+UserSchema.plugin(uniqueValidator, "Error, user with followed {PATH} already exist.");
+UserSchema.path("password").set(dbMiddleware.hashPassword);
+
+UserSchema.methods = {
+    compareHash(password: string): boolean {
+        return bcrypt.compareSync(password, this.password);
+    },
+};
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-export default mongoose.model("User", userSchema);
+export const UserModel: Model<User> = mongoose.model("User", UserSchema);

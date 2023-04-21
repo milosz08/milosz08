@@ -14,7 +14,7 @@
 import config from "../utils/config";
 import logger from "../utils/logger";
 import { ADMIN } from "../utils/constants";
-import UserModel from "./schemas/user-schema";
+import { UserModel } from "./schemas/user-schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -32,6 +32,7 @@ class DbRunners {
                 email: config.DEF_USER_EMAIL,
                 password: config.DEF_USER_PASSWORD,
                 role: ADMIN,
+                firstLogin: true,
             });
             const savedUser = await defaultUser.save();
             logger.info(`Saved default user in db: ${JSON.stringify(savedUser)}. 1 row affected.`);

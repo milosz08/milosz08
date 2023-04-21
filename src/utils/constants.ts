@@ -24,7 +24,6 @@ export const ACCOUNT_UPDATE_ACCOUNT_EJS             = { title: "Update account",
 export const AUTH_CHANGE_PASSWORD_EJS               = { title: "Change password", path: "auth/change-password", layout: EMPTY_LAYOUT };
 export const AUTH_REQUEST_CHANGE_PASSWORD_EJS       = { title: "Request change password", path: "auth/request-change-password", layout: EMPTY_LAYOUT };
 export const AUTH_LOGIN_EJS                         = { title: "Login", path: "auth/login", layout: EMPTY_LAYOUT };
-export const AUTH_LOGOUT_EJS                        = { title: "Logout", path: "auth/logout", layout: EMPTY_LAYOUT };
 export const AUTH_FIRST_LOGIN_EJS                   = { title: "First login", path: "auth/first-login", layout: EMPTY_LAYOUT };
 
 export const CMS_PROJECTS_EJS                       = { title: "Projects", path: "cms/projects", layout: CMS_LAYOUT };
@@ -38,3 +37,8 @@ export const PUBLIC_PROJECT_DETAILS_EJS             = { path: "public/project-de
 // roles
 export const ADMIN                                  = "ADMIN";
 export const MODERATOR                              = "MODERATOR";
+
+// alert
+export const ALERT_SUCCESS                          = "alert-success";
+export const ALERT_WARN                             = "alert-warning";
+export const ALERT_DANGER                           = "alert-danger";

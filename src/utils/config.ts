@@ -21,6 +21,7 @@ dotenv.config();
 export default {
     PORT:                   process.env.EXPRESS_PORT            || 80,
     NODE_ENV:               process.env.NODE_ENV                || "development",
+    SESSION_KEY:            process.env.SESSION_KEY             || "vtg290d203dkd0kd09kdgghhmnkj57jh4hg3fgv5h65h6h",
     CONNECTION_STRING:      process.env.CONNECTION_STRING       || "mongodb://127.0.0.1:27017/db",
     DEF_USER_LOGIN:         process.env.DEF_USER_LOGIN          || "admin",
     DEF_USER_EMAIL:         process.env.DEF_USER_EMAIL          || "admin@example.com",

@@ -13,6 +13,8 @@
 
 import express, { Express } from "express";
 import expressEjsLayouts from "express-ejs-layouts";
+import cookieParser from "cookie-parser";
+import expressSession from "express-session";
 
 import dbInit from "./db/db-config";
 import router from "./routes/web-routes";
@@ -20,7 +22,11 @@ import router from "./routes/web-routes";
 import config from "./utils/config";
 import logger from "./utils/logger";
 import utilities from "./utils/utilities";
+import session from "./utils/session";
 import { DEFAULT_LAYOUT } from "./utils/constants";
+
+import variablesMiddleware from "./middleware/variables.middleware";
+import loggedUserMiddleware from "./middleware/logged-user.middleware";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -29,13 +35,21 @@ const port = config.PORT;
 
 dbInit();
 
+app.use(expressSession(session.configure()));
 app.use(expressEjsLayouts);
 app.set("layout", DEFAULT_LAYOUT);
 
 app.set("view engine", "ejs");
 app.set("views", utilities.getProjectRootPath("/views"));
 
-app.use('/assets', express.static(utilities.getProjectRootPath("public")));
+app.use("/assets", express.static(utilities.getProjectRootPath("public")));
+
+app.use("/", variablesMiddleware);
+app.use("/", loggedUserMiddleware);
+
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+
 app.use(router);
 
 app.listen(port, () => logger.info(`Server is up and running at @ http://127.0.0.1:${port}`));
