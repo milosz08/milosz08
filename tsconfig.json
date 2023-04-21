@@ -9,6 +9,8 @@
         "outDir": "dist",
         "removeComments": true,
         "baseUrl": ".",
+        "suppressImplicitAnyIndexErrors": true,
+        "ignoreDeprecations": "5.0",
         "paths": {
             "*": [
                 "node_modules/*"
