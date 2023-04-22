@@ -11,9 +11,10 @@
  * original author. Project created only for personal purposes.
  */
 
-import path from "path";
-import { AlertType, AlertTypeId } from "./session";
 import { Request } from "express";
+import path from "path";
+
+import { AlertType, AlertTypeId } from "./session";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
