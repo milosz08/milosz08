@@ -1,20 +1,42 @@
-<div class="alert alert-warning" role="alert">
-    You successfully logged into <strong><%= loggedUser.role.toLowerCase() %></strong> account, but for full access,
-    change default password for your account.
-</div>
-<% if (generalError) { %>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <%- generalError %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<div class="fixed-container">
+    <div class="alert alert-warning" role="alert">
+        You successfully logged into <strong><%= loggedUser.role.toLowerCase() %></strong> account, but for full access,
+        change default password for your account.
     </div>
-<% } %>
 
-<form method="post">
-    <input type="password" name="newPassword" placeholder="New password" value="<%= form.newPassword %>">
-    <%= errors?.password %>
+    <%- include("../partials/general-error-alert.partial.ejs") %>
 
-    <input type="password" name="repeatNewPassword" placeholder="Repeat new password" value="<%= form.repeatNewPassword %>">
+    <div class="card">
+        <form method="post" class="card-body p-4 mb-0">
+            <h5 class="card-title mb-4">Change first password</h5>
+            <div class="mb-3">
+                <label for="newPassword" class="form-label">New password:</label>
+                <div class="input-group" data-pwd-container data-pwd-input-id="newPassword"
+                    data-pwd-toggle-id="newPassword-icon">
+                    <input id="newPassword" type="password" class="form-control" name="newPassword"
+                        value="<%= form.newPassword %>" placeholder="min 8 characters">
+                    <span id="newPassword-icon" class="input-group-text" role="button">
+                        <i class="bi bi-eye-fill"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="repeatNewPassword" class="form-label">Repeat new password:</label>
+                <div class="input-group" data-pwd-container data-pwd-input-id="repeatNewPassword"
+                    data-pwd-toggle-id="repeatNewPassword-icon">
+                    <input id="repeatNewPassword" type="password" class="form-control" name="repeatNewPassword"
+                        value="<%= form.repeatNewPassword %>" placeholder="min 8 characters">
+                    <span id="repeatNewPassword-icon" class="input-group-text" role="button">
+                        <i class="bi bi-eye-fill"></i>
+                    </span>
+                </div>
+            </div>
+            <button class="btn btn-primary w-100" type="submit">
+                Change first password
+            </button>
+        </form>
+    </div>
+</div>
 
-
-    <button>Change password</button>
-</form>
+<%- contentFor('additional-scripts') %>
+<script src="/assets/js/toggle-password.js"></script>

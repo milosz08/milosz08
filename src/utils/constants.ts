@@ -42,3 +42,5 @@ export const MODERATOR                              = "MODERATOR";
 export const ALERT_SUCCESS                          = "alert-success";
 export const ALERT_WARN                             = "alert-warning";
 export const ALERT_DANGER                           = "alert-danger";
+
+export const PASSWORD_REGEX                         = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;

@@ -17,7 +17,7 @@ import logger from "../utils/logger";
 import utilities from "../utils/utilities";
 import * as View from "../utils/constants";
 import { AlertTypeId } from "../utils/session";
-import { ALERT_SUCCESS } from "../utils/constants";
+import { ALERT_SUCCESS, PASSWORD_REGEX } from "../utils/constants";
 import { UserModel } from "../db/schemas/user-schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -55,11 +55,12 @@ class AuthController {
                 type: ALERT_SUCCESS,
                 message: `You successfully logged into <strong>${user.role.toLowerCase()}</strong> account.`,
             };
+            logger.info(`Successfully login to account: '${user.login}'`);
             res.redirect(`/cms/projects`);
         } catch (ex: any) {
             logger.error(`Authentication failed. Cause: ${ex.message}`);
             res.render(path, { title, layout,
-                errors: true,
+                generalError: "Invalid email and/or password. Try again with another credentials.",
                 form: req.body,
             });
         }
@@ -73,6 +74,7 @@ class AuthController {
             type: ALERT_SUCCESS,
             message: `Successfully logout from <strong>${role.toLowerCase()}</strong> account.`,
         };
+        logger.info(`Successfully logout from account: '${req.session.loggedUser?.login}'`);
         req.session.loggedUser = null;
         res.redirect("/login");
     };
@@ -87,20 +89,22 @@ class AuthController {
     async postFirstLoginPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = View.AUTH_FIRST_LOGIN_EJS;
         const { newPassword, repeatNewPassword } = req.body;
-        if (newPassword !== repeatNewPassword) {
-            res.render(path, { title, layout,
-                generalError: "Password and repeat password fields are not the same.",
-                form: req.body,
-            });
-            return;
-        }
         try {
-            const user = await UserModel.findOne({ login: req.session.loggedUser?.login });
+            const user = await UserModel.findOne({login: req.session.loggedUser?.login});
             if (!user) throw new Error("user not found");
 
-            if (user.compareHash(newPassword)) {
+            let notValidMessage: string = "";
+            if (!PASSWORD_REGEX.test(newPassword)) {
+                notValidMessage = "Password must have at least 8 characters, one big letter, one number and one " +
+                    "special character.";
+            } else if (user.compareHash(newPassword)) {
+                notValidMessage = "New password must be different from actual.";
+            } else if (newPassword !== repeatNewPassword) {
+                notValidMessage = "Password and repeat password fields are not the same.";
+            }
+            if (notValidMessage) {
                 res.render(path, { title, layout,
-                    generalError: "New password must be different from old pre-generated password.",
+                    generalError: notValidMessage,
                     form: req.body,
                 });
                 return;
@@ -112,8 +116,9 @@ class AuthController {
             req.session.loggedUser!.isFirstLogin = false;
             req.session[AlertTypeId.CMS_PROJECTS_PAGE] = {
                 type: ALERT_SUCCESS,
-                message: "Successfully changed default password for your account.",
+                message: "Password for your account was successfully changed.",
             };
+            logger.info(`Successfully change default password for: '${user.login}' account`);
             res.redirect("/cms/projects");
         } catch (ex: any) {
             logger.error(`First password failure changed. Cause: ${ex.message}`);
