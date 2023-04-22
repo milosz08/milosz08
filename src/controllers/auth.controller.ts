@@ -37,10 +37,10 @@ class AuthController {
         try {
             const user = await UserModel.findOne({ $or: [ { login: loginOrEmail }, { email: loginOrEmail } ] });
             if (!user) {
-                throw new Error("user not found");
+                throw new Error("Invalid email and/or password. Try again with another credentials.");
             }
             if (!user.compareHash(password)) {
-                throw new Error("invalid password");
+                throw new Error("Invalid email and/or password. Try again with another credentials.");
             }
             req.session.loggedUser = {
                 login: user.login,
@@ -55,12 +55,12 @@ class AuthController {
                 type: ALERT_SUCCESS,
                 message: `You successfully logged into <strong>${user.role.toLowerCase()}</strong> account.`,
             };
-            logger.info(`Successfully login to account: '${user.login}'`);
+            logger.info(`Successfully login to: '${user.login}' account`);
             res.redirect(`/cms/projects`);
         } catch (ex: any) {
             logger.error(`Authentication failed. Cause: ${ex.message}`);
             res.render(path, { title, layout,
-                generalError: "Invalid email and/or password. Try again with another credentials.",
+                generalError: ex.message,
                 form: req.body,
             });
         }
@@ -74,7 +74,7 @@ class AuthController {
             type: ALERT_SUCCESS,
             message: `Successfully logout from <strong>${role.toLowerCase()}</strong> account.`,
         };
-        logger.info(`Successfully logout from account: '${req.session.loggedUser?.login}'`);
+        logger.info(`Successfully logout from: '${req.session.loggedUser?.login}' account`);
         req.session.loggedUser = null;
         res.redirect("/login");
     };
@@ -91,24 +91,19 @@ class AuthController {
         const { newPassword, repeatNewPassword } = req.body;
         try {
             const user = await UserModel.findOne({login: req.session.loggedUser?.login});
-            if (!user) throw new Error("user not found");
+            if (!user) throw new Error("User based passed login or email not found.");
 
-            let notValidMessage: string = "";
             if (!PASSWORD_REGEX.test(newPassword)) {
-                notValidMessage = "Password must have at least 8 characters, one big letter, one number and one " +
-                    "special character.";
-            } else if (user.compareHash(newPassword)) {
-                notValidMessage = "New password must be different from actual.";
-            } else if (newPassword !== repeatNewPassword) {
-                notValidMessage = "Password and repeat password fields are not the same.";
+                throw new Error("Password must have at least 8 characters, one big letter, one number and one " +
+                    "special character.");
             }
-            if (notValidMessage) {
-                res.render(path, { title, layout,
-                    generalError: notValidMessage,
-                    form: req.body,
-                });
-                return;
+            if (user.compareHash(newPassword)) {
+                throw new Error("New password must be different from actual.");
             }
+            if (newPassword !== repeatNewPassword) {
+                throw new Error("Password and repeat password fields are not the same.");
+            }
+
             user.password = newPassword;
             user.firstLogin = false;
             await user.save();
@@ -123,7 +118,7 @@ class AuthController {
         } catch (ex: any) {
             logger.error(`First password failure changed. Cause: ${ex.message}`);
             res.render(path, { title, layout,
-                errors: ex.errors,
+                generalError: ex.message,
                 form: req.body,
             });
         }
