@@ -21,7 +21,8 @@ export type UserType = { login: string, role: string, isFirstLogin: boolean } | 
 
 export enum AlertTypeId {
     LOGIN_PAGE = "loginPageAlert",
-    CMS_PROJECTS_PAGE = "cmsProjectsPageAlert"
+    REQUEST_CHANGE_PASSWORD_PAGE = "requestChangePasswordPageAlert",
+    CMS_PROJECTS_PAGE = "cmsProjectsPageAlert",
 }
 
 declare module 'express-session' {

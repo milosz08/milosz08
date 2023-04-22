@@ -32,7 +32,7 @@ router.get("/project/:name",                                                    
 router.get("/login",                                isNotLoggedAdminMiddleware,     authController.getLoginPage);
 router.get("/logout",                               isAuthMiddleware,               authController.getLogoutRedirect);
 router.get("/request-change-password",              isNotLoggedAdminMiddleware,     authController.getRequestChangePasswordPage);
-router.get("/change-password",                      isNotLoggedAdminMiddleware,     authController.getChangePasswordPage);
+router.get("/change-password/:token",               isNotLoggedAdminMiddleware,     authController.getChangePasswordPage);
 router.get("/first-login",                          isAuthMiddleware,               authController.getFirstLoginPage);
 
 router.get("/cms/accounts",                         isAuthAdminMiddleware,          accountController.getAccountsPage);
@@ -48,7 +48,7 @@ router.get("/cms/project/delete/:projectId",        isAuthMiddleware,           
 
 router.post("/login",                               isNotLoggedAdminMiddleware,     authController.postLoginPage);
 router.post("/request-change-password",             isNotLoggedAdminMiddleware,     authController.postRequestChangePasswordPage);
-router.post("/change-password",                     isNotLoggedAdminMiddleware,     authController.postChangePasswordPage);
+router.post("/change-password/:token",              isNotLoggedAdminMiddleware,     authController.postChangePasswordPage);
 router.post("/first-login",                         isAuthMiddleware,               authController.postFirstLoginPage);
 
 router.post("/cms/account/add",                     isNotLoggedAdminMiddleware,     accountController.postCreateAccountPage);

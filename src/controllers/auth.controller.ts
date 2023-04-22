@@ -133,24 +133,72 @@ class AuthController {
 
     getRequestChangePasswordPage(req: Request, res: Response): void {
         const { path, title, layout } = View.AUTH_REQUEST_CHANGE_PASSWORD_EJS;
-        res.render(path, { title, layout });
+        res.render(path, { title, layout,
+            pageAlert: utilities.extractAlertAndDestroy(req, AlertTypeId.REQUEST_CHANGE_PASSWORD_PAGE),
+        });
     };
 
     async postRequestChangePasswordPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = View.AUTH_REQUEST_CHANGE_PASSWORD_EJS;
-        res.render(path, { title, layout });
+        const { loginOrEmail } = req.body;
+        try {
+            const user = await UserModel.findOne({ $or: [ { login: loginOrEmail }, { email: loginOrEmail } ] });
+            if (!user) {
+                throw new Error("User based passed login or email not found.");
+            }
+
+            // TODO: save new token, send email message to user
+
+            req.session[AlertTypeId.REQUEST_CHANGE_PASSWORD_PAGE] = {
+                type: ALERT_SUCCESS,
+                message: `Check your email box ${user.email} and follow the orders.`,
+            };
+            logger.info(`Successfully send request for change password for: '${user.login}' account`);
+            res.redirect("/request-change-password");
+        } catch (ex: any) {
+            logger.error(`Request password failure sended. Cause: ${ex.message}`);
+            res.render(path, { title, layout,
+                generalError: ex.message,
+                form: req.body,
+            });
+        }
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     getChangePasswordPage(req: Request, res: Response): void {
         const { path, title, layout } = View.AUTH_CHANGE_PASSWORD_EJS;
-        res.render(path, { title, layout });
+        const token = req.params.token;
+
+        // TODO: check token
+
+        res.render(path, { title, layout,
+            tokenIsValid: false,
+            token,
+        });
     };
 
     async postChangePasswordPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = View.AUTH_CHANGE_PASSWORD_EJS;
-        res.render(path, { title, layout });
+        const token = req.params.token;
+        try {
+
+            // TODO: check token, set expired, change user password
+
+            req.session[AlertTypeId.LOGIN_PAGE] = {
+                type: ALERT_SUCCESS,
+                message: "Password for your account was successfully changed.",
+            };
+            logger.info(`Successfully change password for: '${"user"}' account`);
+            res.redirect("/login");
+        } catch (ex: any) {
+            logger.error(`Password failure changed. Cause: ${ex.message}`);
+            res.render(path, { title, layout,
+                tokenIsValid: false,
+                token,
+            });
+        }
+
     };
 }
 
