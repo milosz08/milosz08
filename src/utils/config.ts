@@ -11,8 +11,8 @@
  * original author. Project created only for personal purposes.
  */
 
-import process from "process";
-import dotenv from "dotenv";
+import * as process from "process";
+import * as dotenv from "dotenv";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -13,14 +13,14 @@
 
 import mongoose, { Schema, Model } from "mongoose";
 import uniqueValidator from "mongoose-unique-validator";
-import bcrypt from "bcrypt";
+import * as bcrypt from "bcrypt";
 
 import dbValidators from "../db-validators";
 import dbMiddleware from "../db-middlewares";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-interface User {
+export interface IUser {
     login: string;
     email: string;
     password: string;
@@ -30,7 +30,7 @@ interface User {
     compareHash(password: string): boolean;
 }
 
-const UserSchema: Schema<User> = new Schema<User>({
+const UserSchema: Schema<IUser> = new Schema<IUser>({
     login: {
         type: String,
         lowercase: true,
@@ -75,4 +75,4 @@ UserSchema.methods = {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-export const UserModel: Model<User> = mongoose.model("User", UserSchema);
+export const UserModel: Model<IUser> = mongoose.model("User", UserSchema);

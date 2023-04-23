@@ -93,16 +93,7 @@ class AuthController {
             const user = await UserModel.findOne({login: req.session.loggedUser?.login});
             if (!user) throw new Error("User based passed login or email not found.");
 
-            if (!PASSWORD_REGEX.test(newPassword)) {
-                throw new Error("Password must have at least 8 characters, one big letter, one number and one " +
-                    "special character.");
-            }
-            if (user.compareHash(newPassword)) {
-                throw new Error("New password must be different from actual.");
-            }
-            if (newPassword !== repeatNewPassword) {
-                throw new Error("Password and repeat password fields are not the same.");
-            }
+            Utilities.validatePassword(user, newPassword, repeatNewPassword);
 
             user.password = newPassword;
             user.firstLogin = false;
@@ -146,7 +137,7 @@ class AuthController {
 
             req.session[AlertTypeId.REQUEST_CHANGE_PASSWORD_PAGE] = {
                 type: ALERT_SUCCESS,
-                message: `Check your email box ${user.email} and follow the orders.`,
+                message: `Check your email box <strong>${user.email}</strong> and follow on the rest of instructions.`,
             };
             logger.info(`Successfully send request for change password for: '${user.login}' account`);
             res.redirect("/request-change-password");
