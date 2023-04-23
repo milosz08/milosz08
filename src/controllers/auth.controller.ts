@@ -174,7 +174,7 @@ class AuthController {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     async getChangePasswordPage(req: Request, res: Response): Promise<void> {
-        const { path, title, layout } = View.AUTH_CHANGE_PASSWORD_EJS;
+        const { path, title, layout } = Constant.AUTH_CHANGE_PASSWORD_EJS;
         const { token } = req.params;
         const otaToken = await OtaTokenModel.findOne({ token });
         const isExpired = otaToken === null || otaToken.isExpired || otaToken.expiredAt < new Date;
@@ -185,7 +185,7 @@ class AuthController {
     };
 
     async postChangePasswordPage(req: Request, res: Response): Promise<void> {
-        const { path, title, layout } = View.AUTH_CHANGE_PASSWORD_EJS;
+        const { path, title, layout } = Constant.AUTH_CHANGE_PASSWORD_EJS;
         const { token } = req.params;
         const { newPassword, repeatNewPassword } = req.body;
         let isInvalid: boolean = false;
@@ -205,7 +205,7 @@ class AuthController {
             await UserModel.findOneAndUpdate({ "login": user.login }, { "password": newPassword });
 
             req.session[AlertTypeId.LOGIN_PAGE] = {
-                type: ALERT_SUCCESS,
+                type: Constant.ALERT_SUCCESS,
                 message: "Password for your account was successfully changed.",
             };
             logger.info(`Successfully change password for: '${user.login}' account`);
