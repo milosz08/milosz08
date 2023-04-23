@@ -14,9 +14,10 @@
 import { Request } from "express";
 import path from "path";
 
-import { PASSWORD_REGEX } from "./constants";
-import { IUser } from "../db/schemas/user-schema";
+import * as Constant from "./constants";
 import { AlertType, AlertTypeId } from "./session";
+
+import { IUser } from "../db/schemas/user-schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -54,7 +55,7 @@ class Utilities {
     };
 
     validatePassword(user: IUser, newPassword: string, repeatNewPassword: string): void {
-        if (!PASSWORD_REGEX.test(newPassword)) {
+        if (!Constant.PASSWORD_REGEX.test(newPassword)) {
             throw new Error("Password must have at least 8 characters, one big letter, one number and one " +
                 "special character.");
         }

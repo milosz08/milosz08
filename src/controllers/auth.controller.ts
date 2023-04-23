@@ -15,11 +15,10 @@ import { Request, Response } from "express";
 
 import logger from "../utils/logger";
 import utilities from "../utils/utilities";
-import * as View from "../utils/constants";
+import * as Constant from "../utils/constants";
 import Utilities from "../utils/utilities";
 import { AlertTypeId } from "../utils/session";
 import MailSender, { EmailReplacements } from "../utils/mail-sender";
-import { ALERT_SUCCESS, CHANGE_PASSWORD_MAIL_TEMPLATE } from "../utils/constants";
 
 import { UserModel } from "../db/schemas/user-schema";
 import { OtaTokenModel } from "../db/schemas/ota-token-schema";
@@ -29,14 +28,14 @@ import { OtaTokenModel } from "../db/schemas/ota-token-schema";
 class AuthController {
 
     getLoginPage(req: Request, res: Response): void {
-        const { path, title, layout } = View.AUTH_LOGIN_EJS;
+        const { path, title, layout } = Constant.AUTH_LOGIN_EJS;
         res.render(path, { title, layout,
             pageAlert: utilities.extractAlertAndDestroy(req, AlertTypeId.LOGIN_PAGE),
         });
     };
 
     async postLoginPage(req: Request, res: Response): Promise<void> {
-        const { path, title, layout } = View.AUTH_LOGIN_EJS;
+        const { path, title, layout } = Constant.AUTH_LOGIN_EJS;
         const { loginOrEmail, password } = req.body;
         try {
             const user = await UserModel.findOne({ $or: [ { login: loginOrEmail }, { email: loginOrEmail } ] });
@@ -56,7 +55,7 @@ class AuthController {
                 return;
             }
             req.session[AlertTypeId.CMS_PROJECTS_PAGE]  = {
-                type: ALERT_SUCCESS,
+                type: Constant.ALERT_SUCCESS,
                 message: `You successfully logged into <strong>${user.role.toLowerCase()}</strong> account.`,
             };
             logger.info(`Successfully login to: '${user.login}' account`);
@@ -75,7 +74,7 @@ class AuthController {
     getLogoutRedirect(req: Request, res: Response): void {
         const { role } = req.session.loggedUser!;
         req.session[AlertTypeId.LOGIN_PAGE] = {
-            type: ALERT_SUCCESS,
+            type: Constant.ALERT_SUCCESS,
             message: `Successfully logout from <strong>${role.toLowerCase()}</strong> account.`,
         };
         logger.info(`Successfully logout from: '${req.session.loggedUser?.login}' account`);
@@ -86,12 +85,12 @@ class AuthController {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     getFirstLoginPage(req: Request, res: Response): void {
-        const { path, title, layout } = View.AUTH_FIRST_LOGIN_EJS;
+        const { path, title, layout } = Constant.AUTH_FIRST_LOGIN_EJS;
         res.render(path, { title, layout });
     };
 
     async postFirstLoginPage(req: Request, res: Response): Promise<void> {
-        const { path, title, layout } = View.AUTH_FIRST_LOGIN_EJS;
+        const { path, title, layout } = Constant.AUTH_FIRST_LOGIN_EJS;
         const { newPassword, repeatNewPassword } = req.body;
         try {
             const user = await UserModel.findOne({login: req.session.loggedUser?.login});
@@ -105,7 +104,7 @@ class AuthController {
 
             req.session.loggedUser!.isFirstLogin = false;
             req.session[AlertTypeId.CMS_PROJECTS_PAGE] = {
-                type: ALERT_SUCCESS,
+                type: Constant.ALERT_SUCCESS,
                 message: "Password for your account was successfully changed.",
             };
             logger.info(`Successfully change default password for: '${user.login}' account`);
@@ -122,14 +121,14 @@ class AuthController {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     getRequestChangePasswordPage(req: Request, res: Response): void {
-        const { path, title, layout } = View.AUTH_REQUEST_CHANGE_PASSWORD_EJS;
+        const { path, title, layout } = Constant.AUTH_REQUEST_CHANGE_PASSWORD_EJS;
         res.render(path, { title, layout,
             pageAlert: utilities.extractAlertAndDestroy(req, AlertTypeId.REQUEST_CHANGE_PASSWORD_PAGE),
         });
     };
 
     async postRequestChangePasswordPage(req: Request, res: Response): Promise<void> {
-        const { path, title, layout } = View.AUTH_REQUEST_CHANGE_PASSWORD_EJS;
+        const { path, title, layout } = Constant.AUTH_REQUEST_CHANGE_PASSWORD_EJS;
         const { loginOrEmail } = req.body;
         try {
             const user = await UserModel.findOne({ $or: [ { login: loginOrEmail }, { email: loginOrEmail } ] });
@@ -155,10 +154,10 @@ class AuthController {
                 regenerateToken: `${Utilities.getFullUrl(req)}/request-change-password`,
             };
             await MailSender.sendEmail(user.email, `Request for change password (${user.login})`,
-                CHANGE_PASSWORD_MAIL_TEMPLATE, replacements);
+                Constant.CHANGE_PASSWORD_MAIL_TEMPLATE, replacements);
 
             req.session[AlertTypeId.REQUEST_CHANGE_PASSWORD_PAGE] = {
-                type: ALERT_SUCCESS,
+                type: Constant.ALERT_SUCCESS,
                 message: `Check your email box <strong>${user.email}</strong> and follow on the rest of instructions.`,
             };
             logger.info(`Successfully send request for change password for: '${user.login}' account`);

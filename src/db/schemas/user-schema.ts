@@ -37,7 +37,8 @@ const UserSchema: Schema<IUser> = new Schema<IUser>({
         trim: true,
         required: true,
         unique: true,
-        maxlength: [ 30, "Login must have less or equals 30 characters." ]
+        maxlength: [ 30, "Login must have less or equals 30 characters." ],
+        validate: [ dbValidators.validateLogin, "Login must contains only letters and numbers." ],
     },
     email: {
         type: String,
@@ -45,7 +46,7 @@ const UserSchema: Schema<IUser> = new Schema<IUser>({
         trim: true,
         required: [ true, "Email field is required." ],
         unique: true,
-        validate: [ dbValidators.validateEmail, "Incorrect email format." ]
+        validate: [ dbValidators.validateEmail, "Incorrect email format." ],
     },
     password: {
         type: String,
@@ -64,7 +65,7 @@ const UserSchema: Schema<IUser> = new Schema<IUser>({
     },
 });
 
-UserSchema.plugin(uniqueValidator, "Error, user with followed {PATH} already exist.");
+UserSchema.plugin(uniqueValidator, { type: "mongoose-unique-validator", message: "Followed {PATH} already exist." });
 UserSchema.path("password").set(dbMiddleware.hashPassword);
 
 UserSchema.methods = {

@@ -22,8 +22,6 @@ class DbValidators {
         return regex.test(email);
     };
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     validateRole(role: string): boolean {
         return [ MODERATOR, ADMIN ].some(r => r === role.toUpperCase());
     };
