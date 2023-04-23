@@ -11,10 +11,13 @@
  * original author. Project created only for personal purposes.
  */
 
+import * as CronJob from "node-cron";
+
 import config from "../utils/config";
 import logger from "../utils/logger";
 import { ADMIN } from "../utils/constants";
 import { UserModel } from "./schemas/user-schema";
+import { OtaTokenModel } from "./schemas/ota-token-schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -39,6 +42,15 @@ class DbRunners {
         } catch (e) {
             logger.error("Unable to save default user in db. 0 rows affected.");
         }
+    };
+
+    removeNotUsedOtaTokensCronSchedule(): void {
+        const scheduleJobFunction = CronJob.schedule("0 0 3 * * *", async () => {
+            const deleted = await OtaTokenModel
+                .deleteMany({ $and: [ { isExpired: false }, { expiredAt: { lte: new Date() } } ]});
+            logger.info(`Removed unused ota tokens. Rows affected: ${deleted.deletedCount}`);
+        });
+        scheduleJobFunction.start();
     };
 }
 
