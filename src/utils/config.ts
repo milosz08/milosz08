@@ -25,5 +25,10 @@ export default {
     CONNECTION_STRING:      process.env.CONNECTION_STRING       || "mongodb://127.0.0.1:27017/db",
     DEF_USER_LOGIN:         process.env.DEF_USER_LOGIN          || "admin",
     DEF_USER_EMAIL:         process.env.DEF_USER_EMAIL          || "admin@example.com",
-    DEF_USER_PASSWORD:      process.env.DEF_USER_PASSWORD       || "Admin123@"
+    DEF_USER_PASSWORD:      process.env.DEF_USER_PASSWORD       || "Admin123@",
+    SMTP_HOST:              process.env.SMTP_HOST,
+    SMTP_USERNAME:          process.env.SMTP_USERNAME,
+    SMTP_PASSWORD:          process.env.SMTP_PASSWORD,
+    SMTP_SSL:               process.env.SMTP_SSL                || false,
+    SMTP_PORT:              process.env.SMTP_PORT               || 25,
 };

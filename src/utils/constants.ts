@@ -53,3 +53,8 @@ export const ALERT_DANGER                           = "alert-danger";
 
 // regex
 export const PASSWORD_REGEX                         = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// email templates
+export const CHANGE_PASSWORD_MAIL_TEMPLATE          = "change-password-email";

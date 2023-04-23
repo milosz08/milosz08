@@ -16,9 +16,13 @@ import { Request, Response } from "express";
 import logger from "../utils/logger";
 import utilities from "../utils/utilities";
 import * as View from "../utils/constants";
+import Utilities from "../utils/utilities";
 import { AlertTypeId } from "../utils/session";
-import { ALERT_SUCCESS, PASSWORD_REGEX } from "../utils/constants";
+import MailSender, { EmailReplacements } from "../utils/mail-sender";
+import { ALERT_SUCCESS, CHANGE_PASSWORD_MAIL_TEMPLATE } from "../utils/constants";
+
 import { UserModel } from "../db/schemas/user-schema";
+import { OtaTokenModel } from "../db/schemas/ota-token-schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -132,8 +136,26 @@ class AuthController {
             if (!user) {
                 throw new Error("User based passed login or email not found.");
             }
+            let generatedToken: string = "";
+            do {
+                generatedToken = Utilities.otaTokenGenerator();
+            } while (await OtaTokenModel.findOne({ token: generatedToken }));
 
-            // TODO: save new token, send email message to user
+            const otaToken = new OtaTokenModel({
+                token: generatedToken,
+                expiredAt: Utilities.nowPlusNminutes(10),
+                isExpired: false,
+                user: user._id,
+            });
+            await otaToken.save();
+
+            const replacements: EmailReplacements = {
+                userLogin: user.login,
+                linkWithToken: `${Utilities.getFullUrl(req)}/change-password/${generatedToken}`,
+                regenerateToken: `${Utilities.getFullUrl(req)}/request-change-password`,
+            };
+            await MailSender.sendEmail(user.email, `Request for change password (${user.login})`,
+                CHANGE_PASSWORD_MAIL_TEMPLATE, replacements);
 
             req.session[AlertTypeId.REQUEST_CHANGE_PASSWORD_PAGE] = {
                 type: ALERT_SUCCESS,
@@ -152,35 +174,49 @@ class AuthController {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    getChangePasswordPage(req: Request, res: Response): void {
+    async getChangePasswordPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = View.AUTH_CHANGE_PASSWORD_EJS;
-        const token = req.params.token;
-
-        // TODO: check token
-
+        const { token } = req.params;
+        const otaToken = await OtaTokenModel.findOne({ token });
+        const isExpired = otaToken === null || otaToken.isExpired || otaToken.expiredAt < new Date;
         res.render(path, { title, layout,
-            tokenIsValid: false,
+            tokenIsValid: !isExpired,
             token,
         });
     };
 
     async postChangePasswordPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = View.AUTH_CHANGE_PASSWORD_EJS;
-        const token = req.params.token;
+        const { token } = req.params;
+        const { newPassword, repeatNewPassword } = req.body;
+        let isInvalid: boolean = false;
         try {
+            const otaToken = await OtaTokenModel.findOne({ token }).populate("user");
+            isInvalid = otaToken === null || otaToken.isExpired || otaToken.expiredAt < new Date;
+            if (isInvalid) {
+                throw new Error("Token is invalid, expired or already used. Try with another token");
+            }
+            const user = otaToken!.user;
+            Utilities.validatePassword(user, newPassword, repeatNewPassword);
 
-            // TODO: check token, set expired, change user password
+            user.password = newPassword;
+            otaToken!.isExpired = true;
+            await otaToken!.save();
+
+            await UserModel.findOneAndUpdate({ "login": user.login }, { "password": newPassword });
 
             req.session[AlertTypeId.LOGIN_PAGE] = {
                 type: ALERT_SUCCESS,
                 message: "Password for your account was successfully changed.",
             };
-            logger.info(`Successfully change password for: '${"user"}' account`);
+            logger.info(`Successfully change password for: '${user.login}' account`);
             res.redirect("/login");
         } catch (ex: any) {
             logger.error(`Password failure changed. Cause: ${ex.message}`);
             res.render(path, { title, layout,
-                tokenIsValid: false,
+                generalError: ex.message,
+                tokenIsValid: !isInvalid,
+                form: req.body,
                 token,
             });
         }
