@@ -11,19 +11,22 @@
  * original author. Project created only for personal purposes.
  */
 
-import { ADMIN, MODERATOR } from "../utils/constants";
+import { ADMIN, EMAIL_REGEX, LOGIN_REGEX, MODERATOR } from "../utils/constants";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class DbValidators {
 
     validateEmail(email: string): boolean {
-        const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-        return regex.test(email);
+        return EMAIL_REGEX.test(email);
     };
 
     validateRole(role: string): boolean {
         return [ MODERATOR, ADMIN ].some(r => r === role.toUpperCase());
+    };
+
+    validateLogin(login: string): boolean {
+        return LOGIN_REGEX.test(login);
     };
 }
 

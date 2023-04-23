@@ -23,6 +23,7 @@ export enum AlertTypeId {
     LOGIN_PAGE = "loginPageAlert",
     REQUEST_CHANGE_PASSWORD_PAGE = "requestChangePasswordPageAlert",
     CMS_PROJECTS_PAGE = "cmsProjectsPageAlert",
+    CMS_ACCOUNTS_PAGE = "cmsAccountsPageAlert",
 }
 
 declare module 'express-session' {

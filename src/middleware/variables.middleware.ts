@@ -12,6 +12,7 @@
  */
 
 import { Request, Response } from "express";
+import { PAGINATION_STATES } from "../utils/constants";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -22,5 +23,7 @@ export default function variablesMiddleware(req: Request, res: Response, next: C
     res.locals.errors = null;
     res.locals.generalError = null;
     res.locals.form = {};
+    res.locals.query = req.query;
+    res.locals.paginationStates = PAGINATION_STATES;
     next();
 }

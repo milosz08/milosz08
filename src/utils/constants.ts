@@ -52,9 +52,18 @@ export const ALERT_DANGER                           = "alert-danger";
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // regex
+export const EMAIL_REGEX                            = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 export const PASSWORD_REGEX                         = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+export const LOGIN_REGEX                            = /^[a-zA-Z\d]{3,30}$/;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // email templates
 export const CHANGE_PASSWORD_MAIL_TEMPLATE          = "change-password-email";
+export const AFTER_CREATED_ACCOUNT_MAIL_TEMPLATE    = "after-created-account-email";
+export const AFTER_REVOKED_PASSWORD_MAIL_TEMPLATE   = "after-revoked-password-email";
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// pagination
+export const PAGINATION_STATES                      = [ 5, 10, 15, 50, 100 ];

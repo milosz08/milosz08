@@ -70,6 +70,19 @@ class Utilities {
     getFullUrl(req: Request): string {
         return req.protocol + '://' + req.get('host');
     };
+
+    validatePaginationDataAndGetUrl(
+        paginationUrl: string, selectedPage: number, pagesCount: number, totalPerPage: number
+    ): string {
+        const totalDefault = Constant.PAGINATION_STATES[0];
+        if ((selectedPage < 1 || selectedPage > pagesCount) && pagesCount > 0) {
+            return`${paginationUrl}page=1&total=${totalPerPage}`;
+        }
+        if (!Constant.PAGINATION_STATES.some(s => s === totalPerPage)) {
+            return `${paginationUrl}page=${selectedPage}&total=${totalDefault}`;
+        }
+        return "";
+    };
 }
 
 export default new Utilities;
