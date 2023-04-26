@@ -12,11 +12,15 @@
  */
 
 import { Request, Response } from "express";
+
 import { PAGINATION_STATES } from "../utils/constants";
+
+import middlewaresDb from "../db/middlewares.db";
+import { SocialLinkModel } from "../db/schemas/social-link.schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-export default function variablesMiddleware(req: Request, res: Response, next: CallableFunction) {
+export default async function variablesMiddleware(req: Request, res: Response, next: CallableFunction) {
     res.locals.url = req.url;
     res.locals.pageAlert = null;
     res.locals.nowYear = new Date().getFullYear();
@@ -25,5 +29,7 @@ export default function variablesMiddleware(req: Request, res: Response, next: C
     res.locals.form = {};
     res.locals.query = req.query;
     res.locals.paginationStates = PAGINATION_STATES;
+    res.locals.personalData = await middlewaresDb.getPersonalDataAndMarkdownParse();
+    res.locals.socialLinks = await SocialLinkModel.find();
     next();
 }
