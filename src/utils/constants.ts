@@ -31,7 +31,10 @@ export const AUTH_FIRST_LOGIN_EJS                   = { title: "First login", pa
 export const CMS_PROJECTS_EJS                       = { title: "Projects", path: "cms/projects", layout: CMS_LAYOUT };
 export const CMS_ADD_PROJECT_EJS                    = { title: "Add project", path: "cms/add-update-project", layout: CMS_LAYOUT };
 export const CMS_UPDATE_PROJECT_EJS                 = { title: "Update project", path: "cms/add-update-project", layout: CMS_LAYOUT };
-export const CMS_PERSONAL_DATA_EJS                  = { title: "Personal", path: "cms/personal-data", layout: CMS_LAYOUT };
+export const CMS_PERSONAL_DATA_EJS                  = { title: "Personal data", path: "cms/personal-data", layout: CMS_LAYOUT };
+export const CMS_SOCIAL_LINKS_EJS                   = { title: "Social links", path: "cms/social-links", layout: CMS_LAYOUT };
+export const CMS_ADD_SOCIAL_LINKS_EJS               = { title: "Add social link", path: "cms/add-update-social-link", layout: CMS_LAYOUT };
+export const CMS_UPDATE_SOCIAL_LINKS_EJS            = { title: "Update social link", path: "cms/add-update-social-link", layout: CMS_LAYOUT };
 
 export const PUBLIC_PROJECTS_EJS                    = { title: "Projects", path: "public/projects" };
 export const PUBLIC_PROJECT_DETAILS_EJS             = { path: "public/project-details" };
