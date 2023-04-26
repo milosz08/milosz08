@@ -20,8 +20,8 @@ import Utilities from "../utils/utilities";
 import { AlertTypeId } from "../utils/session";
 import MailSender, { EmailReplacements } from "../utils/mail-sender";
 
-import { UserModel } from "../db/schemas/user-schema";
-import { OtaTokenModel } from "../db/schemas/ota-token-schema";
+import { UserModel } from "../db/schemas/user.schema";
+import { OtaTokenModel } from "../db/schemas/ota-token.schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

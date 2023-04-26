@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 by MILOSZ GILGA <http://miloszgilga.pl>
  *
- * File name: db-runners.ts
+ * File name: runners.db.ts
  * Last modified: 19/04/2023, 16:13
  * Project name: personal-website
  *
@@ -54,4 +54,4 @@ class DbRunners {
     };
 }
 
-export default new DbRunners;
+export default new RunnersDb;

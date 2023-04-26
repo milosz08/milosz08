@@ -17,7 +17,7 @@ import path from "path";
 import * as Constant from "./constants";
 import { AlertType, AlertTypeId } from "./session";
 
-import { IUser } from "../db/schemas/user-schema";
+import { IUser } from "../db/schemas/user.schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

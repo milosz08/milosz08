@@ -15,7 +15,7 @@ import { ADMIN, EMAIL_REGEX, LOGIN_REGEX, MODERATOR } from "../utils/constants";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class DbValidators {
+class ValidatorsDb {
 
     validateEmail(email: string): boolean {
         return EMAIL_REGEX.test(email);
@@ -30,4 +30,4 @@ class DbValidators {
     };
 }
 
-export default new DbValidators;
+export default new ValidatorsDb;

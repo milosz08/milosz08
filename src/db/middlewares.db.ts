@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 by MILOSZ GILGA <http://miloszgilga.pl>
  *
- * File name: db-middlewares.ts
+ * File name: middlewares.db.ts
  * Last modified: 19/04/2023, 16:08
  * Project name: personal-website
  *
@@ -15,7 +15,7 @@ import * as bcrypt from "bcrypt";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class DbMiddlewares {
+class MiddlewaresDb {
 
     hashPassword(rawPassword: string): string {
         const salt = bcrypt.genSaltSync(10);
@@ -23,4 +23,4 @@ class DbMiddlewares {
     };
 }
 
-export default new DbMiddlewares;
+export default new MiddlewaresDb;

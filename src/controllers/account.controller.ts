@@ -20,7 +20,7 @@ import * as Constant from "../utils/constants";
 import { AlertTypeId } from "../utils/session";
 import MailSender, { EmailReplacements } from "../utils/mail-sender";
 
-import { UserModel } from "../db/schemas/user-schema";
+import { UserModel } from "../db/schemas/user.schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

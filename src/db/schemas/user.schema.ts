@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 by MILOSZ GILGA <http://miloszgilga.pl>
  *
- * File name: user-schema.ts
+ * File name: user.schema.ts
  * Last modified: 19/04/2023, 15:27
  * Project name: personal-website
  *
@@ -15,8 +15,8 @@ import mongoose, { Schema, Model } from "mongoose";
 import uniqueValidator from "mongoose-unique-validator";
 import * as bcrypt from "bcrypt";
 
-import dbValidators from "../db-validators";
-import dbMiddleware from "../db-middlewares";
+import dbValidators from "../validators.db";
+import dbMiddleware from "../middlewares.db";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

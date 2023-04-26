@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 by MILOSZ GILGA <http://miloszgilga.pl>
  *
- * File name: ota-token-schema.ts
+ * File name: ota-token.schema.ts
  * Last modified: 22/04/2023, 19:14
  * Project name: personal-website
  *
@@ -12,7 +12,7 @@
  */
 
 import mongoose, { Model, Schema, Types } from "mongoose";
-import { IUser, UserModel } from "./user-schema";
+import { IUser, UserModel } from "./user.schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

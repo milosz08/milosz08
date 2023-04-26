@@ -16,8 +16,8 @@ import expressEjsLayouts from "express-ejs-layouts";
 import cookieParser from "cookie-parser";
 import expressSession from "express-session";
 
-import dbInit from "./db/db-config";
-import dbRunners from "./db/db-runners";
+import dbInit from "./db/config.db";
+import dbRunners from "./db/runners.db";
 import router from "./routes/web-routes";
 
 import config from "./utils/config";
@@ -35,6 +35,7 @@ const app: Express = express();
 const port = config.PORT;
 
 dbInit();
+
 dbRunners.removeNotUsedOtaTokensCronSchedule();
 
 app.use(expressSession(session.configure()));
