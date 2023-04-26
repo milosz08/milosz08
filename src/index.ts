@@ -37,6 +37,7 @@ const port = config.PORT;
 dbInit();
 
 dbRunners.removeNotUsedOtaTokensCronSchedule();
+dbRunners.migratePersonalDataToDb().then(_ => _);
 
 app.use(expressSession(session.configure()));
 app.use(expressEjsLayouts);

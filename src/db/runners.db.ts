@@ -12,16 +12,26 @@
  */
 
 import * as CronJob from "node-cron";
+import * as fs from "fs";
 
 import config from "../utils/config";
 import logger from "../utils/logger";
 import { ADMIN } from "../utils/constants";
-import { UserModel } from "./schemas/user-schema";
-import { OtaTokenModel } from "./schemas/ota-token-schema";
+import utilities from "../utils/utilities";
+import { PersonalJsonData } from "../models/personal-data.model";
+
+import { UserModel } from "./schemas/user.schema";
+import { OtaTokenModel } from "./schemas/ota-token.schema";
+import { SocialLinkModel } from "./schemas/social-link.schema";
+import { PersonalDataModel } from "./schemas/personal-data.schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class DbRunners {
+class RunnersDb {
+
+    private readonly PERSONAL_DATA_FILE = "data/personal-data.json";
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     async createDefaultUser(): Promise<void> {
         try {
@@ -51,6 +61,36 @@ class DbRunners {
             logger.info(`Removed unused ota tokens. Rows affected: ${deleted.deletedCount}`);
         });
         scheduleJobFunction.start();
+    };
+
+    async migratePersonalDataToDb(): Promise<void> {
+        const rawFileData = fs.readFileSync(utilities.getProjectRootPath(`/public/${this.PERSONAL_DATA_FILE}`));
+        const jsonFileData: PersonalJsonData = JSON.parse(rawFileData.toString());
+
+        const personalData = await PersonalDataModel.find();
+        if (personalData.length === 0) {
+            const personalData = new PersonalDataModel({
+                descriptionTop: jsonFileData.description_top,
+                descriptionBottom: jsonFileData.description_bottom,
+                mavenCentralLink: jsonFileData.maven_central_link,
+                firstEmail: jsonFileData.first_email,
+                secondEmail: jsonFileData.second_email,
+                githubAccountLink: jsonFileData.github_account_link,
+            });
+            await personalData.save();
+            logger.info(`Successfully migrated personal data from ${this.PERSONAL_DATA_FILE} file to db. 1 row affected.`);
+        }
+        const socialLinks = await SocialLinkModel.find();
+        if (socialLinks.length === 0) {
+            const socialLinks = jsonFileData.social_links.map(l => new SocialLinkModel({
+                paraphrase: l.paraphrase,
+                link: l.link,
+                iconClass: l.icon_class,
+            }));
+            await SocialLinkModel.bulkSave(socialLinks);
+            logger.info(`Successfully migrated social links from ${this.PERSONAL_DATA_FILE} file to db.
+                ${jsonFileData.social_links.length} row affected.`);
+        }
     };
 }
 
