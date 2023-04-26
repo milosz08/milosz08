@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 by MILOSZ GILGA <http://miloszgilga.pl>
  *
- * File name: account.controller.ts
+ * File name: cms-account.controller.ts
  * Last modified: 19/04/2023, 12:24
  * Project name: personal-website
  *
@@ -24,10 +24,10 @@ import { UserModel } from "../db/schemas/user.schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class AccountController {
+class CmsAccountController {
 
     async getAccountsPage(req: Request, res: Response): Promise<void> {
-        const { path, title, layout } = Constant.ACCOUNT_ACCOUNTS_EJS;
+        const { path, title, layout } = Constant.CMS_ACCOUNT_ACCOUNTS_EJS;
         const { q, page, total } = req.query;
 
         let selectedPage = Number(page) || 1;
@@ -35,7 +35,7 @@ class AccountController {
         const paginationUrl = q ? `/cms/accounts?q=${q}&` : "/cms/accounts?";
 
         const regex = { $regex: q || "", $options: "i" };
-        const where = { $or: [ { login: regex }, { email: regex } ] };
+        const where = { $or: [ { login: regex }, { email: regex }, { role: regex } ] };
         let query = UserModel.find(where);
 
         const resultsCount = await UserModel.find(where).count();
@@ -64,7 +64,7 @@ class AccountController {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     getCreateAccountPage(req: Request, res: Response): void {
-        const { path, title, layout } = Constant.ACCOUNT_ADD_ACCOUNT_EJS;
+        const { path, title, layout } = Constant.CMS_ACCOUNT_ADD_ACCOUNT_EJS;
         res.render(path, { title, layout,
             accountAction: "Add",
             roleOptions: [ Constant.MODERATOR, Constant.ADMIN ],
@@ -72,7 +72,7 @@ class AccountController {
     };
 
     async postCreateAccountPage(req: Request, res: Response): Promise<void> {
-        const { path, title, layout } = Constant.ACCOUNT_ADD_ACCOUNT_EJS;
+        const { path, title, layout } = Constant.CMS_ACCOUNT_ADD_ACCOUNT_EJS;
         const { login, email, role } = req.body;
         try {
             const firstPassword = utilities.otaTokenGenerator();
@@ -115,7 +115,7 @@ class AccountController {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     async getUpdateAccountPage(req: Request, res: Response): Promise<void> {
-        const { path, title, layout } = Constant.ACCOUNT_UPDATE_ACCOUNT_EJS;
+        const { path, title, layout } = Constant.CMS_ACCOUNT_UPDATE_ACCOUNT_EJS;
         const { accountId } = req.params;
         if (!mongoose.Types.ObjectId.isValid(accountId)) {
             res.redirect("/cms/accounts");
@@ -135,7 +135,7 @@ class AccountController {
     };
 
     async postUpdateAccountPage(req: Request, res: Response): Promise<void> {
-        const { path, title, layout } = Constant.ACCOUNT_UPDATE_ACCOUNT_EJS;
+        const { path, title, layout } = Constant.CMS_ACCOUNT_UPDATE_ACCOUNT_EJS;
         const { login, email, role } = req.body;
         const { accountId } = req.params;
         try {
@@ -263,4 +263,4 @@ class AccountController {
     };
 }
 
-export default new AccountController;
+export default new CmsAccountController;

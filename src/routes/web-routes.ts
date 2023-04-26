@@ -55,11 +55,12 @@ router.post("/first-login",                             isAuthMiddleware,       
 router.post("/cms/account/add",                         isNotLoggedAdminMiddleware,     accountController.postCreateAccountPage);
 router.post("/cms/account/update/:accountId",           isNotLoggedAdminMiddleware,     accountController.postUpdateAccountPage);
 
-router.post("/cms/personals",                           isNotLoggedAdminMiddleware,     cmsController.postPersonalsDataPage);
-router.post("/cms/project/add",                         isAuthMiddleware,               cmsController.postAddProjectPage);
-router.post("/cms/project/update/:projectId",           isAuthMiddleware,               cmsController.postUpdateProjectPage);
+router.post("/cms/personal-data",                       isAuthAdminMiddleware,          cmsPersonalDataController.postPersonalsDataPage);
 
-router.get("/cms",                                  (req, res) => res.redirect("/cms/projects"));
-router.get("*",                                     (req, res) => res.redirect("/"));
+router.post("/cms/project/add",                         isAuthMiddleware,               cmsProjectsController.postAddProjectPage);
+router.post("/cms/project/update/:projectId",           isAuthMiddleware,               cmsProjectsController.postUpdateProjectPage);
+
+router.get("/cms",                                      (req, res) => res.redirect("/cms/projects"));
+router.get("*",                                         (req, res) => res.redirect("/"));
 
 export default router;

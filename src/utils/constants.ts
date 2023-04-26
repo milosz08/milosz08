@@ -19,9 +19,9 @@ export const DEFAULT_LAYOUT                         = "layouts/default-layout";
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // views
-export const ACCOUNT_ACCOUNTS_EJS                   = { title: "Accounts", path: "account/accounts", layout: CMS_LAYOUT };
-export const ACCOUNT_ADD_ACCOUNT_EJS                = { title: "Add account", path: "account/add-update-account", layout: CMS_LAYOUT };
-export const ACCOUNT_UPDATE_ACCOUNT_EJS             = { title: "Update account", path: "account/add-update-account", layout: CMS_LAYOUT };
+export const CMS_ACCOUNT_ACCOUNTS_EJS               = { title: "Accounts", path: "account/accounts", layout: CMS_LAYOUT };
+export const CMS_ACCOUNT_ADD_ACCOUNT_EJS            = { title: "Add account", path: "account/add-update-account", layout: CMS_LAYOUT };
+export const CMS_ACCOUNT_UPDATE_ACCOUNT_EJS         = { title: "Update account", path: "account/add-update-account", layout: CMS_LAYOUT };
 
 export const AUTH_CHANGE_PASSWORD_EJS               = { title: "Change password", path: "auth/change-password", layout: EMPTY_LAYOUT };
 export const AUTH_REQUEST_CHANGE_PASSWORD_EJS       = { title: "Request change password", path: "auth/request-change-password", layout: EMPTY_LAYOUT };

@@ -1,5 +1,5 @@
 <%- include("../partials/general-error-alert.partial.ejs") %>
-<%- include("../partials/decline-changes-modal.partial.ejs") %>
+<%- include("../partials/decline-changes-modal.partial.ejs", { returnUrl: "/cms/accounts" }) %>
 
 <h2 class="mb-1"><%= accountAction %> account</h2>
 <div class="row mb-3">
@@ -10,13 +10,13 @@
         <div class="col-md-4">
             <label for="login" class="form-label">Login:</label>
             <input type="text" class="form-control <%= errors?.login && "is-invalid" %>" id="login"
-                value="<%= form.login %>" name="login" maxlength="30" placeholder="ex. admin123">
+                value="<%= form.login %>" name="login" maxlength="30">
             <div class="invalid-feedback"><%= errors?.login?.message %></div>
         </div>
         <div class="col-md-4">
             <label for="email" class="form-label">Email address:</label>
             <input type="email" class="form-control <%= errors?.email && "is-invalid" %>" id="login"
-                value="<%= form.email %>" name="email" maxlength="100" placeholder="ex. admin@example.net">
+                value="<%= form.email %>" name="email" maxlength="100">
             <div class="invalid-feedback"><%= errors?.email?.message %></div>
         </div>
         <div class="col-md-4">

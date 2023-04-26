@@ -3,7 +3,7 @@
 <h2 class="mb-3">Accounts</h2>
 
 <%- include("../partials/search-form.partial.ejs", {
-    searchBy: "login/email", addContentPath: "/cms/account/add", addContentText: "account"
+    searchBy: "login/email/role", addContentPath: "/cms/account/add", addContentText: "account"
 }) %>
 
 <% if (users.length !== 0) { %>
