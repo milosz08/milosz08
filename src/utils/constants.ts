@@ -55,6 +55,7 @@ export const ALERT_DANGER                           = "alert-danger";
 export const EMAIL_REGEX                            = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 export const PASSWORD_REGEX                         = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 export const LOGIN_REGEX                            = /^[a-zA-Z\d]{3,30}$/;
+export const LINK_REGEX                             = /^(http|https):\/\/[^ "]+$/;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

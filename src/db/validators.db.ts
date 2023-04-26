@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 by MILOSZ GILGA <http://miloszgilga.pl>
  *
- * File name: db-validators.ts
+ * File name: validators.db.ts
  * Last modified: 19/04/2023, 15:56
  * Project name: personal-website
  *
@@ -11,7 +11,7 @@
  * original author. Project created only for personal purposes.
  */
 
-import { ADMIN, EMAIL_REGEX, LOGIN_REGEX, MODERATOR } from "../utils/constants";
+import { ADMIN, EMAIL_REGEX, LINK_REGEX, LOGIN_REGEX, MODERATOR } from "../utils/constants";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -27,6 +27,10 @@ class ValidatorsDb {
 
     validateLogin(login: string): boolean {
         return LOGIN_REGEX.test(login);
+    };
+
+    validateLink(link: string): boolean {
+        return LINK_REGEX.test(link);
     };
 }
 

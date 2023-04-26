@@ -7,30 +7,25 @@
         <div class="col-md-4 d-flex justify-content-center order-1 order-md-1">
             <div class="hstack gap-2">
                 <i class="fa-regular fa-envelope footer-icon"></i>
-                <a class="standard-font primary-text-color anchor-link" href="mailto:personal@miloszgilga.pl" target="_blank">
-                    personal@miloszgilga.pl
+                <a class="standard-font primary-text-color anchor-link" href="mailto:<%= personalData.firstEmail %>" target="_blank">
+                    <%= personalData.firstEmail %>
                 </a>
             </div>
         </div>
         <div class="col-md-4 d-flex justify-content-center order-3 order-md-2">
             <div class="hstack gap-3">
-                <a href="https://www.linkedin.com/in/miłosz-gilga-477201219" target="_blank" title="Go to my LinkedIn account">
-                    <i class="fa-brands fa-linkedin-in standard-icon"></i>
-                </a>
-                <a href="https://github.com/Milosz08" target="_blank" title="Go to my Github account">
-                    <i class="fa-brands fa-github standard-icon"></i>
-                </a>
-                <a href="https://stackoverflow.com/users/18847390/milosz08?tab=profile" target="_blank"
-                    title="Go to my StackOverflow profile">
-                    <i class="fa-brands fa-stack-overflow standard-icon"></i>
-                </a>
+                <% for (const link of socialLinks) { %>
+                    <a href="<%= link.link %>" target="_blank" title="<%= link.paraphrase %>">
+                        <i class="<%= link.iconClass %> standard-icon"></i>
+                    </a>
+                <% } %>
             </div>
         </div>
         <div class="col-md-4 d-flex justify-content-center order-2 order-md-3 mb-4 mb-md-0">
             <div class="hstack gap-2">
                 <i class="fa-solid fa-at footer-icon"></i>
-                <a class="standard-font primary-text-color anchor-link" href="mailto:business@miloszgilga.pl" target="_blank">
-                    business@miloszgilga.pl
+                <a class="standard-font primary-text-color anchor-link" href="mailto:<%= personalData.secondEmail %>" target="_blank">
+                    <%= personalData.secondEmail %>
                 </a>
             </div>
         </div>

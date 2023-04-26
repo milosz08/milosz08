@@ -1,3 +1,55 @@
 <%- include("../partials/session-alert.partial.ejs") %>
+<%- include("../partials/general-error-alert.partial.ejs") %>
+<%- include("../partials/decline-changes-modal.partial.ejs", { returnUrl: "/cms/personal-data" }) %>
 
-<h2>Personal data</h2>
+<h2 class="mb-3">Personal data</h2>
+<form method="post">
+    <div class="row">
+        <div class="col-12 mb-4">
+            <label for="descriptionTop" class="form-label">First (top) description (support markdown syntax):</label>
+            <textarea class="form-control <%= errors?.descriptionTop && "is-invalid" %>" id="descriptionTop"
+                name="dscTop" minlength="10" maxlength="500"><%= form.descriptionTop %></textarea>
+            <div class="invalid-feedback"><%= errors?.descriptionTop?.message %></div>
+        </div>
+        <div class="col-12 mb-4">
+            <label for="mavenCentralLink" class="form-label">Maven central link:</label>
+            <input class="form-control <%= errors?.mavenCentralLink && "is-invalid" %>" id="mavenCentralLink"
+                name="mvnLink" value="<%= form.mavenCentralLink %>">
+            <div class="invalid-feedback"><%= errors?.mavenCentralLink?.message %></div>
+        </div>
+        <div class="col-12 mb-4">
+            <label for="descriptionBottom" class="form-label">Second (bottom) description (support markdown syntax):</label>
+            <textarea class="form-control <%= errors?.descriptionBottom && "is-invalid" %>" id="descriptionBottom"
+                name="dscBottom" minlength="10" maxlength="500"><%= form.descriptionBottom %></textarea>
+            <div class="invalid-feedback"><%= errors?.descriptionBottom?.message %></div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <label for="firstEmail" class="form-label">First email (left):</label>
+            <input class="form-control <%= errors?.firstEmail && "is-invalid" %>" id="firstEmail"
+                name="firstEmail" value="<%= form.firstEmail %>">
+            <div class="invalid-feedback"><%= errors?.firstEmail?.message %></div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <label for="secondEmail" class="form-label">Second email (right):</label>
+            <input class="form-control <%= errors?.secondEmail && "is-invalid" %>" id="secondEmail"
+                name="secondEmail" value="<%= form.secondEmail %>">
+            <div class="invalid-feedback"><%= errors?.secondEmail?.message %></div>
+        </div>
+        <div class="col-12 b-4">
+            <label for="githubAccountLink" class="form-label">Github account email:</label>
+            <input class="form-control <%= errors?.githubAccountLink && "is-invalid" %>" id="githubAccountLink"
+                name="ghLink" value="<%= form.githubAccountLink %>">
+            <div class="invalid-feedback"><%= errors?.githubAccountLink?.message %></div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6 mb-2">
+            <button class="btn btn-outline-dark w-100" type="button" data-bs-toggle="modal" data-bs-target="#declineChanges">
+                Decline changes
+            </button>
+        </div>
+        <div class="col-md-6 mb-2">
+            <button class="btn btn-primary w-100" type="submit">Update personal details</button>
+        </div>
+    </div>
+</form>

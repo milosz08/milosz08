@@ -2,16 +2,11 @@
     <div class="row justify-content-between">
         <div class="col-md-6 d-flex justify-content-center justify-content-md-start order-2 order-md-1 mt-3 mt-md-0">
             <div class="hstack gap-3">
-                <a href="https://www.linkedin.com/in/miłosz-gilga-477201219" target="_blank" title="Go to my LinkedIn account">
-                    <i class="fa-brands fa-linkedin-in standard-icon"></i>
-                </a>
-                <a href="https://github.com/Milosz08" target="_blank" title="Go to my Github account">
-                    <i class="fa-brands fa-github standard-icon"></i>
-                </a>
-                <a href="https://stackoverflow.com/users/18847390/milosz08?tab=profile" target="_blank"
-                    title="Go to my StackOverflow profile">
-                    <i class="fa-brands fa-stack-overflow standard-icon"></i>
-                </a>
+                <% for (const link of socialLinks) { %>
+                    <a href="<%= link.link %>" target="_blank" title="<%= link.paraphrase %>">
+                        <i class="<%= link.iconClass %> standard-icon"></i>
+                    </a>
+                <% } %>
             </div>
         </div>
         <div class="col-md-6 d-flex justify-content-end order-1 order-md-2">
@@ -21,20 +16,17 @@
     <hr/>
     <div class="row justify-content-center">
         <div class="text-center mb-2 text-container">
-            Computer Science student at Silesian University of Technology and Java developer. Mostly work in: Angular,
-            Java SE/EE, Spring Framework/Boot, JPA, JSP/JSTL, FreeMarker, Hibernate, Liquibase, JPQL/SQL.
+            <%- personalData.descriptionTop %>
         </div>
     </div>
     <div class="d-flex my-4 justify-content-center">
-        <a class="gth-button" href="https://mvnrepository.com/search?q=pl.miloszgilga" target="_blank">
+        <a class="gth-button" href="<%= personalData.mavenCentralLink %>" target="_blank">
             Maven Central
         </a>
     </div>
     <div class="row justify-content-center">
         <div class="text-center mt-2 text-container">
-            My main interests are business process automation and applied algorithms used for digital images processing
-            (DIP/DSP). I have a fairly broad knowledge of Java and Typescript. I have basic knowledge of programming in
-            C, C++, C#, PHP and Matlab. I am currently learning Scala.
+            <%- personalData.descriptionBottom %>
         </div>
     </div>
 </header>

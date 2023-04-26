@@ -19,19 +19,7 @@ import { AlertTypeId } from "../utils/session";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class CmsController {
-
-    getPersonalsDataPage(req: Request, res: Response): void {
-        const { path, title, layout } = View.CMS_PERSONAL_DATA_EJS;
-        res.render(path, { title, layout });
-    };
-
-    async postPersonalsDataPage(req: Request, res: Response): Promise<void> {
-        const { path, title, layout } = View.CMS_PERSONAL_DATA_EJS;
-        res.render(path, { title, layout });
-    };
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class CmsProjectsController {
 
     getProjectsPage(req: Request, res: Response): void {
         const { path, title, layout } = Constant.CMS_PROJECTS_EJS;
