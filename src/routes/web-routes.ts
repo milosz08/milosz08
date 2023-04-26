@@ -13,10 +13,12 @@
 
 import { Router } from "express";
 
-import cmsController from "../controllers/cms.controller";
 import authController from "../controllers/auth.controller";
 import homeController from "../controllers/home.controller";
-import accountController from "../controllers/account.controller";
+import cmsAccountController from "../controllers/cms-account.controller";
+import cmsProjectsController from "../controllers/cms-projects.controller";
+import cmsSocialLinksController from "../controllers/cms-social-links.controller";
+import cmsPersonalDataController from "../controllers/cms-personal-data.controller";
 
 import isAuthMiddleware from "../middleware/is-auth.middleware";
 import isAuthAdminMiddleware from "../middleware/is-auth-admin.middleware";
@@ -35,25 +37,34 @@ router.get("/request-change-password",                  isNotLoggedAdminMiddlewa
 router.get("/change-password/:token",                   isNotLoggedAdminMiddleware,     authController.getChangePasswordPage);
 router.get("/first-login",                              isAuthMiddleware,               authController.getFirstLoginPage);
 
-router.get("/cms/accounts",                             isAuthAdminMiddleware,          accountController.getAccountsPage);
-router.get("/cms/account/add",                          isAuthAdminMiddleware,          accountController.getCreateAccountPage);
-router.get("/cms/account/update/:accountId",            isAuthAdminMiddleware,          accountController.getUpdateAccountPage);
-router.get("/cms/account/delete/:accountId",            isAuthAdminMiddleware,          accountController.getDeleteAccountRedirect);
-router.get("/cms/account/revoke-password/:accountId",   isAuthAdminMiddleware,          accountController.getRevokeAccountPasswordRedirect);
+router.get("/cms/accounts",                             isAuthAdminMiddleware,          cmsAccountController.getAccountsPage);
+router.get("/cms/account/add",                          isAuthAdminMiddleware,          cmsAccountController.getCreateAccountPage);
+router.get("/cms/account/update/:accountId",            isAuthAdminMiddleware,          cmsAccountController.getUpdateAccountPage);
+router.get("/cms/account/delete/:accountId",            isAuthAdminMiddleware,          cmsAccountController.getDeleteAccountRedirect);
+router.get("/cms/account/revoke-password/:accountId",   isAuthAdminMiddleware,          cmsAccountController.getRevokeAccountPasswordRedirect);
 
-router.get("/cms/personals",                            isAuthAdminMiddleware,          cmsController.getPersonalsDataPage);
-router.get("/cms/projects",                             isAuthMiddleware,               cmsController.getProjectsPage);
-router.get("/cms/project/add",                          isAuthMiddleware,               cmsController.getAddProjectPage);
-router.get("/cms/project/update/:projectId",            isAuthMiddleware,               cmsController.getUpdateProjectPage);
-router.get("/cms/project/delete/:projectId",            isAuthMiddleware,               cmsController.getDeleteProjectRedirect);
+router.get("/cms/social-links",                         isAuthAdminMiddleware,          cmsSocialLinksController.getSocialLinksPage);
+router.get("/cms/social-link/add",                      isAuthAdminMiddleware,          cmsSocialLinksController.getAddSocialLinksPage);
+router.get("/cms/social-link/update/:socialLinkId",     isAuthAdminMiddleware,          cmsSocialLinksController.getUpdateSocialLinksPage);
+router.get("/cms/social-link/delete/:socialLinkId",     isAuthAdminMiddleware,          cmsSocialLinksController.getDeleteSocialLinksRedirect);
+
+router.get("/cms/personal-data",                        isAuthAdminMiddleware,          cmsPersonalDataController.getPersonalsDataPage);
+
+router.get("/cms/projects",                             isAuthMiddleware,               cmsProjectsController.getProjectsPage);
+router.get("/cms/project/add",                          isAuthMiddleware,               cmsProjectsController.getAddProjectPage);
+router.get("/cms/project/update/:projectId",            isAuthMiddleware,               cmsProjectsController.getUpdateProjectPage);
+router.get("/cms/project/delete/:projectId",            isAuthMiddleware,               cmsProjectsController.getDeleteProjectRedirect);
 
 router.post("/login",                                   isNotLoggedAdminMiddleware,     authController.postLoginPage);
 router.post("/request-change-password",                 isNotLoggedAdminMiddleware,     authController.postRequestChangePasswordPage);
 router.post("/change-password/:token",                  isNotLoggedAdminMiddleware,     authController.postChangePasswordPage);
 router.post("/first-login",                             isAuthMiddleware,               authController.postFirstLoginPage);
 
-router.post("/cms/account/add",                         isNotLoggedAdminMiddleware,     accountController.postCreateAccountPage);
-router.post("/cms/account/update/:accountId",           isNotLoggedAdminMiddleware,     accountController.postUpdateAccountPage);
+router.post("/cms/account/add",                         isAuthAdminMiddleware,          cmsAccountController.postCreateAccountPage);
+router.post("/cms/account/update/:accountId",           isAuthAdminMiddleware,          cmsAccountController.postUpdateAccountPage);
+
+router.post("/cms/social-link/add",                     isAuthAdminMiddleware,          cmsSocialLinksController.postAddSocialLinksPage);
+router.post("/cms/social-link/update/:socialLinkId",    isAuthAdminMiddleware,          cmsSocialLinksController.postUpdateSocialLinksPage);
 
 router.post("/cms/personal-data",                       isAuthAdminMiddleware,          cmsPersonalDataController.postPersonalsDataPage);
 
