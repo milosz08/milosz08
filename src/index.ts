@@ -15,6 +15,7 @@ import express, { Express } from "express";
 import expressEjsLayouts from "express-ejs-layouts";
 import cookieParser from "cookie-parser";
 import expressSession from "express-session";
+import nocache from "nocache";
 
 import dbInit from "./db/config.db";
 import dbRunners from "./db/runners.db";
@@ -39,6 +40,7 @@ dbInit();
 dbRunners.removeNotUsedOtaTokensCronSchedule();
 dbRunners.migratePersonalDataToDb().then(_ => _);
 
+app.use(nocache());
 app.use(expressSession(session.configure()));
 app.use(expressEjsLayouts);
 app.set("layout", DEFAULT_LAYOUT);
