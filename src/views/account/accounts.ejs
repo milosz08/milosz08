@@ -26,16 +26,19 @@
                     <td class="align-middle"><%= user.email %></td>
                     <td class="align-middle"><%= user.role.toLowerCase() %></td>
                     <td class="align-middle fit">
-                        <button class="btn btn-success btn-sm lh-sm" data-bs-toggle="modal" data-bs-target="#revokePassword">
+                        <button class="btn btn-success btn-sm lh-sm" data-bs-toggle="modal"
+                            data-bs-target="#revokePassword<%= user._id %>">
                             Revoke password
                         </button>
                         <a class="btn btn-primary btn-sm lh-sm" href="/cms/account/update/<%= user._id %>">Edit</a>
-                        <button class="btn btn-danger btn-sm lh-sm" data-bs-toggle="modal" data-bs-target="#deleteAccount">
+                        <button class="btn btn-danger btn-sm lh-sm" data-bs-toggle="modal"
+                            data-bs-target="#deleteAccount<%= user._id %>">
                             Delete
                         </button>
                     </td>
                 </tr>
-                <div class="modal fade" id="revokePassword" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                <div class="modal fade" id="revokePassword<%= user._id %>" data-bs-backdrop="static"
+                    data-bs-keyboard="false" tabindex="-1">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -55,7 +58,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="deleteAccount" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                <div class="modal fade" id="deleteAccount<%= user._id %>" data-bs-backdrop="static"
+                    data-bs-keyboard="false" tabindex="-1">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
