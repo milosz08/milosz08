@@ -27,12 +27,14 @@
                     <td class="align-middle"><%= socialLink.iconClass %></td>
                     <td class="align-middle fit">
                         <a class="btn btn-primary btn-sm lh-sm" href="/cms/social-link/update/<%= socialLink._id %>">Edit</a>
-                        <button class="btn btn-danger btn-sm lh-sm" data-bs-toggle="modal" data-bs-target="#deleteSocialLink">
+                        <button class="btn btn-danger btn-sm lh-sm" data-bs-toggle="modal"
+                            data-bs-target="#deleteSocialLink<%= socialLink._id %>">
                             Delete
                         </button>
                     </td>
                 </tr>
-                <div class="modal fade" id="deleteSocialLink" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                <div class="modal fade" id="deleteSocialLink<%= socialLink._id %>" data-bs-backdrop="static"
+                    data-bs-keyboard="false" tabindex="-1">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">

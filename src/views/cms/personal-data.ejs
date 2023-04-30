@@ -8,7 +8,7 @@
         <div class="col-12 mb-4">
             <label for="descriptionTop" class="form-label">First (top) description (support markdown syntax):</label>
             <textarea class="form-control <%= errors?.descriptionTop && "is-invalid" %>" id="descriptionTop"
-                name="dscTop" minlength="10" maxlength="500"><%= form.descriptionTop %></textarea>
+                name="dscTop" minlength="10" maxlength="500" rows="7"><%= form.descriptionTop %></textarea>
             <div class="invalid-feedback"><%= errors?.descriptionTop?.message %></div>
         </div>
         <div class="col-12 mb-4">
@@ -20,7 +20,7 @@
         <div class="col-12 mb-4">
             <label for="descriptionBottom" class="form-label">Second (bottom) description (support markdown syntax):</label>
             <textarea class="form-control <%= errors?.descriptionBottom && "is-invalid" %>" id="descriptionBottom"
-                name="dscBottom" minlength="10" maxlength="500"><%= form.descriptionBottom %></textarea>
+                name="dscBottom" minlength="10" maxlength="500" rows="7"><%= form.descriptionBottom %></textarea>
             <div class="invalid-feedback"><%= errors?.descriptionBottom?.message %></div>
         </div>
         <div class="col-md-6 mb-4">

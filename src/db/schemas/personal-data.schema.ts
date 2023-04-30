@@ -29,7 +29,7 @@ const PersonalDataSchema: Schema<IPersonalData> = new Schema({
     descriptionTop: {
         type: String,
         required: [ true, "First description section is required." ],
-        minlength: [ 10, "First description section must have at least 3 characters." ],
+        minlength: [ 10, "First description section must have at least 10 characters." ],
         maxlength: [ 500, "First description section must have less or equal 500 characters." ],
     },
     mavenCentralLink: {
@@ -40,7 +40,7 @@ const PersonalDataSchema: Schema<IPersonalData> = new Schema({
     descriptionBottom: {
         type: String,
         required: [ true, "Second description section is required." ],
-        minlength: [ 10, "Second description section must have at least 3 characters." ],
+        minlength: [ 10, "Second description section must have at least 10 characters." ],
         maxlength: [ 500, "Second description section must have less or equal 500 characters." ],
     },
     firstEmail: {

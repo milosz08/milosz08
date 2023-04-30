@@ -84,7 +84,7 @@ class CmsSocialLinksController {
                 type: Constant.ALERT_SUCCESS,
                 message: "Social link was successfully created.",
             };
-            logger.info(`Successfull created new social link: ${savedNewSocialLink}.`);
+            logger.info(`Successfull created new social link: ${JSON.stringify(savedNewSocialLink)}.`);
             res.redirect("/cms/social-links");
         } catch (ex: any) {
             logger.error(`Failure create new social link. Cause: ${ex.message}`);
@@ -141,7 +141,7 @@ class CmsSocialLinksController {
                 type: Constant.ALERT_SUCCESS,
                 message: "Social link was successfully updated.",
             };
-            logger.info(`Successfull update social link: ${updatedSocialLink}.`);
+            logger.info(`Successfull update social link: ${JSON.stringify(updatedSocialLink)}.`);
             res.redirect("/cms/social-links");
         } catch (ex: any) {
             logger.error(`Failure update social link. Cause: ${ex.message}`);
@@ -175,7 +175,7 @@ class CmsSocialLinksController {
             await SocialLinkModel.findByIdAndRemove(socialLinkId);
 
             alertMessage = "Social link was successfully removed.";
-            logger.info(`Successfull delete social link: ${socialLink}.`);
+            logger.info(`Successfull delete social link: ${JSON.stringify(socialLink)}.`);
         } catch (ex: any) {
             alertType = Constant.ALERT_DANGER;
             alertMessage = ex.message;

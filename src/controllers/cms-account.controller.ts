@@ -98,7 +98,7 @@ class CmsAccountController {
                 message: `Account for <strong>${login}</strong> was successfully created. Check mailbox
                     <strong>${email}</strong> and follow for rest of instructions.`,
             };
-            logger.info(`Successfull created user account and send email message. Account: ${savedUser}`);
+            logger.info(`Successfull created user account and send email message. Account: ${JSON.stringify(savedUser)}`);
             res.redirect("/cms/accounts");
         } catch (ex: any) {
             logger.error(`Failure created user account. Cause: ${ex.message}`);
@@ -163,7 +163,7 @@ class CmsAccountController {
                 type: Constant.ALERT_SUCCESS,
                 message: `Account with login <strong>${user.login}</strong> was successfully updated.`,
             };
-            logger.info(`Successfull updated user account. Account: ${updatedUser}`);
+            logger.info(`Successfull updated user account. Account: ${JSON.stringify(updatedUser)}`);
             res.redirect("/cms/accounts");
         } catch (ex: any) {
             logger.error(`Failure updated account informations. Cause: ${ex.message}`);
@@ -202,7 +202,7 @@ class CmsAccountController {
             }
             await UserModel.findByIdAndDelete(user._id);
             alertMessage = `User account with login <strong>${user.login}</strong> was successfully deleted.`;
-            logger.info(`Successfull deleted user account. Account: ${user}`);
+            logger.info(`Successfull deleted user account. Account: ${JSON.stringify(user)}`);
         } catch (ex: any) {
             alertType = Constant.ALERT_DANGER;
             alertMessage = ex.message;
