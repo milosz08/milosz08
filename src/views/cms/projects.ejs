@@ -1,3 +1,64 @@
 <%- include("../partials/session-alert.partial.ejs") %>
 
-<h2>Projects</h2>
+<h2 class="mb-3">Projects</h2>
+
+<%- include("../partials/search-form.partial.ejs", {
+    searchBy: "name/alternative name", addContentPath: "/cms/project/add", addContentText: "project"
+}) %>
+
+<% if (projects.length !== 0) { %>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered mt-3">
+            <thead>
+            <tr>
+                <th>Lp.</th>
+                <th>Alternative name</th>
+                <th>Name</th>
+                <th class="fit">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% projects.forEach((project, index) => { %>
+                <tr>
+                    <td class="align-middle"><%= ((page - 1) * totalPerPage) + index + 1 %></td>
+                    <td class="align-middle"><%- project.alternativeName || '<i>none</i>' %></td>
+                    <td class="align-middle"><%= project.name %></td>
+                    <td class="align-middle fit">
+                        <a class="btn btn-primary btn-sm lh-sm" href="/cms/project/update/<%= project._id %>">Edit</a>
+                        <button class="btn btn-danger btn-sm lh-sm" data-bs-toggle="modal"
+                            data-bs-target="#deleteProject<%= project._id %>">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <div class="modal fade" id="deleteProject<%= project._id %>" data-bs-backdrop="static"
+                    data-bs-keyboard="false" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete project</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to delete project <strong><%= project.name %></strong>?
+                                Changes will not be able to be revoked.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+                                <a href="/cms/project/delete/<%= project._id %>" class="btn btn-outline-danger">
+                                    Delete project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+            </tbody>
+        </table>
+    </div>
+<% } else { %>
+    <div class="alert alert-warning">No projects were found from the search results.</div>
+<% } %>
+
+<%- include("../partials/pagination.partial.ejs", { showingCount: projects.length }) %>
+

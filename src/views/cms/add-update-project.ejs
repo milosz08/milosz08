@@ -1,3 +1,55 @@
 <%- include("../partials/session-alert.partial.ejs") %>
+<%- include("../partials/decline-changes-modal.partial.ejs", { returnUrl: "/cms/projects" }) %>
 
-<h1>Add/Update project</h1>
+<h2 class="mb-1"><%= projectAction %> project</h2>
+<div class="row mb-3">
+    <a href="/cms/projects">Return to projects</a>
+</div>
+<form method="post">
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <label for="ghProject" class="form-label">Select Github project:</label>
+            <select id="ghProject" class="form-select <%= errors?.id && "is-invalid" %>" name="ghProject">
+                <% for (const project of projects) { %>
+                    <option value="<%= project.name %>" <%= form.ghProject === project.name && "selected" %>>
+                        <%= project.name %>
+                    </option>
+                <% } %>
+            </select>
+            <div class="invalid-feedback"><%= errors?.id?.message %></div>
+        </div>
+        <div class="col-md-12 mb-3">
+            <label for="alternativeName" class="form-label">Alternative project name (not required):</label>
+            <input type="text" class="form-control <%= errors?.alternativeName && "is-invalid" %>" id="alternativeName"
+                value="<%= form.altName %>" name="altName" maxlength="150">
+            <div class="invalid-feedback"><%= errors?.alternativeName?.message %></div>
+        </div>
+        <div class="col-md-12 mb-3">
+            <label for="detailsDescription" class="form-label">
+                Details description (max 2000 characters, markdown support):
+            </label>
+            <textarea class="form-control <%= errors?.detailsDescription && "is-invalid" %>" id="detailsDescription"
+                name="detDesc" minlength="10" maxlength="2000" rows="10"><%= form.detDesc %></textarea>
+            <div class="invalid-feedback"><%= errors?.detailsDescription?.message %></div>
+        </div>
+        <div class="col-md-12">
+            <div class="projectTechStacksContainer" data-tech-stacks="<%= techStacks %>"></div>
+            <button type="button" class="btn btn-primary w-100 addNewInput">
+                Add new tech stack element
+            </button>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6 mb-2">
+            <button class="btn btn-outline-dark w-100" type="button" data-bs-toggle="modal" data-bs-target="#declineChanges">
+                Decline changes
+            </button>
+        </div>
+        <div class="col-md-6 mb-2">
+            <button class="btn btn-primary w-100" type="submit"><%= projectAction %> project</button>
+        </div>
+    </div>
+</form>
+
+<%- contentFor('additional-scripts') %>
+<script src="/assets/js/tech-stacks-inserter.js"></script>
