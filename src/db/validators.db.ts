@@ -32,6 +32,10 @@ class ValidatorsDb {
     validateLink(link: string): boolean {
         return LINK_REGEX.test(link);
     };
+
+    validateLinkNotRequired(link: string): boolean {
+        return LINK_REGEX.test(link) || link === null;
+    };
 }
 
 export default new ValidatorsDb;

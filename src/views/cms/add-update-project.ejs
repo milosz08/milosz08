@@ -19,10 +19,16 @@
             <div class="invalid-feedback"><%= errors?.id?.message %></div>
         </div>
         <div class="col-md-12 mb-3">
-            <label for="alternativeName" class="form-label">Alternative project name (not required):</label>
+            <label for="alternativeName" class="form-label">Alternative project name:</label>
             <input type="text" class="form-control <%= errors?.alternativeName && "is-invalid" %>" id="alternativeName"
                 value="<%= form.altName %>" name="altName" maxlength="150">
             <div class="invalid-feedback"><%= errors?.alternativeName?.message %></div>
+        </div>
+        <div class="col-md-12 mb-3">
+            <label for="externalLink" class="form-label">External link (not required):</label>
+            <input type="text" class="form-control <%= errors?.externalLink && "is-invalid" %>" id="externalLink"
+                value="<%= form.extLink %>" name="extLink" maxlength="150">
+            <div class="invalid-feedback"><%= errors?.externalLink?.message %></div>
         </div>
         <div class="col-md-12 mb-3">
             <label for="detailsDescription" class="form-label">

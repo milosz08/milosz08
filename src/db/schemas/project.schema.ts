@@ -14,6 +14,8 @@
 import mongoose, { Model, Schema } from "mongoose";
 import uniqueValidator from "mongoose-unique-validator";
 
+import dbValidators from "../validators.db";
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 export interface ITechStackPos {
@@ -25,6 +27,7 @@ export interface IProject {
     id: number;
     name: string;
     alternativeName: string;
+    externalLink: string;
     detailsDescription: string;
     techStackPositions: ITechStackPos[];
 }
@@ -45,6 +48,10 @@ const ProjectSchema: Schema<IProject> = new Schema({
         required: [ true, "Alternative name field is required." ],
         minlength: [ 2, "Alternative name must have at least 2 characters." ],
         maxlength: [ 150, "Alternative name must have less or equal 150 characters." ],
+    },
+    externalLink: {
+        type: String,
+        validate: [ dbValidators.validateLinkNotRequired, "Link is invalid." ],
     },
     detailsDescription: {
         type: String,

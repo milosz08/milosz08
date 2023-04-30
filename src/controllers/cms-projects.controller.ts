@@ -76,7 +76,7 @@ class CmsProjectsController {
 
     async postAddProjectPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = Constant.CMS_ADD_PROJECT_EJS;
-        const { ghProject, altName, detDesc, techStacks } = req.body;
+        const { ghProject, altName, detDesc, techStacks, extLink } = req.body;
 
         const notPersistProjects = await githubApi.getAllParsedNotPersistedProject();
         try {
@@ -84,6 +84,7 @@ class CmsProjectsController {
                 id: await githubApi.getRepoId(ghProject),
                 name: ghProject,
                 alternativeName: altName,
+                externalLink: extLink || null,
                 detailsDescription: detDesc,
                 techStackPositions: techStacks.map((s: string, i: number) => ({ pos: i, name: s })),
             });
@@ -127,20 +128,20 @@ class CmsProjectsController {
             return;
         }
         const notPersistProjects = await githubApi.getAllParsedNotPersistedProject(project.name);
-        const { name, alternativeName, detailsDescription } = project;
+        const { name, alternativeName, externalLink, detailsDescription } = project;
         const techStacks = project.techStackPositions.map(e => ({ name: e.name, error: false, errorMess: "" }));
 
         res.render(path, { title, layout,
             projectAction: "Update",
             projects: notPersistProjects,
-            form: { ghProject: name, altName: alternativeName, detDesc: detailsDescription },
+            form: { ghProject: name, altName: alternativeName, extLink: externalLink, detDesc: detailsDescription },
             techStacks: JSON.stringify(techStacks),
         });
     };
 
     async postUpdateProjectPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = Constant.CMS_UPDATE_PROJECT_EJS;
-        const { ghProject, altName, detDesc, techStacks } = req.body;
+        const { ghProject, altName, extLink, detDesc, techStacks } = req.body;
         const { projectId } = req.params;
         if (!mongoose.Types.ObjectId.isValid(projectId)) {
             res.redirect("/cms/projects");
@@ -156,6 +157,7 @@ class CmsProjectsController {
             updatedProject.id = notPersistProjects.find(e => e.name === ghProject)?.id;
             updatedProject.name = ghProject;
             updatedProject.alternativeName = altName;
+            updatedProject.externalLink = extLink || null;
             updatedProject.detailsDescription = detDesc;
             updatedProject.techStackPositions = techStacks.map((s: string, i: number) => ({ pos: i, name: s }));
 
