@@ -1,38 +1,99 @@
 <div class="container mt-5 overflow-hidden">
     <h5 class="text-center fw-normal">Selected projects<span class="secondary-text-color">:</span></h5>
-    <div class="row my-4 gx-3 gy-3">
-        <div class="col-md-4">
-            <div class="gth-project-container p-2">
-                1123
-            </div>
+    <div class="mt-4 mx-0 row d-flex justify-content-between">
+        <div class="col-md-3 px-0 d-none d-md-flex mx-0">
+            <a class="gth-button h-100 hstack gap-2 <%= page <= 1 && "disabled" %>"
+                href="<%= paginationUrl %>page=<%= page - 1 %>">
+                <i class="bi bi-arrow-left d-block gth-icon"></i>
+                Prev page
+            </a>
         </div>
-        <div class="col-md-4">
-            <div class="gth-project-container p-2">
-                1123
-            </div>
+        <div class="col-md-6 px-0 mx-0">
+            <form method="get" class="d-flex h-100 w-100">
+                <input type="text" name="q" class="gth-input w-100" placeholder="Search by name..." value="<%= query.q %>">
+                <button class="gth-button small-padding h-100 ms-2">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
         </div>
-        <div class="col-md-4">
-            <div class="gth-project-container p-2">
-                1123
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="gth-project-container p-2">
-                1123
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="gth-project-container p-2">
-                1123
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="gth-project-container p-2">
-                1123
-            </div>
+        <div class="col-md-3 px-0 d-none d-md-flex mx-0 justify-content-end">
+            <a class="gth-button h-100 hstack gap-2 <%= page >= pagesCount && "disabled" %>"
+                href="<%= paginationUrl %>page=<%= page + 1 %>">
+                Next page
+                <i class="bi bi-arrow-right d-block gth-icon"></i>
+            </a>
         </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="hstack mx-0 mt-2 gap-2 d-flex d-md-none w-100">
+        <a class="gth-button hstack gap-2 justify-content-center <%= page <= 1 && "disabled" %>"
+            href="<%= paginationUrl %>page=<%= page - 1 %>">
+            <i class="bi bi-arrow-left d-block gth-icon"></i>
+            Prev page
+        </a>
+        <a class="gth-button hstack gap-2 justify-content-center <%= page >= pagesCount && "disabled" %>"
+            href="<%= paginationUrl %>page=<%= page + 1 %>">
+            Next page
+            <i class="bi bi-arrow-right d-block gth-icon"></i>
+        </a>
+    </div>
+    <div class="row my-4 w-100 mx-0">
+        <% if (mergedData.length > 0) { %>
+            <% for (const projectData of mergedData) { %>
+                <div class="col-md-4 p-2">
+                    <div class="gth-project-container d-flex flex-column justify-content-between p-3 h-100">
+                        <div>
+                            <div class="hstack gap-2 align-items-center">
+                                <i class="bi bi-code-slash secondary-text-color d-block gth-icon"></i>
+                                <a class="standard-font primary-text-color anchor-link mb-0 me-auto"
+                                    href="/project/<%= projectData.projectDb.name %>">
+                                    <%= projectData.projectDb.alternativeName %>
+                                </a>
+                                <a class="secondary-text-color text-decoration-none" title="Go to github repository"
+                                    href="<%= projectData.projectApi.htmlUrl %>">
+                                    <i class="bi bi-git darken-icon gth-icon"></i>
+                                </a>
+                            </div>
+                            <p class="text-secondary my-3 lh-sm">
+                                <%= projectData.projectApi.description %>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="hstack gap-2">
+                                <span class="gth-rounded-color-ind"
+                                    style="background-color: <%= projectData.projectApi.primaryLanguageColor %>;"></span>
+                                <span class="text-secondary"><%= projectData.projectApi.primaryLanguage %></span>
+                            </div>
+                            <div class="hstack gap-3">
+                                <div class="hstack gap-1" title="stars">
+                                    <i class="fa-regular fa-star darken-icon gth-icon"></i>
+                                    <span class="text-secondary"><%= projectData.projectApi.starsCount %></span>
+                                </div>
+                                <div class="hstack gap-1" title="watchers">
+                                    <i class="fa-regular fa-eye darken-icon gth-icon"></i>
+                                    <span class="text-secondary"><%= projectData.projectApi.watchersCount %></span>
+                                </div>
+                                <div class="hstack gap-1" title="forks">
+                                    <i class="fa-solid fa-code-fork darken-icon gth-icon"></i>
+                                    <span class="text-secondary"><%= projectData.projectApi.forksCount %></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        <% } else { %>
+            <div class="col-md-12 d-flex justify-content-center">
+                <div class="gth-alert p-3">
+                    Project was not found based on the search term: <span class="primary-text-color"><%= query.q %></span>.
+                    Enter the phrase again, or if you can't find the project, check out my
+                    github <a class="primary-text-color anchor-link" href="<%= personalData.githubAccountLink %>" target="_blank">
+                        at this link
+                    </a>.
+                </div>
+            </div>
+        <% } %>
+    </div>
+    <div class="row mt-2 justify-content-center">
         <p class="text-container text-center">
             Other projects you could find on my
             <a class="standard-font primary-text-color anchor-link" href="<%= personalData.githubAccountLink %>"

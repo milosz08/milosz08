@@ -58,6 +58,10 @@ body {
     font-size: 1rem;
 }
 
+.darken-icon {
+    color: var(--darken-icon-color);
+}
+
 .secondary-text-color,
 .secondary-text-color:hover {
     color: var(--anchor-link-icon-color);
@@ -93,6 +97,12 @@ body {
     box-shadow: 0 1px 0 rgba(27,31,36,0.04), 0 1px 0 rgba(27,31,36,0.04);
     text-decoration: none;
     width: fit-content;
+    cursor: pointer;
+}
+
+.gth-button.small-padding {
+    padding: 5px 12px;
+    max-width: 40px;
 }
 
 .gth-button:hover {
@@ -101,11 +111,54 @@ body {
     background-color: var(--button-hover-background);
 }
 
+.gth-button.disabled,
+.gth-button:disabled {
+    opacity: .5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.gth-input {
+    color: var(--button-foreground);
+    font-size: .8rem;
+    box-shadow: 0 1px 0 rgba(27,31,36,0.04), 0 1px 0 rgba(27,31,36,0.04);
+    background-color: transparent;
+    border: .15em solid var(--button-border-color);
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+.gth-icon {
+    margin-top: 2px;
+}
+
+.gth-input::placeholder {
+    color: var(--anchor-link-icon-color);
+}
+
 .gth-project-container {
     border: .05em solid var(--button-border-color);
     background-color: var(--background-color);
     border-radius: 5px;
     font-size: .9rem;
+}
+
+.gth-alert {
+    border: .05em solid var(--button-border-color);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    max-width: 600px;
+    width: 100%;
+    font-size: .8rem;
+    box-shadow: 0 1px 0 rgba(27,31,36,0.04), 0 1px 0 rgba(27,31,36,0.04);
+    color: var(--anchor-link-icon-color);
+}
+
+.gth-rounded-color-ind {
+    width: 12px;
+    height: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
 }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
