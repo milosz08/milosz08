@@ -25,6 +25,7 @@ export interface ITechStackPos {
 
 export interface IProject {
     id: number;
+    position: number;
     name: string;
     alternativeName: string;
     externalLink: string;
@@ -37,6 +38,10 @@ const ProjectSchema: Schema<IProject> = new Schema({
         type: Number,
         unique: true,
         required: [ true, "Github project id field is required." ],
+    },
+    position: {
+        type: Number,
+        required: [ true, "Project position field is required." ],
     },
     name: {
         type: String,

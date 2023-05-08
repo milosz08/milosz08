@@ -12,6 +12,7 @@
             <thead>
             <tr>
                 <th>Lp.</th>
+                <th>Position</th>
                 <th>Alternative name</th>
                 <th>Name</th>
                 <th class="fit">Action</th>
@@ -21,6 +22,7 @@
             <% projects.forEach((project, index) => { %>
                 <tr>
                     <td class="align-middle"><%= ((page - 1) * totalPerPage) + index + 1 %></td>
+                    <td class="align-middle"><%= project.position %></td>
                     <td class="align-middle"><%- project.alternativeName || '<i>none</i>' %></td>
                     <td class="align-middle"><%= project.name %></td>
                     <td class="align-middle fit">

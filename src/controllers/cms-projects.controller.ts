@@ -36,7 +36,7 @@ class CmsProjectsController {
 
         const regex = { $regex: q || "", $options: "i" };
         const where = { $or: [ { name: regex }, { alternativeName: regex } ] };
-        let query = ProjectModel.find(where);
+        let query = ProjectModel.find(where).sort({ position: 1 });
 
         const resultsCount = await ProjectModel.find(where).count();
         const pagesCount = Math.ceil(resultsCount / totalPerPage);
@@ -79,9 +79,11 @@ class CmsProjectsController {
         const { ghProject, altName, detDesc, techStacks, extLink } = req.body;
 
         const notPersistProjects = await githubApi.getAllParsedNotPersistedProject();
+        const projectsCount = await ProjectModel.find({}).count();
         try {
             const newProject = new ProjectModel({
                 id: await githubApi.getRepoId(ghProject),
+                position: projectsCount + 1,
                 name: ghProject,
                 alternativeName: altName,
                 externalLink: extLink || null,
@@ -118,6 +120,8 @@ class CmsProjectsController {
     async getUpdateProjectPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = Constant.CMS_UPDATE_PROJECT_EJS;
         const { projectId } = req.params;
+
+        const projectsCount = await ProjectModel.find({}).count();
         if (!mongoose.Types.ObjectId.isValid(projectId)) {
             res.redirect("/cms/projects");
             return;
@@ -128,20 +132,22 @@ class CmsProjectsController {
             return;
         }
         const notPersistProjects = await githubApi.getAllParsedNotPersistedProject(project.name);
-        const { name, alternativeName, externalLink, detailsDescription } = project;
+        const { name, alternativeName, position, externalLink, detailsDescription } = project;
         const techStacks = project.techStackPositions.map(e => ({ name: e.name, error: false, errorMess: "" }));
 
         res.render(path, { title, layout,
             projectAction: "Update",
             projects: notPersistProjects,
-            form: { ghProject: name, altName: alternativeName, extLink: externalLink, detDesc: detailsDescription },
+            posMax: projectsCount,
+            form: { ghProject: name, listPos: position, altName: alternativeName,
+                extLink: externalLink, detDesc: detailsDescription },
             techStacks: JSON.stringify(techStacks),
         });
     };
 
     async postUpdateProjectPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = Constant.CMS_UPDATE_PROJECT_EJS;
-        const { ghProject, altName, extLink, detDesc, techStacks } = req.body;
+        const { ghProject, listPos, altName, extLink, detDesc, techStacks } = req.body;
         const { projectId } = req.params;
         if (!mongoose.Types.ObjectId.isValid(projectId)) {
             res.redirect("/cms/projects");
@@ -153,9 +159,17 @@ class CmsProjectsController {
             return;
         }
         const notPersistProjects = await githubApi.getAllParsedNotPersistedProject(updatedProject.name);
+        const projectsCount = await ProjectModel.find({}).count();
         try {
+            const updatedProjectPos = await ProjectModel.findOne({ position: listPos });
+            const prevValue = updatedProject.position;
+            if (updatedProjectPos) {
+                updatedProjectPos.position = prevValue;
+                await updatedProjectPos.save();
+            }
             updatedProject.id = notPersistProjects.find(e => e.name === ghProject)?.id;
             updatedProject.name = ghProject;
+            updatedProject.position = listPos;
             updatedProject.alternativeName = altName;
             updatedProject.externalLink = extLink || null;
             updatedProject.detailsDescription = detDesc;
@@ -181,6 +195,7 @@ class CmsProjectsController {
                 errors: ex.errors,
                 projects: notPersistProjects,
                 form: req.body,
+                posMax: projectsCount,
                 techStacks: JSON.stringify(techStacksWithErrors),
             });
         }
@@ -204,6 +219,20 @@ class CmsProjectsController {
                 res.redirect("/cms/projects");
                 return;
             }
+            const remainingElements = await ProjectModel
+                .findByIdAndUpdate(
+                    { _id: projectId },
+                    { $pull: { arrayField: { _id: projectId } } },
+                    { new: true }
+                )
+                .select({ position: 1 })
+                .then((deletedElement) =>
+                    ProjectModel.find({ position: { $gt: deletedElement!.position } }).sort({ position: 1 })
+                );
+            await ProjectModel.updateMany(
+                { _id: { $in: remainingElements.map((e) => e._id) } },
+                { $inc: { position: -1 } }
+            );
             await ProjectModel.findByIdAndRemove(projectId);
 
             alertMessage = `Project <strong>${project.name}</strong> was successfully removed.`;

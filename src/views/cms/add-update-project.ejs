@@ -30,6 +30,19 @@
                 value="<%= form.extLink %>" name="extLink" maxlength="150">
             <div class="invalid-feedback"><%= errors?.externalLink?.message %></div>
         </div>
+        <% if (projectAction.toLowerCase() === "update") { %>
+            <div class="col-md-12 mb-3">
+                <label for="externalLink" class="form-label">Position on list:</label>
+                <select id="ghProject" class="form-select <%= errors?.position && "is-invalid" %>" name="listPos">
+                    <% for (let i = 1; i <= posMax; i++) { %>
+                        <option value="<%= i %>" <%= form.listPos === i && "selected" %>>
+                            <%= i %>
+                        </option>
+                    <% } %>
+                </select>
+                <div class="invalid-feedback"><%= errors?.position?.message %></div>
+            </div>
+        <% } %>
         <div class="col-md-12 mb-3">
             <label for="detailsDescription" class="form-label">
                 Details description (max 2000 characters, markdown support):
