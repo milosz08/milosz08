@@ -15,18 +15,15 @@ const preferColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
 const changeThemeButton = document.querySelector(".change-theme-btn");
 
 const DISABLE_ANIMATIONS_CLASS = "disable-animations";
-const DARK_THEME_CLASS = "dark-theme";
 const BUTTON_DARK_TEXT = "Set theme to LIGHT";
 const BUTTON_LIGHT_TEXT = "Set theme to DARK";
 
 const addClass = className => document.body.classList.add(className);
 const removeClass = className => document.body.classList.remove(className);
 const removeClassOnTimeout = (className, timeout = 100) => setTimeout(() => removeClass(className), timeout);
-const toggleClass = className => document.body.classList.toggle(className);
-const containsClass = className => document.body.classList.contains(className);
 
 function changeThemeFallback() {
-    if (containsClass(DARK_THEME_CLASS)) {
+    if (document.documentElement.dataset.theme === "DARK") {
         changeThemeButton.innerText = BUTTON_DARK_TEXT;
     } else {
         changeThemeButton.innerText = BUTTON_LIGHT_TEXT;
@@ -35,27 +32,23 @@ function changeThemeFallback() {
 
 function onChangeColorScheme() {
     addClass(DISABLE_ANIMATIONS_CLASS);
-    toggleClass(DARK_THEME_CLASS);
-    if (containsClass(DARK_THEME_CLASS)) {
-        Cookies.set("THEME", "DARK", { expires: 365 });
+    if (document.documentElement.dataset.theme === "LIGHT") {
+        localStorage.setItem("THEME", "DARK");
+        document.documentElement.dataset.theme = "DARK";
     } else {
-        Cookies.set("THEME", "LIGHT", { expires: 365 });
+        localStorage.setItem("THEME", "LIGHT");
+        document.documentElement.dataset.theme = "LIGHT";
     }
     changeThemeFallback();
     removeClassOnTimeout(DISABLE_ANIMATIONS_CLASS);
 }
 
 function changeColorTheme(isDark) {
-    if (Cookies.get("THEME") === 'DARK') {
-        isDark = true;
-    } else if (Cookies.get("THEME") === 'LIGHT') {
-        isDark = false;
-    }
     addClass(DISABLE_ANIMATIONS_CLASS);
-    if (isDark) {
-        addClass(DARK_THEME_CLASS);
+    if (isDark || document.documentElement.dataset.theme === "DARK") {
+        document.documentElement.dataset.theme = "DARK";
     } else {
-        removeClass(DARK_THEME_CLASS);
+        document.documentElement.dataset.theme = "LIGHT";
     }
     changeThemeFallback();
     removeClassOnTimeout(DISABLE_ANIMATIONS_CLASS);
