@@ -11,7 +11,7 @@
  * original author. Project created only for personal purposes.
  */
 
-import { Router } from "express";
+import { Request, Response, Router } from "express";
 
 import authController from "../controllers/auth.controller";
 import homeController from "../controllers/home.controller";
@@ -71,7 +71,7 @@ router.post("/cms/personal-data",                       isAuthAdminMiddleware,  
 router.post("/cms/project/add",                         isAuthMiddleware,               cmsProjectsController.postAddProjectPage);
 router.post("/cms/project/update/:projectId",           isAuthMiddleware,               cmsProjectsController.postUpdateProjectPage);
 
-router.get("/cms",                                      (req, res) => res.redirect("/cms/projects"));
-router.get("*",                                         (req, res) => res.redirect("/"));
+router.get("/cms",                                      (req: Request, res: Response) => res.redirect("/cms/projects"));
+router.get("*",                                         (req: Request, res: Response) => res.redirect("/"));
 
 export default router;
