@@ -18,7 +18,7 @@ import config from "../utils/config";
 import logger from "../utils/logger";
 import { ADMIN } from "../utils/constants";
 import utilities from "../utils/utilities";
-import { PersonalJsonData } from "../models/personal-data.model";
+import { IPersonalJsonData } from "../models/personal-data.model";
 
 import { UserModel } from "./schemas/user.schema";
 import { OtaTokenModel } from "./schemas/ota-token.schema";
@@ -65,7 +65,7 @@ class RunnersDb {
 
     async migratePersonalDataToDb(): Promise<void> {
         const rawFileData = fs.readFileSync(utilities.getProjectRootPath(`/public/${this.PERSONAL_DATA_FILE}`));
-        const jsonFileData: PersonalJsonData = JSON.parse(rawFileData.toString());
+        const jsonFileData: IPersonalJsonData = JSON.parse(rawFileData.toString());
 
         const personalData = await PersonalDataModel.find();
         if (personalData.length === 0) {

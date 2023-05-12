@@ -11,12 +11,7 @@
  * original author. Project created only for personal purposes.
  */
 
-export class ProjectSelectDataModel {
+export interface IProjectSelectDataModel {
     id: number;
     name: string;
-
-    constructor(id: number, name: string) {
-        this.id = id;
-        this.name = name;
-    }
 }

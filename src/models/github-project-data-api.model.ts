@@ -11,7 +11,7 @@
  * original author. Project created only for personal purposes.
  */
 
-export class GithubProjectDataApiModel {
+export interface IGithubProjectDataApiModel {
     id: number;
     htmlUrl: string;
     description: string;
@@ -20,18 +20,4 @@ export class GithubProjectDataApiModel {
     forksCount: number;
     primaryLanguage: string;
     primaryLanguageColor: string;
-
-    constructor(
-        id: number, htmlUrl: string, description: string, starsCount: number, watchersCount: number, forksCount: number,
-        primaryLanguage: string, primaryLanguageColor: string,
-    ) {
-        this.id = id;
-        this.htmlUrl = htmlUrl;
-        this.description = description;
-        this.starsCount = starsCount;
-        this.watchersCount = watchersCount;
-        this.forksCount = forksCount;
-        this.primaryLanguage = primaryLanguage;
-        this.primaryLanguageColor = primaryLanguageColor;
-    };
 }
