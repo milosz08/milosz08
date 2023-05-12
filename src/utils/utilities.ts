@@ -18,6 +18,7 @@ import * as Constant from "./constants";
 import { AlertType, AlertTypeId } from "./session";
 
 import { IUser } from "../db/schemas/user.schema";
+import { HtmlRenderer, Parser } from "commonmark";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -82,6 +83,12 @@ class Utilities {
             return `${paginationUrl}page=${selectedPage}&total=${totalDefault}`;
         }
         return "";
+    };
+
+    parseMarkdown(rawData: string): string {
+        const reader = new Parser();
+        const writer = new HtmlRenderer();
+        return writer.render(reader.parse(rawData));
     };
 }
 

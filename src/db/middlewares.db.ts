@@ -12,8 +12,8 @@
  */
 
 import * as bcrypt from "bcrypt";
-import { Parser, HtmlRenderer } from "commonmark";
 
+import utilities from "../utils/utilities";
 import { PersonalDataModel } from "./schemas/personal-data.schema";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,15 +25,12 @@ class MiddlewaresDb {
         return bcrypt.hashSync(rawPassword, salt)
     };
 
-    async getPersonalDataAndMarkdownParse() {
-        const reader = new Parser();
-        const writer = new HtmlRenderer();
-
+    async getPersonalDataAndMarkdownParse(): Promise<object> {
         const personalData = await PersonalDataModel.findOne();
         if (!personalData) return {};
 
-        personalData.descriptionTop = writer.render(reader.parse(personalData.descriptionTop));
-        personalData.descriptionBottom = writer.render(reader.parse(personalData.descriptionBottom));
+        personalData.descriptionTop = utilities.parseMarkdown(personalData.descriptionTop);
+        personalData.descriptionBottom = utilities.parseMarkdown(personalData.descriptionBottom);
         return personalData;
     };
 }
