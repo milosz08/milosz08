@@ -11,17 +11,19 @@
  * original author. Project created only for personal purposes.
  */
 
-export interface PersonalJsonData {
+export interface IPersonalJsonData {
     description_top: string;
     description_bottom: string;
     maven_central_link: string;
     first_email: string;
     second_email: string;
     github_account_link: string;
-    social_links: PersonalLinkJsonData[];
+    social_links: IPersonalLinkJsonData[];
 }
 
-export interface PersonalLinkJsonData {
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+export interface IPersonalLinkJsonData {
     name: string;
     paraphrase: string;
     link: string;
