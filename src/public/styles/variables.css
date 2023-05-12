@@ -11,6 +11,10 @@
  * original author. Project created only for personal purposes.
  */
 
+body {
+    --topic-foreground: #2f81f7;
+}
+
 html[data-theme="LIGHT"] body {
     --background-color: #ffffff;
     --background-inverse-color: #24292f;
@@ -24,6 +28,7 @@ html[data-theme="LIGHT"] body {
     --button-hover-background: hsla(220, 14%, 93%, 1);
     --button-hover-border-color: rgba(27,31,36,0.15);
     --separator-color: #c0c7cf;
+    --topic-background: rgba(56,139,253,.1);
 }
 
 html[data-theme="DARK"] body {
@@ -39,4 +44,5 @@ html[data-theme="DARK"] body {
     --button-hover-background: #2c3138;
     --button-hover-border-color: #95999e;
     --separator-color: #21262d;
+    --topic-background: rgba(56,139,253,.1);
 }

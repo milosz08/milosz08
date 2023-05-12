@@ -80,11 +80,41 @@ class GithubApi {
             });
     };
 
-                return new GithubProjectDataApiModel(
-                    r.id, r.html_url, r.description, r.stargazers_count, r.watchers_count, r.forks_count, r.language,
-                    foundedColor
-                );
-            });
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    async getSingleProjectDetails(repoName: string): Promise<IGithubProjectDetailsApiModel> {
+        const { data: projectData } = await this.axiosInstance.get(this.GH_REPO(repoName));
+        const { data: langData } = await this.axiosInstance.get(this.GH_REPO_LANGS(repoName));
+        const { data: colorsData } = await this.axiosInstance.get(this.GH_COLORS());
+
+        const allLanguagesCount = Object.values(langData).reduce((sum: number, langDataObj: any) => sum + langDataObj, 0);
+        const lowerLangs = Object.keys(langData).map(l => l.toLowerCase());
+
+        const allLanguagesColorKeys = Object.entries(colorsData)
+            .filter(([ key, _ ]) => lowerLangs.includes(key.toLowerCase()))
+            .map(([ key, value ]) => ({ name: key, color: (value as { color: string, url: string }).color }));
+
+        const languages: ILanguage[] = Object.entries(langData).map(([ key, value ]) => ({
+            name: key,
+            color: allLanguagesColorKeys.find(c => c.name === key)!.color ?? "#ffffff",
+            percentage: (Number(value) / allLanguagesCount) * 100,
+        }));
+        languages.sort((x, y) => y.percentage - x.percentage);
+        return {
+            githubLink: projectData.html_url,
+            homepage: projectData.homepage ?? "",
+            description: projectData.description,
+            license: projectData.license ? projectData.license.name : "License not specified",
+            repoCreated: projectData.created_at,
+            repoUpdated: projectData.updated_at,
+            cloneUrl: projectData.clone_url,
+            altCloneUrl: `$ git clone ${projectData.svn_url}`,
+            topics: projectData.topics,
+            forksCount: projectData.forks_count,
+            watchersCount: projectData.watchers_count,
+            starsCount: projectData.stargazers_count,
+            languages,
+        };
     };
 }
 

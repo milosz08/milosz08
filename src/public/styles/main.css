@@ -161,6 +161,34 @@ body {
     border-radius: 50%;
 }
 
+.gth-icon-container {
+    min-width: 25px;
+    text-align: center;
+}
+
+.gth-topic {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: var(--topic-background);
+    color: var(--topic-foreground);
+    font-size: .8rem;
+    padding: 0 7px;
+}
+
+.gth-lang-meter {
+    height: 7px;
+}
+
+.gth-lang-meter-container .gth-lang-meter:nth-child(1) {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.gth-lang-meter-container .gth-lang-meter:nth-last-child(1) {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 @media only screen and (max-width: 768px) {

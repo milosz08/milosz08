@@ -14,6 +14,7 @@
 import { Request, Response } from "express";
 
 import * as View from "../utils/constants";
+import utilities from "../utils/utilities";
 import githubApi from "../utils/github-api";
 
 import { ProjectModel } from "../db/schemas/project.schema";
@@ -59,11 +60,23 @@ class HomeController {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    getProjectDetailsPage(req: Request, res: Response): void {
-        const projectName = "Testing project"
+    async getProjectDetailsPage(req: Request, res: Response): Promise<void> {
+        const { path } = View.PUBLIC_PROJECT_DETAILS_EJS;
+        const { name } = req.params;
 
-        res.render(View.PUBLIC_PROJECT_DETAILS_EJS.path, {
-            title: projectName,
+        const project  = await ProjectModel.findOne({ name });
+        if (!project) {
+            res.redirect("/");
+            return;
+        }
+        project.detailsDescription = utilities.parseMarkdown(project.detailsDescription);
+        project.techStackPositions.sort((x, y) => x.pos - y.pos);
+        const projectApi = await githubApi.getSingleProjectDetails(name);
+
+        res.render(path, {
+            title: project.alternativeName,
+            projectDb: project,
+            projectApi,
         });
     };
 }

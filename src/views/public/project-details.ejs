@@ -1,9 +1,119 @@
 <div class="container mt-5 overflow-hidden">
-    <div class="hstack gap-2 mb-2">
+    <div class="hstack gap-2 mb-3">
         <i class="fa-solid fa-arrow-left dark-icon"></i>
         <a class="standard-font secondary-text-color anchor-link" href="/">
             Return to projects
         </a>
     </div>
-    <h5 class="fw-normal">Project details<span class="secondary-text-color">:</span></h5>
+    <div class="row mb-3">
+        <div class="d-flex w-100 gth-lang-meter-container">
+            <% for (const lang of projectApi.languages) { %>
+                <div class="gth-lang-meter" style="width: <%= lang.percentage %>%; background-color: <%= lang.color %>"></div>
+            <% } %>
+        </div>
+        <div class="hstack gap-3 d-flex justify-content-center mt-1">
+            <% for (const lang of projectApi.languages) { %>
+                <div class="hstack gap-2">
+                    <span class="gth-rounded-color-ind" style="background-color: <%= lang.color %>;"></span>
+                    <span class="text-secondary standard-font"><%= lang.name %></span>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9 d-flex">
+            <div class="me-3 flex-fill">
+                <h6 class="secondary-text-color standard-font mb-1">Project name:</h6>
+                <h5 class="fw-normal mb-4"><%= projectDb.alternativeName %></h5>
+                <h6 class="secondary-text-color standard-font mb-1">About the project:</h6>
+                <%- projectDb.detailsDescription %>
+                <p class="secondary-text-color standard-font mb-1 mt-4">Tech stack:</p>
+                <ul>
+                    <% for (const techStack of projectDb.techStackPositions) { %>
+                        <li><%= techStack.name %></li>
+                    <% } %>
+                </ul>
+                <p class="secondary-text-color standard-font mb-3 mt-4">
+                    For other details and source code, check this project on <a target="_blank"
+                        class="standard-font primary-text-color anchor-link" href="<%= projectApi.githubLink %>">Github</a>.
+                </p>
+            </div>
+            <div class="vr d-none d-md-block"></div>
+        </div>
+        <div class="col-md-3">
+            <a class="gth-button w-100 mb-2 d-block" href="<%= projectApi.githubLink %>" target="_blank">
+                View on Github
+                <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+            </a>
+            <button class="gth-button w-100 mb-3 d-block" id="copyCloneButton" data-clone-url="<%= projectApi.altCloneUrl %>">
+                Copy clone command
+                <i class="fa-solid fa-copy ms-2"></i>
+            </button>
+            <p class="secondary-text-color standard-font mb-1 lh-sm">
+                <%= projectApi.description %>
+            </p>
+            <div class="my-3">
+                <% if (projectApi.homepage) { %>
+                    <div class="hstack gap-2">
+                        <i class="fa-solid fa-link dark-icon text-secondary"></i>
+                        <a href="<%= projectApi.homepage %>" target="_blank"
+                            class="standard-font primary-text-color anchor-link">
+                            <%= projectApi.homepage %>
+                        </a>
+                    </div>
+                <% } %>
+                <% if (projectDb.externalLink && projectApi.homepage !== projectDb.externalLink) { %>
+                    <div class="hstack gap-2">
+                        <i class="fa-solid fa-link dark-icon text-secondary"></i>
+                        <a href="<%= projectDb.externalLink %>" target="_blank"
+                            class="standard-font primary-text-color anchor-link">
+                            <%= projectDb.externalLink %>
+                        </a>
+                    </div>
+                <% } %>
+            </div>
+            <div class="mb-3">
+                <% for (const topic of projectApi.topics) { %>
+                    <div class="gth-topic me-1"><%= topic %></div>
+                <% } %>
+            </div>
+            <div class="mb-3">
+                <div class="hstack gap-2 standard-font">
+                    <div class="gth-icon-container">
+                        <i class="fa-regular fa-file darken-icon gth-icon"></i>
+                    </div>
+                    <span class="text-secondary">
+                        <%= projectApi.license %>
+                    </span>
+                </div>
+                <div class="hstack gap-2 standard-font">
+                    <div class="gth-icon-container">
+                        <i class="fa-regular fa-star darken-icon gth-icon"></i>
+                    </div>
+                    <span class="text-secondary">
+                        <%= projectApi.starsCount %> <%= projectApi.starsCount === 1 ? "star" : "stars" %>
+                    </span>
+                </div>
+                <div class="hstack gap-2 standard-font">
+                    <div class="gth-icon-container">
+                        <i class="fa-regular fa-eye darken-icon gth-icon"></i>
+                    </div>
+                    <span class="text-secondary">
+                        <%= projectApi.watchersCount %> watching
+                    </span>
+                </div>
+                <div class="hstack gap-2 standard-font">
+                    <div class="gth-icon-container">
+                        <i class="fa-solid fa-code-fork darken-icon gth-icon"></i>
+                    </div>
+                    <span class="text-secondary">
+                        <%= projectApi.forksCount %> <%= projectApi.forksCount === 1 ? "fork" : "forks" %>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<%- contentFor('additional-scripts') %>
+<script src="/assets/js/copy-clone-link.js"></script>
