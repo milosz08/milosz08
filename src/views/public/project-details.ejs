@@ -11,11 +11,14 @@
                 <div class="gth-lang-meter" style="width: <%= lang.percentage %>%; background-color: <%= lang.color %>"></div>
             <% } %>
         </div>
-        <div class="hstack gap-3 d-flex justify-content-center mt-1">
+        <div class="d-flex justify-content-center mt-1 flex-wrap">
             <% for (const lang of projectApi.languages) { %>
-                <div class="hstack gap-2">
+                <div class="hstack gap-2 me-3">
                     <span class="gth-rounded-color-ind" style="background-color: <%= lang.color %>;"></span>
-                    <span class="text-secondary standard-font"><%= lang.name %></span>
+                    <span class="small-font-size">
+                        <%= lang.name %>
+                        <span class="text-secondary"><%= lang.percentage.toFixed(1) %>%</span>
+                    </span>
                 </div>
             <% } %>
         </div>
@@ -74,7 +77,7 @@
             </div>
             <div class="mb-3">
                 <% for (const topic of projectApi.topics) { %>
-                    <div class="gth-topic me-1"><%= topic %></div>
+                    <div class="gth-topic small-font-size me-1"><%= topic %></div>
                 <% } %>
             </div>
             <div class="mb-3">
