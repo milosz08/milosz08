@@ -23,6 +23,7 @@ export enum AlertTypeId {
     LOGIN_PAGE = "loginPageAlert",
     REQUEST_CHANGE_PASSWORD_PAGE = "requestChangePasswordPageAlert",
     CMS_PROJECTS_PAGE = "cmsProjectsPageAlert",
+    CMS_PROJECT_UPDATE_PAGE = "cmsProjectUpdatePageAlert",
     CMS_ACCOUNTS_PAGE = "cmsAccountsPageAlert",
     CMS_PERSONAL_DATA_PAGE = "cmsPersonalDataPageAlert",
     CMS_SOCIAL_LINKS_PAGE = "cmsSocialLinksPageAlert",

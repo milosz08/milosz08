@@ -5,7 +5,7 @@
 <div class="row mb-3">
     <a href="/cms/projects">Return to projects</a>
 </div>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col-md-12 mb-3">
             <label for="ghProject" class="form-label">Select Github project:</label>
@@ -57,6 +57,26 @@
                 Add new tech stack element
             </button>
         </div>
+        <div class="col-md-12 mb-3">
+            <label for="imagesInput" class="form-label">Additional project images:</label>
+            <input type="file" class="form-control" id="imagesInput" name="images" accept="image/jpeg,image/png" multiple>
+            <div id="imagesPreviewContainer" class="d-flex flex-wrap gap-2 mt-2"></div>
+        </div>
+        <% if (projectImages.length > 0 && projectId) { %>
+            <div class="col-md-12">
+                <p>Project images:</p>
+                <div class="d-flex flex-wrap gap-2 mt-2">
+                    <% for (const image of projectImages) { %>
+                        <%- include("../partials/remove-image-modal.partial.ejs", { image }) %>
+                        <div class="d-flex flex-column image-preview">
+                            <div class="flex-fill image-preview-content" style="background-image: url('<%= image.absolutePath %>')"></div>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#removeImage<%= image.index %>"
+                                class="btn btn-danger w-100 mt-2">X</button>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        <% } %>
     </div>
     <div class="row mt-4">
         <div class="col-md-6 mb-2">
@@ -72,3 +92,4 @@
 
 <%- contentFor('additional-scripts') %>
 <script src="/assets/js/tech-stacks-inserter.js"></script>
+<script src="/assets/js/images-preview.js"></script>

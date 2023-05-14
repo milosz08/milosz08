@@ -3,3 +3,7 @@ dist/
 node_modules/
 .idea/discord.xml
 logs/
+public/uploads/temp/*
+!public/uploads/temp/.gitkeep
+public/uploads/projects/*
+!public/uploads/projects/.gitkeep

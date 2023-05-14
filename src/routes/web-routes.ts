@@ -12,6 +12,7 @@
  */
 
 import { Request, Response, Router } from "express";
+import { upload } from "../files/multer-config";
 
 import authController from "../controllers/auth.controller";
 import homeController from "../controllers/home.controller";
@@ -50,10 +51,11 @@ router.get("/cms/social-link/delete/:socialLinkId",         isAuthAdminMiddlewar
 
 router.get("/cms/personal-data",                            isAuthAdminMiddleware,          cmsPersonalDataController.getPersonalsDataPage);
 
-router.get("/cms/projects",                             isAuthMiddleware,               cmsProjectsController.getProjectsPage);
-router.get("/cms/project/add",                          isAuthMiddleware,               cmsProjectsController.getAddProjectPage);
-router.get("/cms/project/update/:projectId",            isAuthMiddleware,               cmsProjectsController.getUpdateProjectPage);
-router.get("/cms/project/delete/:projectId",            isAuthMiddleware,               cmsProjectsController.getDeleteProjectRedirect);
+router.get("/cms/projects",                                 isAuthMiddleware,               cmsProjectsController.getProjectsPage);
+router.get("/cms/project/add",                              isAuthMiddleware,               cmsProjectsController.getAddProjectPage);
+router.get("/cms/project/update/:projectId",                isAuthMiddleware,               cmsProjectsController.getUpdateProjectPage);
+router.get("/cms/project/delete/:projectId",                isAuthMiddleware,               cmsProjectsController.getDeleteProjectRedirect);
+router.get("/cms/project/delete-image/:projectId/:image",   isAuthMiddleware,               cmsProjectsController.getDeleteProjectImageRedirect);
 
 router.post("/login",                                       isNotLoggedAdminMiddleware,     authController.postLoginPage);
 router.post("/request-change-password",                     isNotLoggedAdminMiddleware,     authController.postRequestChangePasswordPage);
@@ -68,8 +70,8 @@ router.post("/cms/social-link/update/:socialLinkId",        isAuthAdminMiddlewar
 
 router.post("/cms/personal-data",                           isAuthAdminMiddleware,          cmsPersonalDataController.postPersonalsDataPage);
 
-router.post("/cms/project/add",                         isAuthMiddleware,               cmsProjectsController.postAddProjectPage);
-router.post("/cms/project/update/:projectId",           isAuthMiddleware,               cmsProjectsController.postUpdateProjectPage);
+router.post("/cms/project/add",                             isAuthMiddleware,               upload.array('images'), cmsProjectsController.postAddProjectPage);
+router.post("/cms/project/update/:projectId",               isAuthMiddleware,               upload.array('images'), cmsProjectsController.postUpdateProjectPage);
 
 router.get("/cms",                                          (req: Request, res: Response) => res.redirect("/cms/projects"));
 router.get("*",                                             (req: Request, res: Response) => res.redirect("/"));

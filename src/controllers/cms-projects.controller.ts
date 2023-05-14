@@ -19,6 +19,7 @@ import utilities from "../utils/utilities";
 import githubApi from "../utils/github-api";
 import * as Constant from "../utils/constants";
 import { AlertTypeId } from "../utils/session";
+import projectImages from "../files/project-images";
 
 import { ProjectModel } from "../db/schemas/project.schema";
 
@@ -71,6 +72,8 @@ class CmsProjectsController {
             projectAction: "Add",
             projects: notPersistProjects,
             techStacks: JSON.stringify([ { name: "", error: false, errorMess: "" } ]),
+            projectImages: [],
+            projectId: "",
         });
     };
 
@@ -90,8 +93,13 @@ class CmsProjectsController {
                 detailsDescription: detDesc,
                 techStackPositions: techStacks.map((s: string, i: number) => ({ pos: i, name: s })),
             });
-            await newProject.save();
-
+            const savedProject = await newProject.save();
+            const preImages = await ProjectModel.findById(savedProject._id);
+            if (preImages) {
+                await projectImages.saveProjectImages(req, preImages._id.toString());
+                preImages.images = projectImages.getFilesNames(req);
+                await preImages.save();
+            }
             req.session[AlertTypeId.CMS_PROJECTS_PAGE] = {
                 type: Constant.ALERT_SUCCESS,
                 message: `Project <strong>${newProject.name}</strong> was successfully created.`,
@@ -111,6 +119,8 @@ class CmsProjectsController {
                 projects: notPersistProjects,
                 form: req.body,
                 techStacks: JSON.stringify(techStacksWithErrors),
+                projectImages: [],
+                projectId: "",
             });
         }
     };
@@ -137,11 +147,14 @@ class CmsProjectsController {
 
         res.render(path, { title, layout,
             projectAction: "Update",
+            pageAlert: utilities.extractAlertAndDestroy(req, AlertTypeId.CMS_PROJECT_UPDATE_PAGE),
             projects: notPersistProjects,
             posMax: projectsCount,
             form: { ghProject: name, listPos: position, altName: alternativeName,
                 extLink: externalLink, detDesc: detailsDescription },
             techStacks: JSON.stringify(techStacks),
+            projectImages: projectImages.parseToFullPaths(projectId, project.images),
+            projectId,
         });
     };
 
@@ -167,6 +180,8 @@ class CmsProjectsController {
                 updatedProjectPos.position = prevValue;
                 await updatedProjectPos.save();
             }
+            await projectImages.saveProjectImages(req, projectId);
+
             updatedProject.id = notPersistProjects.find(e => e.name === ghProject)?.id;
             updatedProject.name = ghProject;
             updatedProject.position = listPos;
@@ -174,6 +189,7 @@ class CmsProjectsController {
             updatedProject.externalLink = extLink || null;
             updatedProject.detailsDescription = detDesc;
             updatedProject.techStackPositions = techStacks.map((s: string, i: number) => ({ pos: i, name: s }));
+            updatedProject.images = updatedProject.images.concat(projectImages.getFilesNames(req));
 
             await updatedProject.save();
 
@@ -197,6 +213,8 @@ class CmsProjectsController {
                 form: req.body,
                 posMax: projectsCount,
                 techStacks: JSON.stringify(techStacksWithErrors),
+                projectImages: projectImages.parseToFullPaths(projectId, updatedProject.images),
+                projectId,
             });
         }
     };
@@ -234,6 +252,7 @@ class CmsProjectsController {
                 { $inc: { position: -1 } }
             );
             await ProjectModel.findByIdAndRemove(projectId);
+            await projectImages.deleteAllProjectImages(projectId);
 
             alertMessage = `Project <strong>${project.name}</strong> was successfully removed.`;
             logger.info(`Successfull delete project: ${JSON.stringify(project)}.`);
@@ -247,6 +266,42 @@ class CmsProjectsController {
             message: alertMessage,
         };
         res.redirect("/cms/projects");
+    };
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    async getDeleteProjectImageRedirect(req: Request, res: Response): Promise<void> {
+        const { projectId, image } = req.params;
+
+        let alertType: string = Constant.ALERT_SUCCESS;
+        let alertMessage: string = "";
+
+        if (!mongoose.Types.ObjectId.isValid(projectId)) {
+            res.redirect("/cms/projects");
+            return;
+        }
+        try {
+            const project = await ProjectModel.findById(projectId);
+            if (!project) {
+                res.redirect("/cms/projects");
+                return;
+            }
+            project.images = project.images.filter(img => img !== image);
+            await project.save();
+            await projectImages.deleteSingleProjectImage(projectId, image);
+
+            alertMessage = `Project image <strong>${image}</strong> was successfully removed.`;
+            logger.info(`Successfull delete project image: ${image}.`);
+        } catch (ex: any) {
+            alertType = Constant.ALERT_DANGER;
+            alertMessage = ex.message;
+            logger.error(`Failure delete project image. Cause: ${ex.message}`);
+        }
+        req.session[AlertTypeId.CMS_PROJECT_UPDATE_PAGE] = {
+            type: alertType,
+            message: alertMessage,
+        };
+        res.redirect(`/cms/project/update/${projectId}`);
     };
 }
 

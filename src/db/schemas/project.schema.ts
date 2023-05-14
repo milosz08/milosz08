@@ -31,6 +31,7 @@ export interface IProject {
     externalLink: string;
     detailsDescription: string;
     techStackPositions: ITechStackPos[];
+    images: string[];
 }
 
 const ProjectSchema: Schema<IProject> = new Schema({
@@ -77,7 +78,11 @@ const ProjectSchema: Schema<IProject> = new Schema({
                 required: [ true, "Project tech stack name field is required." ],
             }
         }
-    ]
+    ],
+    images: {
+        type: [ String ],
+        default: [],
+    }
 });
 
 ProjectSchema.plugin(uniqueValidator, { type: "mongoose-unique-validator", message: "Followed {PATH} already exist." });
