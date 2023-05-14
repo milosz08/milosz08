@@ -30,7 +30,23 @@
                 <h5 class="fw-normal mb-4"><%= projectDb.alternativeName %></h5>
                 <h6 class="secondary-text-color standard-font mb-1">About the project:</h6>
                 <%- projectDb.detailsDescription %>
-                <p class="secondary-text-color standard-font mb-1 mt-4">Tech stack:</p>
+                <h6 class="secondary-text-color standard-font mb-2">Project gallery:</h6>
+                <% if (projectImages.length > 0) { %>
+                    <div class="d-flex flex-wrap gap-3">
+                        <% for (const image of projectImages) { %>
+                            <a href="<%= image.absolutePath %>" class="gth-preview-image" data-fslightbox="gallery"
+                                style="background-image: url('<%= image.absolutePath %>')" ></a>
+                        <% } %>
+                    </div>
+                <% } else { %>
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="gth-alert p-3 text-center">
+                            This repository has no images yet. If a demo is available, check it out by clicking on the
+                            link on the right or at the bottom of the page.
+                        </div>
+                    </div>
+                <% } %>
+                <h6 class="secondary-text-color standard-font mb-1 mt-4">Tech stack:</h6>
                 <ul>
                     <% for (const techStack of projectDb.techStackPositions) { %>
                         <li><%= techStack.name %></li>
@@ -120,3 +136,4 @@
 
 <%- contentFor('additional-scripts') %>
 <script src="/assets/js/copy-clone-link.js"></script>
+<script src="/assets/js/lib/fslightbox.js"></script>

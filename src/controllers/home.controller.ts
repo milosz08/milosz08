@@ -16,6 +16,7 @@ import { Request, Response } from "express";
 import * as View from "../utils/constants";
 import utilities from "../utils/utilities";
 import githubApi from "../utils/github-api";
+import projectImages from "../files/project-images";
 
 import { ProjectModel } from "../db/schemas/project.schema";
 
@@ -77,6 +78,7 @@ class HomeController {
             title: project.alternativeName,
             projectDb: project,
             projectApi,
+            projectImages: await projectImages.parseToFullPaths(project._id.toString()),
         });
     };
 }

@@ -192,6 +192,20 @@ body {
     border-bottom-right-radius: 5px;
 }
 
+.gth-preview-image {
+    max-width: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: calc(200px * (9 / 16));
+    border-radius: 7px;
+    transition: .2s;
+}
+
+.gth-preview-image:hover {
+    transform: scale(.95);
+}
+
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 @media only screen and (max-width: 768px) {
