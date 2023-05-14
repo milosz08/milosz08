@@ -48,7 +48,7 @@ app.set("layout", DEFAULT_LAYOUT);
 app.set("view engine", "ejs");
 app.set("views", utilities.getProjectRootPath("/views"));
 
-app.use("/assets", express.static(utilities.getProjectRootPath("public")));
+app.use("/assets", express.static(utilities.getProjectRootPath("../public")));
 
 app.use("/", variablesMiddleware);
 app.use("/", loggedUserMiddleware);
