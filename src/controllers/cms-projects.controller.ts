@@ -97,8 +97,6 @@ class CmsProjectsController {
             const preImages = await ProjectModel.findById(savedProject._id);
             if (preImages) {
                 await projectImages.saveProjectImages(req, preImages._id.toString());
-                preImages.images = projectImages.getFilesNames(req);
-                await preImages.save();
             }
             req.session[AlertTypeId.CMS_PROJECTS_PAGE] = {
                 type: Constant.ALERT_SUCCESS,
@@ -153,7 +151,7 @@ class CmsProjectsController {
             form: { ghProject: name, listPos: position, altName: alternativeName,
                 extLink: externalLink, detDesc: detailsDescription },
             techStacks: JSON.stringify(techStacks),
-            projectImages: projectImages.parseToFullPaths(projectId, project.images),
+            projectImages: await projectImages.parseToFullPaths(projectId),
             projectId,
         });
     };
@@ -189,7 +187,6 @@ class CmsProjectsController {
             updatedProject.externalLink = extLink || null;
             updatedProject.detailsDescription = detDesc;
             updatedProject.techStackPositions = techStacks.map((s: string, i: number) => ({ pos: i, name: s }));
-            updatedProject.images = updatedProject.images.concat(projectImages.getFilesNames(req));
 
             await updatedProject.save();
 
@@ -213,7 +210,7 @@ class CmsProjectsController {
                 form: req.body,
                 posMax: projectsCount,
                 techStacks: JSON.stringify(techStacksWithErrors),
-                projectImages: projectImages.parseToFullPaths(projectId, updatedProject.images),
+                projectImages: await projectImages.parseToFullPaths(projectId),
                 projectId,
             });
         }
@@ -286,8 +283,6 @@ class CmsProjectsController {
                 res.redirect("/cms/projects");
                 return;
             }
-            project.images = project.images.filter(img => img !== image);
-            await project.save();
             await projectImages.deleteSingleProjectImage(projectId, image);
 
             alertMessage = `Project image <strong>${image}</strong> was successfully removed.`;

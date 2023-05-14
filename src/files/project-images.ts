@@ -31,18 +31,14 @@ class ProjectImages {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    getFilesNames(req: Request): string[] {
-        if (!req.files) return [];
-        const files = req.files as Express.Multer.File[];
-        if (files.length === 0) return [];
+    async parseToFullPaths(projectId: string): Promise<IProjectImage[]> {
+        const dirPath = utilities.getProjectRootPath(`${this.BASE_PATH}/${projectId}`);
+        if (!await asyncApi.existAsync(dirPath)) return [];
 
-        return files.map(f => f.filename + path.extname(f.originalname));
-    };
-
-    parseToFullPaths(projectId: string, images: string[]): IProjectImage[] {
-        return images.map((img, idx) => ({
-            absolutePath: `/assets/uploads/projects/${projectId}/${img}`,
-            imageName: img,
+        const files = await asyncApi.readdirAsync(dirPath);
+        return files.map((file, idx) => ({
+            absolutePath: `/assets/uploads/projects/${projectId}/${file}`,
+            imageName: file,
             index: idx
         }));
     };
