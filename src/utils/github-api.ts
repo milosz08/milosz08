@@ -64,7 +64,7 @@ class GithubApi {
         return data
             .filter((r: any) => repoNames.includes(r.name))
             .map((r: any) => {
-                const langKey = Object.keys(colorsData).find(c => c.toLowerCase() === r.language.toLowerCase());
+                const langKey = Object.keys(colorsData).find(c => c.toLowerCase() === r.language?.toLowerCase());
                 const searchedColor = langKey ? colorsData[langKey] : "";
                 const foundedColor = searchedColor ? searchedColor.color ? searchedColor.color : "" : "";
                 return {
@@ -74,7 +74,7 @@ class GithubApi {
                     starsCount: r.stargazers_count,
                     watchersCount: r.watchers_count,
                     forksCount: r.forks_count,
-                    primaryLanguage: r.language,
+                    primaryLanguage: r.language || "Unknow",
                     primaryLanguageColor: foundedColor
                 };
             });

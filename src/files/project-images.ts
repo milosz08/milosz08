@@ -72,6 +72,7 @@ class ProjectImages {
 
     async deleteAllProjectImages(projectId: string): Promise<void> {
         const dirPath = utilities.getProjectRootPath(`${this.BASE_PATH}/${projectId}`);
+        if (!await asyncApi.existAsync(dirPath)) return;
         await asyncApi.rmdirAsync(dirPath, { recursive: true });
     };
 }

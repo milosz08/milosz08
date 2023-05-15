@@ -12,13 +12,13 @@
  */
 
 import { Request } from "express";
+import { HtmlRenderer, Parser } from "commonmark";
 import path from "path";
 
 import * as Constant from "./constants";
 import { AlertType, AlertTypeId } from "./session";
 
 import { IUser } from "../db/schemas/user.schema";
-import { HtmlRenderer, Parser } from "commonmark";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
