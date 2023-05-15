@@ -51,9 +51,22 @@ class CmsProjectsController {
         query = query.limit(totalPerPage);
         const projects = await query.exec();
 
+        const projectsData = await githubApi.getAllUserProjects(Array.from(projects).map(p => p.name));
+        const apiProjMapped = projectsData.map(p => p.id);
+        const projectsMapped = projects.map(p => p.id);
+
+        const idsToDelete: number[] = [...new Set([...apiProjMapped, ...projectsMapped])]
+            .filter(value => !apiProjMapped.includes(value) || !projectsMapped.includes(value));
+        if (idsToDelete.length > 0) {
+            const projectsToDelete = await ProjectModel.find({ id: { $in: idsToDelete } });
+            for (const project of [ ...projectsToDelete ]) {
+                await githubApi.deleteProjectAndMoveCursor(project._id.toString());
+            }
+            logger.info(`Deleted already removed github projects with ids: '${idsToDelete}'`);
+        }
         res.render(path, { title, layout,
             pageAlert: utilities.extractAlertAndDestroy(req, AlertTypeId.CMS_PROJECTS_PAGE),
-            projects,
+            projects: projects.filter(p => !idsToDelete.includes(p.id)),
             page: selectedPage,
             pagesCount,
             resultsCount,
@@ -83,6 +96,10 @@ class CmsProjectsController {
 
         const notPersistProjects = await githubApi.getAllParsedNotPersistedProject();
         const projectsCount = await ProjectModel.find({}).count();
+        if (await githubApi.deleteAlreadyRemovedProject(req, res, ghProject)) {
+            res.redirect("/cms/projects");
+            return;
+        }
         try {
             const newProject = new ProjectModel({
                 id: await githubApi.getRepoId(ghProject),
@@ -143,6 +160,10 @@ class CmsProjectsController {
         const { name, alternativeName, position, externalLink, detailsDescription } = project;
         const techStacks = project.techStackPositions.map(e => ({ name: e.name, error: false, errorMess: "" }));
 
+        if (await githubApi.deleteAlreadyRemovedProject(req, res, name, project._id.toString(), true)) {
+            res.redirect("/cms/projects");
+            return;
+        }
         res.render(path, { title, layout,
             projectAction: "Update",
             pageAlert: utilities.extractAlertAndDestroy(req, AlertTypeId.CMS_PROJECT_UPDATE_PAGE),
@@ -166,6 +187,10 @@ class CmsProjectsController {
         }
         const updatedProject = await ProjectModel.findById(projectId);
         if (!updatedProject) {
+            res.redirect("/cms/projects");
+            return;
+        }
+        if (await githubApi.deleteAlreadyRemovedProject(req, res, updatedProject.name, updatedProject._id.toString(), true)) {
             res.redirect("/cms/projects");
             return;
         }
@@ -234,22 +259,7 @@ class CmsProjectsController {
                 res.redirect("/cms/projects");
                 return;
             }
-            const remainingElements = await ProjectModel
-                .findByIdAndUpdate(
-                    { _id: projectId },
-                    { $pull: { arrayField: { _id: projectId } } },
-                    { new: true }
-                )
-                .select({ position: 1 })
-                .then((deletedElement) =>
-                    ProjectModel.find({ position: { $gt: deletedElement!.position } }).sort({ position: 1 })
-                );
-            await ProjectModel.updateMany(
-                { _id: { $in: remainingElements.map((e) => e._id) } },
-                { $inc: { position: -1 } }
-            );
-            await ProjectModel.findByIdAndRemove(projectId);
-            await projectImages.deleteAllProjectImages(projectId);
+            await githubApi.deleteProjectAndMoveCursor(project._id.toString());
 
             alertMessage = `Project <strong>${project.name}</strong> was successfully removed.`;
             logger.info(`Successfull delete project: ${JSON.stringify(project)}.`);

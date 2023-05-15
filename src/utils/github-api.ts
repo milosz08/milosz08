@@ -11,10 +11,16 @@
  * original author. Project created only for personal purposes.
  */
 
-import { ProjectModel } from "../db/schemas/project.schema";
+import { Request, Response } from "express";
 import axios from "axios";
 
+import logger from "./logger";
 import config from "./config";
+import { AlertTypeId } from "./session";
+import * as Constant from "./constants";
+import projectImages from "../files/project-images";
+
+import { ProjectModel } from "../db/schemas/project.schema";
 
 import { IProjectSelectDataModel } from "../models/project-select-data.model";
 import { IGithubProjectDataApiModel } from "../models/github-project-data-api.model";
@@ -115,6 +121,48 @@ class GithubApi {
             starsCount: projectData.stargazers_count,
             languages,
         };
+    };
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    async deleteProjectAndMoveCursor(objectId: string): Promise<void> {
+        const remainingElements = await ProjectModel
+            .findByIdAndUpdate(
+                { _id: objectId },
+                { $pull: { arrayField: { _id: objectId } } },
+                { new: true }
+            )
+            .select({ position: 1 })
+            .then((deletedElement) =>
+                ProjectModel.find({ position: { $gt: deletedElement!.position } }).sort({ position: 1 })
+            );
+        await ProjectModel.updateMany(
+            { _id: { $in: remainingElements.map((e) => e._id) } },
+            { $inc: { position: -1 } }
+        );
+        await ProjectModel.findByIdAndRemove(objectId);
+        await projectImages.deleteAllProjectImages(objectId);
+    };
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    async deleteAlreadyRemovedProject(
+        req: Request, res: Response, name: string, projectId: string = "", removable: boolean = false
+    ): Promise<boolean> {
+        try {
+            await this.getSingleProjectDetails(name);
+            return false;
+        } catch (ex: any) {
+            if (removable) {
+                await this.deleteProjectAndMoveCursor(projectId);
+            }
+            req.session[AlertTypeId.CMS_PROJECTS_PAGE] = {
+                type: Constant.ALERT_SUCCESS,
+                message: `Project <strong>${name}</strong> was already removed from Github account.`,
+            };
+            logger.info(`Deleted already removed github project with id: '${projectId}'`);
+            return true;
+        }
     };
 }
 

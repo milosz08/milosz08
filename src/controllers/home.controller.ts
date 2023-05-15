@@ -13,12 +13,14 @@
 
 import { Request, Response } from "express";
 
+import logger from "../utils/logger";
 import * as View from "../utils/constants";
 import utilities from "../utils/utilities";
 import githubApi from "../utils/github-api";
 import projectImages from "../files/project-images";
 
 import { ProjectModel } from "../db/schemas/project.schema";
+import { IGithubProjectDetailsApiModel } from "../models/github-project-details-api.model";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -47,9 +49,23 @@ class HomeController {
         const projects = await query.exec();
 
         const projectsData = await githubApi.getAllUserProjects(Array.from(projects).map(p => p.name));
+
+        const apiProjMapped = projectsData.map(p => p.id);
         const projectsMapped = projects.map(p => p.id);
+
+        const idsToDelete: number[] = [...new Set([...apiProjMapped, ...projectsMapped])]
+            .filter(value => !apiProjMapped.includes(value) || !projectsMapped.includes(value));
+        if (idsToDelete.length > 0) {
+            const projectsToDelete = await ProjectModel.find({ id: { $in: idsToDelete } });
+            for (const project of [ ...projectsToDelete ]) {
+                await githubApi.deleteProjectAndMoveCursor(project._id.toString());
+            }
+            logger.info(`Deleted already removed github projects with ids: '${idsToDelete}'`);
+        }
         projectsData.sort((x, y) => projectsMapped.indexOf(x.id) - projectsMapped.indexOf(y.id))
-        const mergedData = projects.map((p, i) => ({ projectDb: p, projectApi: projectsData[i] }));
+        const mergedData = projects
+            .filter(p => !idsToDelete.includes(p.id))
+            .map((p, i) => ({ projectDb: p, projectApi: projectsData[i] }));
 
         res.render(path, { title,
             page: selectedPage,
@@ -72,8 +88,15 @@ class HomeController {
         }
         project.detailsDescription = utilities.parseMarkdown(project.detailsDescription);
         project.techStackPositions.sort((x, y) => x.pos - y.pos);
-        const projectApi = await githubApi.getSingleProjectDetails(name);
-
+        let projectApi: IGithubProjectDetailsApiModel | null = null;
+        try {
+            projectApi = await githubApi.getSingleProjectDetails(name);
+        } catch (ex: any) {
+            await githubApi.deleteProjectAndMoveCursor(project._id.toString());
+            logger.info(`Deleted already removed github project with id: '${project.id}'`);
+            res.redirect("/");
+            return;
+        }
         res.render(path, {
             title: project.alternativeName,
             projectDb: project,
