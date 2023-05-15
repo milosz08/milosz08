@@ -13,10 +13,57 @@ CMS in order to add/edit/delete projects and modify other website elements. Addi
 are pulled dynamically from the Github API.
 
 ## Table of content
+* [Clone script](#clone-script)
+* [Prepare and run](#prepare-and-run)
 * [Tech stack](#tech-stack)
 * [Author](#author)
 * [Project status](#project-status)
 * [License](#license)
+
+<a name="clone-script"></a>
+## Clone script
+To install the program on your computer use the command (or use the built-in GIT system in your IDE environment):
+```
+$ git clone https://github.com/Milosz08/jwizard jwizard-discord-bot
+```
+
+<a name="prepare-and-run"></a>
+## Prepare and run
+0. Before you run program, create `.env` file in ROOT project context and fill as below:
+```properties
+# server configuration
+EXPRESS_PORT              = [application port, ex. 3031]
+NODE_ENV                  = ['development' or 'production']
+SESSION_KEY               = [session key, ex. 'vtg290d203dkd0kd09kdgghhmnkj57jh4hg3fgv5h65h6h']
+
+# default admin user
+DEF_USER_LOGIN            = [default user login, ex. 'admin']
+DEF_USER_EMAIL            = [default user email, ex. 'admin@example.com']
+DEF_USER_PASSWORD         = [default user password, ex. 'StrongPassword321@']
+
+# database
+CONNECTION_STRING         = mongodb://[dbUsername]:[dbPassword]@[dbHost]:[dbPort]
+
+# smtp server
+SMTP_HOST                 = [smtp host server, ex. 'example.net']
+SMTP_USERNAME             = [smtp sender email, ex. 'noreply@example.net']
+SMTP_PASSWORD             = [smtp password, ex. 'SuperSecretPassword123']
+SMTP_SSL                  = [true if SSL is active, otherwise false]
+SMTP_PORT                 = [587 if SSL is active, otherwise 25]
+```
+1. Install all dependencies via:
+```
+$ npm install
+```
+2. Run project (compile TS files and move static files into `dist` directory) - listening all changes and hotreload:
+```
+$ npm run dev:start
+```
+2. To create production build, type:
+```
+$ npm run build
+```
+All compiled files will be in `dist` directory.
 
 <a name="tech-stack"></a>
 ## Tech stack
