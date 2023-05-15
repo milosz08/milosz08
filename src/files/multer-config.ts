@@ -18,7 +18,7 @@ import utilities from "../utils/utilities";
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, utilities.getProjectRootPath("../public/uploads/temp/"));
+        cb(null, utilities.getProjectRootPath("public/uploads/temp/"));
     },
     filename: (req, file, cb) => {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);

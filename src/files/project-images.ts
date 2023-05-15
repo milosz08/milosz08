@@ -27,7 +27,7 @@ interface IProjectImage {
 
 class ProjectImages {
 
-    private readonly BASE_PATH = "../public/uploads/projects";
+    private readonly BASE_PATH = "public/uploads/projects";
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

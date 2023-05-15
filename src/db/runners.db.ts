@@ -64,7 +64,7 @@ class RunnersDb {
     };
 
     async migratePersonalDataToDb(): Promise<void> {
-        const rawFileData = fs.readFileSync(utilities.getProjectRootPath(`../public/${this.PERSONAL_DATA_FILE}`));
+        const rawFileData = fs.readFileSync(utilities.getProjectRootPath(`public/${this.PERSONAL_DATA_FILE}`));
         const jsonFileData: IPersonalJsonData = JSON.parse(rawFileData.toString());
 
         const personalData = await PersonalDataModel.find();
