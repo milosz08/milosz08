@@ -31,5 +31,4 @@ export default {
     SMTP_PASSWORD:          process.env.SMTP_PASSWORD,
     SMTP_SSL:               process.env.SMTP_SSL                || false,
     SMTP_PORT:              process.env.SMTP_PORT               || 25,
-    GITHUB_API_TOKEN:       process.env.GITHUB_API_TOKEN,
 };

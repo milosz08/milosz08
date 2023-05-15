@@ -19,6 +19,8 @@ export interface IPersonalJsonData {
     second_email: string;
     github_account_link: string;
     social_links: IPersonalLinkJsonData[];
+    github_name: string;
+    github_token: string;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

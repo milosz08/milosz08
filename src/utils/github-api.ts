@@ -12,15 +12,15 @@
  */
 
 import { Request, Response } from "express";
-import axios from "axios";
+import axios, { AxiosInstance } from "axios";
 
 import logger from "./logger";
-import config from "./config";
 import { AlertTypeId } from "./session";
 import * as Constant from "./constants";
 import projectImages from "../files/project-images";
 
 import { ProjectModel } from "../db/schemas/project.schema";
+import { PersonalDataModel } from "../db/schemas/personal-data.schema";
 
 import { IProjectSelectDataModel } from "../models/project-select-data.model";
 import { IGithubProjectDataApiModel } from "../models/github-project-data-api.model";
@@ -30,14 +30,24 @@ import { IGithubProjectDetailsApiModel, ILanguage } from "../models/github-proje
 
 class GithubApi {
 
-    private GH_REPOS = () => "https://api.github.com/users/Milosz08/repos";
-    private GH_REPO = (repoName: string) => `https://api.github.com/repos/Milosz08/${repoName}`;
-    private GH_REPO_LANGS = (repoName: string) => `https://api.github.com/repos/Milosz08/${repoName}/languages`;
+    private githubUsername: string = "";
+    private axiosInstance: AxiosInstance | undefined = undefined;
+
+    private GH_REPOS = () => `https://api.github.com/users/${this.githubUsername}/repos`;
+    private GH_REPO = (repoName: string) => `https://api.github.com/repos/${this.githubUsername}/${repoName}`;
+    private GH_REPO_LANGS = (repoName: string) => `https://api.github.com/repos/${this.githubUsername}/${repoName}/languages`;
     private GH_COLORS = () => "https://raw.githubusercontent.com/ozh/github-colors/master/colors.json";
 
-    private axiosInstance = axios.create({
-        headers: { "Authorization": `token ${config.GITHUB_API_TOKEN}` },
-    });
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    constructor() {
+        PersonalDataModel.findOne().then(detailsModel => {
+            if (!detailsModel) throw new Error("Could not find user details.");
+
+            this.githubUsername = detailsModel.githubName;
+            this.axiosInstance = axios.create({ headers: { "Authorization": `token ${detailsModel.githubToken}` } });
+        });
+    };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -48,7 +58,7 @@ class GithubApi {
         } else {
             projects = await ProjectModel.find({});
         }
-        const { data } = await this.axiosInstance.get(this.GH_REPOS());
+        const { data } = await this.axiosInstance!.get(this.GH_REPOS());
         return data
             .map((d: any) => ({ id: d.id, name: d.name }))
             .filter((d: IProjectSelectDataModel) => !projects.map((p: any) => p.id).includes(d.id))
@@ -57,15 +67,15 @@ class GithubApi {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     async getRepoId(repoName: string): Promise<number> {
-        const { data } = await this.axiosInstance.get(this.GH_REPO(repoName));
+        const { data } = await this.axiosInstance!.get(this.GH_REPO(repoName));
         return data.id;
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     async getAllUserProjects(repoNames: string[]): Promise<IGithubProjectDataApiModel[]> {
-        const { data } = await this.axiosInstance.get(this.GH_REPOS());
-        const { data: colorsData } = await this.axiosInstance.get(this.GH_COLORS());
+        const { data } = await this.axiosInstance!.get(this.GH_REPOS());
+        const { data: colorsData } = await this.axiosInstance!.get(this.GH_COLORS());
 
         return data
             .filter((r: any) => repoNames.includes(r.name))
@@ -89,9 +99,9 @@ class GithubApi {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     async getSingleProjectDetails(repoName: string): Promise<IGithubProjectDetailsApiModel> {
-        const { data: projectData } = await this.axiosInstance.get(this.GH_REPO(repoName));
-        const { data: langData } = await this.axiosInstance.get(this.GH_REPO_LANGS(repoName));
-        const { data: colorsData } = await this.axiosInstance.get(this.GH_COLORS());
+        const { data: projectData } = await this.axiosInstance!.get(this.GH_REPO(repoName));
+        const { data: langData } = await this.axiosInstance!.get(this.GH_REPO_LANGS(repoName));
+        const { data: colorsData } = await this.axiosInstance!.get(this.GH_COLORS());
 
         const allLanguagesCount = Object.values(langData).reduce((sum: number, langDataObj: any) => sum + langDataObj, 0);
         const lowerLangs = Object.keys(langData).map(l => l.toLowerCase());

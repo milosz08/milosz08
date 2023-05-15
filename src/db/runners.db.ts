@@ -76,6 +76,8 @@ class RunnersDb {
                 firstEmail: jsonFileData.first_email,
                 secondEmail: jsonFileData.second_email,
                 githubAccountLink: jsonFileData.github_account_link,
+                githubName: jsonFileData.github_name,
+                githubToken: jsonFileData.github_token,
             });
             await personalData.save();
             logger.info(`Successfully migrated personal data from ${this.PERSONAL_DATA_FILE} file to db. 1 row affected.`);

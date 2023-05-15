@@ -42,7 +42,7 @@ class CmsPersonalDataController {
     async postPersonalsDataPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = Constant.CMS_PERSONAL_DATA_EJS;
 
-        const { dscTop, mvnLink, dscBottom, firstEmail, secondEmail, ghLink } = req.body;
+        const { dscTop, mvnLink, dscBottom, firstEmail, secondEmail, ghLink, ghName, ghToken } = req.body;
         const personalDetails = await PersonalDataModel.findOne();
         try {
             if (!personalDetails) {
@@ -54,6 +54,8 @@ class CmsPersonalDataController {
             personalDetails.firstEmail = firstEmail;
             personalDetails.secondEmail = secondEmail;
             personalDetails.githubAccountLink = ghLink;
+            personalDetails.githubName = ghName;
+            personalDetails.githubToken = ghToken;
 
             await personalDetails.save();
 

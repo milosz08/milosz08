@@ -35,11 +35,29 @@
                 name="secondEmail" value="<%= form.secondEmail %>">
             <div class="invalid-feedback"><%= errors?.secondEmail?.message %></div>
         </div>
-        <div class="col-12 b-4">
+        <div class="col-12 mb-4">
             <label for="githubAccountLink" class="form-label">Github account email:</label>
             <input class="form-control <%= errors?.githubAccountLink && "is-invalid" %>" id="githubAccountLink"
                 name="ghLink" value="<%= form.githubAccountLink %>">
             <div class="invalid-feedback"><%= errors?.githubAccountLink?.message %></div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <label for="githubName" class="form-label">Github name:</label>
+            <input class="form-control <%= errors?.githubName && "is-invalid" %>" id="githubName"
+                name="ghName" value="<%= form.githubName %>">
+            <div class="invalid-feedback"><%= errors?.githubName?.message %></div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <label for="githubToken" class="form-label">Github token:</label>
+            <div class="input-group has-validation" data-pwd-container data-pwd-input-id="githubToken"
+                data-pwd-toggle-id="token-icon">
+                <input id="githubToken" type="password" class="form-control <%= errors?.githubToken && "is-invalid" %>"
+                    name="ghToken" value="<%= form.githubToken %>">
+                <span id="token-icon" class="input-group-text" role="button">
+                    <i class="bi bi-eye-fill"></i>
+                </span>
+                <div class="invalid-feedback"><%= errors?.githubToken?.message %></div>
+            </div>
         </div>
     </div>
     <div class="row mt-4">
@@ -53,3 +71,6 @@
         </div>
     </div>
 </form>
+
+<%- contentFor('additional-scripts') %>
+<script src="/assets/js/toggle-password.js"></script>

@@ -23,6 +23,8 @@ export interface IPersonalData {
     firstEmail: string;
     secondEmail: string;
     githubAccountLink: string;
+    githubName: string;
+    githubToken: string;
 }
 
 const PersonalDataSchema: Schema<IPersonalData> = new Schema({
@@ -57,6 +59,13 @@ const PersonalDataSchema: Schema<IPersonalData> = new Schema({
         type: String,
         required: [ true, "Github account link is required." ],
         validate: [ dbValidators.validateLink, "Link is invalid." ],
+    },
+    githubName: {
+        type: String,
+        required: [ true, "Github name is required." ],
+    },
+    githubToken: {
+        type: String,
     },
 });
 
