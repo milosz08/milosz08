@@ -25,6 +25,17 @@
             <div class="invalid-feedback"><%= errors?.alternativeName?.message %></div>
         </div>
         <div class="col-md-12 mb-3">
+            <label for="stage" class="form-label">Project stage:</label>
+            <select id="stage" class="form-select <%= errors?.stage && "is-invalid" %>" name="stage">
+                <% for (const stage of projectStages) { %>
+                    <option value="<%= stage.slug %>" <%= form.stage === stage.slug && "selected" %>>
+                        <%= stage.name %>
+                    </option>
+                <% } %>
+            </select>
+            <div class="invalid-feedback"><%= errors?.stage?.message %></div>
+        </div>
+        <div class="col-md-12 mb-3">
             <label for="externalLink" class="form-label">External link (not required):</label>
             <input type="text" class="form-control <%= errors?.externalLink && "is-invalid" %>" id="externalLink"
                 value="<%= form.extLink %>" name="extLink" maxlength="150">

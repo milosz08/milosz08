@@ -136,6 +136,10 @@ body {
     color: var(--anchor-link-icon-color);
 }
 
+select.gth-input option {
+    color: black;
+}
+
 .gth-project-container {
     border: .05em solid var(--button-border-color);
     background-color: var(--background-color);
@@ -159,6 +163,18 @@ body {
     height: 12px;
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 50%;
+}
+
+.gth-rounded-color-ind[data-color="early-dev-stage"] {
+    background-color: #a83f3f;
+}
+
+.gth-rounded-color-ind[data-color="in-progress"] {
+    background-color: #e7d69b;
+}
+
+.gth-rounded-color-ind[data-color="finished"] {
+    background-color: #bae199;
 }
 
 .gth-icon-container {

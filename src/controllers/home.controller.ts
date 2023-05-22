@@ -18,6 +18,7 @@ import * as View from "../utils/constants";
 import utilities from "../utils/utilities";
 import githubApi from "../utils/github-api";
 import projectImages from "../files/project-images";
+import { PROJECT_STAGES } from "../utils/project-stages";
 
 import { ProjectModel } from "../db/schemas/project.schema";
 import { IGithubProjectDetailsApiModel } from "../models/github-project-details-api.model";
@@ -28,13 +29,18 @@ class HomeController {
 
     async getHomePage(req: Request, res: Response): Promise<void> {
         const { path, title } = View.PUBLIC_PROJECTS_EJS;
-        const { q, page } = req.query;
+        const { q, s, page } = req.query;
 
         let selectedPage = Number(page) || 1;
-        const paginationUrl = q ? `?q=${q}&` : "?";
+        let paginationUrl = q ? `?q=${q}&` : "?";
+        if (s) paginationUrl +=`s=${s}&`;
 
         const regex = { $regex: q || "", $options: "i" };
-        const where = { $or: [ { name: regex }, { alternativeName: regex } ] };
+        const stRegex = { $regex: s || "", $options: "i" };
+        let where: any = { $and: [ { $or: [ { name: regex }, { alternativeName: regex } ] } ]};
+        if (s && s !== "all") {
+            where = { $and: [ { $or: [ { name: regex }, { alternativeName: regex } ] }, { stage: stRegex } ]};
+        }
         let query = ProjectModel.find(where).sort({ position: 1 });
 
         const resultsCount = await ProjectModel.find(where).count();
@@ -71,7 +77,9 @@ class HomeController {
             page: selectedPage,
             pagesCount,
             paginationUrl,
-            mergedData
+            mergedData,
+            projectStages: PROJECT_STAGES,
+            selectedStage: s,
         });
     };
 
@@ -102,6 +110,7 @@ class HomeController {
             projectDb: project,
             projectApi,
             projectImages: await projectImages.parseToFullPaths(project._id.toString()),
+            projectStage: PROJECT_STAGES.find(s => s.slug === project.stage) || PROJECT_STAGES[0],
         });
     };
 }

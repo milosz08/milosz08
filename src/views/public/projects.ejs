@@ -1,6 +1,14 @@
 <div class="container mt-5 overflow-hidden">
     <h5 class="text-center fw-normal">Selected projects<span class="secondary-text-color">:</span></h5>
-    <div class="mt-4 mx-0 row d-flex justify-content-between">
+    <div class="d-flex justify-content-center gap-4 flex-wrap mt-1 mb-4">
+        <% for (const stage of projectStages) { %>
+            <div class="hstack gap-2">
+                <span class="gth-rounded-color-ind" data-color="<%= stage.slug %>"></span>
+                <span class="text-secondary standard-font"><%= stage.name %></span>
+            </div>
+        <% } %>
+    </div>
+    <div class="mt-2 mx-0 row d-flex justify-content-between">
         <div class="col-md-3 px-0 d-none d-md-flex mx-0">
             <a class="gth-button h-100 hstack gap-2 <%= page <= 1 && "disabled" %>"
                 href="<%= paginationUrl %>page=<%= page - 1 %>">
@@ -11,6 +19,14 @@
         <div class="col-md-6 px-0 mx-0">
             <form method="get" class="d-flex h-100 w-100">
                 <input type="text" name="q" class="gth-input w-100" placeholder="Search by name..." value="<%= query.q %>">
+                <select class="gth-input ms-2" name="s">
+                    <option value="all">All stages</option>
+                    <% for (const stage of projectStages) { %>
+                        <option value="<%= stage.slug %>" <%= stage.slug === selectedStage && "selected" %>>
+                            <%= stage.name %>
+                        </option>
+                    <% } %>
+                </select>
                 <button class="gth-button small-padding h-100 ms-2">
                     <i class="bi bi-search"></i>
                 </button>
@@ -43,7 +59,7 @@
                     <div class="gth-project-container d-flex flex-column justify-content-between p-3 h-100">
                         <div>
                             <div class="hstack gap-2 align-items-center">
-                                <i class="bi bi-code-slash secondary-text-color d-block gth-icon"></i>
+                                <span class="gth-rounded-color-ind" data-color="<%= projectData.projectDb.stage %>"></span>
                                 <a class="standard-font primary-text-color anchor-link mb-0 me-auto"
                                     href="/project/<%= projectData.projectDb.name %>">
                                     <%= projectData.projectDb.alternativeName %>

@@ -27,6 +27,7 @@ export interface IProject {
     id: number;
     position: number;
     name: string;
+    stage: string;
     alternativeName: string;
     externalLink: string;
     detailsDescription: string;
@@ -46,6 +47,11 @@ const ProjectSchema: Schema<IProject> = new Schema({
     name: {
         type: String,
         unique: true,
+    },
+    stage: {
+        type: String,
+        required: [ true, "Project stage field is required." ],
+        validate: [ dbValidators.validateStage, "Invalid stage name" ]
     },
     alternativeName: {
         type: String,

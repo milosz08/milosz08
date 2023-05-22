@@ -20,6 +20,7 @@ import githubApi from "../utils/github-api";
 import * as Constant from "../utils/constants";
 import { AlertTypeId } from "../utils/session";
 import projectImages from "../files/project-images";
+import { PROJECT_STAGES } from "../utils/project-stages";
 
 import { ProjectModel } from "../db/schemas/project.schema";
 
@@ -87,12 +88,13 @@ class CmsProjectsController {
             techStacks: JSON.stringify([ { name: "", error: false, errorMess: "" } ]),
             projectImages: [],
             projectId: "",
+            projectStages: PROJECT_STAGES,
         });
     };
 
     async postAddProjectPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = Constant.CMS_ADD_PROJECT_EJS;
-        const { ghProject, altName, detDesc, techStacks, extLink } = req.body;
+        const { ghProject, altName, stage, detDesc, techStacks, extLink } = req.body;
 
         const notPersistProjects = await githubApi.getAllParsedNotPersistedProject();
         const projectsCount = await ProjectModel.find({}).count();
@@ -105,6 +107,7 @@ class CmsProjectsController {
                 id: await githubApi.getRepoId(ghProject),
                 position: projectsCount + 1,
                 name: ghProject,
+                stage,
                 alternativeName: altName,
                 externalLink: extLink || null,
                 detailsDescription: detDesc,
@@ -136,6 +139,7 @@ class CmsProjectsController {
                 techStacks: JSON.stringify(techStacksWithErrors),
                 projectImages: [],
                 projectId: "",
+                projectStages: PROJECT_STAGES,
             });
         }
     };
@@ -157,7 +161,7 @@ class CmsProjectsController {
             return;
         }
         const notPersistProjects = await githubApi.getAllParsedNotPersistedProject(project.name);
-        const { name, alternativeName, position, externalLink, detailsDescription } = project;
+        const { name, alternativeName, stage, position, externalLink, detailsDescription } = project;
         const techStacks = project.techStackPositions.map(e => ({ name: e.name, error: false, errorMess: "" }));
 
         if (await githubApi.deleteAlreadyRemovedProject(req, res, name, project._id.toString(), true)) {
@@ -169,17 +173,18 @@ class CmsProjectsController {
             pageAlert: utilities.extractAlertAndDestroy(req, AlertTypeId.CMS_PROJECT_UPDATE_PAGE),
             projects: notPersistProjects,
             posMax: projectsCount,
-            form: { ghProject: name, listPos: position, altName: alternativeName,
+            form: { ghProject: name, stage, listPos: position, altName: alternativeName,
                 extLink: externalLink, detDesc: detailsDescription },
             techStacks: JSON.stringify(techStacks),
             projectImages: await projectImages.parseToFullPaths(projectId),
             projectId,
+            projectStages: PROJECT_STAGES,
         });
     };
 
     async postUpdateProjectPage(req: Request, res: Response): Promise<void> {
         const { path, title, layout } = Constant.CMS_UPDATE_PROJECT_EJS;
-        const { ghProject, listPos, altName, extLink, detDesc, techStacks } = req.body;
+        const { ghProject, listPos, altName, stage, extLink, detDesc, techStacks } = req.body;
         const { projectId } = req.params;
         if (!mongoose.Types.ObjectId.isValid(projectId)) {
             res.redirect("/cms/projects");
@@ -207,6 +212,7 @@ class CmsProjectsController {
 
             updatedProject.id = notPersistProjects.find(e => e.name === ghProject)?.id;
             updatedProject.name = ghProject;
+            updatedProject.stage = stage;
             updatedProject.position = listPos;
             updatedProject.alternativeName = altName;
             updatedProject.externalLink = extLink || null;
@@ -237,6 +243,7 @@ class CmsProjectsController {
                 techStacks: JSON.stringify(techStacksWithErrors),
                 projectImages: await projectImages.parseToFullPaths(projectId),
                 projectId,
+                projectStages: PROJECT_STAGES,
             });
         }
     };

@@ -12,6 +12,7 @@
  */
 
 import { ADMIN, EMAIL_REGEX, LINK_REGEX, LOGIN_REGEX, MODERATOR } from "../utils/constants";
+import { PROJECT_STAGES } from "../utils/project-stages";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -23,6 +24,10 @@ class ValidatorsDb {
 
     validateRole(role: string): boolean {
         return [ MODERATOR, ADMIN ].some(r => r === role.toUpperCase());
+    };
+
+    validateStage(stage: string): boolean {
+        return PROJECT_STAGES.some(s => s.slug === stage.toLowerCase());
     };
 
     validateLogin(login: string): boolean {
