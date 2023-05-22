@@ -24,7 +24,7 @@ are pulled dynamically from the Github API.
 ## Clone script
 To install the program on your computer use the command (or use the built-in GIT system in your IDE environment):
 ```
-$ git clone https://github.com/Milosz08/jwizard jwizard-discord-bot
+$ git clone https://github.com/Milosz08/personal-website personal-website
 ```
 
 <a name="prepare-and-run"></a>
