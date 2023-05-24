@@ -158,23 +158,23 @@ select.gth-input option {
     color: var(--anchor-link-icon-color);
 }
 
-.gth-rounded-color-ind {
+.gth-rounded-ind {
     width: 12px;
     height: 12px;
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 50%;
 }
 
-.gth-rounded-color-ind[data-color="early-dev-stage"] {
-    background-color: #a83f3f;
+.gth-rounded-ind[data-type="early-dev-stage"] {
+    background-color: transparent;
 }
 
-.gth-rounded-color-ind[data-color="in-progress"] {
-    background-color: #e7d69b;
+.gth-rounded-ind[data-type="in-progress"] {
+    background-color: var(--topic-background);
 }
 
-.gth-rounded-color-ind[data-color="finished"] {
-    background-color: #bae199;
+.gth-rounded-ind[data-type="finished"] {
+    background-color: var(--text-color);
 }
 
 .gth-icon-container {

@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-center gap-4 flex-wrap mt-1 mb-4">
         <% for (const stage of projectStages) { %>
             <div class="hstack gap-2">
-                <span class="gth-rounded-color-ind" data-color="<%= stage.slug %>"></span>
+                <span class="gth-rounded-ind" data-type="<%= stage.slug %>"></span>
                 <span class="text-secondary standard-font"><%= stage.name %></span>
             </div>
         <% } %>
@@ -59,7 +59,7 @@
                     <div class="gth-project-container d-flex flex-column justify-content-between p-3 h-100">
                         <div>
                             <div class="hstack gap-2 align-items-center">
-                                <span class="gth-rounded-color-ind" data-color="<%= projectData.projectDb.stage %>"></span>
+                                <span class="gth-rounded-ind" data-type="<%= projectData.projectDb.stage %>"></span>
                                 <a class="standard-font primary-text-color anchor-link mb-0 me-auto"
                                     href="/project/<%= projectData.projectDb.name %>">
                                     <%= projectData.projectDb.alternativeName %>
@@ -75,7 +75,7 @@
                         </div>
                         <div class="d-flex justify-content-between">
                             <div class="hstack gap-2">
-                                <span class="gth-rounded-color-ind"
+                                <span class="gth-rounded-ind"
                                     style="background-color: <%= projectData.projectApi.primaryLanguageColor %>;"></span>
                                 <span class="text-secondary"><%= projectData.projectApi.primaryLanguage %></span>
                             </div>

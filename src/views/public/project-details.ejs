@@ -14,7 +14,7 @@
         <div class="d-flex justify-content-center mt-1 flex-wrap">
             <% for (const lang of projectApi.languages) { %>
                 <div class="hstack gap-2 me-3">
-                    <span class="gth-rounded-color-ind" style="background-color: <%= lang.color %>;"></span>
+                    <span class="gth-rounded-ind" style="background-color: <%= lang.color %>;"></span>
                     <span class="small-font-size">
                         <%= lang.name %>
                         <span class="text-secondary"><%= lang.percentage.toFixed(1) %>%</span>
@@ -99,7 +99,7 @@
             <div class="mb-3">
                 <div class="hstack gap-2 standard-font mb-2">
                     <div class="gth-icon-container">
-                        <div class="gth-rounded-color-ind mx-auto" data-color="<%= projectStage.slug %>"></div>
+                        <div class="gth-rounded-ind mx-auto" data-type="<%= projectStage.slug %>"></div>
                     </div>
                     <span class="text-secondary">Status: <%= projectStage.name %></span>
                 </div>
