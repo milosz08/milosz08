@@ -219,7 +219,6 @@ class AuthController {
                 token,
             });
         }
-
     };
 }
 
