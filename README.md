@@ -33,7 +33,11 @@ $ git clone https://github.com/Milosz08/personal-website personal-website
 
 <a name="prepare-and-run"></a>
 ## Prepare and run
-0. Before you run program, create `.env` file in ROOT project context and fill as below:
+0. Before you run program, create `.env` file via this command:
+```
+$ grep -vE '^\s*$|^#' .env.sample > .env
+```
+and fill with propriet values:
 ```properties
 # server configuration
 EXPRESS_PORT              = [application port, ex. 3031]
