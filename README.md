@@ -7,14 +7,13 @@
 ![](https://img.shields.io/badge/Packages%20manager-npm-brown.svg)
 &nbsp;&nbsp;
 <br>
+> More info about this project you will find [on my personal website](https://miloszgilga.pl/project/personal-website)
+> <br>
+> See project at [miloszgilga.pl](https://miloszgilga.pl)
 
 Personal website created using NodeJS environment with Express framework, written in TypeScript language. Includes a simple
 CMS in order to add/edit/delete projects and modify other website elements. Additional informations about selected projects
 are pulled dynamically from the Github API.
-
-> More info about this project you will find [on my personal website](https://miloszgilga.pl/project/personal-website)
-> <br>
-> See project at [miloszgilga.pl](https://miloszgilga.pl)
 
 ## Table of content
 * [Clone script](#clone-script)
