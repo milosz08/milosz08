@@ -1,6 +1,0 @@
-<component name="CopyrightManager">
-  <copyright>
-    <option name="notice" value="Copyright (c) &amp;#36;originalComment.match(&quot;Copyright (\d+)&quot;, 1, &quot;-&quot;)&amp;#36;today.year by MILOSZ GILGA &lt;http://miloszgilga.pl&gt;&#10;&#10;File name: &amp;#36;file.fileName&#10;Last modified: &amp;#36;file.lastModified&#10;Project name: &amp;#36;project.name&#10;&#10;LICENSE NOT SPECIFIED.&#10;&#10;For more info about use this code in your project, make contact with &#10;original author. Project created only for personal purposes." />
-    <option name="myName" value="Not specified" />
-  </copyright>
-</component>

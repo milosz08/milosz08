@@ -1,0 +1,66 @@
+{
+  "prettier.configPath": "./.prettierrc.js",
+  "editor.detectIndentation": false,
+  "editor.mouseWheelZoom": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "explorer.autoReveal": false,
+  "explorer.compactFolders": false,
+  "workbench.tree.indent": 20,
+  "files.insertFinalNewline": true,
+  "psi-header.config": {
+    "forceToTop": true,
+    "blankLinesAfter": 1
+  },
+  "psi-header.changes-tracking": {
+    "isActive": true,
+    "autoHeader": "autoSave",
+    "include": ["javascript", "typescript", "css"],
+    "includeGlob": ["**/*.sh"],
+    "excludeGlob": [".husky/**/*", ".vscode/**/*"],
+    "enforceHeader": true,
+    "replace": ["File name", "Last modified"]
+  },
+  "psi-header.lang-config": [
+    {
+      "language": "javascript",
+      "begin": "/*",
+      "lineLength": 64,
+      "beforeHeader": ["'use strict';"]
+    },
+    {
+      "language": "shellscript",
+      "begin": "#",
+      "prefix": "# ",
+      "end": "#",
+      "beforeHeader": ["#!/bin/sh", ""],
+      "lineLength": 64
+    },
+    {
+      "language": "*",
+      "begin": "/*",
+      "prefix": " * ",
+      "end": " */",
+      "lineLength": 64
+    }
+  ],
+  "psi-header.templates": [
+    {
+      "language": "*",
+      "template": [
+        "Copyright (c) <<year>> by MILOSZ GILGA <https://miloszgilga.pl>",
+        "",
+        "  File name: <<filename>>",
+        "  Created at: <<filecreated('YYYY-MM-DD, HH:mm:ss')>>",
+        "  Last updated at: <<dateformat('YYYY-MM-DD, HH:mm:ss')>>",
+        "  Project name: <<msph_projectName>>",
+        "",
+        "  LICENSE NOT SPECIFIED.",
+        "",
+        "For more info about use this code in your project, make contact with",
+        "original author. Project created only for personal purposes."
+      ]
+    }
+  ]
+}
