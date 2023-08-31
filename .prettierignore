@@ -1,0 +1,10 @@
+node_modules
+dist
+.husky
+LICENSE
+README.md
+.env
+.env.sample
+yarn.lock
+.gitignore
+src/**/*.ejs
