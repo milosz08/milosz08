@@ -1,30 +1,33 @@
 <html lang="en-US">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %> | Miłosz Gilga</title>
-    <script>
-        const theme = localStorage.getItem("THEME") || "LIGHT";
-        document.documentElement.dataset.theme = theme;
-    </script>
-    <%- include("../partials/_head-includes.partial.ejs") %>
-    <link rel="stylesheet" href="/assets/styles/variables.css">
-    <link rel="stylesheet" href="/assets/styles/main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | Miłosz Gilga</title>
+  <script>
+    const theme = localStorage.getItem("THEME") || "LIGHT";
+    document.documentElement.dataset.theme = theme;
+  </script>
+  <%- include("../partials/_head-includes.partial.ejs") %>
+  <link rel="stylesheet" href="/assets/styles/variables.css">
+  <link rel="stylesheet" href="/assets/styles/main.css">
 </head>
+
 <body>
-    <% if (personalData) { %>
-        <%- include("../partials/header.partial.ejs") %>
-        <main class="my-4">
-            <%- body %>
-        </main>
-        <%- include("../partials/footer.partial.ejs") %>
-        <%- include("../partials/_scripts-includes.partial.ejs") %>
-        <script src="/assets/js/common-public.js"></script>
-    <% } else { %>
-        <div class="d-flex justify-content-center align-items-center min-vh-100">
-            <p class="secondary-text-color">Unable to load project data.</p>
-        </div>
-    <% } %>
+  <% if (personalData) { %>
+  <%- include("../partials/header.partial.ejs") %>
+  <main class="my-4">
+    <%- body %>
+  </main>
+  <%- include("../partials/footer.partial.ejs") %>
+  <%- include("../partials/_scripts-includes.partial.ejs") %>
+  <script src="/assets/js/common-public.js"></script>
+  <% } else { %>
+  <div class="d-flex justify-content-center align-items-center min-vh-100">
+    <p class="secondary-text-color">Unable to load project data.</p>
+  </div>
+  <% } %>
 </body>
+
 </html>

@@ -1,51 +1,50 @@
 /*
- * Copyright (c) 2023 by MILOSZ GILGA <http://miloszgilga.pl>
+ * Copyright (c) 2023 by MILOSZ GILGA <https://miloszgilga.pl>
  *
- * File name: ota-token.schema.ts
- * Last modified: 22/04/2023, 19:14
- * Project name: personal-website
+ *   File name: ota-token.schema.ts
+ *   Created at: 2023-05-29, 01:50:56
+ *   Last updated at: 2023-08-31, 19:48:35
+ *   Project name: <<msph_projectName>>
  *
- * LICENSE NOT SPECIFIED.
+ *   LICENSE NOT SPECIFIED.
  *
  * For more info about use this code in your project, make contact with
  * original author. Project created only for personal purposes.
  */
+import mongoose, { Model, Schema, Types } from 'mongoose';
+import { User, UserModel } from './user.schema';
 
-import mongoose, { Model, Schema, Types } from "mongoose";
-import { IUser, UserModel } from "./user.schema";
+export type OtaToken = {
+  token: string;
+  expiredAt: Date;
+  isExpired: boolean;
+  user: User;
+};
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-export interface IOtaToken {
-    token: string;
-    expiredAt: Date;
-    isExpired: boolean;
-    user: IUser;
-}
-
-const OtaTokenSchema: Schema<IOtaToken> = new Schema<IOtaToken>({
-    token: {
-        type: String,
-        required: true,
-        unique: true,
-        maxlength: 10,
-    },
-    expiredAt: {
-        type: Date,
-        required: true,
-    },
-    isExpired: {
-        type: Boolean,
-        required: true,
-        default: false,
-    },
-    user: {
-        type: Types.ObjectId,
-        required: true,
-        ref: UserModel,
-    },
+const OtaTokenSchema: Schema<OtaToken> = new Schema<OtaToken>({
+  token: {
+    type: String,
+    required: true,
+    unique: true,
+    maxlength: 10,
+  },
+  expiredAt: {
+    type: Date,
+    required: true,
+  },
+  isExpired: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
+  user: {
+    type: Types.ObjectId,
+    required: true,
+    ref: UserModel,
+  },
 });
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-export const OtaTokenModel: Model<IOtaToken> = mongoose.model("OtaToken", OtaTokenSchema);
+export const OtaTokenModel: Model<OtaToken> = mongoose.model(
+  'OtaToken',
+  OtaTokenSchema
+);

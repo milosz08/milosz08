@@ -7,59 +7,57 @@
 }) %>
 
 <% if (socialLinks.length !== 0) { %>
-    <div class="table-responsive">
-        <table class="table table-striped table-hover table-bordered mt-3">
-            <thead>
-            <tr>
-                <th>Lp.</th>
-                <th>Link</th>
-                <th>Paraphrase</th>
-                <th>Icon</th>
-                <th class="fit">Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <% socialLinks.forEach((socialLink, index) => { %>
-                <tr>
-                    <td class="align-middle"><%= ((page - 1) * totalPerPage) + index + 1 %></td>
-                    <td class="align-middle"><%= socialLink.link %></td>
-                    <td class="align-middle"><%= socialLink.paraphrase %></td>
-                    <td class="align-middle"><%= socialLink.iconClass %></td>
-                    <td class="align-middle fit">
-                        <a class="btn btn-primary btn-sm lh-sm" href="/cms/social-link/update/<%= socialLink._id %>">Edit</a>
-                        <button class="btn btn-danger btn-sm lh-sm" data-bs-toggle="modal"
-                            data-bs-target="#deleteSocialLink<%= socialLink._id %>">
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <div class="modal fade" id="deleteSocialLink<%= socialLink._id %>" data-bs-backdrop="static"
-                    data-bs-keyboard="false" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete account</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Are you sure you want to delete social link <strong><%= socialLink.link %></strong>?
-                                Changes will not be able to be revoked.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
-                                <a href="/cms/social-link/delete/<%= socialLink._id %>" class="btn btn-outline-danger">
-                                    Delete social link
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <% }) %>
-            </tbody>
-        </table>
-    </div>
+<div class="table-responsive">
+  <table class="table table-striped table-hover table-bordered mt-3">
+    <thead>
+      <tr>
+        <th>Lp.</th>
+        <th>Link</th>
+        <th>Paraphrase</th>
+        <th>Icon</th>
+        <th class="fit">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% socialLinks.forEach((socialLink, index) => { %>
+      <tr>
+        <td class="align-middle"><%= ((page - 1) * totalPerPage) + index + 1 %></td>
+        <td class="align-middle"><%= socialLink.link %></td>
+        <td class="align-middle"><%= socialLink.paraphrase %></td>
+        <td class="align-middle"><%= socialLink.iconClass %></td>
+        <td class="align-middle fit">
+          <a class="btn btn-primary btn-sm lh-sm" href="/cms/social-link/update/<%= socialLink._id %>">Edit</a>
+          <button class="btn btn-danger btn-sm lh-sm" data-bs-toggle="modal" data-bs-target="#deleteSocialLink<%= socialLink._id %>">
+            Delete
+          </button>
+        </td>
+      </tr>
+      <div class="modal fade" id="deleteSocialLink<%= socialLink._id %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete account</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to delete social link <strong><%= socialLink.link %></strong>?
+              Changes will not be able to be revoked.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+              <a href="/cms/social-link/delete/<%= socialLink._id %>" class="btn btn-outline-danger">
+                Delete social link
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
 <% } else { %>
-    <div class="alert alert-warning">No social links were found from the search results.</div>
+<div class="alert alert-warning">No social links were found from the search results.</div>
 <% } %>
 
 <%- include("../partials/pagination.partial.ejs", { showingCount: socialLinks.length }) %>

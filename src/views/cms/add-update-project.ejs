@@ -3,102 +3,98 @@
 
 <h2 class="mb-1"><%= projectAction %> project</h2>
 <div class="row mb-3">
-    <a href="/cms/projects">Return to projects</a>
+  <a href="/cms/projects">Return to projects</a>
 </div>
 <form method="post" enctype="multipart/form-data">
-    <div class="row">
-        <div class="col-md-12 mb-3">
-            <label for="ghProject" class="form-label">Select Github project:</label>
-            <select id="ghProject" class="form-select <%= errors?.id && "is-invalid" %>" name="ghProject">
-                <% for (const project of projects) { %>
-                    <option value="<%= project.name %>" <%= form.ghProject === project.name && "selected" %>>
-                        <%= project.name %>
-                    </option>
-                <% } %>
-            </select>
-            <div class="invalid-feedback"><%= errors?.id?.message %></div>
-        </div>
-        <div class="col-md-12 mb-3">
-            <label for="alternativeName" class="form-label">Alternative project name:</label>
-            <input type="text" class="form-control <%= errors?.alternativeName && "is-invalid" %>" id="alternativeName"
-                value="<%= form.altName %>" name="altName" maxlength="150">
-            <div class="invalid-feedback"><%= errors?.alternativeName?.message %></div>
-        </div>
-        <div class="col-md-12 mb-3">
-            <label for="stage" class="form-label">Project stage:</label>
-            <select id="stage" class="form-select <%= errors?.stage && "is-invalid" %>" name="stage">
-                <% for (const stage of projectStages) { %>
-                    <option value="<%= stage.slug %>" <%= form.stage === stage.slug && "selected" %>>
-                        <%= stage.name %>
-                    </option>
-                <% } %>
-            </select>
-            <div class="invalid-feedback"><%= errors?.stage?.message %></div>
-        </div>
-        <div class="col-md-12 mb-3">
-            <label for="externalLink" class="form-label">External link (not required):</label>
-            <input type="text" class="form-control <%= errors?.externalLink && "is-invalid" %>" id="externalLink"
-                value="<%= form.extLink %>" name="extLink" maxlength="150">
-            <div class="invalid-feedback"><%= errors?.externalLink?.message %></div>
-        </div>
-        <% if (projectAction.toLowerCase() === "update") { %>
-            <div class="col-md-12 mb-3">
-                <label for="externalLink" class="form-label">Position on list:</label>
-                <select id="ghProject" class="form-select <%= errors?.position && "is-invalid" %>" name="listPos">
-                    <% for (let i = 1; i <= posMax; i++) { %>
-                        <option value="<%= i %>" <%= form.listPos === i && "selected" %>>
-                            <%= i %>
-                        </option>
-                    <% } %>
-                </select>
-                <div class="invalid-feedback"><%= errors?.position?.message %></div>
-            </div>
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <label for="ghProject" class="form-label">Select Github project:</label>
+      <select id="ghProject" class="form-select <%= errors?.id && "is-invalid" %>" name="ghProject">
+        <% for (const project of projects) { %>
+        <option value="<%= project.name %>" <%= form.ghProject === project.name && "selected" %>>
+          <%= project.name %>
+        </option>
         <% } %>
-        <div class="col-md-12 mb-3">
-            <label for="detailsDescription" class="form-label">
-                Details description (max 2000 characters, markdown support):
-            </label>
-            <textarea class="form-control <%= errors?.detailsDescription && "is-invalid" %>" id="detailsDescription"
-                name="detDesc" minlength="10" maxlength="2000" rows="10"><%= form.detDesc %></textarea>
-            <div class="invalid-feedback"><%= errors?.detailsDescription?.message %></div>
-        </div>
-        <div class="col-md-12 mb-3">
-            <div class="projectTechStacksContainer" data-tech-stacks="<%= techStacks %>"></div>
-            <button type="button" class="btn btn-primary w-100 addNewInput">
-                Add new tech stack element
-            </button>
-        </div>
-        <div class="col-md-12 mb-3">
-            <label for="imagesInput" class="form-label">Additional project images:</label>
-            <input type="file" class="form-control" id="imagesInput" name="images" accept="image/jpeg,image/png" multiple>
-            <div id="imagesPreviewContainer" class="d-flex flex-wrap gap-2 mt-2"></div>
-        </div>
-        <% if (projectImages.length > 0 && projectId) { %>
-            <div class="col-md-12">
-                <p>Project images:</p>
-                <div class="d-flex flex-wrap gap-2 mt-2">
-                    <% for (const image of projectImages) { %>
-                        <%- include("../partials/remove-image-modal.partial.ejs", { image }) %>
-                        <div class="d-flex flex-column image-preview">
-                            <div class="flex-fill image-preview-content" style="background-image: url('<%= image.absolutePath %>')"></div>
-                            <button type="button" data-bs-toggle="modal" data-bs-target="#removeImage<%= image.index %>"
-                                class="btn btn-danger w-100 mt-2">X</button>
-                        </div>
-                    <% } %>
-                </div>
-            </div>
+      </select>
+      <div class="invalid-feedback"><%= errors?.id?.message %></div>
+    </div>
+    <div class="col-md-12 mb-3">
+      <label for="alternativeName" class="form-label">Alternative project name:</label>
+      <input type="text" class="form-control <%= errors?.alternativeName && "is-invalid" %>" id="alternativeName" value="<%= form.altName %>" name="altName" maxlength="150">
+      <div class="invalid-feedback"><%= errors?.alternativeName?.message %></div>
+    </div>
+    <div class="col-md-12 mb-3">
+      <label for="stage" class="form-label">Project stage:</label>
+      <select id="stage" class="form-select <%= errors?.stage && "is-invalid" %>" name="stage">
+        <% for (const stage of projectStages) { %>
+        <option value="<%= stage.slug %>" <%= form.stage === stage.slug && "selected" %>>
+          <%= stage.name %>
+        </option>
         <% } %>
+      </select>
+      <div class="invalid-feedback"><%= errors?.stage?.message %></div>
     </div>
-    <div class="row mt-4">
-        <div class="col-md-6 mb-2">
-            <button class="btn btn-outline-dark w-100" type="button" data-bs-toggle="modal" data-bs-target="#declineChanges">
-                Decline changes
-            </button>
-        </div>
-        <div class="col-md-6 mb-2">
-            <button class="btn btn-primary w-100" type="submit"><%= projectAction %> project</button>
-        </div>
+    <div class="col-md-12 mb-3">
+      <label for="externalLink" class="form-label">External link (not required):</label>
+      <input type="text" class="form-control <%= errors?.externalLink && "is-invalid" %>" id="externalLink" value="<%= form.extLink %>" name="extLink" maxlength="150">
+      <div class="invalid-feedback"><%= errors?.externalLink?.message %></div>
     </div>
+    <% if (projectAction.toLowerCase() === "update") { %>
+    <div class="col-md-12 mb-3">
+      <label for="externalLink" class="form-label">Position on list:</label>
+      <select id="ghProject" class="form-select <%= errors?.position && "is-invalid" %>" name="listPos">
+        <% for (let i = 1; i <= posMax; i++) { %>
+        <option value="<%= i %>" <%= form.listPos === i && "selected" %>>
+          <%= i %>
+        </option>
+        <% } %>
+      </select>
+      <div class="invalid-feedback"><%= errors?.position?.message %></div>
+    </div>
+    <% } %>
+    <div class="col-md-12 mb-3">
+      <label for="detailsDescription" class="form-label">
+        Details description (max 2000 characters, markdown support):
+      </label>
+      <textarea class="form-control <%= errors?.detailsDescription && "is-invalid" %>" id="detailsDescription" name="detDesc" minlength="10" maxlength="2000" rows="10"><%= form.detDesc %></textarea>
+      <div class="invalid-feedback"><%= errors?.detailsDescription?.message %></div>
+    </div>
+    <div class="col-md-12 mb-3">
+      <div class="projectTechStacksContainer" data-tech-stacks="<%= techStacks %>"></div>
+      <button type="button" class="btn btn-primary w-100 addNewInput">
+        Add new tech stack element
+      </button>
+    </div>
+    <div class="col-md-12 mb-3">
+      <label for="imagesInput" class="form-label">Additional project images:</label>
+      <input type="file" class="form-control" id="imagesInput" name="images" accept="image/jpeg,image/png" multiple>
+      <div id="imagesPreviewContainer" class="d-flex flex-wrap gap-2 mt-2"></div>
+    </div>
+    <% if (projectImages.length > 0 && projectId) { %>
+    <div class="col-md-12">
+      <p>Project images:</p>
+      <div class="d-flex flex-wrap gap-2 mt-2">
+        <% for (const image of projectImages) { %>
+        <%- include("../partials/remove-image-modal.partial.ejs", { image }) %>
+        <div class="d-flex flex-column image-preview">
+          <div class="flex-fill image-preview-content" style="background-image: url('<%= image.absolutePath %>')"></div>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#removeImage<%= image.index %>" class="btn btn-danger w-100 mt-2">X</button>
+        </div>
+        <% } %>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-6 mb-2">
+      <button class="btn btn-outline-dark w-100" type="button" data-bs-toggle="modal" data-bs-target="#declineChanges">
+        Decline changes
+      </button>
+    </div>
+    <div class="col-md-6 mb-2">
+      <button class="btn btn-primary w-100" type="submit"><%= projectAction %> project</button>
+    </div>
+  </div>
 </form>
 
 <%- contentFor('additional-scripts') %>

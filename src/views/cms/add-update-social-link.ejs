@@ -3,37 +3,34 @@
 
 <h1><%= socialLinkAction %> social link</h1>
 <div class="row mb-3">
-    <a href="/cms/social-links">Return to social links</a>
+  <a href="/cms/social-links">Return to social links</a>
 </div>
 <form method="post">
-    <div class="row">
-        <div class="col-12 mb-3">
-            <label for="paraphrase" class="form-label">Paraphrase:</label>
-            <input type="text" class="form-control <%= errors?.paraphrase && "is-invalid" %>" id="paraphrase"
-                value="<%= form.paraphrase %>" name="paraphrase" minlength="10" maxlength="150">
-            <div class="invalid-feedback"><%= errors?.paraphrase?.message %></div>
-        </div>
-        <div class="col-md-6">
-            <label for="link" class="form-label">Link:</label>
-            <input type="text" class="form-control <%= errors?.link && "is-invalid" %>" id="link"
-                value="<%= form.link %>" name="link">
-            <div class="invalid-feedback"><%= errors?.link?.message %></div>
-        </div>
-        <div class="col-md-6">
-            <label for="iconClass" class="form-label">CSS icon classes:</label>
-            <input type="text" class="form-control <%= errors?.iconClass && "is-invalid" %>" id="iconClass"
-                value="<%= form.iconClass %>" name="iconClass">
-            <div class="invalid-feedback"><%= errors?.iconClass?.message %></div>
-        </div>
+  <div class="row">
+    <div class="col-12 mb-3">
+      <label for="paraphrase" class="form-label">Paraphrase:</label>
+      <input type="text" class="form-control <%= errors?.paraphrase && "is-invalid" %>" id="paraphrase" value="<%= form.paraphrase %>" name="paraphrase" minlength="10" maxlength="150">
+      <div class="invalid-feedback"><%= errors?.paraphrase?.message %></div>
     </div>
-    <div class="row mt-4">
-        <div class="col-md-6 mb-2">
-            <button class="btn btn-outline-dark w-100" type="button" data-bs-toggle="modal" data-bs-target="#declineChanges">
-                Decline changes
-            </button>
-        </div>
-        <div class="col-md-6 mb-2">
-            <button class="btn btn-primary w-100" type="submit"><%= socialLinkAction %> social link</button>
-        </div>
+    <div class="col-md-6">
+      <label for="link" class="form-label">Link:</label>
+      <input type="text" class="form-control <%= errors?.link && "is-invalid" %>" id="link" value="<%= form.link %>" name="link">
+      <div class="invalid-feedback"><%= errors?.link?.message %></div>
     </div>
+    <div class="col-md-6">
+      <label for="iconClass" class="form-label">CSS icon classes:</label>
+      <input type="text" class="form-control <%= errors?.iconClass && "is-invalid" %>" id="iconClass" value="<%= form.iconClass %>" name="iconClass">
+      <div class="invalid-feedback"><%= errors?.iconClass?.message %></div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-6 mb-2">
+      <button class="btn btn-outline-dark w-100" type="button" data-bs-toggle="modal" data-bs-target="#declineChanges">
+        Decline changes
+      </button>
+    </div>
+    <div class="col-md-6 mb-2">
+      <button class="btn btn-primary w-100" type="submit"><%= socialLinkAction %> social link</button>
+    </div>
+  </div>
 </form>

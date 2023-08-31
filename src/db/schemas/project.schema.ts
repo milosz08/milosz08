@@ -1,93 +1,106 @@
 /*
- * Copyright (c) 2023 by MILOSZ GILGA <http://miloszgilga.pl>
+ * Copyright (c) 2023 by MILOSZ GILGA <https://miloszgilga.pl>
  *
- * File name: project.schema.ts
- * Last modified: 30/04/2023, 01:37
- * Project name: personal-website
+ *   File name: project.schema.ts
+ *   Created at: 2023-05-29, 01:50:56
+ *   Last updated at: 2023-08-31, 19:48:43
+ *   Project name: <<msph_projectName>>
  *
- * LICENSE NOT SPECIFIED.
+ *   LICENSE NOT SPECIFIED.
  *
  * For more info about use this code in your project, make contact with
  * original author. Project created only for personal purposes.
  */
+import mongoose, { Model, Schema } from 'mongoose';
+import uniqueValidator from 'mongoose-unique-validator';
+import dbValidators from '../validators.db';
 
-import mongoose, { Model, Schema } from "mongoose";
-import uniqueValidator from "mongoose-unique-validator";
+export type TechStackPos = {
+  pos: number;
+  name: string;
+};
 
-import dbValidators from "../validators.db";
+export type Project = {
+  id: number;
+  position: number;
+  name: string;
+  stage: string;
+  alternativeName: string;
+  externalLink: string;
+  detailsDescription: string;
+  techStackPositions: TechStackPos[];
+};
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-export interface ITechStackPos {
-    pos: number;
-    name: string;
-}
-
-export interface IProject {
-    id: number;
-    position: number;
-    name: string;
-    stage: string;
-    alternativeName: string;
-    externalLink: string;
-    detailsDescription: string;
-    techStackPositions: ITechStackPos[];
-}
-
-const ProjectSchema: Schema<IProject> = new Schema({
-    id: {
-        type: Number,
-        unique: true,
-        required: [ true, "Github project id field is required." ],
-    },
-    position: {
-        type: Number,
-        required: [ true, "Project position field is required." ],
-    },
-    name: {
-        type: String,
-        unique: true,
-    },
-    stage: {
-        type: String,
-        required: [ true, "Project stage field is required." ],
-        validate: [ dbValidators.validateStage, "Invalid stage name" ]
-    },
-    alternativeName: {
-        type: String,
-        unique: true,
-        required: [ true, "Alternative name field is required." ],
-        minlength: [ 2, "Alternative name must have at least 2 characters." ],
-        maxlength: [ 150, "Alternative name must have less or equal 150 characters." ],
-    },
-    externalLink: {
-        type: String,
-        validate: [ dbValidators.validateLinkNotRequired, "Link is invalid." ],
-    },
-    detailsDescription: {
-        type: String,
-        minlength: [ 20, "Details description must have at least 20 characters." ],
-        maxlength: [ 2000, "Details description must have less or equal 2000 characters." ],
-        required: [ true, "Github project details description field is required." ],
-    },
-    techStackPositions: [
-        {
-            pos: {
-                type: Number,
-                required: true,
-            },
-            name: {
-                type: String,
-                minlength: [ 2, "Project tech stack name must have at least 5 characters." ],
-                maxlength: [ 150, "Project tech stack name must have less or equal 150 characters." ],
-                required: [ true, "Project tech stack name field is required." ],
-            }
-        }
+const ProjectSchema: Schema<Project> = new Schema({
+  id: {
+    type: Number,
+    unique: true,
+    required: [true, 'Github project id field is required.'],
+  },
+  position: {
+    type: Number,
+    required: [true, 'Project position field is required.'],
+  },
+  name: {
+    type: String,
+    unique: true,
+  },
+  stage: {
+    type: String,
+    required: [true, 'Project stage field is required.'],
+    validate: [dbValidators.validateStage, 'Invalid stage name'],
+  },
+  alternativeName: {
+    type: String,
+    unique: true,
+    required: [true, 'Alternative name field is required.'],
+    minlength: [2, 'Alternative name must have at least 2 characters.'],
+    maxlength: [
+      150,
+      'Alternative name must have less or equal 150 characters.',
     ],
+  },
+  externalLink: {
+    type: String,
+    validate: [dbValidators.validateLinkNotRequired, 'Link is invalid.'],
+  },
+  detailsDescription: {
+    type: String,
+    minlength: [20, 'Details description must have at least 20 characters.'],
+    maxlength: [
+      2000,
+      'Details description must have less or equal 2000 characters.',
+    ],
+    required: [true, 'Github project details description field is required.'],
+  },
+  techStackPositions: [
+    {
+      pos: {
+        type: Number,
+        required: true,
+      },
+      name: {
+        type: String,
+        minlength: [
+          2,
+          'Project tech stack name must have at least 5 characters.',
+        ],
+        maxlength: [
+          150,
+          'Project tech stack name must have less or equal 150 characters.',
+        ],
+        required: [true, 'Project tech stack name field is required.'],
+      },
+    },
+  ],
 });
 
-ProjectSchema.plugin(uniqueValidator, { type: "mongoose-unique-validator", message: "Followed {PATH} already exist." });
+ProjectSchema.plugin(uniqueValidator, {
+  type: 'mongoose-unique-validator',
+  message: 'Followed {PATH} already exist.',
+});
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-export const ProjectModel: Model<IProject> = mongoose.model("Project", ProjectSchema);
+export const ProjectModel: Model<Project> = mongoose.model(
+  'Project',
+  ProjectSchema
+);

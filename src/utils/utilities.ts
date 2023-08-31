@@ -1,95 +1,98 @@
 /*
- * Copyright (c) 2023 by MILOSZ GILGA <http://miloszgilga.pl>
+ * Copyright (c) 2023 by MILOSZ GILGA <https://miloszgilga.pl>
  *
- * File name: utilities.ts
- * Last modified: 14/04/2023, 16:54
- * Project name: personal-website
+ *   File name: utilities.ts
+ *   Created at: 2023-05-29, 01:50:56
+ *   Last updated at: 2023-08-31, 19:53:31
+ *   Project name: <<msph_projectName>>
  *
- * LICENSE NOT SPECIFIED.
+ *   LICENSE NOT SPECIFIED.
  *
  * For more info about use this code in your project, make contact with
  * original author. Project created only for personal purposes.
  */
-
-import { Request } from "express";
-import { HtmlRenderer, Parser } from "commonmark";
-import path from "path";
-
-import * as Constant from "./constants";
-import { AlertType, AlertTypeId } from "./session";
-
-import { IUser } from "../db/schemas/user.schema";
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import { HtmlRenderer, Parser } from 'commonmark';
+import { Request } from 'express';
+import path from 'path';
+import { User } from '../db/schemas/user.schema';
+import * as Constant from './constants';
+import { AlertType, AlertTypeId } from './session';
 
 class Utilities {
+  private readonly CHARS =
+    '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    private readonly CHARS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  getProjectRootPath(relativeDir: string): string {
+    return path.join(__dirname, relativeDir);
+  }
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  extractAlertAndDestroy(req: Request, alertId: AlertTypeId): AlertType {
+    let pageAlert = null;
+    if (req.session[alertId]) {
+      pageAlert = JSON.parse(JSON.stringify(req.session[alertId]));
+    }
+    req.session[alertId] = null;
+    return pageAlert;
+  }
 
-    getProjectRootPath(relativeDir: string): string {
-        return path.join(__dirname, "..", relativeDir);
-    };
+  otaTokenGenerator(length: number = 10): string {
+    let token: string = '';
+    for (let i = 0; i < length; i++) {
+      token += this.CHARS.charAt(Math.random() * this.CHARS.length);
+    }
+    return token;
+  }
 
-    extractAlertAndDestroy(req: Request, alertId: AlertTypeId): AlertType {
-        let pageAlert = null;
-        if (req.session[alertId]) {
-            pageAlert = JSON.parse(JSON.stringify(req.session[alertId]));
-        }
-        req.session[alertId] = null;
-        return pageAlert;
-    };
+  nowPlusNminutes(minutes: number): Date {
+    const date: Date = new Date();
+    date.setMinutes(date.getMinutes() + minutes);
+    return date;
+  }
 
-    otaTokenGenerator(length: number = 10): string {
-        let token: string = "";
-        for (let i = 0; i < length; i++) {
-            token += this.CHARS.charAt(Math.random() * this.CHARS.length);
-        }
-        return token;
-    };
+  validatePassword(
+    user: User,
+    newPassword: string,
+    repeatNewPassword: string
+  ): void {
+    if (!Constant.PASSWORD_REGEX.test(newPassword)) {
+      throw new Error(
+        'Password must have at least 8 characters, one big letter, one number and one ' +
+          'special character.'
+      );
+    }
+    if (user.compareHash(newPassword)) {
+      throw new Error('New password must be different from actual.');
+    }
+    if (newPassword !== repeatNewPassword) {
+      throw new Error('Password and repeat password fields are not the same.');
+    }
+  }
 
-    nowPlusNminutes(minutes: number): Date {
-        const date: Date = new Date;
-        date.setMinutes(date.getMinutes() + minutes);
-        return date;
-    };
+  getFullUrl(req: Request): string {
+    return req.protocol + '://' + req.get('host');
+  }
 
-    validatePassword(user: IUser, newPassword: string, repeatNewPassword: string): void {
-        if (!Constant.PASSWORD_REGEX.test(newPassword)) {
-            throw new Error("Password must have at least 8 characters, one big letter, one number and one " +
-                "special character.");
-        }
-        if (user.compareHash(newPassword)) {
-            throw new Error("New password must be different from actual.");
-        }
-        if (newPassword !== repeatNewPassword) {
-            throw new Error("Password and repeat password fields are not the same.");
-        }
-    };
+  validatePaginationDataAndGetUrl(
+    paginationUrl: string,
+    selectedPage: number,
+    pagesCount: number,
+    totalPerPage: number
+  ): string {
+    const totalDefault = Constant.PAGINATION_STATES[0];
+    if ((selectedPage < 1 || selectedPage > pagesCount) && pagesCount > 0) {
+      return `${paginationUrl}page=1&total=${totalPerPage}`;
+    }
+    if (!Constant.PAGINATION_STATES.some(s => s === totalPerPage)) {
+      return `${paginationUrl}page=${selectedPage}&total=${totalDefault}`;
+    }
+    return '';
+  }
 
-    getFullUrl(req: Request): string {
-        return req.protocol + '://' + req.get('host');
-    };
-
-    validatePaginationDataAndGetUrl(
-        paginationUrl: string, selectedPage: number, pagesCount: number, totalPerPage: number
-    ): string {
-        const totalDefault = Constant.PAGINATION_STATES[0];
-        if ((selectedPage < 1 || selectedPage > pagesCount) && pagesCount > 0) {
-            return `${paginationUrl}page=1&total=${totalPerPage}`;
-        }
-        if (!Constant.PAGINATION_STATES.some(s => s === totalPerPage)) {
-            return `${paginationUrl}page=${selectedPage}&total=${totalDefault}`;
-        }
-        return "";
-    };
-
-    parseMarkdown(rawData: string): string {
-        const reader = new Parser();
-        const writer = new HtmlRenderer();
-        return writer.render(reader.parse(rawData));
-    };
+  parseMarkdown(rawData: string): string {
+    const reader = new Parser();
+    const writer = new HtmlRenderer();
+    return writer.render(reader.parse(rawData));
+  }
 }
 
-export default new Utilities;
+export default new Utilities();

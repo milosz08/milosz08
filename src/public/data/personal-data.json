@@ -1,27 +1,27 @@
 {
-    "description_top": "Computer Science student at Silesian University of Technology and Java developer. Mostly work in: Angular, Java SE/EE, Spring Framework/Boot, JPA, JSP/JSTL, FreeMarker, Hibernate, Liquibase, JPQL/SQL.",
-    "description_bottom": "My main interests are business process automation and applied algorithms used for digital images processing (DIP/DSP). I have a fairly broad knowledge of Java and Typescript. I have basic knowledge of programming in C, C++, C#, PHP and Matlab. I am currently learning Scala.",
-    "maven_central_link": "https://mvnrepository.com/search?q=pl.miloszgilga",
-    "first_email": "personal@miloszgilga.pl",
-    "second_email": "business@miloszgilga.pl",
-    "github_account_link": "https://github.com/Milosz08",
-    "social_links": [
-        {
-            "paraphrase": "Go to my LinkedIn account",
-            "link": "https://www.linkedin.com/in/miłosz-gilga-477201219",
-            "icon_class": "fa-brands fa-linkedin-in"
-        },
-        {
-            "paraphrase": "Go to my Github account",
-            "link": "https://github.com/Milosz08",
-            "icon_class": "fa-brands fa-github"
-        },
-        {
-            "paraphrase": "Go to my Stackoverflow profile",
-            "link": "https://stackoverflow.com/users/18847390/milosz08?tab=profile",
-            "icon_class": "fa-brands fa-stack-overflow"
-        }
-    ],
-    "github_name": "Milosz08",
-    "github_token": ""
+  "description_top": "Computer Science student at Silesian University of Technology and Java developer. Mostly work in: Angular, Java SE/EE, Spring Framework/Boot, JPA, JSP/JSTL, FreeMarker, Hibernate, Liquibase, JPQL/SQL.",
+  "description_bottom": "My main interests are business process automation and applied algorithms used for digital images processing (DIP/DSP). I have a fairly broad knowledge of Java and Typescript. I have basic knowledge of programming in C, C++, C#, PHP and Matlab. I am currently learning Scala.",
+  "maven_central_link": "https://mvnrepository.com/search?q=pl.miloszgilga",
+  "first_email": "personal@miloszgilga.pl",
+  "second_email": "business@miloszgilga.pl",
+  "github_account_link": "https://github.com/Milosz08",
+  "social_links": [
+    {
+      "paraphrase": "Go to my LinkedIn account",
+      "link": "https://www.linkedin.com/in/miłosz-gilga-477201219",
+      "icon_class": "fa-brands fa-linkedin-in"
+    },
+    {
+      "paraphrase": "Go to my Github account",
+      "link": "https://github.com/Milosz08",
+      "icon_class": "fa-brands fa-github"
+    },
+    {
+      "paraphrase": "Go to my Stackoverflow profile",
+      "link": "https://stackoverflow.com/users/18847390/milosz08?tab=profile",
+      "icon_class": "fa-brands fa-stack-overflow"
+    }
+  ],
+  "github_name": "Milosz08",
+  "github_token": ""
 }

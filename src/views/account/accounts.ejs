@@ -7,84 +7,80 @@
 }) %>
 
 <% if (users.length !== 0) { %>
-    <div class="table-responsive">
-        <table class="table table-striped table-hover table-bordered mt-3">
-            <thead>
-            <tr>
-                <th>Lp.</th>
-                <th>Login</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th class="fit">Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <% users.forEach((user, index) => { %>
-                <tr>
-                    <td class="align-middle"><%= ((page - 1) * totalPerPage) + index + 1 %></td>
-                    <td class="align-middle"><%= user.login %></td>
-                    <td class="align-middle"><%= user.email %></td>
-                    <td class="align-middle"><%= user.role.toLowerCase() %></td>
-                    <td class="align-middle fit">
-                        <button class="btn btn-success btn-sm lh-sm" data-bs-toggle="modal"
-                            data-bs-target="#revokePassword<%= user._id %>">
-                            Revoke password
-                        </button>
-                        <a class="btn btn-primary btn-sm lh-sm" href="/cms/account/update/<%= user._id %>">Edit</a>
-                        <button class="btn btn-danger btn-sm lh-sm" data-bs-toggle="modal"
-                            data-bs-target="#deleteAccount<%= user._id %>">
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-                <div class="modal fade" id="revokePassword<%= user._id %>" data-bs-backdrop="static"
-                    data-bs-keyboard="false" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Revoke password</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Are you sure you want to revoke password for account <strong><%= user.login %></strong>?
-                                Changes will not be able to be revoked.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
-                                <a href="/cms/account/revoke-password/<%= user._id %>" class="btn btn-outline-success">
-                                    Revoke password
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="deleteAccount<%= user._id %>" data-bs-backdrop="static"
-                    data-bs-keyboard="false" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete account</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Are you sure you want to delete account with login <strong><%= user.login %></strong>?
-                                Changes will not be able to be revoked.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
-                                <a href="/cms/account/delete/<%= user._id %>" class="btn btn-outline-danger">
-                                    Delete account
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <% }) %>
-            </tbody>
-        </table>
-    </div>
+<div class="table-responsive">
+  <table class="table table-striped table-hover table-bordered mt-3">
+    <thead>
+      <tr>
+        <th>Lp.</th>
+        <th>Login</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th class="fit">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach((user, index) => { %>
+      <tr>
+        <td class="align-middle"><%= ((page - 1) * totalPerPage) + index + 1 %></td>
+        <td class="align-middle"><%= user.login %></td>
+        <td class="align-middle"><%= user.email %></td>
+        <td class="align-middle"><%= user.role.toLowerCase() %></td>
+        <td class="align-middle fit">
+          <button class="btn btn-success btn-sm lh-sm" data-bs-toggle="modal" data-bs-target="#revokePassword<%= user._id %>">
+            Revoke password
+          </button>
+          <a class="btn btn-primary btn-sm lh-sm" href="/cms/account/update/<%= user._id %>">Edit</a>
+          <button class="btn btn-danger btn-sm lh-sm" data-bs-toggle="modal" data-bs-target="#deleteAccount<%= user._id %>">
+            Delete
+          </button>
+        </td>
+      </tr>
+      <div class="modal fade" id="revokePassword<%= user._id %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Revoke password</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to revoke password for account <strong><%= user.login %></strong>?
+              Changes will not be able to be revoked.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+              <a href="/cms/account/revoke-password/<%= user._id %>" class="btn btn-outline-success">
+                Revoke password
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="deleteAccount<%= user._id %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete account</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to delete account with login <strong><%= user.login %></strong>?
+              Changes will not be able to be revoked.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+              <a href="/cms/account/delete/<%= user._id %>" class="btn btn-outline-danger">
+                Delete account
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
 <% } else { %>
-    <div class="alert alert-warning">No users were found from the search results.</div>
+<div class="alert alert-warning">No users were found from the search results.</div>
 <% } %>
 
 <%- include("../partials/pagination.partial.ejs", { showingCount: users.length }) %>
