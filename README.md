@@ -7,6 +7,9 @@
 ![](https://img.shields.io/badge/Packages%20manager-npm-brown.svg)
 &nbsp;&nbsp;
 <br>
+> More info about this project you will find [on my personal website](https://miloszgilga.pl/project/personal-website)
+> <br>
+> See project at [miloszgilga.pl](https://miloszgilga.pl)
 
 Personal website created using NodeJS environment with Express framework, written in TypeScript language. Includes a simple
 CMS in order to add/edit/delete projects and modify other website elements. Additional informations about selected projects
@@ -29,7 +32,11 @@ $ git clone https://github.com/Milosz08/personal-website personal-website
 
 <a name="prepare-and-run"></a>
 ## Prepare and run
-0. Before you run program, create `.env` file in ROOT project context and fill as below:
+0. Before you run program, create `.env` file via this command:
+```
+$ grep -vE '^\s*$|^#' .env.sample > .env
+```
+and fill with propriet values:
 ```properties
 # server configuration
 EXPRESS_PORT              = [application port, ex. 3031]
