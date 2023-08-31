@@ -81,6 +81,7 @@ All compiled files will be in `dist` directory.
 * MongoDB with Mongoose (database)
 * Nodemailer (email sender)
 * Multer (files management)
+* Webpack with Babel
 
 <a name="author"></a>
 ## Author
