@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Node application serving personal website.",
   "scripts": {
-    "dev:start": "webpack --watch --progress --config _webpack/webpack-dev.config.cjs",
-    "build": "webpack --progress --config _webpack/webpack-prod.config.cjs",
+    "dev:start": "webpack --watch --progress --config .webpack/webpack-dev.config.cjs",
+    "build": "webpack --progress --config .webpack/webpack-prod.config.cjs",
     "lint:check": "npx eslint src/**/*.{ts,js,cjs}",
     "lint:fix": "npx eslint src/**/*.{ts,js,cjs} --fix",
     "format": "npx prettier . --write",
