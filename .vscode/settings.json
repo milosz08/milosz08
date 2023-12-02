@@ -30,14 +30,6 @@
       "beforeHeader": ["'use strict';"]
     },
     {
-      "language": "shellscript",
-      "begin": "#",
-      "prefix": "# ",
-      "end": "#",
-      "beforeHeader": ["#!/bin/sh", ""],
-      "lineLength": 64
-    },
-    {
       "language": "*",
       "begin": "/*",
       "prefix": " * ",
@@ -50,16 +42,7 @@
       "language": "*",
       "template": [
         "Copyright (c) <<year>> by MILOSZ GILGA <https://miloszgilga.pl>",
-        "",
-        "  File name: <<filename>>",
-        "  Created at: <<filecreated('YYYY-MM-DD, HH:mm:ss')>>",
-        "  Last updated at: <<dateformat('YYYY-MM-DD, HH:mm:ss')>>",
-        "  Project name: <<msph_projectName>>",
-        "",
-        "  LICENSE NOT SPECIFIED.",
-        "",
-        "For more info about use this code in your project, make contact with",
-        "original author. Project created only for personal purposes."
+        "For check application license, check LICENSE file."
       ]
     }
   ]

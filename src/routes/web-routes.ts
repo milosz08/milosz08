@@ -1,15 +1,6 @@
 /*
  * Copyright (c) 2023 by MILOSZ GILGA <https://miloszgilga.pl>
- *
- *   File name: web-routes.ts
- *   Created at: 2023-05-29, 01:50:56
- *   Last updated at: 2023-08-31, 19:51:06
- *   Project name: <<msph_projectName>>
- *
- *   LICENSE NOT SPECIFIED.
- *
- * For more info about use this code in your project, make contact with
- * original author. Project created only for personal purposes.
+ * For check application license, check LICENSE file.
  */
 import { Request, Response, Router } from 'express';
 import authController from '../controllers/auth.controller';
@@ -201,10 +192,10 @@ router.post(
   cmsProjectsController.postUpdateProjectPage
 );
 
-router.get('/cms', (req: Request, res: Response) =>
+router.get('/cms', (_: Request, res: Response) =>
   res.redirect('/cms/projects')
 );
 
-router.get('*', (req: Request, res: Response) => res.redirect('/'));
+router.get('*', (_: Request, res: Response) => res.redirect('/'));
 
 export default router;

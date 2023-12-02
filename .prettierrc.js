@@ -1,16 +1,7 @@
 'use strict';
 /*
  * Copyright (c) 2023 by MILOSZ GILGA <https://miloszgilga.pl>
- *
- *   File name: .prettierrc.cjs
- *   Created at: 2023-08-29, 19:54:48
- *   Last updated at: 2023-08-29, 20:16:18
- *   Project name: <<msph_projectName>>
- *
- *  LICENSE NOT SPECIFIED.
- *
- * For more info about use this code in your project, make contact with
- * original author. Project created only for personal purposes.
+ * For check application license, check LICENSE file.
  */
 
 module.exports = {
