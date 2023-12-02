@@ -60,15 +60,15 @@ SMTP_PORT                 = [587 if SSL is active, otherwise 25]
 ```
 1. Install all dependencies via:
 ```
-$ npm install
+$ yarn install
 ```
 2. Run project (compile TS files and move static files into `dist` directory) - listening all changes and hotreload:
 ```
-$ npm run dev:start
+$ yarn run dev:start
 ```
 2. To create production build, type:
 ```
-$ npm run build
+$ yarn run build
 ```
 All compiled files will be in `dist` directory.
 
@@ -81,6 +81,7 @@ All compiled files will be in `dist` directory.
 * MongoDB with Mongoose (database)
 * Nodemailer (email sender)
 * Multer (files management)
+* Webpack with Babel
 
 <a name="author"></a>
 ## Author
