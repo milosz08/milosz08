@@ -4,7 +4,7 @@ dist
 LICENSE
 README.md
 .env
-.env.sample
+example.env
 yarn.lock
 .gitignore
 src/**/*.ejs
