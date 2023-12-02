@@ -16,12 +16,12 @@ CMS in order to add/edit/delete projects and modify other website elements. Addi
 are pulled dynamically from the Github API.
 
 ## Table of content
-* [Clone script](#clone-script)
-* [Prepare and run](#prepare-and-run)
-* [Tech stack](#tech-stack)
-* [Author](#author)
-* [Project status](#project-status)
-* [License](#license)
+- [Clone script](#clone-script)
+- [Prepare and run](#prepare-and-run)
+- [Tech stack](#tech-stack)
+- [Author](#author)
+- [Project status](#project-status)
+- [License](#license)
 
 <a name="clone-script"></a>
 ## Clone script
@@ -34,7 +34,7 @@ $ git clone https://github.com/Milosz08/personal-website personal-website
 ## Prepare and run
 0. Before you run program, create `.env` file via this command:
 ```
-$ grep -vE '^\s*$|^#' .env.sample > .env
+$ grep -vE '^\s*$|^#' example.env > .env
 ```
 and fill with propriet values:
 ```properties
