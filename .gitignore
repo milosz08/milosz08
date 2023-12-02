@@ -1,8 +1,6 @@
 .env
-.husky/
 dist/
 node_modules/
-.idea/discord.xml
 logs/
 src/public/uploads/temp/*
 !src/public/uploads/temp/.gitkeep
