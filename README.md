@@ -28,7 +28,7 @@ in a broad range of highly scalable and distributed environments. In particular:
 
 ## 💎 Technologies
 I'm currently working with:
-- JVM (Java, Kotlin, little bit of Scala: Spring and Spring Boot, Jakarta EE, Swing),
+- JVM (Java, Kotlin, little bit of Scala: Spring and Spring Boot),
 - C/C++ (in field of multimedia processing and rapidly fast web services),
 - JavaScript/TypeScript (with web frameworks: Angular, Vue, little bit of React),
 - Apache Kafka (distributed data streaming, event-driven architecture),
@@ -38,6 +38,7 @@ I'm currently working with:
 🎓 Besides, I'am worked with technologies during my CS studies:
 - .NET (C#, ASP.NET WebAPI, WinForms, XNA),
 - Android (Java Native),
+- Jakarta EE and Swing UI (JVM)
 - PHP,
 - Matlab and Scilab.
 
