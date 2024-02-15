@@ -22,9 +22,7 @@ in a broad range of highly scalable and distributed environments. In particular:
 
 ## 📈 Github Stats
 
-![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=milosz08&theme=react) &nbsp;
-![](https://streak-stats.demolab.com/?user=milosz08&theme=react&hide_border=true&card_width=475)
-![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=milosz08&theme=react)
+![](https://streak-stats.demolab.com/?user=milosz08&theme=react&hide_border=true)
 
 ## 💎 Technologies
 I'm currently working with:
