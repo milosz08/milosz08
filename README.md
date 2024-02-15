@@ -10,6 +10,9 @@ JVM (Java, Kotlin, little bit of Scala), C/C++, JavaScript/TypeScript, Apache Ka
 👀 &nbsp; Learning:<br>
 Erlang, Elixir, Rust
 
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
 [Go to my website](https://miloszgilga.pl)
 <br>
 [Go to my LinkedIn profile](https://www.linkedin.com/in/miłosz-gilga-477201219/)
