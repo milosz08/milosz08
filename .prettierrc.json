@@ -1,4 +1,5 @@
 {
+  "singleQuote": true,
   "plugins": ["prettier-plugin-astro", "@trivago/prettier-plugin-sort-imports"],
   "overrides": [
     {
