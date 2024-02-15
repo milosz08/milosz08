@@ -1,0 +1,37 @@
+{
+  "name": "personal-website",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "private": true,
+  "author": {
+    "name": "Visphere",
+    "email": "info@visphere.pl",
+    "url": "https://visphere.pl"
+  },
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "@astrojs/check": "^0.5.4",
+    "@astrojs/mdx": "^2.1.1",
+    "astro": "^4.3.7",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^0.31.4",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-plugin-astro": "^0.13.0"
+  }
+}

@@ -1,0 +1,8 @@
+.astro/
+.vscode/
+node_modules/
+public/
+.gitignore
+.prettierignore
+README.md
+yarn.lock
