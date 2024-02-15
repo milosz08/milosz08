@@ -22,7 +22,7 @@ in a broad range of highly scalable and distributed environments. In particular:
 ## 📈 Github Stats
 
 ![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=milosz08&theme=github_dark)
-&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;
 ![](https://streak-stats.demolab.com/?user=milosz08&theme=blueberry-duo)
 
 ![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=milosz08&theme=github_dark)
