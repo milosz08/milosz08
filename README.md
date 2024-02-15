@@ -35,7 +35,7 @@ I'm currently working with:
 - microservices (Spring Cloud architecture, AWS),
 - Python.
 
-🎓 Besides, I'am worked with technologies during my CS studies:
+🎓 Besides, I'am worked with following technologies during my CS studies:
 - .NET (C#, ASP.NET WebAPI, WinForms, XNA),
 - Android (Java Native),
 - Jakarta EE and Swing UI (JVM)
