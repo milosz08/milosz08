@@ -23,7 +23,7 @@
   },
   "license": "GPL-3.0-only",
   "lint-staged": {
-    "**/*.{ts,js,cjs,astro,json}": [
+    "**/*.{ts,astro}": [
       "yarn run lint:fix",
       "yarn run format"
     ]
