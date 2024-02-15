@@ -9,6 +9,7 @@ chat application ([source code](https://github.com/visphere)).
 
 ### 🤝 Connect with me
 [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miłosz-gilga-477201219/) &nbsp;
+[![](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/18847390/milosz08) &nbsp;
 
 ### 🔬 Field of interest and researching
 My main interests revolve around of real-time communication with a focus on multimedia streaming and system integrations
