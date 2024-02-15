@@ -1,8 +1,0 @@
-node_modules
-dist
-.husky
-LICENSE
-package.json
-yarn.lock
-.gitignore
-src/views/*

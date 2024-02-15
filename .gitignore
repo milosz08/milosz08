@@ -1,8 +1,0 @@
-.env
-dist/
-node_modules/
-logs/
-src/public/uploads/temp/*
-!src/public/uploads/temp/.gitkeep
-src/public/uploads/projects/*
-!src/public/uploads/projects/.gitkeep

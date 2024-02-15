@@ -4,12 +4,12 @@
     "brennondenny.vsc-jetbrains-icons-enhanced",
     "yzhang.markdown-all-in-one",
     "trabpukcip.vscode-npm-scripts",
-    "eserozvataf.one-dark-pro-monokai-darker",
     "esbenp.prettier-vscode",
     "psioniq.psi-header",
     "dbaeumer.vscode-eslint",
     "naumovs.color-highlight",
     "oderwat.indent-rainbow",
-    "j69.ejs-beautify"
+    "astro-build.astro-vscode",
+    "sheltonlouis.astro-snippets"
   ]
 }
