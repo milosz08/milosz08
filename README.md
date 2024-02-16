@@ -4,7 +4,7 @@ Hello, I'm <a href="https://miloszgilga.pl" target="_blank">Miłosz</a>👋
 
 Currently master of science student at Silesian University of Technology. In february 2024, I defended Bachelor of
 Science at the same university. My thesis was about demostrate posibilities of communication in a highly distributed
-microservice infrastructure using event-driven architecture with Apache Kafka in field of real-time communication on
+microservice infrastructure using Apache Kafka event-driven architecture in field of real-time communication on
 example of chat application ([source code](https://github.com/visphere)).
 
 ### 🤝 Connect with me
