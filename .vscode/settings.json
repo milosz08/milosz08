@@ -14,7 +14,7 @@
   "psi-header.changes-tracking": {
     "isActive": true,
     "autoHeader": "autoSave",
-    "include": ["javascript", "typescript", "astro", "css"],
+    "include": ["javascript", "typescript", "astro", "scss"],
     "includeGlob": ["**/*.sh"],
     "excludeGlob": [".husky/**/*", ".vscode/**/*"],
     "enforceHeader": true,
