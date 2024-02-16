@@ -25,7 +25,7 @@ in a broad range of highly scalable and distributed environments. In particular:
 ![](https://streak-stats.demolab.com/?user=milosz08&theme=react&hide_border=true)
 
 ## 💎 Technologies
-I'm currently working with:
+🖥 I'm currently working with:
 - JVM (Java, Kotlin, little bit of Scala: Spring and Spring Boot),
 - C/C++ (in field of multimedia processing and rapidly fast web services),
 - JavaScript/TypeScript (with web frameworks: Angular, Vue, little bit of React),
