@@ -17,7 +17,8 @@ In particular:
 
 - web engineering in field of real-time communication,
 - distributed data streaming,
-- multimedia over Internet (processing of real-time video/audio streams, live streaming, VoD, IPTV),
+- processing of real-time video/audio streams in field of QoS (packet loss control, auto-adaptive stream quality),
+- multimedia over Internet (live streaming, VoD, IPTV),
 - cloud software integration in a broad range of highly scalable and distributed environments (microservices).
 
 ## 💎 Technologies
