@@ -21,7 +21,7 @@ example of chat application ([source code](https://github.com/visphere)).
 ## 💎 Technologies
 🖥 I'm currently working with:
 - JVM (Java, Kotlin, little bit of Scala: Spring and Spring Boot),
-- C/C++ (in field of multimedia processing and rapidly fast web services),
+- C/C++ (in field of multimedia processing and rapid web services),
 - JavaScript/TypeScript (with web frameworks: Angular, Vue, little bit of React),
 - Apache Kafka (distributed data streaming, event-driven architecture),
 - microservices (Spring Cloud architecture, AWS),
