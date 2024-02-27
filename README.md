@@ -27,13 +27,6 @@ example of chat application ([source code](https://github.com/visphere)).
 - microservices (Spring Cloud architecture, AWS),
 - Python.
 
-🎓 Besides, during my CS studies I've worked with following technologies:
-- .NET (C#, ASP.NET WebAPI, WinForms, XNA),
-- Android (Java Native),
-- Jakarta EE and Swing UI (JVM)
-- PHP,
-- Matlab and Scilab.
-
 👀 Currently learning:
 - Elixir (with Erlang),
 - Rust.
