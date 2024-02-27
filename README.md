@@ -13,7 +13,7 @@ example of chat application ([source code](https://github.com/visphere)).
 
 ### 🔬 Field of interest and researching
 - processing of real-time video/audio streams in field of QoS (packet loss control, auto-adaptive stream quality),
-- multimedia over Internet (live streaming, VoD, IPTV),
+- multimedia over Internet (live streaming, VoD, IPTV, VoIP),
 - web engineering in field of real-time communication,
 - distributed data streaming,
 - cloud software integration in a broad range of highly scalable and distributed environments (microservices).
