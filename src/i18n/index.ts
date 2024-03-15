@@ -29,8 +29,5 @@ export function useTranslations(lang: TLanguage) {
 }
 
 export function i18nHref(originalUrl: string, lang: TLanguage): string {
-  if (lang === DEFAULT_LANG) {
-    return originalUrl;
-  }
   return `/${lang}${originalUrl}`;
 }
