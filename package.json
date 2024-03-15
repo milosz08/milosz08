@@ -24,8 +24,7 @@
   "license": "GPL-3.0-only",
   "lint-staged": {
     "**/*.{ts,astro}": [
-      "yarn run lint:fix",
-      "yarn run format"
+      "yarn run lint:fix"
     ]
   },
   "husky": {

@@ -11,7 +11,7 @@ const { lang, type } = Astro.props as TProps;
 
 const langSpecificProjects = await getCollection(
   'projects',
-  ({ id, data }) => id.startsWith(`${lang}/`) && data.type === type
+  ({ id, data }) => id.startsWith(`${lang}/`) && data.type === type,
 );
 
 langSpecificProjects.sort((o1, o2) => o1.data.index - o2.data.index);
@@ -26,10 +26,7 @@ function getLang(slug: string): string {
   {
     langSpecificProjects.map((project) => (
       <li class="projects__element">
-        <a
-          href={getLang(project.slug)}
-          class="projects__link"
-        >
+        <a href={getLang(project.slug)} class="projects__link">
           {project.data.title}
         </a>
       </li>

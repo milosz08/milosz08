@@ -16,7 +16,7 @@ export async function getStaticPaths() {
         params: { lang },
         props: aboutMdx,
       };
-    })
+    }),
   );
 }
 
@@ -24,21 +24,12 @@ const page = Astro.props;
 const { Content } = await page.render();
 ---
 
-<MainLayout frontmatter={{ header: 'inż. Miłosz Gilga' }}>
+<MainLayout frontmatter={{ header: t('about.header') }}>
   <Content />
   <h2>{t('about.projects.impl')}</h2>
-  <Projects
-    lang={lang}
-    type="impl"
-  />
+  <Projects lang={lang} type="impl" />
   <h2>{t('about.projects.rd')}</h2>
-  <Projects
-    lang={lang}
-    type="rd"
-  />
+  <Projects lang={lang} type="rd" />
   <h2>{t('about.projects.part')}</h2>
-  <Projects
-    lang={lang}
-    type="part"
-  />
+  <Projects lang={lang} type="part" />
 </MainLayout>
