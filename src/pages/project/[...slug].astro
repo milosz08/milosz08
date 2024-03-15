@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('projects');
+  return pages.map((page) => ({
+    params: { slug: page.slug.substring(3) },
+  }));
+}
+
+const { slug } = Astro.params;
+---
+
+<head>
+  <meta
+    http-equiv="refresh"
+    content={`0;url=/en/project/${slug}`}
+  />
+</head>
