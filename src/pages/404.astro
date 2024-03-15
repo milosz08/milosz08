@@ -1,0 +1,17 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+---
+
+<MainLayout frontmatter={{ title: '404', header: 'inż. Miłosz Gilga' }}>
+  <div class="not-found__container">
+    <h1>404</h1>
+    <a href="/">Home</a>
+  </div>
+</MainLayout>
+
+<style lang="scss">
+  .not-found__container {
+    margin-top: 20px;
+    text-align: center;
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+import { AVAILABLE_LANGS, isLang, toggleLangHref } from '@/i18n';
+
+type TProps = {
+  header: string;
+};
+
+const { header } = Astro.props as TProps;
+---
+
+<header class="header__container">
+  <div class="header__wrapper">
+    <h1>{header}</h1>
+    <div class="header__lang-container">
+      {
+        AVAILABLE_LANGS.map((lang, index) => (
+          <>
+            <a
+              class="header__lang"
+              class:list={[
+                isLang(Astro.url.pathname, lang) && 'header__lang--selected',
+              ]}
+              href={toggleLangHref(Astro.url.pathname, lang)}
+            >
+              {lang}
+            </a>
+            {index !== AVAILABLE_LANGS.length - 1 && (
+              <span class="header__lang-separator">/</span>
+            )}
+          </>
+        ))
+      }
+    </div>
+  </div>
+</header>
+
+<style lang="scss">
+  .header {
+    &__container {
+      background: var(--main-dark);
+      color: var(--main-light);
+    }
+    &__wrapper {
+      margin: 0 auto;
+      max-width: var(--safety-width);
+      padding: 30px 20px;
+      padding: 80px 20px 30px;
+      position: relative;
+    }
+    &__lang-container {
+      position: absolute;
+      display: flex;
+      top: 15px;
+      right: 0;
+    }
+    &__lang,
+    &__lang-separator {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: var(--main-light);
+      margin: 0;
+      &--selected {
+        color: var(--main-link);
+      }
+    }
+    &__lang-separator {
+      margin: 0 4px;
+    }
+  }
+</style>

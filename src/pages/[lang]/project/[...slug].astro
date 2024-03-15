@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '@/layouts/MainLayout.astro';
+import { getLangFromUrl, i18nHref, useTranslations } from '@/i18n';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('projects');
+  return pages.map((page) => {
+    const [lang, ...slug] = page.slug.split('/');
+    return {
+      params: { lang, slug: slug.join('/') || undefined },
+      props: page,
+    };
+  });
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const page = Astro.props;
+const {
+  data: { title },
+} = page;
+
+const { Content } = await page.render();
+---
+
+<MainLayout frontmatter={{ title, header: title }}>
+  <a href={i18nHref('/', lang)}>
+    {t('project.return')}
+  </a>
+  <Content />
+</MainLayout>
+
+<style lang="scss"></style>
