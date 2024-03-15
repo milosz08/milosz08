@@ -4,7 +4,7 @@ import Header from '@/components/Header.astro';
 import { getLangFromUrl } from '@/i18n';
 import '@/styles/combined.scss';
 
-type Props = {
+type TProps = {
   frontmatter: {
     title?: string;
     header: string;
@@ -13,7 +13,7 @@ type Props = {
 
 const {
   frontmatter: { title, header },
-} = Astro.props as Props;
+} = Astro.props as TProps;
 
 const lang = getLangFromUrl(Astro.url);
 
