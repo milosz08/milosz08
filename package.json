@@ -17,9 +17,9 @@
   },
   "private": true,
   "author": {
-    "name": "Visphere",
-    "email": "info@visphere.pl",
-    "url": "https://visphere.pl"
+    "name": "Miłosz Gilga",
+    "email": "personal@miloszgilga.pl",
+    "url": "https://miloszgilga.pl"
   },
   "license": "GPL-3.0-only",
   "lint-staged": {

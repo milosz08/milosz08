@@ -6,48 +6,5 @@
   "explorer.autoReveal": false,
   "explorer.compactFolders": false,
   "workbench.tree.indent": 20,
-  "files.insertFinalNewline": true,
-  "psi-header.config": {
-    "forceToTop": true,
-    "blankLinesAfter": 1
-  },
-  "psi-header.changes-tracking": {
-    "isActive": true,
-    "autoHeader": "autoSave",
-    "include": ["javascript", "typescript", "astro", "scss"],
-    "includeGlob": ["**/*.sh"],
-    "excludeGlob": [".husky/**/*", ".vscode/**/*"],
-    "enforceHeader": true,
-    "replace": ["File name", "Last modified"]
-  },
-  "psi-header.lang-config": [
-    {
-      "language": "javascript",
-      "begin": "/*",
-      "lineLength": 64,
-      "beforeHeader": ["'use strict';"]
-    },
-    {
-      "language": "astro",
-      "beforeHeader": ["---"],
-      "begin": "/*",
-      "lineLength": 64
-    },
-    {
-      "language": "*",
-      "begin": "/*",
-      "prefix": " * ",
-      "end": " */",
-      "lineLength": 64
-    }
-  ],
-  "psi-header.templates": [
-    {
-      "language": "*",
-      "template": [
-        "Copyright (c) <<year>> by MILOSZ GILGA <https://miloszgilga.pl>",
-        "For check application license, check LICENSE file."
-      ]
-    }
-  ]
+  "files.insertFinalNewline": true
 }
