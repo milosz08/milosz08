@@ -37,8 +37,8 @@ const { header } = Astro.props as TProps;
 <style lang="scss">
   .header {
     &__container {
-      background: var(--main-dark);
-      color: var(--main-light);
+      background: var(--main-tint);
+      color: var(--main-dark);
     }
     &__wrapper {
       margin: 0 auto;
@@ -57,7 +57,7 @@ const { header } = Astro.props as TProps;
     &__lang-separator {
       font-size: 0.9rem;
       text-transform: uppercase;
-      color: var(--main-light);
+      color: var(--main-dark);
       margin: 0;
       &--selected {
         color: var(--main-link);
