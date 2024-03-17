@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 17px;
-  font-family: 'Lexend Deca', sans-serif;
   font-weight: 400;
 }
 
@@ -12,6 +11,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--main-tint);
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 h1 {
@@ -25,11 +25,15 @@ h2 {
 }
 
 p,
-a {
+a,
+li {
   font-size: inherit;
-  display: block;
   width: fit-content;
-  margin: 15px 0;
+  line-height: 1.4;
+}
+
+p {
+  margin: 20px 0;
 }
 
 a {
@@ -41,5 +45,5 @@ a {
 }
 
 ul {
-  margin-left: 25px;
+  margin-left: 40px;
 }

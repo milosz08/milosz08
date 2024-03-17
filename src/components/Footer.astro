@@ -4,13 +4,7 @@ const year = new Date().getFullYear();
 
 <footer class="footer__container">
   <div class="footer__wrapper">
-    <p>&copy; {year} by Miłosz Gilga</p>
-    <p>
-      Created with
-      <a class="footer__link" href="https://astro.build" target="_blank">
-        Astro SSG
-      </a>
-    </p>
+    <p class="footer__paragraph">&copy; {year} by Miłosz Gilga</p>
   </div>
 </footer>
 
@@ -21,23 +15,13 @@ const year = new Date().getFullYear();
       color: var(--main-dark);
     }
     &__wrapper {
-      display: flex;
-      justify-content: space-between;
       margin: 0 auto;
       max-width: var(--safety-width);
       padding: 30px 20px;
     }
-    &__link {
-      display: inline;
-    }
-  }
-
-  @media only screen and (max-width: 768px) {
-    .footer {
-      &__wrapper {
-        flex-direction: column;
-        align-items: center;
-      }
+    &__paragraph {
+      width: 100%;
+      text-align: center;
     }
   }
 </style>
