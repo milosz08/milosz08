@@ -40,6 +40,10 @@ if (title) {
     />
     <!-- Start OG -->
     <meta property="og:title" content={concatedTitle} />
+    <meta
+      property="og:description"
+      content={description || t('meta.description')}
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url.href} />
     <meta property="og:locale" content={lang} />
