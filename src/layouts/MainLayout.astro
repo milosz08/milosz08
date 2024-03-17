@@ -1,21 +1,23 @@
 ---
 import Footer from '@/components/Footer.astro';
 import Header from '@/components/Header.astro';
-import { getLangFromUrl } from '@/i18n';
+import { getLangFromUrl, useTranslations } from '@/i18n';
 import '@/styles/combined.scss';
 
 type TProps = {
   frontmatter: {
     title?: string;
+    description?: string;
     header: string;
   };
 };
 
 const {
-  frontmatter: { title, header },
+  frontmatter: { title, header, description },
 } = Astro.props as TProps;
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const staticTitle = 'Miłosz Gilga';
 let concatedTitle = staticTitle;
@@ -31,6 +33,17 @@ if (title) {
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{concatedTitle}</title>
+    <meta name="description" content={description || t('meta.description')} />
+    <meta
+      name="google-site-verification"
+      content="HkvdN6vgQunIuwG9lL4-sZO20bPKjddY39HpTqpq20M"
+    />
+    <!-- Start OG -->
+    <meta property="og:title" content={concatedTitle} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:locale" content={lang} />
+    <!-- End OG -->
     <!-- Start GFont -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
