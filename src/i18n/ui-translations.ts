@@ -8,7 +8,7 @@ export const ui = {
     'projects.impl': 'My projects',
     'projects.rd': 'My R&D projects',
     'projects.part': 'Co-developed projects',
-    'project.return': 'Return to main page',
+    'project.return': 'Return to all projects',
   },
   pl: {
     'meta.description':
@@ -19,6 +19,6 @@ export const ui = {
     'projects.impl': 'Moje projekty',
     'projects.rd': 'Moje projekty R&D',
     'projects.part': 'Projekty współtworzone',
-    'project.return': 'Powrót do strony głównej',
+    'project.return': 'Powrót do projektów',
   },
 } as const;

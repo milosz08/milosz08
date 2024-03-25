@@ -26,7 +26,7 @@ const { Content } = await page.render();
 ---
 
 <MainLayout frontmatter={{ title, header: title }}>
-  <a href={i18nHref('/', lang)}>
+  <a href={i18nHref('/projects', lang)}>
     {t('project.return')}
   </a>
   <Content />
