@@ -15,6 +15,10 @@ const { header } = Astro.props as TProps;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const isShowable = AVAILABLE_LANGS.every(
+  (lang) => !isLang(Astro.url.pathname, lang),
+);
 ---
 
 <header class="header__container">
@@ -24,6 +28,7 @@ const t = useTranslations(lang);
       {
         AVAILABLE_LANGS.map(
           (lang) =>
+            !isShowable &&
             !isLang(Astro.url.pathname, lang) && (
               <a
                 class="header__lang"
