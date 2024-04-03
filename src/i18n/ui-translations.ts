@@ -9,6 +9,9 @@ export const ui = {
     'projects.rd': 'My R&D projects',
     'projects.part': 'Co-developed projects',
     'project.return': 'Return to all projects',
+    'gallery.prev': 'previous',
+    'gallery.next': 'next',
+    'gallery.close': 'close',
   },
   pl: {
     'meta.description':
@@ -20,5 +23,8 @@ export const ui = {
     'projects.rd': 'Moje projekty R&D',
     'projects.part': 'Projekty współtworzone',
     'project.return': 'Powrót do projektów',
+    'gallery.prev': 'poprzednie',
+    'gallery.next': 'następne',
+    'gallery.close': 'zamknij',
   },
 } as const;
