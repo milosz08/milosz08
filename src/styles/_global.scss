@@ -30,10 +30,12 @@ li {
   font-size: inherit;
   width: fit-content;
   line-height: 1.4;
+  color: var(--main-text-tint);
 }
 
 p {
   margin: 20px 0;
+  color: var(--main-text-tint);
 }
 
 a {
