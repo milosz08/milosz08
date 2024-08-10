@@ -4,8 +4,6 @@ index: 2
 type: 'part'
 ---
 
-import Gallery from '@/components/Gallery.astro';
-
 [![](<https://img.shields.io/badge/github-klient%20(Angular)-3178c6?style=for-the-badge&logo=github>)](https://github.com/milosz08/stars-magnet-client) &nbsp;
 [![](<https://img.shields.io/badge/github-serwer%20(Python)-3572A5?style=for-the-badge&logo=github>)](https://github.com/Lettulouz/StarsMagnet) &nbsp;
 
@@ -26,7 +24,7 @@ i moduł commons, który jest wspólny dla dwóch pierwszych modułów.
 
 ## Galeria
 
-<Gallery />
+<[GalleryContent}]>
 
 ## Użyte technologie
 

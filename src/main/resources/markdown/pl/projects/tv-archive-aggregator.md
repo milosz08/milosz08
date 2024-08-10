@@ -4,8 +4,6 @@ index: 5
 type: 'impl'
 ---
 
-import Gallery from '@/components/Gallery.astro';
-
 [![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/tv-archive-aggregator) &nbsp;
 
 ## Cel projektu
@@ -29,7 +27,7 @@ Ten projekt składa się z 3 podprojektów:
 
 ## Galeria
 
-<Gallery />
+<[GalleryContent}]>
 
 ## Użyte technologie
 
