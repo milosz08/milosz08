@@ -1,0 +1,51 @@
+plugins {
+  id 'java'
+}
+
+group = 'pl.miloszgilga'
+version = '1.0.0'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation 'com.github.jknack:handlebars:4.4.0'
+  implementation 'org.commonmark:commonmark:0.22.0'
+  implementation 'commons-io:commons-io:2.16.1'
+  implementation 'com.googlecode.htmlcompressor:htmlcompressor:1.5.2'
+  implementation 'org.slf4j:slf4j-api:2.0.6'
+  implementation 'org.slf4j:slf4j-simple:2.0.6'
+  implementation 'net.logicsquad:minifier:1.2'
+
+  testImplementation platform('org.junit:junit-bom:5.10.0')
+  testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+  useJUnitPlatform()
+}
+
+clean {
+  doLast {
+    def binDir = new File("${project.projectDir}/.bin")
+    if (binDir.exists()) {
+      binDir.deleteDir()
+    }
+  }
+}
+
+tasks.register('fatJar', Jar) {
+  destinationDirectory = new File("${project.projectDir}/.bin")
+  archiveFileName = "parser.jar"
+  manifest {
+    attributes "Main-Class": "pl.miloszgilga.Main"
+  }
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+  from {
+    configurations.runtimeClasspath.collect {
+      it.isDirectory() ? it : zipTree(it)
+    }
+  }
+  with jar
+}
