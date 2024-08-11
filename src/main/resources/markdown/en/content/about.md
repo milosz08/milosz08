@@ -4,7 +4,7 @@ You can find me on:
 [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miloszgilga) &nbsp;
 [![](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/18847390/milosz08) &nbsp;
 
-[Go to projects](/en/projects)
+[Go to projects](/projects)
 
 ## Contact
 

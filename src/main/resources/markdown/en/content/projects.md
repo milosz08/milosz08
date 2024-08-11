@@ -1,4 +1,4 @@
-[Return to home page](/en)
+[Return to home page](/)
 
 [![](https://img.shields.io/badge/github-projects-808080?style=for-the-badge&logo=github)](https://github.com/milosz08) &nbsp;
 
