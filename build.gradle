@@ -37,9 +37,9 @@ clean {
 
 tasks.register('fatJar', Jar) {
   destinationDirectory = new File("${project.projectDir}/.bin")
-  archiveFileName = "parser.jar"
+  archiveFileName = "ssg.jar"
   manifest {
-    attributes "Main-Class": "pl.miloszgilga.Main"
+    attributes "Main-Class": "pl.miloszgilga.ssg.SsgEntrypoint"
   }
   duplicatesStrategy = DuplicatesStrategy.EXCLUDE
   from {

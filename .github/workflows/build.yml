@@ -30,7 +30,7 @@ jobs:
       - name: Package to JAR
         run: ./gradlew fatJar --no-daemon
 
-  generate:
+  ssg:
     runs-on: self-hosted
     needs: build
 

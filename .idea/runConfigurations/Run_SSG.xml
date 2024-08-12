@@ -1,10 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Run generator" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="pl.miloszgilga.Main" />
+  <configuration default="false" name="Run SSG" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="pl.miloszgilga.ssg.SsgEntrypoint" />
     <module name="personal-page.main" />
+    <option name="PROGRAM_PARAMETERS" value="-d https://miloszgilga.pl" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="pl.miloszgilga.*" />
+        <option name="PATTERN" value="pl.miloszgilga.io.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
