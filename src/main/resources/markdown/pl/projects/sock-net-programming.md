@@ -1,7 +1,7 @@
 ---
 title: Przykłady programowania w środowisku sieciowym z wykorzystaniem niskopoziomowego API gniazd C++
 index: 2
-type: 'rd'
+type: rAndD
 ---
 
 [![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/sock-net-programming) &nbsp;

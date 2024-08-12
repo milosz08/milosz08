@@ -1,7 +1,7 @@
 ---
 title: AirHub Master (gra mobilna do zarządzania flotą samolotów)
 index: 4
-type: 'part'
+type: coop
 ---
 
 [![](<https://img.shields.io/badge/github-klient%20(Android)-b07219?style=for-the-badge&logo=github>)](https://github.com/Lettulouz/AirHubMaster) &nbsp;
@@ -16,8 +16,7 @@ Ta aplikacja korzysta z najnowszej stabilnej wersji biblioteki [JMPS](https://gi
 communication, core, security).
 
 ## Galeria
-
-<[GalleryContent}]>
+$[{GalleryContent}]$
 
 ## Wsparcie dla wielu języków
 

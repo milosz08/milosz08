@@ -1,7 +1,7 @@
 ---
 title: Stars Magnet (platforma do wystawiania recenzji)
 index: 2
-type: 'part'
+type: coop
 ---
 
 [![](<https://img.shields.io/badge/github-klient%20(Angular)-3178c6?style=for-the-badge&logo=github>)](https://github.com/milosz08/stars-magnet-client) &nbsp;
@@ -23,8 +23,7 @@ usługach HTTP. Cała aplikacja została podzielona na 3 leniwie ładowane modu�
 i moduł commons, który jest wspólny dla dwóch pierwszych modułów.
 
 ## Galeria
-
-<[GalleryContent}]>
+$[{GalleryContent}]$
 
 ## Użyte technologie
 

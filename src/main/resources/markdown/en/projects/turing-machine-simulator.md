@@ -1,7 +1,7 @@
 ---
 title: Turing machine simulator
 index: 3
-type: 'rd'
+type: rAndD
 ---
 
 [![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/turing-machine-simulator) &nbsp;
@@ -22,8 +22,7 @@ Below you will find additional links to learn about the hypothetical operation o
 * [en.wikipedia.org/wiki/Turing_machine](https://en.wikipedia.org/wiki/Turing_machine)
 
 ## Gallery
-
-<[GalleryContent}]>
+$[{GalleryContent}]$
 
 ## Technology design
 

@@ -1,7 +1,7 @@
 ---
 title: AirHub Master (mobile game for managing aircraft fleet)
 index: 4
-type: 'part'
+type: coop
 ---
 
 [![](<https://img.shields.io/badge/github-client%20(Android)-b07219?style=for-the-badge&logo=github>)](https://github.com/Lettulouz/AirHubMaster) &nbsp;
@@ -16,8 +16,7 @@ This application use newest stable [JMPS library](https://github.com/milosz08/jm
 core, security).
 
 ## Gallery
-
-<[GalleryContent}]>
+$[{GalleryContent}]$
 
 ## Multi-language support
 

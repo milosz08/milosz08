@@ -1,7 +1,7 @@
 ---
 title: Symulator maszyny Turinga
 index: 3
-type: 'rd'
+type: rAndD
 ---
 
 [![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/turing-machine-simulator) &nbsp;
@@ -25,8 +25,7 @@ Turinga:
 * [en.wikipedia.org/wiki/Turing_machine](https://en.wikipedia.org/wiki/Turing_machine)
 
 ## Galeria
-
-<[GalleryContent}]>
+$[{GalleryContent}]$
 
 ## Opis technologii
 

@@ -1,7 +1,7 @@
 ---
 title: Stars Magnet (company reviews platform)
 index: 2
-type: 'part'
+type: coop
 ---
 
 [![](<https://img.shields.io/badge/github-client%20(Angular)-3178c6?style=for-the-badge&logo=github>)](https://github.com/milosz08/stars-magnet-client) &nbsp;
@@ -24,8 +24,7 @@ query services. The whole application was divided into 3 lazily loaded modules: 
 and commons module which is a commonality for the first 2 modules.
 
 ## Gallery
-
-<[GalleryContent}]>
+$[{GalleryContent}]$
 
 ## Used technologies
 

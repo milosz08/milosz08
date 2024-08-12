@@ -1,7 +1,7 @@
 ---
 title: Schedule management system
 index: 4
-type: 'impl'
+type: normal
 ---
 
 [![](<https://img.shields.io/badge/github-client%20(Angular)-3178c6?style=for-the-badge&logo=github>)](https://github.com/milosz08/schedule-management-client) &nbsp;

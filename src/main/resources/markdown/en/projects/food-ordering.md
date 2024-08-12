@@ -1,7 +1,7 @@
 ---
 title: Food ordering web application
 index: 3
-type: 'part'
+type: coop
 ---
 
 [![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/food-ordering-web-app) &nbsp;
@@ -10,8 +10,7 @@ A CMS (Content Management System) web application to support restaurant manageme
 from created restaurants. For obvious reasons, the application does not have a payment system.
 
 ## Gallery
-
-<[GalleryContent}]>
+$[{GalleryContent}]$
 
 ## Business design
 

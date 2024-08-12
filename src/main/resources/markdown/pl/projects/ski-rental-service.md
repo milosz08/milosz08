@@ -1,7 +1,7 @@
 ---
 title: System dla wypożyczalni sprzętu narciarskiego
 index: 3
-type: 'impl'
+type: normal
 ---
 
 [![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/ski-rental-service) &nbsp;
@@ -22,8 +22,7 @@ Możliwości **modułu pracownika**:
 - stworzenie wypożyczenia i zwrotu dla wcześniej zapisanych klientów.
 
 ## Galeria
-
-<[GalleryContent}]>
+$[{GalleryContent}]$
 
 ## Funkcjonalności
 
