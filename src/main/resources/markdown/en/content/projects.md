@@ -1,5 +1,3 @@
-[Return to home page](/)
-
 [![](https://img.shields.io/badge/github-projects-808080?style=for-the-badge&logo=github)](https://github.com/milosz08) &nbsp;
 
 Below you will find some of the projects I have done or co-created. Other projects that are not are listed below you can
