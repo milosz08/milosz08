@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--
   ~ Copyright (c) 2024 by MILOSZ GILGA <https://miloszgilga.pl>
-  ~ You can find the licenses for this program in the LICENSE file.
+  ~ You can find the licenses for this software in the LICENSE file.
   -->
 <configuration>
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
