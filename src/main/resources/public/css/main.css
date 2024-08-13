@@ -1,9 +1,14 @@
+/*
+ * Copyright (c) 2024 by MILOSZ GILGA <https://miloszgilga.pl>
+ * You can find the licenses for this program in the LICENSE file.
+ */
+
 :root {
-  --main-bg: #1f1f1f;
+  --main-bg: #000000;
   --main-text: #ffffff;
-  --main-text-tint: #cccccc;
-  --main-tint: #363636;
-  --main-link: #9b9bff;
+  --main-text-tint: #d7d7d7;
+  --main-tint: #171717;
+  --main-link: #c68659;
 
   --safety-width: 1024px;
 }
@@ -51,6 +56,7 @@ p {
 a {
   color: var(--main-link);
   text-decoration: none;
+
   &:hover {
     text-decoration: underline;
   }
@@ -64,6 +70,7 @@ ul {
   background: var(--main-tint);
   color: var(--main-text);
 }
+
 .header__wrapper {
   margin: 0 auto;
   max-width: var(--safety-width);
@@ -94,6 +101,7 @@ ul {
   background-color: var(--main-bg);
   color: var(--main-text);
 }
+
 .main__wrapper {
   margin: 30px auto 80px;
   max-width: var(--safety-width);
