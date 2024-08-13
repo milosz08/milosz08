@@ -4,12 +4,14 @@ index: 3
 type: coop
 ---
 
-[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/food-ordering-web-app) &nbsp;
+[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/food-ordering-web-app)
+&nbsp;
 
 Aplikacja internetowa CMS (Content Management System) do obsługi zarządzania restauracjami, kontaktu z klientami i
 zamawiania produktów z utworzonych restauracji. Z oczywistych względów aplikacja nie posiada systemu płatności.
 
 ## Galeria
+
 $[{GalleryContent}]$
 
 ## Funkcjonalności

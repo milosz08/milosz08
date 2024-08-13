@@ -1,8 +1,10 @@
 You can find me on:
 
 [![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08) &nbsp;
-[![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miloszgilga) &nbsp;
-[![](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/18847390/milosz08) &nbsp;
+[![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miloszgilga)
+&nbsp;
+[![](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/18847390/milosz08)
+&nbsp;
 
 [Go to projects](/projects)
 
@@ -25,6 +27,7 @@ Source code you find [here](https://github.com/visphere).
 ## Interests
 
 My interests are mainly focused on topics related to multimedia processing, including primarily:
+
 - selected methods of digital audio and image processing,
 - designing real-time audio/video streaming applications,
 - selected applications of digital image processing, including medical imaging and computer vision.

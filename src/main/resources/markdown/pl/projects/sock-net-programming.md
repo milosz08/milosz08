@@ -4,6 +4,7 @@ index: 2
 type: rAndD
 ---
 
-[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/sock-net-programming) &nbsp;
+[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/sock-net-programming)
+&nbsp;
 
 Wkrótce

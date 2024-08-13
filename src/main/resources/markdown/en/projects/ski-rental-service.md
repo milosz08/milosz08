@@ -4,14 +4,16 @@ index: 3
 type: normal
 ---
 
-[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/ski-rental-service) &nbsp;
+[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/ski-rental-service)
+&nbsp;
 
 Enterprise-class Java web application for ski rental company. This application consists of 2 modules, where 1 is the
 owner module and the other is the employee module.
 
 The **owner's module** can:
 
-- add/change/remove employee accounts (automatically generated email address, login details sent to the employee's mailbox)
+- add/change/remove employee accounts (automatically generated email address, login details sent to the employee's
+  mailbox)
 - add/change/remove ski equipment (count of equipments, attributes, rental price etc.)
 - see all rentals and returns made by all employees
 
@@ -22,6 +24,7 @@ The **employeer's module** can:
 - create rentals and returns of previous saved customers
 
 ## Gallery
+
 $[{GalleryContent}]$
 
 ## Business design
@@ -38,8 +41,8 @@ document is generated and sent to the customer's email address).
 
 Server was mainly created using Jakarta EE and a MySQL relational database. Database migrations were managed by
 Liquibase. The ORM system used was Hibernate. The client layer, on the other hand, consisted of JSP + JSTL pages and
-Bootstrap with the jQuery library. Blob data (reports and bar codes) are stored in Minio S3 storage with code-compatibility
-with AWS S3 API.
+Bootstrap with the jQuery library. Blob data (reports and bar codes) are stored in Minio S3 storage with
+code-compatibility with AWS S3 API.
 
 I realize that this project could have been done in Spring Boot and Thymeleaf technology, but it was mainly created
 to familiarize with "legacy" technologies from the old Java tech stack using best practices as I can

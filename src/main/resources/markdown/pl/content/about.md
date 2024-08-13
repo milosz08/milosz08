@@ -1,8 +1,10 @@
 Znajdziesz mnie na:
 
 [![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08) &nbsp;
-[![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miloszgilga) &nbsp;
-[![](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/18847390/milosz08) &nbsp;
+[![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miloszgilga)
+&nbsp;
+[![](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/18847390/milosz08)
+&nbsp;
 
 [Przejdź do projektów](/pl/projects)
 
@@ -26,6 +28,7 @@ Kod źródłowy mojej pracy dyplomowej możesz znaleźć [tutaj](https://github.
 
 Moje zainteresowania skupiają się w głównej mierze wokół tematów związanych z przetwarzaniem danych multimedialnych,
 wliczając to przede wszystkim:
+
 - wybrane metody cyfrowego przetwarzania obrazów i dźwięków,
 - zagadnienia projektowania aplikacji strumieniowania audio/wideo w czasie rzeczywistym,
 - wybrane aplikacje cyfrowego przetwarzania obrazów, wliczając w to obrazowanie medyczne oraz wizję komputerową.

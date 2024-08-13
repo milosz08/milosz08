@@ -4,10 +4,11 @@ index: 3
 type: normal
 ---
 
-[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/ski-rental-service) &nbsp;
+[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/ski-rental-service)
+&nbsp;
 
-Aplikacja webowa klasy enterprise dla wypożyczalni sprzętu narciarskiego. Aplikacja ta jest podzielona na 2 główne moduły,
-gdzie odpowiednio pierwszy to moduł właściciela a drugi to moduł pracownika (sprzedawcy).
+Aplikacja webowa klasy enterprise dla wypożyczalni sprzętu narciarskiego. Aplikacja ta jest podzielona na 2 główne
+moduły, gdzie odpowiednio pierwszy to moduł właściciela a drugi to moduł pracownika (sprzedawcy).
 
 Możliwości **modułu właściciela**:
 
@@ -22,6 +23,7 @@ Możliwości **modułu pracownika**:
 - stworzenie wypożyczenia i zwrotu dla wcześniej zapisanych klientów.
 
 ## Galeria
+
 $[{GalleryContent}]$
 
 ## Funkcjonalności

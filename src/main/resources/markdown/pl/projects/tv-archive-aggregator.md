@@ -4,7 +4,8 @@ index: 5
 type: normal
 ---
 
-[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/tv-archive-aggregator) &nbsp;
+[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/tv-archive-aggregator)
+&nbsp;
 
 ## Cel projektu
 
@@ -13,7 +14,8 @@ interesujących treści z danego okresu.
 
 Ten projekt składa się z 3 podprojektów:
 
-- *web-scrapper* - pobieranie danych ze strony internetowej i zapisywanie ich w bazie danych (desktopowa aplikacja Java Swing),
+- *web-scrapper* - pobieranie danych ze strony internetowej i zapisywanie ich w bazie danych (desktopowa aplikacja Java
+  Swing),
 - *data-server* - Rest API napisane w Spring Boot,
 - *web-ui* - klient internetowy napisany przy użyciu biblioteki React i komponentów MUI.
 
@@ -26,6 +28,7 @@ Ten projekt składa się z 3 podprojektów:
   zaawansowanym systemem wyszukiwania i dodatkowymi narzędzia do wizualizacji danych.
 
 ## Galeria
+
 $[{GalleryContent}]$
 
 ## Użyte technologie
