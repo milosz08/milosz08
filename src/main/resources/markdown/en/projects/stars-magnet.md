@@ -4,10 +4,8 @@ index: 2
 type: coop
 ---
 
-[![](<https://img.shields.io/badge/github-client%20(Angular)-3178c6?style=for-the-badge&logo=github>)](https://github.com/milosz08/stars-magnet-client)
-&nbsp;
-[![](<https://img.shields.io/badge/github-server%20(Python)-3572A5?style=for-the-badge&logo=github>)](https://github.com/Lettulouz/StarsMagnet)
-&nbsp;
+{{badge:source code-client (Angular)$github$3178c6$https://github.com/milosz08/stars-magnet-client}}
+{{badge:source code-server (Python)$github$3572A5$https://github.com/Lettulouz/StarsMagnet}}
 
 Client for [Stars Magnet](https://github.com/Lettulouz/StarsMagnet) Django rest API. This application allows you to
 register/log in and create new company accounts. Each company can be rated only once by a logged-in user (this rating is
@@ -26,7 +24,7 @@ and commons module which is a commonality for the first 2 modules.
 
 ## Gallery
 
-$[{GalleryContent}]$
+{{html:projectGallery}}
 
 ## Used technologies
 

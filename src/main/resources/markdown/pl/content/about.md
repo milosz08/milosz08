@@ -1,10 +1,8 @@
 Znajdziesz mnie na:
 
-[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08) &nbsp;
-[![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miloszgilga)
-&nbsp;
-[![](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/18847390/milosz08)
-&nbsp;
+{{badge:github$github$808080$https://github.com/milosz08}}
+{{badge:linkedin$linkedin$0077B5$https://www.linkedin.com/in/miloszgilga}}
+{{badge:stackoverflow$stackoverflow$FE7A16$https://stackoverflow.com/users/18847390/milosz08}}
 
 [Przejdź do projektów](/pl/projects)
 

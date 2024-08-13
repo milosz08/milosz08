@@ -4,7 +4,7 @@ index: 5
 type: normal
 ---
 
-[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/tv-archive-aggregator) &nbsp;
+{{badge:source code$github$808080$https://github.com/milosz08/tv-archive-aggregator}}
 
 ## Project purpose
 
@@ -25,7 +25,8 @@ This project consists of 3 sub-projects:
   data visualization tools.
 
 ## Gallery
-$[{GalleryContent}]$
+
+{{html:projectGallery}}
 
 ## Used technologies
 

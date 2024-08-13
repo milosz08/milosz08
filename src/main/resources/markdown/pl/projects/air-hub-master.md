@@ -4,10 +4,8 @@ index: 4
 type: coop
 ---
 
-[![](<https://img.shields.io/badge/github-klient%20(Android)-b07219?style=for-the-badge&logo=github>)](https://github.com/Lettulouz/AirHubMaster)
-&nbsp;
-[![](<https://img.shields.io/badge/github-serwer%20(Java)-b07219?style=for-the-badge&logo=github>)](https://github.com/milosz08/air-hub-master-api)
-&nbsp;
+{{badge:kod źródłowy-klient (Android)$github$b07219$https://github.com/Lettulouz/AirHubMaster}}
+{{badge:kod źródłowy-serwer (Java)$github$b07219$https://github.com/milosz08/air-hub-master-api}}
 
 Serwer Java Spring Boot stworzony dla aplikacji mobilnej [AirHub Master](https://github.com/Lettulouz/AirHubMaster)
 zgodny ze specyfikacją Rest API. Zapewnia podstawowe funkcje: logowanie, rejestracja, resetowanie hasła za pomocą tokenu
@@ -19,7 +17,7 @@ communication, core, security).
 
 ## Galeria
 
-$[{GalleryContent}]$
+{{html:projectGallery}}
 
 ## Wsparcie dla wielu języków
 

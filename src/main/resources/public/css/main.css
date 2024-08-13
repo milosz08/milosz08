@@ -66,6 +66,10 @@ ul {
   margin-left: 40px;
 }
 
+strong {
+  font-weight: 600;
+}
+
 .header__container {
   background: var(--main-tint);
   color: var(--main-text);

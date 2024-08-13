@@ -4,10 +4,8 @@ index: 2
 type: coop
 ---
 
-[![](<https://img.shields.io/badge/github-klient%20(Angular)-3178c6?style=for-the-badge&logo=github>)](https://github.com/milosz08/stars-magnet-client)
-&nbsp;
-[![](<https://img.shields.io/badge/github-serwer%20(Python)-3572A5?style=for-the-badge&logo=github>)](https://github.com/Lettulouz/StarsMagnet)
-&nbsp;
+{{badge:kod źródłowy-klient (Angular)$github$3178c6$https://github.com/milosz08/stars-magnet-client}}
+{{badge:kod źródłowy-serwer (Python)$github$3572A5$https://github.com/Lettulouz/StarsMagnet}}
 
 Klient dla [Stars Magnet](https://github.com/Lettulouz/StarsMagnet) Django rest API. Aplikacja umożliwia
 rejestrację/logowanie i tworzenie nowych kont firmowych. Każda firma może być oceniona tylko raz przez zalogowanego
@@ -26,7 +24,7 @@ główny i moduł commons, który jest wspólny dla dwóch pierwszych modułów.
 
 ## Galeria
 
-$[{GalleryContent}]$
+{{html:projectGallery}}
 
 ## Użyte technologie
 

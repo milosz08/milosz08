@@ -4,8 +4,7 @@ index: 3
 type: rAndD
 ---
 
-[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/turing-machine-simulator)
-&nbsp;
+{{badge:source code$github$808080$https://github.com/milosz08/turing-machine-simulator}}
 
 An advanced, single-tape, deterministic Turing Machine simulator written using the React library. Available in light and
 dark modes, depending on user preference. This machine is a great foundation for understanding how computer processing
@@ -25,7 +24,7 @@ Below you will find additional links to learn about the hypothetical operation o
 
 ## Gallery
 
-$[{GalleryContent}]$
+{{html:projectGallery}}
 
 ## Technology design
 

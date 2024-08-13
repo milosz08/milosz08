@@ -4,8 +4,7 @@ index: 3
 type: normal
 ---
 
-[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/ski-rental-service)
-&nbsp;
+{{badge:source code$github$808080$https://github.com/milosz08/ski-rental-service}}
 
 Enterprise-class Java web application for ski rental company. This application consists of 2 modules, where 1 is the
 owner module and the other is the employee module.
@@ -25,7 +24,7 @@ The **employeer's module** can:
 
 ## Gallery
 
-$[{GalleryContent}]$
+{{html:projectGallery}}
 
 ## Business design
 

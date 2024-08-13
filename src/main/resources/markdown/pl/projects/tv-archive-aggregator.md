@@ -4,8 +4,7 @@ index: 5
 type: normal
 ---
 
-[![](https://img.shields.io/badge/github-808080?style=for-the-badge&logo=github)](https://github.com/milosz08/tv-archive-aggregator)
-&nbsp;
+{{badge:kod źródłowy$github$808080$https://github.com/milosz08/tv-archive-aggregator}}
 
 ## Cel projektu
 
@@ -29,7 +28,7 @@ Ten projekt składa się z 3 podprojektów:
 
 ## Galeria
 
-$[{GalleryContent}]$
+{{html:projectGallery}}
 
 ## Użyte technologie
 
