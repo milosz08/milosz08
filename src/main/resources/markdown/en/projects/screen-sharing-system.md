@@ -1,5 +1,5 @@
 ---
-title: Screen sharing system (based on own RTMP)
+title: Multithreading screen sharing system (based on own RTMP)
 type: rAndD
 ---
 

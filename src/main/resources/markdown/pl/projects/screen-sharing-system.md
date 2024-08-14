@@ -1,5 +1,5 @@
 ---
-title: System strumieniowania obrazu (oparty o autorski RTMP)
+title: Wielowątkowy system strumieniowania obrazu (oparty o autorski RTMP)
 type: rAndD
 ---
 
