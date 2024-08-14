@@ -1,6 +1,5 @@
 ---
 title: Kalkulator krzywej ROC
-index: 4
 type: rAndD
 ---
 

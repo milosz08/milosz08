@@ -1,6 +1,5 @@
 ---
 title: Programming examples in network environment using low-level C++ socket API
-index: 2
 type: rAndD
 ---
 

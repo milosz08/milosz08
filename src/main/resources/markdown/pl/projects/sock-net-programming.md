@@ -1,6 +1,5 @@
 ---
 title: Przykłady programowania w środowisku sieciowym z wykorzystaniem niskopoziomowego API gniazd C++
-index: 2
 type: rAndD
 ---
 

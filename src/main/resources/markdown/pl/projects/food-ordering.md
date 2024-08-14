@@ -1,6 +1,5 @@
 ---
 title: Platforma do zamawiania jedzenia online
-index: 3
 type: coop
 ---
 

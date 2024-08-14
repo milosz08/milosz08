@@ -1,6 +1,5 @@
 ---
 title: ROC curve calculator
-index: 4
 type: rAndD
 ---
 

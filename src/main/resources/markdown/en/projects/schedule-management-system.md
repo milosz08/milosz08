@@ -1,6 +1,5 @@
 ---
 title: Schedule management system
-index: 4
 type: normal
 ---
 

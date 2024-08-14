@@ -1,6 +1,5 @@
 ---
 title: Aggregator archiwów telewizyjnych
-index: 5
 type: normal
 ---
 

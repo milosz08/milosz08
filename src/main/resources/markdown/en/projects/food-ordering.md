@@ -1,6 +1,5 @@
 ---
 title: Food ordering web application
-index: 3
 type: coop
 ---
 

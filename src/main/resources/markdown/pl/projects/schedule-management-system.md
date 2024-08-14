@@ -1,6 +1,5 @@
 ---
 title: System zarządzania planem
-index: 4
 type: normal
 ---
 

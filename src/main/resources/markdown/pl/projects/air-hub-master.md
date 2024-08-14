@@ -1,6 +1,5 @@
 ---
 title: AirHub Master (gra mobilna do zarządzania flotą samolotów)
-index: 4
 type: coop
 ---
 

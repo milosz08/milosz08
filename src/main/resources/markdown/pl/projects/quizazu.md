@@ -1,6 +1,5 @@
 ---
 title: Quizazu (platforma do quizów online)
-index: 1
 type: coop
 ---
 

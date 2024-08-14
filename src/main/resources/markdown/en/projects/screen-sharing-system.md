@@ -1,6 +1,5 @@
 ---
 title: Screen sharing system (based on own RTMP)
-index: 1
 type: rAndD
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: System strumieniowania obrazu (oparty o autorski RTMP)
-index: 1
 type: rAndD
 ---
 

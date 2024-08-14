@@ -1,6 +1,5 @@
 ---
 title: Symulator maszyny Turinga
-index: 3
 type: rAndD
 ---
 

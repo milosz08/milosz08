@@ -1,6 +1,5 @@
 ---
 title: System dla wypożyczalni sprzętu narciarskiego
-index: 3
 type: normal
 ---
 

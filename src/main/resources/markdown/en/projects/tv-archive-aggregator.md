@@ -1,6 +1,5 @@
 ---
 title: TV Archive aggregator
-index: 5
 type: normal
 ---
 

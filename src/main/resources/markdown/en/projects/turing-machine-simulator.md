@@ -1,6 +1,5 @@
 ---
 title: Turing machine simulator
-index: 3
 type: rAndD
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Ski rental service
-index: 3
 type: normal
 ---
 

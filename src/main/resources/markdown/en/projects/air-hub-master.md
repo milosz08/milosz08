@@ -1,6 +1,5 @@
 ---
 title: AirHub Master (mobile game for managing aircraft fleet)
-index: 4
 type: coop
 ---
 
