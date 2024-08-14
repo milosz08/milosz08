@@ -38,7 +38,7 @@ jobs:
       - name: Generate static content
         run: |
           cd .bin
-          java -jar parser.jar
+          java -jar parser.jar -d https://miloszgilga.pl
 
       - name: Move files to page content directory
         run: |
