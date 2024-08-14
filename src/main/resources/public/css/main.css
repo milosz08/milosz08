@@ -127,16 +127,3 @@ strong {
   width: 100%;
   text-align: center;
 }
-
-.not-found__container {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.not-found__link {
-  margin: 10px auto 0;
-}
-
-.projects__link {
-  margin: 5px;
-}

@@ -1,0 +1,22 @@
+---
+title: {{i18n 'projects.header'}}
+---
+
+<a href="{{url '/'}}">
+  {{i18n 'home.return'}}
+</a>
+
+{{{md 'content/projects'}}}
+
+{{#each projects}}
+  <h2>{{i18n 'projects.' @key}}</h2>
+  <ul>
+    {{#each this}}
+      <li>
+        <a href="{{url '/project/' slug}}" class="projects__link">
+          {{name}}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+{{/each}}
