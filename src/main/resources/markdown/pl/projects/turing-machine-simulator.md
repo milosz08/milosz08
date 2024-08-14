@@ -3,7 +3,8 @@ title: Symulator maszyny Turinga
 type: rAndD
 ---
 
-{{badge:kod źródłowy$github$808080$https://github.com/milosz08/turing-machine-simulator}}
+{{badge 'kod źródłowy$github$808080$https://github.com/milosz08/turing-machine-simulator'}}
+{{badge 'demo$applearcade$C70039$https://turing.miloszgilga.pl'}}
 
 Zaawansowany, jednotaśmowy, deterministyczny symulator maszyny Turinga napisany przy użyciu biblioteki React. Dostępny
 w trybach jasnym i ciemnym, w zależności od preferencji użytkownika. Ta maszyna jest świetnym fundamentem do
@@ -26,7 +27,7 @@ Turinga:
 
 ## Galeria
 
-{{html:projectGallery}}
+{{html 'projectGallery'}}
 
 ## Opis technologii
 

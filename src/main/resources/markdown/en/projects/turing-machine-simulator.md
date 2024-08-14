@@ -3,7 +3,8 @@ title: Turing machine simulator
 type: rAndD
 ---
 
-{{badge:source code$github$808080$https://github.com/milosz08/turing-machine-simulator}}
+{{badge 'source code$github$808080$https://github.com/milosz08/turing-machine-simulator'}}
+{{badge 'demo$applearcade$C70039$https://turing.miloszgilga.pl'}}
 
 An advanced, single-tape, deterministic Turing Machine simulator written using the React library. Available in light and
 dark modes, depending on user preference. This machine is a great foundation for understanding how computer processing
@@ -23,7 +24,7 @@ Below you will find additional links to learn about the hypothetical operation o
 
 ## Gallery
 
-{{html:projectGallery}}
+{{html 'projectGallery'}}
 
 ## Technology design
 

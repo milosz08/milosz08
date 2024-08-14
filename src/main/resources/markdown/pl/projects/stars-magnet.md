@@ -1,11 +1,10 @@
 ---
 title: Stars Magnet (platforma do wystawiania recenzji)
-index: 2
 type: coop
 ---
 
-{{badge:kod źródłowy-klient (Angular)$github$3178c6$https://github.com/milosz08/stars-magnet-client}}
-{{badge:kod źródłowy-serwer (Python)$github$3572A5$https://github.com/Lettulouz/StarsMagnet}}
+{{badge 'kod źródłowy-klient (Angular)$github$3178c6$https://github.com/milosz08/stars-magnet-client'}}
+{{badge 'kod źródłowy-serwer (Python)$github$3572A5$https://github.com/Lettulouz/StarsMagnet'}}
 
 Klient dla [Stars Magnet](https://github.com/Lettulouz/StarsMagnet) Django rest API. Aplikacja umożliwia
 rejestrację/logowanie i tworzenie nowych kont firmowych. Każda firma może być oceniona tylko raz przez zalogowanego
@@ -24,7 +23,7 @@ główny i moduł commons, który jest wspólny dla dwóch pierwszych modułów.
 
 ## Galeria
 
-{{html:projectGallery}}
+{{html 'projectGallery'}}
 
 ## Użyte technologie
 

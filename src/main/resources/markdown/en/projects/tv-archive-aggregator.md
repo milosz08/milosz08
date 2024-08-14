@@ -3,7 +3,7 @@ title: TV Archive aggregator
 type: normal
 ---
 
-{{badge:source code$github$808080$https://github.com/milosz08/tv-archive-aggregator}}
+{{badge 'source code$github$808080$https://github.com/milosz08/tv-archive-aggregator'}}
 
 ## Project purpose
 
@@ -25,7 +25,7 @@ This project consists of 3 sub-projects:
 
 ## Gallery
 
-{{html:projectGallery}}
+{{html 'projectGallery'}}
 
 ## Used technologies
 

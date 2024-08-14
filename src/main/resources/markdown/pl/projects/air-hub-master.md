@@ -3,8 +3,8 @@ title: AirHub Master (gra mobilna do zarządzania flotą samolotów)
 type: coop
 ---
 
-{{badge:kod źródłowy-klient (Android)$github$b07219$https://github.com/Lettulouz/AirHubMaster}}
-{{badge:kod źródłowy-serwer (Java)$github$b07219$https://github.com/milosz08/air-hub-master-api}}
+{{badge 'kod źródłowy-klient (Android)$github$b07219$https://github.com/Lettulouz/AirHubMaster'}}
+{{badge 'kod źródłowy-serwer (Java)$github$b07219$https://github.com/milosz08/air-hub-master-api'}}
 
 Serwer Java Spring Boot stworzony dla aplikacji mobilnej [AirHub Master](https://github.com/Lettulouz/AirHubMaster)
 zgodny ze specyfikacją Rest API. Zapewnia podstawowe funkcje: logowanie, rejestracja, resetowanie hasła za pomocą tokenu
@@ -16,7 +16,7 @@ communication, core, security).
 
 ## Galeria
 
-{{html:projectGallery}}
+{{html 'projectGallery'}}
 
 ## Wsparcie dla wielu języków
 

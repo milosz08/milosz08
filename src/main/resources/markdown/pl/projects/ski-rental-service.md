@@ -3,7 +3,8 @@ title: System dla wypożyczalni sprzętu narciarskiego
 type: normal
 ---
 
-{{badge:kod źródłowy$github$808080$https://github.com/milosz08/ski-rental-service}}
+{{badge 'kod źródłowy$github$808080$https://github.com/milosz08/ski-rental-service'}}
+{{badge 'demo$applearcade$C70039$https://ski.miloszgilga.pl'}}
 
 Aplikacja webowa klasy enterprise dla wypożyczalni sprzętu narciarskiego. Aplikacja ta jest podzielona na 2 główne
 moduły, gdzie odpowiednio pierwszy to moduł właściciela a drugi to moduł pracownika (sprzedawcy).
@@ -22,7 +23,7 @@ Możliwości **modułu pracownika**:
 
 ## Galeria
 
-{{html:projectGallery}}
+{{html 'projectGallery'}}
 
 ## Funkcjonalności
 

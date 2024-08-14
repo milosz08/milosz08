@@ -1,8 +1,8 @@
 Znajdziesz mnie na:
 
-{{badge:github$github$808080$https://github.com/milosz08}}
-{{badge:linkedin$linkedin$0077B5$https://www.linkedin.com/in/miloszgilga}}
-{{badge:stackoverflow$stackoverflow$FE7A16$https://stackoverflow.com/users/18847390/milosz08}}
+{{badge 'github$github$808080$https://github.com/milosz08'}}
+{{badge 'linkedin$linkedin$0077B5$https://www.linkedin.com/in/miloszgilga'}}
+{{badge 'stackoverflow$stackoverflow$FE7A16$https://stackoverflow.com/users/18847390/milosz08'}}
 
 [Przejdź do projektów](/pl/projects)
 

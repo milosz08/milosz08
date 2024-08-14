@@ -3,7 +3,7 @@ title: Aggregator archiwów telewizyjnych
 type: normal
 ---
 
-{{badge:kod źródłowy$github$808080$https://github.com/milosz08/tv-archive-aggregator}}
+{{badge 'kod źródłowy$github$808080$https://github.com/milosz08/tv-archive-aggregator'}}
 
 ## Cel projektu
 
@@ -27,7 +27,7 @@ Ten projekt składa się z 3 podprojektów:
 
 ## Galeria
 
-{{html:projectGallery}}
+{{html 'projectGallery'}}
 
 ## Użyte technologie
 
