@@ -22,6 +22,16 @@ field of real-time communication on example of chat application.
 
 Source code you find [here](https://github.com/visphere).
 
+Currently, I am focusing on research involving the use of wavelet transforms for edge detection in practical
+applications of MRI brain image analysis, specifically T1 and T2-weighted images. I intend to include the results of
+this research in my master's thesis.
+
+## Education
+
+* **2024 - current**: (MSc, BEng) Computer Science, Silesian University of Technology,
+* **2020 - 2024**: (BEng) Computer Science, Silesian University of Technology,
+* **2017 - 2020**: High School of the Evangelical Society in Cieszyn (Biology-Chemistry profile).
+
 ## Interests
 
 My interests are mainly focused on topics related to multimedia processing, including primarily:

@@ -22,6 +22,16 @@ Apache Kafka w zakresie komunikacji w czasie rzeczywistym w środowisku JVM.
 
 Kod źródłowy mojej pracy dyplomowej możesz znaleźć [tutaj](https://github.com/visphere).
 
+Obecnie skupiam się na badaniach wykorzystania transformaty falkowej w celu wykrywaniu krawędzi w praktycznych
+zastosowaniach analizy obrazów MRI mózgu T1 i T2 zależnych. Rezultat tych badań chce zawrzeć w mojej pracy
+magisterskiej.
+
+## Edukacja
+
+* **2024 - nadal**: (mgr inż.) Informatyka - profil ogólnoakademicki, Politechnika Śląska,
+* **2020 - 2024**: (inż.) Informatyka - profil ogólnoakademicki, Politechnika Śląska,
+* **2017 - 2020**: Liceum ogólnokształcące Towarzystwa Ewangelickiego, profil biologiczno-chemiczny.
+
 ## Zainteresowania
 
 Moje zainteresowania skupiają się w głównej mierze wokół tematów związanych z przetwarzaniem danych multimedialnych,
