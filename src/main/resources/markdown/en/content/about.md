@@ -6,6 +6,8 @@ You can find me on:
 
 [Go to projects](/projects)
 
+<a href="https://static.miloszgilga.pl/resume/resume-en.pdf" target="_blank">Download resume (PDF)</a>
+
 ## Contact
 
 - [personal@miloszgilga.pl](mailto:personal@miloszgilga.pl)

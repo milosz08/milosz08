@@ -6,6 +6,8 @@ Znajdziesz mnie na:
 
 [Przejdź do projektów](/pl/projects)
 
+<a href="https://static.miloszgilga.pl/resume/resume-pl.pdf" target="_blank">Pobierz CV (PDF)</a>
+
 ## Kontant
 
 - [personal@miloszgilga.pl](mailto:personal@miloszgilga.pl)
