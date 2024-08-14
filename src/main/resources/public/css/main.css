@@ -126,4 +126,18 @@ strong {
 .footer__paragraph {
   width: 100%;
   text-align: center;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.footer__paragraph,
+.footer__paragraph strong {
+  font-size: .9rem;
+}
+
+.footer__icon {
+  position: relative;
+  top: -1px;
+  margin: 0 3px;
+  font-size: .8rem;
 }
