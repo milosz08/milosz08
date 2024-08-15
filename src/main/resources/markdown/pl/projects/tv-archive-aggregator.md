@@ -1,5 +1,5 @@
 ---
-title: Aggregator archiwów telewizyjnych
+title: Agregator archiwów telewizyjnych
 type: normal
 ---
 
@@ -8,14 +8,14 @@ type: normal
 ## Cel projektu
 
 Głównym celem tego projektu jest ulepszenie systemu archiwizacji programów telewizyjnych i ułatwienie ich wyszukiwania
-interesujących treści z danego okresu.
+oraz znajdowania interesujących treści z wybranego okresu z pomocą wygodnej wyszukiwarki pełnotekstowej.
 
 Ten projekt składa się z 3 podprojektów:
 
-- *web-scrapper* - pobieranie danych ze strony internetowej i zapisywanie ich w bazie danych (desktopowa aplikacja Java
-  Swing),
-- *data-server* - Rest API napisane w Spring Boot,
-- *web-ui* - klient internetowy napisany przy użyciu biblioteki React i komponentów MUI.
+- **web-scrapper** - pobieranie danych ze strony internetowej i zapisywanie ich w bazie danych (desktopowa aplikacja
+  Java Swing),
+- **data-server** - Rest API napisane w Spring Boot,
+- **web-ui** - klient internetowy napisany przy użyciu biblioteki React i komponentów MUI.
 
 ## Główne funkcje
 

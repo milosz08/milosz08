@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--main-tint);
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
@@ -128,11 +128,6 @@ strong {
   text-align: center;
   font-weight: 300;
   margin: 10px 0;
-}
-
-.footer__paragraph,
-.footer__paragraph strong {
-  font-size: .9rem;
 }
 
 .footer__icon {

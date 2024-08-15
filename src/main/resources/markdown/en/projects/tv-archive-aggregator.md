@@ -12,9 +12,9 @@ for interesting content from a given time period.
 
 This project consists of 3 sub-projects:
 
-- *web-scrapper* - scrapping data from website and saving in DB (desktop Java Swing app),
-- *data-server* - Rest API written in Spring Boot,
-- *web-ui* - Web client written in React and MUI component library.
+- **web-scrapper** - scrapping data from website and saving in DB (desktop Java Swing app),
+- **data-server** - Rest API written in Spring Boot,
+- **web-ui** - Web client written in React and MUI component library.
 
 ## Main features
 
