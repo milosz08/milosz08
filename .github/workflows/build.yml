@@ -38,7 +38,7 @@ jobs:
       - name: Generate static content
         run: |
           cd .bin
-          java -jar parser.jar -d ${{ vars.REVERSE_PROXY_DOMAIN }}
+          java -jar ssg.jar -d ${{ vars.REVERSE_PROXY_DOMAIN }}
 
       - name: Move files to page content directory
         run: |
