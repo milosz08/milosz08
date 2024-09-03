@@ -56,7 +56,7 @@ Technologie których obecnie używam:
 
 - JVM (Java, Kotlin, trochę Scala: Spring oraz Spring Boot),
 - C/C++ (w dziedzinie przetwarzania multimediów i szybkich usług internetowych),
-- JavaScript/TypeScript (frameworki: Angular, React, Astro, trochę Vue),
+- JavaScript/TypeScript (frameworki: Angular, React),
 - Apache Kafka (rozproszone strumieniowanie danych, architektura sterowana zdarzeniami),
 - mikroserwisy (infrastruktura Spring Cloud, AWS),
 - Matlab/GNU Octave (cyfrowe przetwarzanie sygnałów/obrazów),

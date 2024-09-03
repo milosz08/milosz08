@@ -55,7 +55,7 @@ Technologies I'm currently using:
 
 - JVM (Java, Kotlin, little bit of Scala: Spring and Spring Boot),
 - C/C++ (in field of multimedia processing and rapid web services),
-- JavaScript/TypeScript (with web frameworks: Angular, React, Astro, little bit of Vue),
+- JavaScript/TypeScript (with web frameworks: Angular, React),
 - Apache Kafka (distributed data streaming, event-driven architecture),
 - microservices (Spring Cloud architecture, AWS),
 - Matlab/GNU Octave (digital signal/image processing),
