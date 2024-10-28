@@ -10,7 +10,7 @@ defaults:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
@@ -30,8 +30,8 @@ jobs:
       - name: Package to JAR (with dependencies)
         run: ./gradlew fatJar --no-daemon
 
-  ssg:
-    runs-on: self-hosted
+  generate:
+    runs-on: ubuntu-latest
     needs: build
 
     steps:
@@ -40,7 +40,15 @@ jobs:
           cd .bin
           java -jar ssg.jar -d ${{ vars.REVERSE_PROXY_DOMAIN }}
 
-      - name: Move files to page content directory
-        run: |
-          rm -rf /var/www/personal-website/*
-          cp -rT .bin/output /var/www/personal-website
+      - name: Copy generated content on server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          source: .bin/output/*
+          target: /var/www/personal-website
+          rm: true
+          strip_components: 1
