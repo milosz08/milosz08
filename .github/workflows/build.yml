@@ -30,15 +30,24 @@ jobs:
       - name: Package to JAR (with dependencies)
         run: ./gradlew shadowJar --no-daemon
 
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ssg-jar
+          path: build/libs/ssg.jar
+
   generate:
     runs-on: ubuntu-latest
     needs: build
 
     steps:
+      - name: Download JAR artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ssg-jar
+
       - name: Generate static content
-        run: |
-          cd build/libs
-          java -jar ssg.jar -d ${{ vars.REVERSE_PROXY_DOMAIN }}
+        run: java -jar ssg.jar -d ${{ vars.REVERSE_PROXY_DOMAIN }}
 
       - name: Copy generated content on server
         uses: appleboy/scp-action@v0.1.7
@@ -48,7 +57,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          source: .bin/output/*
+          source: output/*
           target: /var/www/personal-website
           rm: true
           strip_components: 1
