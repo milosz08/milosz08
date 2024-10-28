@@ -32,7 +32,7 @@ dependencies {
 }
 
 shadowJar {
-	archiveBaseName = 'jwizard-core'
+	archiveBaseName = 'ssg'
 	archiveClassifier = ''
 	archiveVersion = ''
 }
