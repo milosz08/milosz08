@@ -28,7 +28,7 @@ jobs:
         run: ./gradlew clean --no-daemon
 
       - name: Package to JAR (with dependencies)
-        run: ./gradlew fatJar --no-daemon
+        run: ./gradlew shadowJar --no-daemon
 
   generate:
     runs-on: ubuntu-latest
@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: Generate static content
         run: |
-          cd .bin
+          cd build/libs
           java -jar ssg.jar -d ${{ vars.REVERSE_PROXY_DOMAIN }}
 
       - name: Copy generated content on server

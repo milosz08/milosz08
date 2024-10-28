@@ -9,6 +9,6 @@
 .gradle
 build/
 target/
-.bin/
+bin/
 output/
 out/
