@@ -31,6 +31,14 @@ dependencies {
 	implementation 'org.apache.commons:commons-vfs2:2.9.0'
 }
 
+jar {
+	manifest {
+		attributes(
+			'Main-Class': 'pl.miloszgilga.ssg.SsgRunner'
+		)
+	}
+}
+
 shadowJar {
 	archiveBaseName = 'ssg'
 	archiveClassifier = ''
