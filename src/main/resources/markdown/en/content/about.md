@@ -53,19 +53,20 @@ _exotic_ (the aforementioned [Elixir](https://elixir-lang.org) language).
 
 ## Technologies
 
-Technologies I'm currently using:
+Technologies I'm working with in my current projects:
 
-- JVM (Java, Kotlin, little bit of Scala: Spring and Spring Boot),
-- C/C++ (in field of multimedia processing and rapid web services),
-- JavaScript/TypeScript (with web frameworks: Angular, React),
-- Apache Kafka (distributed data streaming, event-driven architecture),
-- microservices (Spring Cloud architecture, AWS),
-- Matlab/GNU Octave (digital signal/image processing),
-- Python.
+- JVM (Kotlin, Java, little bit of Scala, Spring and Spring Boot ecosystem),
+- C/C++ (JNI, DSP in field of audio modulation and multimedia processing),
+- Python (process automation, digital images processing, scientific simulations),
+- JavaScript/TypeScript (with web frameworks: Next.js, React, Angular),
+- Message brokers (RabbitMQ),
+- Matlab (digital signals/images processing).
 
-Technologies I've used:
+Technologies I know and have used in the past:
 
 - .NET (C#, ASP.NET WebAPI, WinForms),
+- Apache Kafka (fault tolerant distributed data streaming, event-driven architecture),
+- microservices (Spring Cloud architecture),
 - Scilab (circuits simulations),
 - PHP (native),
 - Android (Java).
@@ -73,4 +74,4 @@ Technologies I've used:
 ## Hobby
 
 Privately a homebody, enthusiast of orchestral film music, fan of hard science-fiction, Open Source software and IoT
-devices (page you are currently viewing is running on my Raspberry PI 4). 
+devices (page you are currently viewing is running on my Raspberry PI 4).

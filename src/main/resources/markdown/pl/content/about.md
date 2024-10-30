@@ -54,19 +54,20 @@ tych _egzotycznych_ (wspomniany wcześniej język [Elixir](https://elixir-lang.o
 
 ## Technologie
 
-Technologie których obecnie używam:
+Technologie z którymi pracuję przy rozwijanych przeze mnie projektach:
 
-- JVM (Java, Kotlin, trochę Scala: Spring oraz Spring Boot),
-- C/C++ (w dziedzinie przetwarzania multimediów i szybkich usług internetowych),
-- JavaScript/TypeScript (frameworki: Angular, React),
-- Apache Kafka (rozproszone strumieniowanie danych, architektura sterowana zdarzeniami),
-- mikroserwisy (infrastruktura Spring Cloud, AWS),
-- Matlab/GNU Octave (cyfrowe przetwarzanie sygnałów/obrazów),
-- Python.
+- JVM (Kotlin, Java, trochę Scala, ekosystem Spring'a oraz Spring Boot'a),
+- C/C++ (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów),
+- Python (automatyzacja procesów, cyfrowe przetwarzanie obrazów, symulacje naukowe),
+- JavaScript/TypeScript (wraz z: Next.js, React, Angular),
+- Brokerzy wiadomości (RabbitMQ),
+- Matlab (cyfrowe przetwarzanie sygnałów/obrazów).
 
-Technologie których używałem/miałem styczność:
+Technologie które znam i używałem w przeszłych projektach:
 
 - .NET (C#, ASP.NET WebAPI, WinForms),
+- Apache Kafka (rozproszone strumieniowanie danych odporne na błędy, architektura sterowana zdarzeniami),
+- microservices (architektura Spring Cloud),
 - Scilab (symulacje obwodów),
 - PHP (natywny),
 - Android (Java).
