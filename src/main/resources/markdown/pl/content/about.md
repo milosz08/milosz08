@@ -42,7 +42,8 @@ Moje zainteresowania skupiają się w głównej mierze wokół tematów związan
 wliczając to przede wszystkim:
 
 - wybrane metody cyfrowego przetwarzania obrazów i dźwięków,
-- zagadnienia projektowania aplikacji strumieniowania audio/wideo w czasie rzeczywistym,
+- projektowanie aplikacji do strumieniowego przesyłania audio/wideo w czasie rzeczywistym dla wysoce rozproszonych
+  środowisk,
 - wybrane aplikacje cyfrowego przetwarzania obrazów, wliczając w to obrazowanie medyczne oraz wizję komputerową.
 
 Jestem entuzjastą języków działających na JVM takich jak Java, Kotlin i Scala, ale również bardziej _egzotycznych_
@@ -56,23 +57,26 @@ tych _egzotycznych_ (wspomniany wcześniej język [Elixir](https://elixir-lang.o
 
 Technologie z którymi pracuję przy rozwijanych przeze mnie projektach:
 
-- JVM (Kotlin, Java, trochę Scala, ekosystem Spring'a oraz Spring Boot'a),
+- JVM (Kotlin, Java, Scala; ekosystem Spring'a oraz Spring Boot'a),
 - C/C++ (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów),
 - Python (automatyzacja procesów, cyfrowe przetwarzanie obrazów, symulacje naukowe),
-- JavaScript/TypeScript (wraz z: Next.js, React, Angular),
+- JavaScript/TypeScript (wraz z: Next.js, React, Angular; strony internetowe i szybkie prototypowanie),
 - Brokerzy wiadomości (RabbitMQ),
-- Matlab (cyfrowe przetwarzanie sygnałów/obrazów).
+- DevOps (Nginx, Prometheus, Grafana, Hashicorp Vault, Minio, GitHub Actions, BetterStack).
 
 Technologie które znam i używałem w przeszłych projektach:
 
 - .NET (C#, ASP.NET WebAPI, WinForms),
 - Apache Kafka (rozproszone strumieniowanie danych odporne na błędy, architektura sterowana zdarzeniami),
-- microservices (architektura Spring Cloud),
+- mikroserwisy (architektura Spring Cloud),
 - Scilab (symulacje obwodów),
+- Apache Cassandra,
+- AWS (EC2, Lambda, KMS, S3, DynamoDB),
+- Matlab (cyfrowe przetwarzanie sygnałów/obrazów),
 - PHP (natywny),
 - Android (Java).
 
 ## Hobby
 
 Prywatnie domator, entuzjasta muzyki filmowej, fan filmów hard science-fiction, oprogramowania Open Source i urządzeń
-IoT (strona, którą właśnie przeglądasz działa na moim Raspberry PI 4).
+IoT (Raspberry PI).

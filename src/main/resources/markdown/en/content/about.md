@@ -41,7 +41,7 @@ this research in my master's thesis.
 My interests are mainly focused on topics related to multimedia processing, including primarily:
 
 - selected methods of digital audio and image processing,
-- designing real-time audio/video streaming applications,
+- designing real-time audio/video streaming applications for highly distributed environments,
 - selected applications of digital image processing, including medical imaging and computer vision.
 
 I am enthusiastic of languages running on the JVM such as Java, Kotlin and Scala, but also more _exotic_ ones such as
@@ -55,12 +55,12 @@ _exotic_ (the aforementioned [Elixir](https://elixir-lang.org) language).
 
 Technologies I'm working with in my current projects:
 
-- JVM (Kotlin, Java, little bit of Scala, Spring and Spring Boot ecosystem),
+- JVM (Kotlin, Java, Scala; Spring and Spring Boot ecosystem),
 - C/C++ (JNI, DSP in field of audio modulation and multimedia processing),
 - Python (process automation, digital images processing, scientific simulations),
-- JavaScript/TypeScript (with web frameworks: Next.js, React, Angular),
+- JavaScript/TypeScript (with web frameworks: Next.js, React, Angular; websites and rapid prototyping),
 - Message brokers (RabbitMQ),
-- Matlab (digital signals/images processing).
+- DevOps (Nginx, Prometheus, Grafana, Hashicorp Vault, Minio, GitHub Actions, BetterStack).
 
 Technologies I know and have used in the past:
 
@@ -68,10 +68,13 @@ Technologies I know and have used in the past:
 - Apache Kafka (fault tolerant distributed data streaming, event-driven architecture),
 - microservices (Spring Cloud architecture),
 - Scilab (circuits simulations),
+- Apache Cassandra,
+- AWS (EC2, Lambda, KMS, S3, DynamoDB),
+- Matlab (digital signals/images processing),
 - PHP (native),
 - Android (Java).
 
 ## Hobby
 
 Privately a homebody, enthusiast of orchestral film music, fan of hard science-fiction, Open Source software and IoT
-devices (page you are currently viewing is running on my Raspberry PI 4).
+devices (Raspberry PI).
