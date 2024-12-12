@@ -39,7 +39,7 @@ magisterskiej.
 ## Zainteresowania
 
 Moje zainteresowania skupiają się w głównej mierze wokół tematów związanych z przetwarzaniem danych multimedialnych,
-wliczając to przede wszystkim:
+wliczając w to przede wszystkim:
 
 - wybrane metody cyfrowego przetwarzania obrazów i dźwięków,
 - projektowanie aplikacji do strumieniowego przesyłania audio/wideo w czasie rzeczywistym dla wysoce rozproszonych
