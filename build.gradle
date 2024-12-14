@@ -29,6 +29,7 @@ dependencies {
 	implementation 'org.apache.httpcomponents.client5:httpclient5:5.3.1'
 	implementation 'org.reflections:reflections:0.10.2'
 	implementation 'org.apache.commons:commons-vfs2:2.9.0'
+	testImplementation 'io.javalin:javalin:6.3.0'
 }
 
 jar {
