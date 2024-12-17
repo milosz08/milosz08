@@ -11,6 +11,6 @@
 - JVM (Kotlin, Java, Scala; Spring and Spring Boot ecosystem),
 - C/C++ (JNI, DSP in field of audio modulation and multimedia processing),
 - Python (process automation, digital images processing, scientific simulations),
-- JavaScript/TypeScript (with web frameworks: Next.js, React, Angular; websites and rapid prototyping),
+- JavaScript/TypeScript (with web frameworks: Next.js, React ecosystem; websites and rapid prototyping),
 - Message brokers (RabbitMQ),
 - DevOps (Nginx, Prometheus, Grafana, Hashicorp Vault, Minio, GitHub Actions, BetterStack).
