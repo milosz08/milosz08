@@ -55,16 +55,17 @@ _exotic_ (the aforementioned [Elixir](https://elixir-lang.org) language).
 
 Technologies I'm working with in my current projects:
 
-- JVM (Kotlin, Java, Scala; Spring and Spring Boot ecosystem),
+- JVM (Kotlin, Java, Scala; Spring and Spring Boot ecosystems),
 - C/C++ (JNI, DSP in field of audio modulation and multimedia processing),
 - Python (process automation, digital images processing, scientific simulations),
-- JavaScript/TypeScript (with web frameworks: Next.js, React, Angular; websites and rapid prototyping),
+- JavaScript/TypeScript (with web frameworks: Next.js, React ecosystem; websites and rapid prototyping),
 - Message brokers (RabbitMQ),
 - DevOps (Nginx, Prometheus, Grafana, Hashicorp Vault, Minio, GitHub Actions, BetterStack).
 
 Technologies I know and have used in the past:
 
 - .NET (C#, ASP.NET WebAPI, WinForms),
+- Angular ecosystem (with RxJS),
 - Apache Kafka (fault tolerant distributed data streaming, event-driven architecture),
 - microservices (Spring Cloud architecture),
 - Scilab (circuits simulations),

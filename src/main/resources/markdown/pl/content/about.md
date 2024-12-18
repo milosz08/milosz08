@@ -57,16 +57,17 @@ tych _egzotycznych_ (wspomniany wcześniej język [Elixir](https://elixir-lang.o
 
 Technologie z którymi pracuję przy rozwijanych przeze mnie projektach:
 
-- JVM (Kotlin, Java, Scala; ekosystem Spring'a oraz Spring Boot'a),
+- JVM (Kotlin, Java, Scala; ekosystemy Spring'a oraz Spring Boot'a),
 - C/C++ (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów),
 - Python (automatyzacja procesów, cyfrowe przetwarzanie obrazów, symulacje naukowe),
-- JavaScript/TypeScript (wraz z: Next.js, React, Angular; strony internetowe i szybkie prototypowanie),
+- JavaScript/TypeScript (wraz z: Next.js, ekosystem React'a; strony internetowe i szybkie prototypowanie),
 - Brokerzy wiadomości (RabbitMQ),
 - DevOps (Nginx, Prometheus, Grafana, Hashicorp Vault, Minio, GitHub Actions, BetterStack).
 
 Technologie które znam i używałem w przeszłych projektach:
 
 - .NET (C#, ASP.NET WebAPI, WinForms),
+- ekosystem Angular'a (wraz z RxJS),
 - Apache Kafka (rozproszone strumieniowanie danych odporne na błędy, architektura sterowana zdarzeniami),
 - mikroserwisy (architektura Spring Cloud),
 - Scilab (symulacje obwodów),
