@@ -27,8 +27,8 @@ Apache Kafka w zakresie komunikacji w czasie rzeczywistym w środowisku JVM.
 Kod źródłowy mojej pracy dyplomowej możesz znaleźć [tutaj](https://github.com/visphere).
 
 Obecnie skupiam się na badaniach wykorzystania transformaty falkowej w celu wykrywaniu krawędzi w praktycznych
-zastosowaniach analizy obrazów MRI mózgu T1 i T2 zależnych. Rezultat tych badań chce zawrzeć w mojej pracy
-magisterskiej.
+zastosowaniach analizy obrazów MRI względem różnego stopnia zaszumienia oraz artefaktów. Rezultat tych badań chce
+zawrzeć w mojej pracy magisterskiej.
 
 ## Edukacja
 
