@@ -6,11 +6,4 @@
 - designing real-time audio/video streaming applications for highly distributed environments,
 - selected applications of digital image processing, including medical imaging and computer vision.
 
-**Technologies I'm working with in my current projects:**
-
-- JVM (Kotlin, Java, Scala; Spring and Spring Boot ecosystem),
-- C/C++ (JNI, DSP in field of audio modulation and multimedia processing),
-- Python (process automation, digital images processing, scientific simulations),
-- JavaScript/TypeScript (with web frameworks: Next.js, React ecosystem; websites and rapid prototyping),
-- Message brokers (RabbitMQ),
-- DevOps (Nginx, Prometheus, Grafana, Hashicorp Vault, Minio, GitHub Actions, BetterStack).
+More about me you will find [here](https://miloszgilga.pl).
