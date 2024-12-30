@@ -12,11 +12,7 @@ public class SsgRunner {
 	private static final Logger LOG = LoggerFactory.getLogger(SsgRunner.class);
 
 	public static void main(String[] args) {
-		new SsgRunner().start(args);
-	}
-
-	private void start(String[] args) {
-		long startTime = System.currentTimeMillis();
+		final long startTime = System.currentTimeMillis();
 
 		final CommandLineHandler commandLineHandler = new CommandLineHandler(args);
 		final CopyResourcesThread copyResourcesThread = new CopyResourcesThread();
@@ -25,7 +21,8 @@ public class SsgRunner {
 			copyResourcesThread.startAndJoin();
 			resourcesGeneratorThread.startAndJoin();
 
-			LOG.info("Finished with no errors. Ended up with {}s.", (System.currentTimeMillis() - startTime) / 1000.0);
+			final double endTime = (System.currentTimeMillis() - startTime) / 1000.0;
+			LOG.info("Finished with no errors. Ended up with {}s.", endTime);
 		} catch (InterruptedException ex) {
 			LOG.error("Interrupted thread. Cause: {}", ex.getMessage());
 			System.exit(-1);
