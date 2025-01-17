@@ -9,7 +9,7 @@ Master's thesis (written in Polish):
 **My interests are mainly focused on topics related to multimedia processing, including primarily:**
 
 - selected methods of digital audio and image processing,
-- designing real-time audio/video streaming applications for highly distributed environments,
+- designing real-time audio/video streaming applications for highly distributed network environments,
 - selected applications of digital image processing, including medical imaging and computer vision.
 
 More about me you will find [here](https://miloszgilga.pl).
