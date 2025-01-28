@@ -9,8 +9,9 @@
 	Master thesis (written in polish):
 	<br>
 	<b>
-		Presentation of the capabilities of wavelet analysis for edge detection in digital images and comparison with methods
-		based on gradient operators.
+		Presentation of the capabilities of wavelet analysis for edge detection in digital
+		<br>
+		images and comparison with methods	based on gradient operators.
 	</b>
 </p>
 
