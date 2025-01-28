@@ -1,15 +1,37 @@
-[The Lorenz Attractor](https://marksmath.org/visualization/LorenzExperiment) -  A 3D space that relates three parameters arising in fluid dynamics. One of the Chaos theory's most iconic symbols that illustrates the phenomenon known as the Butterfly effect, or sensitive dependence on initial conditions - Life, The universe.
+<h3 align="center">Miłosz Gilga</h3>
 
-Computer Science MSc student at Silesian University of Technology (faculty of Automatic Control, Electronics and Computer Science, spec: Internet and network technologies).
+<p align="center">
+	Computer Science MSc student at Silesian University of Technology
+	<br>
+	Spec: <b>Internet and Network Technologies</b>
+	<br>
+	<br>
+	Master thesis (written in polish):
+	<br>
+	<b>
+		Presentation of the capabilities of wavelet analysis for edge detection in digital images and comparison with methods
+		based on gradient operators.
+	</b>
+</p>
 
-Master's thesis (written in polish):
-<br>
-*Presentation of the capabilities of wavelet analysis for edge detection in digital images and comparison with methods based on gradient operators.*
+<p align="center">
+	Mainly interest to <b>multimedia processing</b>, including:
+	<br>
+	<em>• digital image processing, including medical imaging and computer vision •</em>
+	<br>
+	<em>• designing real-time audio/video streaming applications for highly distributed network environments •</em>
+</p>
 
-**My interests are mainly focused on topics related to multimedia processing, including primarily:**
+<hr>
 
-- selected methods of digital audio and image processing,
-- designing real-time audio/video streaming applications for highly distributed network environments,
-- selected applications of digital image processing, including medical imaging and computer vision.
-
-More about me you will find [here](https://miloszgilga.pl).
+<p align="center">
+	<a href="https://miloszgilga.pl" target="_blank">[Website]</a>
+	&nbsp; • &nbsp;
+	<a href="https://miloszgilga.pl/projects" target="_blank">[Projects]</a>
+	&nbsp; • &nbsp;
+	<a href="https://www.linkedin.com/in/miloszgilga" target="_blank">[LinkedIn]</a>
+	&nbsp; • &nbsp;
+	<a href="https://hub.docker.com/u/milosz08" target="_blank">[DockerHub]</a>
+	&nbsp; • &nbsp;
+	<a href="https://m2.miloszgilga.pl" target="_blank">[M2 OSS Central]</a>
+</p>
