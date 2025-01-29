@@ -1,5 +1,3 @@
-<h3 align="center">Miłosz Gilga</h3>
-
 <p align="center">
 	Computer Science MSc student at Silesian University of Technology
 	<br>
@@ -26,13 +24,13 @@
 <hr>
 
 <p align="center">
-	<a href="https://miloszgilga.pl" target="_blank">[Website]</a>
+	[<a href="https://miloszgilga.pl" target="_blank">Website</a>]
 	&nbsp; • &nbsp;
-	<a href="https://miloszgilga.pl/projects" target="_blank">[Projects]</a>
+	[<a href="https://miloszgilga.pl/projects" target="_blank">Projects</a>]
 	&nbsp; • &nbsp;
-	<a href="https://www.linkedin.com/in/miloszgilga" target="_blank">[LinkedIn]</a>
+	[<a href="https://www.linkedin.com/in/miloszgilga" target="_blank">LinkedIn</a>]
 	&nbsp; • &nbsp;
-	<a href="https://hub.docker.com/u/milosz08" target="_blank">[DockerHub]</a>
+	[<a href="https://hub.docker.com/u/milosz08" target="_blank">DockerHub</a>]
 	&nbsp; • &nbsp;
-	<a href="https://m2.miloszgilga.pl" target="_blank">[M2 OSS Central]</a>
+	[<a href="https://m2.miloszgilga.pl" target="_blank">M2 OSS Central</a>]
 </p>
