@@ -18,7 +18,7 @@ You can find me on:
 ## About me
 
 Currently master of science student at Silesian University of Technology (faculty of Automatic Control, Electronics and
-Computer Science, spec: Internet and network technologies).
+Computer Science, spec: Internet and Networking Technologies).
 
 In january 2024 I defended Bachelor of Engineering at the same university. My thesis was about demostrate posibilities
 of communication in a highly distributed microservice infrastructure using Apache Kafka event-driven architecture in
