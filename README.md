@@ -1,7 +1,7 @@
 <p align="center">
 	Computer Science MSc student at Silesian University of Technology
 	<br>
-	Spec: <b>Internet and Network Technologies</b>
+	Spec: <b>Internet and Networking Technologies</b>
 	<br>
 	<br>
 	Master thesis (written in polish):
