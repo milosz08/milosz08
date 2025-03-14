@@ -38,7 +38,7 @@ jobs:
         run: ./gradlew shadowJar --no-daemon
 
       - name: Generate static content
-        run: java -jar ssg.jar -d https://miloszgilga.pl
+        run: java -jar build/libs/ssg.jar -d https://miloszgilga.pl
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
