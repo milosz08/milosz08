@@ -16,10 +16,8 @@ defaults:
     shell: bash
 
 jobs:
-  build-generate-and-deploy:
+  build-and-generate:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -40,10 +38,25 @@ jobs:
         run: ./gradlew shadowJar --no-daemon
 
       - name: Generate static content
-        run: java -jar build/libs/ssg.jar -d https://miloszgilga.pl
+        run: java -jar ssg.jar -d https://miloszgilga.pl
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload generated files
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
+          name: generated-files
+          path: output/
+          retention-days: 1
+
+  deploy:
+    needs: build-and-generate
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
