@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 by MILOSZ GILGA <https://miloszgilga.pl>
+ * Copyright (c) 2025 by MILOSZ GILGA <https://miloszgilga.pl>
  * You can find the licenses for this software in the LICENSE file.
  */
 package pl.miloszgilga.ssg;
@@ -109,6 +109,8 @@ abstract class ProcessThread extends Thread {
 	}
 
 	protected abstract void runWithExceptionPreserve() throws Exception;
+
 	protected abstract int threadPoolSize();
+
 	protected abstract List<AutoCloseable> closeables();
 }

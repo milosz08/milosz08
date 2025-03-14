@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 by MILOSZ GILGA <https://miloszgilga.pl>
+ * Copyright (c) 2025 by MILOSZ GILGA <https://miloszgilga.pl>
  * You can find the licenses for this software in the LICENSE file.
  */
 package pl.miloszgilga.ssg.page;
@@ -57,7 +57,10 @@ public abstract class AbstractPageProcessor {
 	}
 
 	protected abstract Language[] availableLanguages();
+
 	protected abstract PathTraversalData pageTraversal(Map<String, Object> pageData);
+
 	protected abstract List<Map<String, Object>> hbsPagesData(HbsExtractor hbsExtractor);
+
 	protected abstract List<String> additionalCssResources();
 }
