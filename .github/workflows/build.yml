@@ -63,17 +63,13 @@ jobs:
           name: ssg-jar
 
       - name: Generate static content
-        run: java -jar ssg.jar -d ${{ vars.REVERSE_PROXY_DOMAIN }}
+        run: java -jar ssg.jar -d https://miloszgilga.pl
 
-      - name: Copy generated content on server
-        uses: appleboy/scp-action@v0.1.7
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          port: ${{ secrets.SSH_PORT }}
-          key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          source: output/*
-          target: ${{ env.SERVER_OUTPUT }}
-          rm: true
-          strip_components: 1
+          branch: gh-pages
+          folder: output
+
+      - name: Add CNAME for custom domain
+        run: echo "miloszgilga.pl" > output/CNAME
