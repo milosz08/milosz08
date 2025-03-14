@@ -1,4 +1,4 @@
-name: Build and generate
+name: Build, generate and deploy
 
 on:
   push:
@@ -16,7 +16,7 @@ defaults:
     shell: bash
 
 jobs:
-  build-and-deploy:
+  build-generate-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -40,11 +40,8 @@ jobs:
       - name: Generate static content
         run: java -jar build/libs/ssg.jar -d https://miloszgilga.pl
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          branch: gh-pages
-          folder: output
-
-      - name: Add CNAME for custom domain
-        run: echo "miloszgilga.pl" > output/CNAME
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
