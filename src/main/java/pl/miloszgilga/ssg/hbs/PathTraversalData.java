@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 by MILOSZ GILGA <https://miloszgilga.pl>
+ * Copyright (c) 2025 by MILOSZ GILGA <https://miloszgilga.pl>
  * You can find the licenses for this software in the LICENSE file.
  */
 package pl.miloszgilga.ssg.hbs;
@@ -15,6 +15,7 @@ public record PathTraversalData(
 ) {
 	private static final String DELIMITER = "[%s]";
 	private static final String MAPPING_PATH_TRANSFORM = "(^index$)|(/index$)";
+	private static final String DEFAULT_FILE_NAME = "index";
 
 	private PathTraversalData(String path, Map<String, String> params) {
 		this(path, path.replaceAll(MAPPING_PATH_TRANSFORM, StringUtils.EMPTY), params);
@@ -37,7 +38,7 @@ public record PathTraversalData(
 	}
 
 	public String withParamsAsRawFilePath() {
-		return replaceParams(filePath);
+		return replaceParams(mappingPath.isEmpty() ? DEFAULT_FILE_NAME : mappingPath);
 	}
 
 	private String replaceParams(String initVariant) {
