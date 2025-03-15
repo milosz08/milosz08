@@ -12,7 +12,6 @@ Znajdziesz mnie na:
 
 ## Kontant
 
-- [personal@miloszgilga.pl](mailto:personal@miloszgilga.pl)
 - [miloszgilga@gmail.com](mailto:miloszgilga@gmail.com)
 
 ## O mnie

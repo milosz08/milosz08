@@ -12,7 +12,6 @@ You can find me on:
 
 ## Contact
 
-- [personal@miloszgilga.pl](mailto:personal@miloszgilga.pl)
 - [miloszgilga@gmail.com](mailto:miloszgilga@gmail.com)
 
 ## About me
