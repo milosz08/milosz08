@@ -3,7 +3,7 @@ title: Agregator archiwów telewizyjnych
 type: normal
 ---
 
-{{badge 'kod źródłowy$github$808080$https://github.com/milosz08/tv-archive-aggregator'}}
+{{badge 'kod źródłowy$github$808080$https://github.com/milosz08/tv-archive-aggregators'}}
 
 ## Cel projektu
 
