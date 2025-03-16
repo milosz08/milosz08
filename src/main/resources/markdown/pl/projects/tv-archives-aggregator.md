@@ -12,10 +12,10 @@ oraz znajdowania interesujących treści z wybranego okresu z pomocą wygodnej w
 
 Ten projekt składa się z 3 podprojektów:
 
-- **web-scrapper** - pobieranie danych ze strony internetowej i zapisywanie ich w bazie danych (desktopowa aplikacja
+- **app-scrapper** - pobieranie danych ze strony internetowej i zapisywanie ich w bazie danych (desktopowa aplikacja
   Java Swing),
-- **data-server** - Rest API napisane w Spring Boot,
-- **web-ui** - klient internetowy napisany przy użyciu biblioteki React i komponentów MUI.
+- **app-backend** - Rest API napisane w Spring Boot,
+- **app-frontend** - klient internetowy napisany przy użyciu biblioteki React i komponentów MUI.
 
 ## Główne funkcje
 
