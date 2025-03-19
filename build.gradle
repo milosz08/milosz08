@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2025 by MILOSZ GILGA <https://miloszgilga.pl>
- * You can find the licenses for this software in the LICENSE file.
- */
-
 plugins {
 	id 'java'
 	id 'com.github.johnrengelman.shadow' version '8.1.1'

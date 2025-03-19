@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2024 by MILOSZ GILGA <https://miloszgilga.pl>
- * You can find the licenses for this software in the LICENSE file.
- */
 package pl.miloszgilga.ssg.hbs;
 
 import com.github.jknack.handlebars.Template;
@@ -41,7 +37,7 @@ public class HbsRenderer extends AbstractHbsBase {
 	private final HbsEngine hbsEngine;
 
 	public HbsRenderer(I18n i18n, CommandLineHandler commandLineHandler, String layoutName,
-										 PathTraversalData pathTraversalData) {
+	                   PathTraversalData pathTraversalData) {
 		super(i18n);
 		this.commandLineHandler = commandLineHandler;
 		this.pathTraversalData = pathTraversalData;

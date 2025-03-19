@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2024 by MILOSZ GILGA <https://miloszgilga.pl>
- * You can find the licenses for this software in the LICENSE file.
- */
 package pl.miloszgilga.ssg.md;
 
 import org.apache.hc.core5.net.URIBuilder;

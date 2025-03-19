@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2024 by MILOSZ GILGA <https://miloszgilga.pl>
- * You can find the licenses for this software in the LICENSE file.
- */
 package pl.miloszgilga.ssg.md;
 
 import org.commonmark.parser.Parser;
@@ -59,7 +55,7 @@ public class MarkdownRenderer {
 	}
 
 	private String runContentInjector(String rawContent, AbstractFrontmatterReader reader,
-																		Function<MdHelperBase, Boolean> passCondition) throws Exception {
+	                                  Function<MdHelperBase, Boolean> passCondition) throws Exception {
 		final Matcher matcher = HELPER_SEGMENT.matcher(rawContent);
 		String content = rawContent;
 		while (matcher.find()) {

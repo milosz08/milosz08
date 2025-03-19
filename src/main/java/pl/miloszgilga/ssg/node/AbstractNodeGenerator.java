@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2024 by MILOSZ GILGA <https://miloszgilga.pl>
- * You can find the licenses for this software in the LICENSE file.
- */
 package pl.miloszgilga.ssg.node;
 
 import pl.miloszgilga.ssg.minifier.HtmlMinifier;
@@ -22,5 +18,6 @@ public abstract class AbstractNodeGenerator {
 	}
 
 	protected abstract WebDocument prepareContent(WebDocument document, Map<String, String> payload);
+
 	public abstract String injectorContentName();
 }

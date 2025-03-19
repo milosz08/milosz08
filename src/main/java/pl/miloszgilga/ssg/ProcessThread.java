@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2025 by MILOSZ GILGA <https://miloszgilga.pl>
- * You can find the licenses for this software in the LICENSE file.
- */
 package pl.miloszgilga.ssg;
 
 import org.apache.commons.vfs2.FileObject;
