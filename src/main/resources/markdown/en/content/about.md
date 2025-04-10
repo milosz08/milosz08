@@ -26,9 +26,9 @@ Source code you find [here](https://github.com/visphere).
 
 Currently, I’m focusing on:
 
-* Researching wavelet transformation applications for edge detection in practical MRI image analysis under varying noise
-  levels and artifacts (the results will be included in my master’s thesis).
-* Developing [JWizard](https://github.com/jwizard-bot) – a highly distributed, modular, scalable, and fault-tolerant
+* researching wavelet transformation applications for edge detection in practical MRI image analysis under varying noise
+  levels and artifacts (the results will be included in my master’s thesis),
+* developing [JWizard](https://github.com/jwizard-bot) – a highly distributed, modular, scalable, and fault-tolerant
   open-source platform (primarily written in Kotlin, Python and TypeScript) for audio content playback on Discord voice
   channels ([more about project](/project/jwizard)).
 
