@@ -9,7 +9,6 @@ import pl.miloszgilga.ssg.page.AbstractPageProcessor;
 import pl.miloszgilga.ssg.page.ProcesssedPage;
 
 import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.List;
@@ -70,9 +69,7 @@ class ResourcesGeneratorThread extends ProcessThread {
 		final File generatedFile = new File(SsgRunner.OUTPUT_DIR + File.separator + filePath);
 		final File parentDir = generatedFile.getParentFile();
 		if (parentDir != null && !parentDir.exists()) {
-			if (!parentDir.mkdirs()) {
-				throw new IOException("Unable to create directories");
-			}
+			parentDir.mkdirs();
 		}
 		FileUtils.writeStringToFile(generatedFile, content, "UTF-8");
 		LOG.info("Generated file: {}.", filePath);
