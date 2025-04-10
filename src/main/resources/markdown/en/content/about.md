@@ -8,11 +8,9 @@ You can find me on:
 
 [Go to projects](/projects)
 
-<a href="https://static.miloszgilga.pl/resume/resume-en.pdf" target="_blank">Download resume (PDF)</a>
-
 ## Contact
 
-- [miloszgilga@gmail.com](mailto:miloszgilga@gmail.com)
+* [miloszgilga@gmail.com](mailto:miloszgilga@gmail.com)
 
 ## About me
 
@@ -23,11 +21,16 @@ In january 2024 I defended Bachelor of Engineering at the same university. My th
 of communication in a highly distributed microservice infrastructure using Apache Kafka event-driven architecture in
 field of real-time communication on example of chat application.
 
+My thesis is available on my LinkedIn profile.
 Source code you find [here](https://github.com/visphere).
 
-I am currently focusing on research involving the use of wavelet transform for edge detection in practical applications
-of MRI image analysis, considering various levels of noise and artifacts. I intend to incorporate the results of this
-research into my master's thesis.
+Currently, I’m focusing on:
+
+* Researching wavelet transformation applications for edge detection in practical MRI image analysis under varying noise
+  levels and artifacts (the results will be included in my master’s thesis).
+* Developing [JWizard](https://github.com/jwizard-bot) – a highly distributed, modular, scalable, and fault-tolerant
+  open-source platform (primarily written in Kotlin, Python and TypeScript) for audio content playback on Discord voice
+  channels ([more about project](/project/jwizard)).
 
 ## Education
 
@@ -35,46 +38,54 @@ research into my master's thesis.
 * **2020 - 2024**: (BEng) Computer Science, Silesian University of Technology,
 * **2017 - 2020**: High School of the Evangelical Society in Cieszyn (Biology-Chemistry profile).
 
+Throughout my education, I have acquired specialized skills in:
+
+* digital signal processing,
+* fundamentals of computer vision and machine learning,
+* discrete-event simulation modeling (queueing systems),
+* mathematical modeling (static/dynamic systems analysis – phase-space trajectories),
+* fundamentals of biology and chemistry enabling work with bioinformatics and medical informatics (digital processing of
+  biomedical images).
+
 ## Interests
 
 My interests are mainly focused on topics related to multimedia processing, including primarily:
 
-- selected methods of digital audio and image processing,
-- designing real-time audio/video streaming applications for highly distributed environments,
-- selected applications of digital image processing, including medical imaging and computer vision.
+* digital image processing, including medical imaging and computer vision,
+* designing real-time audio/video streaming applications for highly distributed environments.
 
 I am enthusiastic of languages running on the JVM such as Java, Kotlin and Scala, but also more _exotic_ ones such as
 [Elixir](https://elixir-lang.org).
 
-I am proficient in a number of popular programming languages (Java, Kotlin, Javascript, Typescript, PHP, C#) and to a
-greater or lesser extent I know the basics of several other languages (Python, Scala, C++, Matlab) including those
+I am proficient in a number of popular programming languages (Java, Kotlin, Javascript, Typescript, PHP, C#, C, Python)
+and to a greater or lesser extent I know the basics of several other languages (Scala, C++, Matlab, R) including those
 _exotic_ (the aforementioned [Elixir](https://elixir-lang.org) language).
 
 ## Technologies
 
 Technologies I'm working with in my current projects:
 
-- JVM (Kotlin, Java, Scala; Spring and Spring Boot ecosystems),
-- C/C++ (JNI, DSP in field of audio modulation and multimedia processing),
-- Python (process automation, digital images processing, scientific simulations),
-- JavaScript/TypeScript (with web frameworks: Next.js, React ecosystem; websites and rapid prototyping),
-- Message brokers (RabbitMQ),
-- DevOps (Nginx, Prometheus, Grafana, Hashicorp Vault, Minio, GitHub Actions, BetterStack).
+* JVM (Kotlin, Java, Scala; Spring and Spring Boot ecosystems),
+* C/C++ (JNI, DSP in field of audio modulation and multimedia processing),
+* Python (process automation, digital images processing, scientific simulations),
+* JavaScript/TypeScript (with web frameworks: Next.js, React ecosystem; websites and rapid prototyping),
+* Message brokers (RabbitMQ),
+* DevOps (Nginx, Prometheus, Grafana, Hashicorp Vault, Minio, GitHub Actions, BetterStack).
 
 Technologies I know and have used in the past:
 
-- .NET (C#, ASP.NET WebAPI, WinForms),
-- Angular ecosystem (with RxJS),
-- Apache Kafka (fault tolerant distributed data streaming, event-driven architecture),
-- microservices (Spring Cloud architecture),
-- Scilab (circuits simulations),
-- Apache Cassandra,
-- AWS (EC2, Lambda, KMS, S3, DynamoDB),
-- Matlab (digital signals/images processing),
-- PHP (native),
-- Android (Java).
+* .NET (C#, ASP.NET WebAPI, WinForms),
+* Angular ecosystem (with RxJS),
+* Apache Kafka (fault tolerant distributed data streaming, event-driven architecture),
+* microservices (Spring Cloud architecture),
+* Scilab (circuits simulations),
+* Apache Cassandra,
+* AWS (EC2, Lambda, KMS, S3, DynamoDB),
+* Matlab (digital signals/images processing),
+* PHP (native),
+* Android (Java).
 
 ## Hobby
 
-Privately a homebody, enthusiast of orchestral film music, fan of hard science-fiction, Open Source software and IoT
-devices (Raspberry PI).
+Privately a homebody, enthusiast of film music, classical, and cross-genre music, a fan of indie cinema movies (mostly
+hard science-fiction) and Open Source software.
