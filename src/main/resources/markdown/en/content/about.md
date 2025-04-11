@@ -41,7 +41,7 @@ Currently, I’m focusing on:
 Throughout my education, I have acquired specialized skills in:
 
 * digital signal processing,
-* fundamentals of computer vision and machine learning,
+* computer vision and fundamentals of machine learning,
 * discrete-event simulation modeling (queueing systems),
 * mathematical modeling (static/dynamic systems analysis – phase-space trajectories),
 * fundamentals of biology and chemistry enabling work with bioinformatics and medical informatics (digital processing of
