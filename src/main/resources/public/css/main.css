@@ -1,3 +1,9 @@
+@font-face {
+	font-family: 'Portfolio Serif';
+	src: url('../font/deja-vu-serif.ttf') format('truetype');
+	font-style: normal;
+}
+
 :root {
 	--main-bg: #000000;
 	--main-text: #ffffff;
@@ -21,7 +27,7 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	background-color: var(--main-tint);
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Portfolio Serif', 'DejaVu Serif', serif;
 }
 
 h1 {
