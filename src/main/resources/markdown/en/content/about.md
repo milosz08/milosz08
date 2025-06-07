@@ -5,12 +5,14 @@ You can find me on:
 {{badge 'm2 oss central$sonatype$6D5382$https://m2.miloszgilga.pl'}}
 {{badge 'docker hub$docker$1D63ED$https://hub.docker.com/u/milosz08'}}
 {{badge 'stackoverflow$stackoverflow$FE7A16$https://stackoverflow.com/users/18847390/milosz08'}}
+{{badge 'kaggle$kaggle$20BEFF$https://www.kaggle.com/miloszgilga'}}
 
 [Go to projects](/projects)
 
 ## Contact
 
 * [miloszgilga@gmail.com](mailto:miloszgilga@gmail.com)
+* LinkedIn private message
 
 ## About me
 
@@ -21,20 +23,25 @@ In january 2024 I defended Bachelor of Engineering at the same university. My th
 of communication in a highly distributed microservice infrastructure using Apache Kafka event-driven architecture in
 field of real-time communication on example of chat application.
 
-My thesis is available on my LinkedIn profile.
+My thesis is available [here](https://github.com/visphere/visphere-thesis).
 Source code you find [here](https://github.com/visphere).
 
-Currently, I’m focusing on:
+Currently, I'm focusing on:
 
-* researching wavelet transformation applications for edge detection in practical MRI image analysis under varying noise
-  levels and artifacts (the results will be included in my master’s thesis),
+* researching wavelet transformation applications for edge detection in practical image analysis under varying noise
+  levels and artifacts (the results will be included in my master's thesis),
 * developing [JWizard](https://github.com/jwizard-bot) – a highly distributed, modular, scalable, and fault-tolerant
   open-source platform (primarily written in Kotlin, Python and TypeScript) for audio content playback on Discord voice
-  channels ([more about project](/project/jwizard)).
+  channels ([more about project](/project/jwizard)),
+
+and I'm learning:
+
+* practical applications of machine learning (convolutional neural networks, CNNs) as a support for classical image
+  processing algorithms in the context of automatic segmentation and features detection.
 
 ## Education
 
-* **2024 - current**: (MSc, BEng) Computer Science, Silesian University of Technology,
+* **2024 - current**: (MSc) Computer Science, Silesian University of Technology,
 * **2020 - 2024**: (BEng) Computer Science, Silesian University of Technology,
 * **2017 - 2020**: High School of the Evangelical Society in Cieszyn (Biology-Chemistry profile).
 
@@ -47,7 +54,7 @@ Throughout my education, I have acquired specialized skills in:
 * fundamentals of biology and chemistry enabling work with bioinformatics and medical informatics (digital processing of
   biomedical images).
 
-## Interests
+## Interests and abilities
 
 My interests are mainly focused on topics related to multimedia processing, including primarily:
 
@@ -68,18 +75,23 @@ Technologies I'm working with in my current projects:
 * JVM (Kotlin, Java, Scala; Spring and Spring Boot ecosystems),
 * C/C++ (JNI, DSP in field of audio modulation and multimedia processing),
 * Python (process automation, digital images processing, scientific simulations),
-* JavaScript/TypeScript (with web frameworks: Next.js, React ecosystem; websites and rapid prototyping),
+* JavaScript/TypeScript (with web frameworks: Next.js, React ecosystem, Redux Toolkit, RTK Query and Tanstack Query;
+  websites and rapid prototyping),
 * Message brokers (RabbitMQ),
-* DevOps (Nginx, Prometheus, Grafana, Hashicorp Vault, Minio, GitHub Actions, BetterStack).
+* GCP (KMS, Compute Engine),
+* Monitoring (Prometheus, Grafana, BetterStack),
+* DevOps (Cloudflare, Caddy, Hashicorp Vault, Minio, GitHub Actions),
+* LaTeX.
 
 Technologies I know and have used in the past:
 
 * .NET (C#, ASP.NET WebAPI, WinForms),
 * Angular ecosystem (with RxJS),
-* Apache Kafka (fault tolerant distributed data streaming, event-driven architecture),
+* Apache Kafka (fault tolerant distributed data streams, event-driven architecture),
 * microservices (Spring Cloud architecture),
 * Scilab (circuits simulations),
 * Apache Cassandra,
+* Redis,
 * AWS (EC2, Lambda, KMS, S3, DynamoDB),
 * Matlab (digital signals/images processing),
 * PHP (native),
@@ -87,5 +99,5 @@ Technologies I know and have used in the past:
 
 ## Hobby
 
-Privately a homebody, enthusiast of film music, classical, and cross-genre music, a fan of indie cinema movies (mostly
-hard science-fiction) and Open Source software.
+Privately a homebody, an enthusiast of film music, classical, and cross-genre music, a connoisseur of independent
+arthouse movies and Open Source software.

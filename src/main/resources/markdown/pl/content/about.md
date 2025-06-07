@@ -5,12 +5,14 @@ Znajdziesz mnie na:
 {{badge 'm2 oss central$sonatype$6D5382$https://m2.miloszgilga.pl'}}
 {{badge 'docker hub$docker$1D63ED$https://hub.docker.com/u/milosz08'}}
 {{badge 'stackoverflow$stackoverflow$FE7A16$https://stackoverflow.com/users/18847390/milosz08'}}
+{{badge 'kaggle$kaggle$20BEFF$https://www.kaggle.com/miloszgilga'}}
 
 [Przejdź do projektów](/pl/projects)
 
 ## Kontant
 
 * [miloszgilga@gmail.com](mailto:miloszgilga@gmail.com)
+* wiadomość prywatna LinkedIn
 
 ## O mnie
 
@@ -21,22 +23,26 @@ W styczniu 2024 roku obroniłem tytuł inżyniera z oceną 5 na tej samej uczeln
 możliwości komunikacji w wysoce rozproszonej infrastrukturze mikroserwisowej z wykorzystaniem architektury zdarzeniowej
 Apache Kafka w zakresie komunikacji w czasie rzeczywistym w środowisku JVM.
 
-Treść mojej pracy dyplomowej znajdziesz na moim koncie LinkedIn.
+Treść mojej pracy dyplomowej znajdziesz [tutaj](https://github.com/visphere/visphere-thesis).
 Kod źródłowy mojej pracy dyplomowej możesz znaleźć [tutaj](https://github.com/visphere).
 
 Obecnie skupiam się na:
 
 * badaniach wykorzystania transformacji falkowej do wykrywania krawędzi w praktycznych zastosowaniach analizy obrazów
-  MRI względem różnego stopnia zaszumienia oraz artefaktów (rezultat tych badań chce zawrzeć w mojej pracy
-  magisterskiej),
+  względem różnego stopnia zaszumienia oraz artefaktów (rezultat tych badań chce zawrzeć w mojej pracy magisterskiej),
 * rozwijaniu wysoce rozproszonej, modułowej, skalowalnej i odpornej na błędy
   platformy [JWizard](https://github.com/jwizard-bot) - otwartoźródłowego oprogramowania, opartego głównie o języki
   Kotlin, Python oraz Typescript umożliwiającego odtwarzanie treści audio na kanałach głosowych
-  Discord ([więcej o projekcie](/pl/project/jwizard)).
+  Discord ([więcej o projekcie](/pl/project/jwizard)),
+
+oraz uczę się:
+
+* praktycznego wykorzystania uczenia maszynowego (konwolucyjne sieci neuronowe, CNN) jako wsparcia dla klasycznych
+  algorytmów przetwarzania obrazów w kontekście automatycznej segmentacji i detekcji cech.
 
 ## Edukacja
 
-* **2024 - nadal**: (mgr inż.) Informatyka - profil ogólnoakademicki, Politechnika Śląska,
+* **2024 - nadal**: (mgr) Informatyka - profil ogólnoakademicki, Politechnika Śląska,
 * **2020 - 2024**: (inż.) Informatyka - profil ogólnoakademicki, Politechnika Śląska,
 * **2017 - 2020**: Liceum ogólnokształcące Towarzystwa Ewangelickiego, profil biologiczno-chemiczny.
 
@@ -49,7 +55,7 @@ Podczas mojej dotychczasowej edukacji nabyłem specjalistyczne umiejętności z 
 * podstaw biologii i chemii umożliwiających swobodne poruszanie się wśród zagadnień związanych z bioinformatyką i
   informatyką medyczną (cyfrowe przetwarzanie obrazów biomedycznych).
 
-## Zainteresowania
+## Zainteresowania i umiejętności
 
 Moje zainteresowania skupiają się w głównej mierze wokół tematów związanych z przetwarzaniem danych multimedialnych,
 wliczając w to przede wszystkim:
@@ -72,18 +78,23 @@ Technologie z którymi pracuję przy rozwijanych przeze mnie projektach:
 * JVM (Kotlin, Java, Scala; ekosystemy Spring'a oraz Spring Boot'a),
 * C/C++ (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów),
 * Python (automatyzacja procesów, cyfrowe przetwarzanie obrazów, symulacje naukowe),
-* JavaScript/TypeScript (wraz z: Next.js, ekosystem React'a; strony internetowe i szybkie prototypowanie),
+* JavaScript/TypeScript (wraz z: Next.js, ekosystemem React'a, Redux Toolkit, RTK Query oraz Tanstack Query; strony
+  internetowe i szybkie prototypowanie),
 * Brokerzy wiadomości (RabbitMQ),
-* DevOps (Nginx, Prometheus, Grafana, Hashicorp Vault, Minio, GitHub Actions, BetterStack).
+* GCP (KMS, Compute Engine),
+* Monitorowanie (Prometheus, Grafana, BetterStack),
+* DevOps (Cloudflare, Caddy, Hashicorp Vault, Minio, GitHub Actions),
+* LaTeX.
 
 Technologie które znam i używałem w przeszłych projektach:
 
 * .NET (C#, ASP.NET WebAPI, WinForms),
 * ekosystem Angular'a (wraz z RxJS),
-* Apache Kafka (rozproszone strumieniowanie danych odporne na błędy, architektura sterowana zdarzeniami),
+* Apache Kafka (rozproszone strumienie danych, architektura sterowana zdarzeniami),
 * mikroserwisy (architektura Spring Cloud),
 * Scilab (symulacje obwodów),
 * Apache Cassandra,
+* Redis,
 * AWS (EC2, Lambda, KMS, S3, DynamoDB),
 * Matlab (cyfrowe przetwarzanie sygnałów/obrazów),
 * PHP (natywny),
@@ -91,5 +102,5 @@ Technologie które znam i używałem w przeszłych projektach:
 
 ## Hobby
 
-Prywatnie domator, entuzjasta muzyki filmowej, klasycznej oraz wielogatunkowej, fan niezależnych produkcji filmowych
-(najczęściej z gatunku hard science-fiction) oraz oprogramowania Open Source.
+Prywatnie domator, entuzjasta muzyki filmowej, klasycznej oraz wielogatunkowej, koneser niezależnych arthouse'owych
+produkcji filmowych oraz oprogramowania Open Source.
