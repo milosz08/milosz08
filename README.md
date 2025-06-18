@@ -26,9 +26,9 @@
 <p align="center">
 	[<a href="https://miloszgilga.pl" target="_blank">Website</a>]
 	&nbsp; • &nbsp;
-	[<a href="https://miloszgilga.pl/projects" target="_blank">Projects</a>]
-	&nbsp; • &nbsp;
 	[<a href="https://www.linkedin.com/in/miloszgilga" target="_blank">LinkedIn</a>]
+	&nbsp; • &nbsp;
+	[<a href="https://www.last.fm/user/milosz08" target="_blank">Last.fm</a>]
 	&nbsp; • &nbsp;
 	[<a href="https://hub.docker.com/u/milosz08" target="_blank">DockerHub</a>]
 	&nbsp; • &nbsp;
