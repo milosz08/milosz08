@@ -2,6 +2,7 @@ Znajdziesz mnie na:
 
 {{badge 'github$github$808080$https://github.com/milosz08'}}
 {{badge 'linkedin$linkedin$0077B5$https://www.linkedin.com/in/miloszgilga'}}
+{{badge 'last.fm$last.fm$D51007$https://www.last.fm/user/milosz08'}}
 {{badge 'm2 oss central$sonatype$6D5382$https://m2.miloszgilga.pl'}}
 {{badge 'docker hub$docker$1D63ED$https://hub.docker.com/u/milosz08'}}
 {{badge 'stackoverflow$stackoverflow$FE7A16$https://stackoverflow.com/users/18847390/milosz08'}}
