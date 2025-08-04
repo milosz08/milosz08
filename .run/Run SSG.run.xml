@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run SSG" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="pl.miloszgilga.ssg.SsgRunner" />
+    <module name="personal-page.main" />
+    <option name="PROGRAM_PARAMETERS" value="-d miloszgilga.pl" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="pl.miloszgilga.ssg.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
