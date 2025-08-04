@@ -14,6 +14,8 @@ and also:
 
 [Go to projects](/projects)
 
+[My blog (articles)](https://www.linkedin.com/in/miloszgilga/recent-activity/articles)
+
 ## Contact
 
 * [miloszgilga@gmail.com](mailto:miloszgilga@gmail.com)
@@ -24,7 +26,7 @@ and also:
 Currently master of science student at Silesian University of Technology (faculty of Automatic Control, Electronics and
 Computer Science, spec: Internet and Networking Technologies).
 
-In january 2024 I defended Bachelor of Engineering at the same university. My thesis was about demostrate posibilities
+In january 2024 I defended Bachelor of Engineering at the same university. My thesis was about demonstrate possibilities
 of communication in a highly distributed microservice infrastructure using Apache Kafka event-driven architecture in
 field of real-time communication on example of chat application.
 
@@ -35,7 +37,7 @@ Currently, I'm focusing on:
 
 * researching wavelet transformation applications for edge detection in practical image analysis under varying noise
   levels and artifacts (the results will be included in my master's thesis),
-* developing [JWizard](https://github.com/jwizard-bot) – a highly distributed, modular, scalable, and fault-tolerant
+* developing [JWizard](https://github.com/jwizard-bot) — a highly distributed, modular, scalable, and fault-tolerant
   open-source platform (primarily written in Kotlin, Python and TypeScript) for audio content playback on Discord voice
   channels ([more about project](/project/jwizard)),
 
@@ -48,14 +50,14 @@ and I'm learning:
 
 * **2024 - current**: (MSc) Computer Science, Silesian University of Technology,
 * **2020 - 2024**: (BEng) Computer Science, Silesian University of Technology,
-* **2017 - 2020**: High School of the Evangelical Society in Cieszyn (Biology-Chemistry profile).
+* **2017 - 2020**: High School of the Evangelical Society in Cieszyn (biology-chemistry profile).
 
 Throughout my education, I have acquired specialized skills in:
 
 * digital signal processing,
 * computer vision and fundamentals of machine learning,
 * discrete-event simulation modeling (queueing systems),
-* mathematical modeling (static/dynamic systems analysis – phase-space trajectories),
+* mathematical modeling (static/dynamic systems analysis — phase-space trajectories),
 * fundamentals of biology and chemistry enabling work with bioinformatics and medical informatics (digital processing of
   biomedical images).
 
@@ -80,7 +82,7 @@ Technologies I'm working with in my current projects:
 * JVM (Kotlin, Java, Scala; Spring and Spring Boot ecosystems),
 * C/C++ (JNI, DSP in field of audio modulation and multimedia processing),
 * Python (process automation, digital images processing, scientific simulations),
-* JavaScript/TypeScript (with web frameworks: Next.js, React ecosystem, Redux Toolkit, RTK Query and Tanstack Query;
+* JavaScript/TypeScript (with Next.js and React ecosystem: Redux Toolkit, RTK Query and Tanstack Query;
   websites and rapid prototyping),
 * Message brokers (RabbitMQ),
 * GCP (KMS, Compute Engine),

@@ -14,7 +14,9 @@ oraz:
 
 [Przejdź do projektów](/pl/projects)
 
-## Kontant
+[Mój blog (artykuły)](https://www.linkedin.com/in/miloszgilga/recent-activity/articles)
+
+## Kontakt
 
 * [miloszgilga@gmail.com](mailto:miloszgilga@gmail.com)
 * wiadomość prywatna LinkedIn
@@ -36,7 +38,7 @@ Obecnie skupiam się na:
 * badaniach wykorzystania transformacji falkowej do wykrywania krawędzi w praktycznych zastosowaniach analizy obrazów
   względem różnego stopnia zaszumienia oraz artefaktów (rezultat tych badań chce zawrzeć w mojej pracy magisterskiej),
 * rozwijaniu wysoce rozproszonej, modułowej, skalowalnej i odpornej na błędy
-  platformy [JWizard](https://github.com/jwizard-bot) - otwartoźródłowego oprogramowania, opartego głównie o języki
+  platformy [JWizard](https://github.com/jwizard-bot) — otwartoźródłowego oprogramowania, opartego głównie o języki
   Kotlin, Python oraz Typescript umożliwiającego odtwarzanie treści audio na kanałach głosowych
   Discord ([więcej o projekcie](/pl/project/jwizard)),
 
@@ -47,8 +49,8 @@ oraz uczę się:
 
 ## Edukacja
 
-* **2024 - nadal**: (mgr) Informatyka - profil ogólnoakademicki, Politechnika Śląska,
-* **2020 - 2024**: (inż.) Informatyka - profil ogólnoakademicki, Politechnika Śląska,
+* **2024 - nadal**: (mgr) Informatyka — profil ogólnoakademicki, Politechnika Śląska,
+* **2020 - 2024**: (inż.) Informatyka — profil ogólnoakademicki, Politechnika Śląska,
 * **2017 - 2020**: Liceum ogólnokształcące Towarzystwa Ewangelickiego, profil biologiczno-chemiczny.
 
 Podczas mojej dotychczasowej edukacji nabyłem specjalistyczne umiejętności z zakresu:
@@ -56,7 +58,7 @@ Podczas mojej dotychczasowej edukacji nabyłem specjalistyczne umiejętności z 
 * cyfrowego przetwarzania sygnałów,
 * wizji komputerowej i podstaw uczenia maszynowego,
 * modelowania symulacji dyskretnych (systemy kolejkowe),
-* modelowania matematycznego (analiza systemów statycznych i dynamicznych - trajektorie układu w przestrzeni fazowej),
+* modelowania matematycznego (analiza systemów statycznych i dynamicznych — trajektorie układu w przestrzeni fazowej),
 * podstaw biologii i chemii umożliwiających swobodne poruszanie się wśród zagadnień związanych z bioinformatyką i
   informatyką medyczną (cyfrowe przetwarzanie obrazów biomedycznych).
 
@@ -78,12 +80,12 @@ tych _egzotycznych_ (wspomniany wcześniej język [Elixir](https://elixir-lang.o
 
 ## Technologie
 
-Technologie z którymi pracuję przy rozwijanych przeze mnie projektach:
+Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 
 * JVM (Kotlin, Java, Scala; ekosystemy Spring'a oraz Spring Boot'a),
 * C/C++ (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów),
 * Python (automatyzacja procesów, cyfrowe przetwarzanie obrazów, symulacje naukowe),
-* JavaScript/TypeScript (wraz z: Next.js, ekosystemem React'a, Redux Toolkit, RTK Query oraz Tanstack Query; strony
+* JavaScript/TypeScript (wraz z Next.js i ekosystemem React'a: Redux Toolkit, RTK Query oraz Tanstack Query; strony
   internetowe i szybkie prototypowanie),
 * Brokerzy wiadomości (RabbitMQ),
 * GCP (KMS, Compute Engine),
@@ -91,7 +93,7 @@ Technologie z którymi pracuję przy rozwijanych przeze mnie projektach:
 * DevOps (Cloudflare, Caddy, Hashicorp Vault, Minio, GitHub Actions),
 * LaTeX.
 
-Technologie które znam i używałem w przeszłych projektach:
+Technologie, które znam i używałem w przeszłych projektach:
 
 * .NET (C#, ASP.NET WebAPI, WinForms),
 * ekosystem Angular'a (wraz z RxJS),
