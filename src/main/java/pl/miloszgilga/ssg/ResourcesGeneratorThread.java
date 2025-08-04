@@ -37,10 +37,10 @@ class ResourcesGeneratorThread extends ProcessThread {
 
 	@Override
 	protected int threadPoolSize() {
-		final String[] possibleProcessingsDirs = {"/layouts", "/markdown", "/templates"};
+		final String[] possibleProcessingDirs = {"/layouts", "/markdown", "/templates"};
 		int totalFilesCount = 0;
-		for (final String possibleProcessingsDir : possibleProcessingsDirs) {
-			totalFilesCount += getCountOfProcessingContent(possibleProcessingsDir);
+		for (final String possibleProcessingDir : possibleProcessingDirs) {
+			totalFilesCount += getCountOfProcessingContent(possibleProcessingDir);
 		}
 		return (int) Math.ceil(totalFilesCount / DEF_FACTOR);
 	}
