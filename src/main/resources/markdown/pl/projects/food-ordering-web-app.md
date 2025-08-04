@@ -3,7 +3,7 @@ title: Platforma do zamawiania jedzenia online
 type: coop
 ---
 
-{{badge 'kod źródłowy$github$808080$https://github.com/milosz08/food-ordering-web-app'}}
+{{badge 'kod źródłowy$github$232925$https://github.com/milosz08/food-ordering-web-app'}}
 {{badge 'demo$applearcade$C70039$https://restaurants.miloszgilga.pl'}}
 
 Aplikacja internetowa CMS (Content Management System) do obsługi zarządzania restauracjami, kontaktu z klientami i

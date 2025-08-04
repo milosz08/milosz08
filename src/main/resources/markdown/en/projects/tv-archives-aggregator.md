@@ -3,7 +3,7 @@ title: TV archives aggregator
 type: normal
 ---
 
-{{badge 'source code$github$808080$https://github.com/milosz08/tv-archives-aggregator'}}
+{{badge 'source code$github$232925$https://github.com/milosz08/tv-archives-aggregator'}}
 
 ## Project purpose
 

@@ -3,7 +3,7 @@ title: Ski rental service
 type: normal
 ---
 
-{{badge 'source code$github$808080$https://github.com/milosz08/ski-rental-service'}}
+{{badge 'source code$github$232925$https://github.com/milosz08/ski-rental-service'}}
 {{badge 'demo$applearcade$C70039$https://ski.miloszgilga.pl'}}
 
 Enterprise-class Java web application for ski rental company. This application consists of 2 modules, where 1 is the

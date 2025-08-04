@@ -3,7 +3,7 @@ title: Food ordering web application
 type: coop
 ---
 
-{{badge 'source code$github$808080$https://github.com/milosz08/food-ordering-web-app'}}
+{{badge 'source code$github$232925$https://github.com/milosz08/food-ordering-web-app'}}
 {{badge 'demo$applearcade$C70039$https://restaurants.miloszgilga.pl'}}
 
 A CMS (Content Management System) web application to support restaurant management, customer contact and product

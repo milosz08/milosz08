@@ -3,6 +3,6 @@ title: Przykłady programowania w środowisku sieciowym z wykorzystaniem niskopo
 type: rAndD
 ---
 
-{{badge 'kod źródłowy$github$808080$https://github.com/milosz08/sock-net-programming'}}
+{{badge 'kod źródłowy$github$232925$https://github.com/milosz08/sock-net-programming'}}
 
 Wkrótce

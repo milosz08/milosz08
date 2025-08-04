@@ -1,6 +1,6 @@
 You can find me on:
 
-{{badge 'github$github$808080$https://github.com/milosz08'}}
+{{badge 'github$github$232925$https://github.com/milosz08'}}
 {{badge 'linkedin$linkedin$0077B5$https://www.linkedin.com/in/miloszgilga'}}
 {{badge 'm2 oss central$sonatype$6D5382$https://m2.miloszgilga.pl'}}
 {{badge 'docker hub$docker$1D63ED$https://hub.docker.com/u/milosz08'}}
@@ -10,7 +10,7 @@ You can find me on:
 and also:
 
 {{badge 'last.fm$last.fm$D51007$https://www.last.fm/user/milosz08'}}
-{{badge 'letterboxd$letterboxd$00E054$https://letterboxd.com/xenomorph8'}}
+{{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
 
 [Go to projects](/projects)
 
