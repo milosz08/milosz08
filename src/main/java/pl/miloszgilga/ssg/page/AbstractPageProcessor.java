@@ -9,6 +9,7 @@ import pl.miloszgilga.ssg.hbs.PathTraversalData;
 import pl.miloszgilga.ssg.i18n.I18n;
 import pl.miloszgilga.ssg.i18n.Language;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -44,7 +45,8 @@ public abstract class AbstractPageProcessor {
 				final String rawMinifiedHtml = hbsRenderer.parse(pageData, layoutData);
 				// fabricate output path and save into output directory
 				final String fileNameWithoutExt = i18n.getLanguage().addPrefix(pathTraversal.withParamsAsRawFilePath());
-				final ProcesssedPage processsedPage = new ProcesssedPage(fileNameWithoutExt + GEN_FILE_EXT, rawMinifiedHtml);
+				final ProcesssedPage processsedPage = new ProcesssedPage(File.separator + fileNameWithoutExt + GEN_FILE_EXT,
+					rawMinifiedHtml);
 				pages.add(processsedPage);
 				LOG.debug("Processed page: {}.", processsedPage);
 			}

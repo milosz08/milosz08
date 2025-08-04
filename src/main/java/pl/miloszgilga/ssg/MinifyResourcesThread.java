@@ -48,6 +48,6 @@ public class MinifyResourcesThread extends ProcessThread {
 		final String rawCssFileContent = Files.readString(cssFile.toPath());
 		final String minifiedContent = cssMinifier.minify(rawCssFileContent, cssFile);
 		FileUtils.writeStringToFile(cssFile, minifiedContent, StandardCharsets.UTF_8);
-		LOG.info("Minify CSS file: {}.", cssFile.getPath());
+		LOG.info("Minify CSS file: {}.", File.separator + cssFile.getPath());
 	}
 }

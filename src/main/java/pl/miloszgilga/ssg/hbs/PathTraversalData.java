@@ -2,6 +2,7 @@ package pl.miloszgilga.ssg.hbs;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.File;
 import java.util.Map;
 
 public record PathTraversalData(
@@ -34,7 +35,8 @@ public record PathTraversalData(
 	}
 
 	public String withParamsAsRawFilePath() {
-		return replaceParams(mappingPath.isEmpty() ? DEFAULT_FILE_NAME : mappingPath);
+		return replaceParams(mappingPath.isEmpty() ? "" : mappingPath) + (mappingPath.isEmpty() ? "" : File.separator)
+			+ DEFAULT_FILE_NAME;
 	}
 
 	private String replaceParams(String initVariant) {
