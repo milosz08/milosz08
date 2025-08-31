@@ -89,7 +89,7 @@ Technologies I'm working with in my current projects:
 * Message brokers (RabbitMQ),
 * GCP (KMS, Compute Engine),
 * Monitoring (Prometheus, Grafana, BetterStack),
-* DevOps (Cloudflare, Caddy, Hashicorp Vault, Minio, GitHub Actions),
+* DevOps (Cloudflare, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
 * LaTeX.
 
 Technologies I know and have used in the past:
