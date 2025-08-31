@@ -28,8 +28,8 @@ public class BadgeParserMdHelper implements MdHelperBase {
 		final String text = badgeData[0];
 		final String logo = badgeData[1];
 		final String color = badgeData[2];
-		final String onClikHref = badgeData[3];
-		final String badge = wrapWithMarkdownTag(buildBadgeUrl(text, logo, color), onClikHref);
+		final String onClickHref = badgeData[3];
+		final String badge = wrapWithMarkdownTag(buildBadgeUrl(text, logo, color), onClickHref);
 		LOG.debug("Generated badge: {}.", badge);
 		return badge;
 	}
@@ -48,11 +48,23 @@ public class BadgeParserMdHelper implements MdHelperBase {
 		final URIBuilder uri = new URIBuilder(String.format("%s/%s-%s", BASE_URL, text, color).replace(" ", "%20"));
 		uri.addParameter("style", "for-the-badge");
 		uri.addParameter("logo", name);
-		uri.addParameter("logoColor", "white");
+		uri.addParameter("logoColor", calcBadgeLogoColorBaseBackground(color));
 		return uri.build();
 	}
 
-	private String wrapWithMarkdownTag(URI badgeUri, String onClikHref) {
-		return String.format("[![](%s)](%s) &nbsp;", badgeUri, onClikHref);
+	private String wrapWithMarkdownTag(URI badgeUri, String onClickHref) {
+		return String.format("[![](%s)](%s) &nbsp;", badgeUri, onClickHref);
+	}
+
+	private String calcBadgeLogoColorBaseBackground(String bgColor) {
+		if (bgColor.startsWith("#")) {
+			bgColor = bgColor.substring(1);
+		}
+		final int r = Integer.parseInt(bgColor.substring(0, 2), 16);
+		final int g = Integer.parseInt(bgColor.substring(2, 4), 16);
+		final int b = Integer.parseInt(bgColor.substring(4, 6), 16);
+
+		final double luminance = (0.299 * r + 0.587 * g + 0.114 * b);
+		return luminance > 186 ? "000000" : "FFFFFF";
 	}
 }
