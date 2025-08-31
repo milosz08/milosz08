@@ -9,8 +9,9 @@ Znajdziesz mnie na:
 
 oraz:
 
-{{badge 'last.fm$last.fm$D51007$https://www.last.fm/user/milosz08'}}
-{{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
+{{badge 'moja muzyka$last.fm$D51007$https://www.last.fm/user/milosz08'}}
+{{badge 'obejrzane filmy$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
+{{badge 'kolekcja winyli$discogs$FFFFFF$https://www.discogs.com/user/milosz80/collection'}}
 
 [Przejdź do projektów](/pl/projects)
 

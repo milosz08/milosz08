@@ -9,8 +9,9 @@ You can find me on:
 
 and also:
 
-{{badge 'last.fm$last.fm$D51007$https://www.last.fm/user/milosz08'}}
-{{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
+{{badge 'my music$last.fm$D51007$https://www.last.fm/user/milosz08'}}
+{{badge 'watched movies$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
+{{badge 'my vinyl collection$discogs$FFFFFF$https://www.discogs.com/user/milosz80/collection'}}
 
 [Go to projects](/projects)
 
