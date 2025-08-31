@@ -84,8 +84,9 @@ tych _egzotycznych_ (wspomniany wcześniej język [Elixir](https://elixir-lang.o
 Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 
 * JVM (Kotlin, Java, Scala; ekosystemy Spring'a oraz Spring Boot'a),
-* C/C++ (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów),
-* Python (automatyzacja procesów, cyfrowe przetwarzanie obrazów, symulacje naukowe),
+* C/C++ (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów: SRT, OpenCV, LavaDSP),
+* Python (automatyzacja procesów, cyfrowe przetwarzanie obrazów, symulacje naukowe: OpenCV, Pandas, PyWavelets,
+  Matplotlib, Numpy, Scipy),
 * JavaScript/TypeScript (wraz z Next.js i ekosystemem React'a: Redux Toolkit, RTK Query oraz Tanstack Query; strony
   internetowe i szybkie prototypowanie),
 * Brokerzy wiadomości (RabbitMQ),
