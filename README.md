@@ -1,24 +1,11 @@
 <p align="center">
-	Computer Science MSc student at Silesian University of Technology
-	<br>
-	Spec: <b>Internet and Networking Technologies</b>
-	<br>
-	<br>
-	Master thesis (written in polish):
-	<br>
-	<b>
-		Presentation of the capabilities of wavelet analysis for edge detection in digital
-		<br>
-		images and comparison with methods	based on gradient operators.
-	</b>
-</p>
-
-<p align="center">
 	Mainly interest to <b>multimedia processing</b>, including:
 	<br>
 	<em>• digital image processing, including medical imaging and computer vision •</em>
 	<br>
 	<em>• designing real-time audio/video streaming applications for highly distributed network environments •</em>
+	<br>
+	<em>• secure internet transfer and archiving of multimedia data using selected encryption techniques •</em>
 </p>
 
 <hr>
