@@ -1,4 +1,9 @@
 <p align="center">
+	Master of Science in Engineering (MSc Eng), <br/>
+	Computer Science, Silesian University of Technology
+</p>
+
+<p align="center">
 	Mainly interest to <b>multimedia processing</b>, including:
 	<br>
 	<em>• digital image processing, including medical imaging and computer vision •</em>
