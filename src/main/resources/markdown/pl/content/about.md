@@ -9,13 +9,9 @@ Znajdziesz mnie na:
 
 oraz:
 
-{{badge 'moja muzyka$last.fm$D51007$https://www.last.fm/user/milosz08'}}
-{{badge 'obejrzane filmy$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
-{{badge 'kolekcja winyli$discogs$FFFFFF$https://www.discogs.com/user/milosz80/collection'}}
-
-[Przejdź do projektów](/pl/projects)
-
-[Mój blog (artykuły)](https://www.linkedin.com/in/miloszgilga/recent-activity/articles)
+{{badge 'last.fm$last.fm$D51007$https://www.last.fm/user/milosz08'}}
+{{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
+{{badge 'discogs$discogs$E7E7E7$https://www.discogs.com/user/milosz80/collection'}}
 
 ## Kontakt
 
@@ -24,35 +20,56 @@ oraz:
 
 ## O mnie
 
-Obecnie student studiów magisterskich na Politechnice Śląskiej (wydział Automatyki, Elektroniki i Informatyki,
-specjalność: Internet i technologie sieciowe).
+{{badge 'projekty$$232925$/pl/projects'}}
+{{badge 'blog (artykuły)$$0077B5$https://www.linkedin.com/in/miloszgilga/recent-activity/articles'}}
 
-W styczniu 2024 roku obroniłem tytuł inżyniera z oceną 5 na tej samej uczelni. Moja praca dyplomowa przedstawiała
-możliwości komunikacji w wysoce rozproszonej infrastrukturze mikroserwisowej z wykorzystaniem architektury zdarzeniowej
-Apache Kafka w zakresie komunikacji w czasie rzeczywistym w środowisku JVM.
+Absolwent studiów magisterskich z Informatyki na Politechnice Śląskiej. Pasjonuję się tworzeniem niestandardowych
+systemów - zarówno autonomicznych, jak i złożonych rozwiązań sieciowych. Mimo biegłej znajomości nowoczesnych
+frameworków, takich jak Spring Boot, chętnie sięgam po autorskie rozwiązania, opierając się na dogłębnej znajomości
+fundamentalnych technologii. Posiadam doświadczenie w pracy z lekkimi, wbudowanymi kontenerami aplikacji (Jetty) oraz w
+niskopoziomowym programowaniu z użyciem surowych gniazd TCP/UDP.
 
-Treść mojej pracy dyplomowej znajdziesz [tutaj](https://github.com/visphere/visphere-thesis).
-Kod źródłowy mojej pracy dyplomowej możesz znaleźć [tutaj](https://github.com/visphere).
+Moje kompetencje w inżynierii oprogramowania uzupełniam o zainteresowania badawcze związane z przetwarzaniem danych
+multimedialnych. W ramach czasu wolnego poszerzam swoje umiejętności w zakresie praktycznego wykorzystania metod
+łączących głębokie sieci neuronowe z algorytmami falkowymi do przetwarzania sygnałów (obrazów i dźwięków), w kontekście
+automatycznej ekstrakcji cech (segmentacja, polifonia).
 
-Obecnie skupiam się na:
-
-* badaniach wykorzystania transformacji falkowej do wykrywania krawędzi w praktycznych zastosowaniach analizy obrazów
-  względem różnego stopnia zaszumienia oraz artefaktów (rezultat tych badań chce zawrzeć w mojej pracy magisterskiej),
-* rozwijaniu wysoce rozproszonej, modułowej, skalowalnej i odpornej na błędy
-  platformy [JWizard](https://github.com/jwizard-bot) — otwartoźródłowego oprogramowania, opartego głównie o języki
-  Kotlin, Python oraz Typescript umożliwiającego odtwarzanie treści audio na kanałach głosowych
-  Discord ([więcej o projekcie](/pl/project/jwizard)),
-
-oraz uczę się:
-
-* praktycznego wykorzystania uczenia maszynowego (konwolucyjne sieci neuronowe, CNN) jako wsparcia dla klasycznych
-  algorytmów przetwarzania obrazów w kontekście automatycznej segmentacji i detekcji cech.
+Obecnie skupiam się na rozwijaniu wysoce rozproszonej, modułowej, skalowalnej i odpornej na błędy platformy
+[JWizard](https://github.com/jwizard-bot) - otwartoźródłowego oprogramowania, opartego głównie o języki Kotlin, Python
+oraz Typescript umożliwiającego odtwarzanie treści audio na kanałach głosowych Discord. Osobiście odpowiadam za cały
+cykl życia projektu, począwszy od kodu aplikacji, poprzez konfigurację procesów CI/CD, a na zarządzaniu infrastrukturą
+chmurową i sieciową kończąc.
 
 ## Edukacja
 
-* **2024 - nadal**: (mgr) Informatyka — profil ogólnoakademicki, Politechnika Śląska,
-* **2020 - 2024**: (inż.) Informatyka — profil ogólnoakademicki, Politechnika Śląska,
-* **2017 - 2020**: Liceum ogólnokształcące Towarzystwa Ewangelickiego, profil biologiczno-chemiczny.
+* **2025 - obecnie**: (podyplomowe) Cyber Science - Zarządzanie cyberbezpieczeństwem, NASK oraz Politechnika Śląska,
+
+* **2024 - 2025**: (mgr inż.) Informatyka - profil ogólnoakademicki, Politechnika Śląska:
+	* Ocena: 5 (4.82).
+	* Moja praca magisterska skupiała się na analizie wykorzystania pozbawionej diadycznego podpróbkowania dyskretnej
+	  transformacji falkowej, wzbogaconej o autorski estymator wag podpasm dekompozycji w zastosowaniach detekcji krawędzi
+	  na obrazach silnie zakłóconych wysokoczęstotliwościowym szumem cyfrowym. Wyniki (w formie prezentacji) dostępne są
+	  na moim koncie [LinkedIn](https://www.linkedin.com/in/miloszgilga).
+	* Dodatkowe osiągnięcia: stypendium rektora za wybitne wyniki w nauce.
+
+* **2020 - 2024**: (inż.) Informatyka - profil ogólnoakademicki, Politechnika Śląska:
+	* Ocena: 5 (4.67).
+	* Moja praca inżynierska przedstawiała możliwości komunikacji w wysoce rozproszonej infrastrukturze mikroserwisowej z
+	  wykorzystaniem architektury zdarzeniowej Apache Kafka w zakresie komunikacji w czasie rzeczywistym w środowisku JVM.
+	  Treść (w LaTeX) oraz kod źródłowy mojej pracy dyplomowej znajdziesz [tutaj](https://github.com/visphere).
+
+* **2017 - 2020**: Liceum ogólnokształcące, profil biologiczno-chemiczny.
+
+## Zainteresowania i umiejętności
+
+Moje zainteresowania skupiają się w głównej mierze wokół tematów związanych z przetwarzaniem danych multimedialnych,
+wliczając w to przede wszystkim:
+
+* cyfrowe przetwarzanie obrazu, w tym obrazowanie medyczne i wizja komputerowa,
+* projektowanie aplikacji do strumieniowego przesyłania audio/wideo w czasie rzeczywistym dla wysoce rozproszonych
+  środowisk,
+* bezpieczny transfer w sieci Internet oraz archiwizację danych multimedianych z wykorzystaniem wybranych technik
+  szyfrowania.
 
 Podczas mojej dotychczasowej edukacji nabyłem specjalistyczne umiejętności z zakresu:
 
@@ -63,21 +80,11 @@ Podczas mojej dotychczasowej edukacji nabyłem specjalistyczne umiejętności z 
 * podstaw biologii i chemii umożliwiających swobodne poruszanie się wśród zagadnień związanych z bioinformatyką i
   informatyką medyczną (cyfrowe przetwarzanie obrazów biomedycznych).
 
-## Zainteresowania i umiejętności
-
-Moje zainteresowania skupiają się w głównej mierze wokół tematów związanych z przetwarzaniem danych multimedialnych,
-wliczając w to przede wszystkim:
-
-* cyfrowe przetwarzanie obrazu, w tym obrazowanie medyczne i wizja komputerowa,
-* projektowanie aplikacji do strumieniowego przesyłania audio/wideo w czasie rzeczywistym dla wysoce rozproszonych
-  środowisk.
-
 Jestem entuzjastą języków działających na JVM takich jak Java, Kotlin i Scala, ale również bardziej _egzotycznych_
-jak [Elixir](https://elixir-lang.org).
-
-Posiadam znajomość wielu popularnych języków programowania w stopniu biegłym (Java, Kotlin, Javascript, Typescript, PHP,
-C#, C, Python) oraz w większym lub mniejszym stopniu znam podstawy kilku innych języków (Scala, C++, Matlab, R) w tym
-tych _egzotycznych_ (wspomniany wcześniej język [Elixir](https://elixir-lang.org)).
+jak [Elixir](https://elixir-lang.org). Posiadam znajomość wielu popularnych języków programowania w stopniu biegłym
+(Java, Kotlin, Javascript, Typescript, PHP, C#, C, Python) oraz w większym lub mniejszym stopniu znam podstawy kilku
+innych języków (Scala, C++, Matlab, R) w tym tych _egzotycznych_ (wspomniany wcześniej język
+[Elixir](https://elixir-lang.org)).
 
 ## Technologie
 
@@ -90,10 +97,11 @@ Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 * JavaScript/TypeScript (wraz z Next.js i ekosystemem React'a: Redux Toolkit, RTK Query oraz Tanstack Query; strony
   internetowe i szybkie prototypowanie),
 * Brokerzy wiadomości (RabbitMQ),
-* GCP (KMS, Compute Engine),
+* GCP (Google Cloud Platform: KMS, Compute Engine),
+* OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
 * Monitorowanie (Prometheus, Grafana, BetterStack),
-* DevOps (Cloudflare, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
-* LaTeX.
+* DevOps (Cloudflare, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
+* LaTeX (book, article, beamer).
 
 Technologie, które znam i używałem w przeszłych projektach:
 
