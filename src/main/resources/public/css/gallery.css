@@ -68,7 +68,7 @@
 
 .gallery__preview-navigation-link {
 	display: inline-block;
-	color: var(--main-text);
+	color: var(--main-bg);
 }
 
 .gallery__preview-navigation-link--visible-off {
