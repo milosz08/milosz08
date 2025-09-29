@@ -1,35 +1,18 @@
-<p align="center">
-	Master of Science in Engineering (MSc Eng), <br/>
-	Computer Science, Silesian University of Technology
-</p>
+Master of Science in Engineering (MSc Eng), Computer Science, Silesian University of Technology.
 
-<p align="center">
-	Mainly interest to <b>multimedia processing</b>, including:
-	<br>
-	<em>• digital image processing, including medical imaging and computer vision •</em>
-	<br>
-	<em>• designing real-time audio/video streaming applications for highly distributed network environments •</em>
-	<br>
-	<em>• secure internet transfer and archiving of multimedia data using selected encryption techniques •</em>
-</p>
+Mainly interest to **multimedia processing**, including:
+- digital image processing, including medical imaging and computer vision,
+- designing real-time audio/video streaming applications for highly distributed network environments,
+- secure internet transfer and archiving of multimedia data using selected encryption techniques.
 
-<p align="center">
-	<b>Master thesis:</b>
-	<br>
-	My master’s thesis focused on the analysis of a discrete wavelet transform without dyadic subsampling, augmented with
-	a novel subband weight estimator, for the purpose of edge detection in digital images heavily corrupted by
-	high-frequency noise. Presentation with results available on my
-	<a href="https://www.linkedin.com/in/miloszgilga" target="_blank">LinkedIn</a>.
-</p>
+**Master thesis:** My master’s thesis focused on the analysis of a discrete wavelet transform without dyadic
+subsampling, augmented with  a novel subband weight estimator, for the purpose of edge detection in digital images
+heavily corrupted by  high-frequency noise. Presentation with results available on my
+[LinkedIn](https://www.linkedin.com/in/miloszgilga).
 
-<p align="center">
-	<b>Engineering thesis:</b>
-	<br>
-	My engineering thesis was about demonstrate possibilities of communication in a highly distributed microservice
-	infrastructure using Apache Kafka event-driven architecture in field of real-time communication on example of chat
-	application. Source code and thesis (in LaTeX) you find
-	<a href="https://github.com/visphere" target="_blank">here</a>.
-</p>
+**Engineering thesis:** My engineering thesis was about demonstrate possibilities of communication in a highly
+distributed microservice infrastructure using Apache Kafka event-driven architecture in field of real-time communication
+on example of chat application. Source code and thesis (in LaTeX) you find [here](https://github.com/visphere).
 
 <hr>
 
