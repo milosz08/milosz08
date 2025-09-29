@@ -92,7 +92,7 @@ Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 * Brokerzy wiadomości (RabbitMQ),
 * GCP (KMS, Compute Engine),
 * Monitorowanie (Prometheus, Grafana, BetterStack),
-* DevOps (Cloudflare, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
+* DevOps (Cloudflare, CF Zero Trust, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
 * LaTeX.
 
 Technologie, które znam i używałem w przeszłych projektach:
