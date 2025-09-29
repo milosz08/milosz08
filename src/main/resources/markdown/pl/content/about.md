@@ -100,7 +100,7 @@ Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 * GCP (Google Cloud Platform: KMS, Compute Engine),
 * OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
 * Monitorowanie (Prometheus, Grafana, BetterStack),
-* DevOps (Cloudflare, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
+* DevOps (Cloudflare, CF Zero Trust, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
 * LaTeX (book, article, beamer).
 
 Technologie, które znam i używałem w przeszłych projektach:

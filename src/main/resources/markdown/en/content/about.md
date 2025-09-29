@@ -96,7 +96,7 @@ Technologies I am working with in my current projects:
 * GCP (KMS, Compute Engine),
 * OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
 * Monitoring (Prometheus, Grafana, BetterStack),
-* DevOps (Cloudflare, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
+* DevOps (Cloudflare, CF Zero Trust, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
 * LaTeX (book, article, beamer).
 
 Technologies I know and have used in the past:
