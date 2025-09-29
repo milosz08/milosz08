@@ -76,7 +76,7 @@ Podczas mojej dotychczasowej edukacji nabyłem specjalistyczne umiejętności z 
 * cyfrowego przetwarzania sygnałów,
 * wizji komputerowej i podstaw uczenia maszynowego,
 * modelowania symulacji dyskretnych (systemy kolejkowe),
-* modelowania matematycznego (analiza systemów statycznych i dynamicznych — trajektorie układu w przestrzeni fazowej),
+* modelowania matematycznego (analiza systemów statycznych i dynamicznych - trajektorie układu w przestrzeni fazowej),
 * podstaw biologii i chemii umożliwiających swobodne poruszanie się wśród zagadnień związanych z bioinformatyką i
   informatyką medyczną (cyfrowe przetwarzanie obrazów biomedycznych).
 
