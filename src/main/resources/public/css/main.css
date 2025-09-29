@@ -1,15 +1,15 @@
 @font-face {
-	font-family: 'Portfolio Serif';
-	src: url('../font/deja-vu-serif.ttf') format('truetype');
+	font-family: 'Mozilla Headline';
+	src: url('../font/moz-headline.woff2') format('woff');
 	font-style: normal;
 }
 
 :root {
-	--main-bg: #000000;
-	--main-text: #ffffff;
-	--main-text-tint: #d7d7d7;
-	--main-tint: #171717;
-	--main-link: #c68659;
+	--main-bg: #ffffff;
+	--main-text: #000000;
+	--main-text-tint: #1f1f1f;
+	--main-tint: #f3f3f3;
+	--main-link: #0059ff;
 
 	--safety-width: 1024px;
 }
@@ -19,7 +19,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-size: 17px;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	background-color: var(--main-tint);
-	font-family: 'Portfolio Serif', 'DejaVu Serif', serif;
+	font-family: 'Mozilla Headline', serif;
 }
 
 h1 {
@@ -37,7 +37,6 @@ h1 {
 h2 {
 	font-size: 1.8rem;
 	margin: 25px 0 15px;
-	font-weight: 500;
 }
 
 p,
@@ -50,16 +49,17 @@ li {
 }
 
 p {
-	margin: 20px 0;
+	margin: 15px 0;
 	color: var(--main-text-tint);
 }
 
 a {
 	color: var(--main-link);
-	text-decoration: none;
+	text-decoration: underline;
+	font-weight: 600;
 
 	&:hover {
-		text-decoration: underline;
+		text-decoration: none;
 	}
 }
 
@@ -127,7 +127,6 @@ strong {
 .footer__paragraph {
 	width: 100%;
 	text-align: center;
-	font-weight: 300;
 	margin: 10px 0;
 }
 

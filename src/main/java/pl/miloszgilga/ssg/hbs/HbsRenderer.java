@@ -17,6 +17,7 @@ import pl.miloszgilga.ssg.minifier.HtmlMinifier;
 import pl.miloszgilga.ssg.minifier.WebMinifier;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.time.Year;
 import java.util.HashMap;
 import java.util.Map;
@@ -70,6 +71,7 @@ public class HbsRenderer extends AbstractHbsBase {
 			layoutVariables.put("year", Year.now().getValue());
 			layoutVariables.put("languageButton", determinateLanguageButton());
 			layoutVariables.put("pageTitle", reader.getSectionValue("title", DEFAULT_PAGE_TITLE));
+			layoutVariables.put("lastEditedDate", LocalDateTime.now().format(language.toDtfPattern()));
 
 			final Template layoutTemplate = hbsEngine.compileInline(layoutRawContent);
 			htmlContent = layoutTemplate.apply(layoutVariables);

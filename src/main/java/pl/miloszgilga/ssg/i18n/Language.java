@@ -2,19 +2,22 @@ package pl.miloszgilga.ssg.i18n;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public enum Language {
-	PL("pl", false),
-	EN("en", true),
+	PL("pl", false, "dd.MM.yyyy, HH:mm:ss"),
+	EN("en", true, "MM.dd.yyyy, hh:mm:ss a"),
 	;
 
 	private final String code;
 	private final boolean isDefault;
+	private final String dtfPattern;
 
-	Language(String code, boolean isDefault) {
+	Language(String code, boolean isDefault, String dtfPattern) {
 		this.code = code;
 		this.isDefault = isDefault;
+		this.dtfPattern = dtfPattern;
 	}
 
 	public String getCode() {
@@ -23,6 +26,10 @@ public enum Language {
 
 	Locale toLocale() {
 		return Locale.forLanguageTag(code);
+	}
+
+	public DateTimeFormatter toDtfPattern() {
+		return DateTimeFormatter.ofPattern(dtfPattern);
 	}
 
 	public String insertUrlCode(String baseUrl) {
