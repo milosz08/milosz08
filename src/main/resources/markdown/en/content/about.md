@@ -95,6 +95,7 @@ Technologies I am working with in my current projects:
 * Message brokers (RabbitMQ),
 * GCP (KMS, Compute Engine),
 * OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
+* Self-hosted servers management (Debian based distributions),
 * Monitoring (Prometheus, Grafana, BetterStack),
 * DevOps (Cloudflare, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
 * LaTeX (book, article, beamer).

@@ -99,6 +99,7 @@ Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 * Brokerzy wiadomości (RabbitMQ),
 * GCP (Google Cloud Platform: KMS, Compute Engine),
 * OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
+* Zarządzanie serwerami typu self-hosted (dystrybucje oparte na Debianie),
 * Monitorowanie (Prometheus, Grafana, BetterStack),
 * DevOps (Cloudflare, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
 * LaTeX (book, article, beamer).
