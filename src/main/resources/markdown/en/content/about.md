@@ -71,7 +71,7 @@ Throughout my education, I have acquired specialized skills in:
 * digital signal processing,
 * computer vision and fundamentals of machine learning,
 * discrete-event simulation modeling (queueing systems),
-* mathematical modeling (static/dynamic systems analysis — phase-space trajectories),
+* mathematical modeling (static/dynamic systems analysis - phase-space trajectories),
 * fundamentals of biology and chemistry enabling work with bioinformatics and medical informatics (digital processing of
   biomedical images).
 
@@ -93,11 +93,11 @@ Technologies I am working with in my current projects:
 * JavaScript/TypeScript (with Next.js and React ecosystem: Redux Toolkit, RTK Query and Tanstack Query;
   websites and rapid prototyping),
 * Message brokers (RabbitMQ),
-* GCP (KMS, Compute Engine),
+* GCP (Google Cloud Platform: KMS, Compute Engine),
 * OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
 * Self-hosted servers management (Debian based distributions),
 * Monitoring (Prometheus, Grafana, BetterStack),
-* DevOps (Cloudflare, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
+* DevOps (Cloudflare, CF Zero Trust, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
 * LaTeX (book, article, beamer).
 
 Technologies I know and have used in the past:

@@ -76,7 +76,7 @@ Podczas mojej dotychczasowej edukacji nabyłem specjalistyczne umiejętności z 
 * cyfrowego przetwarzania sygnałów,
 * wizji komputerowej i podstaw uczenia maszynowego,
 * modelowania symulacji dyskretnych (systemy kolejkowe),
-* modelowania matematycznego (analiza systemów statycznych i dynamicznych — trajektorie układu w przestrzeni fazowej),
+* modelowania matematycznego (analiza systemów statycznych i dynamicznych - trajektorie układu w przestrzeni fazowej),
 * podstaw biologii i chemii umożliwiających swobodne poruszanie się wśród zagadnień związanych z bioinformatyką i
   informatyką medyczną (cyfrowe przetwarzanie obrazów biomedycznych).
 
@@ -101,7 +101,7 @@ Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 * OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
 * Zarządzanie serwerami typu self-hosted (dystrybucje oparte na Debianie),
 * Monitorowanie (Prometheus, Grafana, BetterStack),
-* DevOps (Cloudflare, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
+* DevOps (Cloudflare, CF Zero Trust, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
 * LaTeX (book, article, beamer).
 
 Technologie, które znam i używałem w przeszłych projektach:
