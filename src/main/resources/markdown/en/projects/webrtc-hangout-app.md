@@ -1,5 +1,5 @@
 ---
-title: WebRTC Video hangout app
+title: WebRTC hangout app
 type: coop
 ---
 
