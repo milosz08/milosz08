@@ -93,10 +93,10 @@ Technologies I am working with in my current projects:
 * JavaScript/TypeScript (with Next.js and React ecosystem: Redux Toolkit, RTK Query and Tanstack Query;
   websites and rapid prototyping),
 * Message brokers (RabbitMQ),
-* GCP (Google Cloud Platform: KMS, Compute Engine),
+* GCP (Google Cloud Platform: KMS, Compute Engine, GCS),
 * OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
 * Self-hosted servers management (Debian based distributions),
-* Monitoring (Prometheus, Grafana, BetterStack),
+* Monitoring (Prometheus, Grafana, BetterStack, Portainer),
 * DevOps (Cloudflare, CF Zero Trust, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
 * LaTeX (book, article, beamer).
 

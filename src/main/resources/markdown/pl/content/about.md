@@ -97,10 +97,10 @@ Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 * JavaScript/TypeScript (wraz z Next.js i ekosystemem React'a: Redux Toolkit, RTK Query oraz Tanstack Query; strony
   internetowe i szybkie prototypowanie),
 * Brokerzy wiadomości (RabbitMQ),
-* GCP (Google Cloud Platform: KMS, Compute Engine),
+* GCP (Google Cloud Platform: KMS, Compute Engine, GCS),
 * OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
 * Zarządzanie serwerami typu self-hosted (dystrybucje oparte na Debianie),
-* Monitorowanie (Prometheus, Grafana, BetterStack),
+* Monitorowanie (Prometheus, Grafana, BetterStack, Portainer),
 * DevOps (Cloudflare, CF Zero Trust, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
 * LaTeX (book, article, beamer).
 
