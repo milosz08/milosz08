@@ -3,6 +3,7 @@ package pl.miloszgilga.ssg.hbs;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
+import java.util.List;
 import java.util.Map;
 
 public record PathTraversalData(
@@ -13,6 +14,9 @@ public record PathTraversalData(
 	private static final String DELIMITER = "[%s]";
 	private static final String MAPPING_PATH_TRANSFORM = "(^index$)|(/index$)";
 	private static final String DEFAULT_FILE_NAME = "index";
+	private static final List<String> EXCLUDED_SEPARATED_PATHS = List.of(
+		"404"
+	);
 
 	private PathTraversalData(String path, Map<String, String> params) {
 		this(path, path.replaceAll(MAPPING_PATH_TRANSFORM, StringUtils.EMPTY), params);
@@ -37,7 +41,7 @@ public record PathTraversalData(
 	public String withParamsAsRawFilePath(boolean separated) {
 		String onEmptyReplacer = DEFAULT_FILE_NAME;
 		String suffix = "";
-		if (separated) {
+		if (separated && EXCLUDED_SEPARATED_PATHS.stream().noneMatch(p -> p.equalsIgnoreCase(mappingPath))) {
 			onEmptyReplacer = "";
 			suffix = (mappingPath.isEmpty() ? "" : File.separator) + DEFAULT_FILE_NAME;
 		}
