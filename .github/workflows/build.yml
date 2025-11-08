@@ -34,7 +34,7 @@ jobs:
         run: ./gradlew shadowJar --no-daemon
 
       - name: Generate static content
-        run: java -jar build/libs/ssg.jar -d https://miloszgilga.pl -a
+        run: java -jar build/libs/ssg.jar -d https://miloszgilga.pl -a -s
 
       - name: Setup Node for Vercel CLI
         uses: actions/setup-node@v4
