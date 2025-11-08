@@ -42,5 +42,7 @@ jobs:
           node-version: "20"
 
       - name: Deploy to Vercel
-        run: npx vercel deploy output --prod --token ${{ secrets.VERCEL_TOKEN }} \
-          --name ${{ secrets.VERCEL_SITE_NAME }} --confirm
+        run: |
+          npx vercel deploy output --prod --yes \
+            --token ${{ secrets.VERCEL_TOKEN }} \
+            --name ${{ secrets.VERCEL_SITE_NAME }}
