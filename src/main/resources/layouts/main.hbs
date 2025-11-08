@@ -17,17 +17,23 @@
 	{{#each cssResources}}
 		<link rel="stylesheet" href="/css/{{this}}.css">
 	{{/each}}
-	<!-- @formatter:off -->
-  <script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5ZTBZLGH');</script>
-  <!-- @formatter:on -->
+	{{#if analytics}}
+		<!-- @formatter:off -->
+		<script defer src="https://analytics.miloszgilga.pl/script.js" data-website-id="13c8bf28-74ce-46fa-81ac-06111a0a4778"></script>
+	  <script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5ZTBZLGH');</script>
+	  <!-- @formatter:on -->
+	{{/if}}
 </head>
 <body>
-<noscript>
-	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZTBZLGH" height="0" width="0"
-	        style="display:none;visibility:hidden"></iframe>
-</noscript>
-<header class="header__container">
-	<div class="header__wrapper">
+{{#if analytics}}
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZTBZLGH" height="0" width="0"
+		        style="display:none;visibility:hidden"></iframe>
+	</noscript>
+{{/if}}
+<header>
+	<div class="header__container">
+		<img src="/hero.png" alt="hero" class="header__hero-image"/>
 		<h1>{{pageTitle}}</h1>
 		{{#if enabledLngBtn}}
 			<div class="header__lang-container">

@@ -67,6 +67,7 @@ public class HbsRenderer extends AbstractHbsBase {
 			layoutVariables.put("language", language.getCode());
 			layoutVariables.put("body", reader.extractSections());
 			layoutVariables.put("domain", commandLineHandler.getArg(CommandLineHandler.Arg.DOMAIN));
+			layoutVariables.put("analytics", commandLineHandler.getArg(CommandLineHandler.Arg.ANALYTICS, Boolean.class));
 			layoutVariables.put("pageUrl", pathTraversalData.mappingPath());
 			layoutVariables.put("year", Year.now().getValue());
 			layoutVariables.put("languageButton", determinateLanguageButton());
