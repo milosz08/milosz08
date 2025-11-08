@@ -11,12 +11,8 @@ on:
       - "build.gradle"
       - "settings.gradle"
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
-  build-and-generate:
+  build-generate-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -40,30 +36,12 @@ jobs:
       - name: Generate static content
         run: java -jar build/libs/ssg.jar -d https://miloszgilga.pl -a
 
-      - name: Upload static files as artifact
-        id: deployment
-        uses: actions/upload-pages-artifact@v3
+      - name: Setup Node for Vercel CLI
+        uses: actions/setup-node@v4
         with:
-          name: github-pages
-          path: ./output
-          retention-days: 1
+          node-version: "20"
+          cache: "yarn"
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build-and-generate
-
-    permissions:
-      pages: write
-      id-token: write
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v4
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy to Vercel
+        run: npx vercel deploy output --prod --token ${{ secrets.VERCEL_TOKEN }} \
+          --name ${{ secrets.VERCEL_SITE_NAME }} --confirm
