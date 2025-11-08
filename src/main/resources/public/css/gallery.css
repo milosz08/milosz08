@@ -71,6 +71,10 @@
 	color: var(--main-bg);
 }
 
+.gallery__preview-navigation-link::after {
+	content: '';
+}
+
 .gallery__preview-navigation-link--visible-off {
 	visibility: hidden;
 }
