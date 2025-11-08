@@ -34,9 +34,14 @@ public record PathTraversalData(
 		return replaceParams(mappingPath);
 	}
 
-	public String withParamsAsRawFilePath() {
-		return replaceParams(mappingPath.isEmpty() ? "" : mappingPath) + (mappingPath.isEmpty() ? "" : File.separator)
-			+ DEFAULT_FILE_NAME;
+	public String withParamsAsRawFilePath(boolean separated) {
+		String onEmptyReplacer = DEFAULT_FILE_NAME;
+		String suffix = "";
+		if (separated) {
+			onEmptyReplacer = "";
+			suffix = (mappingPath.isEmpty() ? "" : File.separator) + DEFAULT_FILE_NAME;
+		}
+		return replaceParams(mappingPath.isEmpty() ? onEmptyReplacer : mappingPath) + suffix;
 	}
 
 	private String replaceParams(String initVariant) {

@@ -44,7 +44,8 @@ public abstract class AbstractPageProcessor {
 				final HbsRenderer hbsRenderer = new HbsRenderer(i18n, commandLineHandler, pathTraversal);
 				final String rawMinifiedHtml = hbsRenderer.parse(pageData, layoutData);
 				// fabricate output path and save into output directory
-				final String fileNameWithoutExt = i18n.getLanguage().addPrefix(pathTraversal.withParamsAsRawFilePath());
+				final String fileNameWithoutExt = i18n.getLanguage().addPrefix(pathTraversal
+					.withParamsAsRawFilePath(commandLineHandler.getArg(CommandLineHandler.Arg.SEPARATED, Boolean.class)));
 				final ProcesssedPage processsedPage = new ProcesssedPage(File.separator + fileNameWithoutExt + GEN_FILE_EXT,
 					rawMinifiedHtml);
 				pages.add(processsedPage);

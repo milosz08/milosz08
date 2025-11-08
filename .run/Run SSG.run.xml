@@ -2,7 +2,7 @@
   <configuration default="false" name="Run SSG" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="pl.miloszgilga.ssg.SsgRunner" />
     <module name="personal-page.main" />
-    <option name="PROGRAM_PARAMETERS" value="-d https://miloszgilga.pl" />
+    <option name="PROGRAM_PARAMETERS" value="-d https://miloszgilga.pl -s" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="pl.miloszgilga.ssg.*" />

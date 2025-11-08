@@ -53,6 +53,7 @@ public class CommandLineHandler {
 	public enum Arg {
 		DOMAIN("d", "domain", true, "Reverse-proxy domain qualifier", true, String.class),
 		ANALYTICS("a", "analytics", false, "Turn on/off analytics scripts", false, Boolean.class),
+		SEPARATED("s", "separated", false, "If on, always generate index.html in subdirectories", false, Boolean.class),
 		;
 
 		private final String option;
