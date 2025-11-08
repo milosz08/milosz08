@@ -21,7 +21,7 @@ oraz:
 ## O mnie
 
 {{badge 'projekty$$232925$/pl/projects'}}
-{{badge 'blog (artykuły)$$0077B5$https://www.linkedin.com/in/miloszgilga/recent-activity/articles'}}
+{{badge 'blog (artykuły)$$232925$https://blog.miloszgilga.pl'}}
 
 Absolwent studiów magisterskich z Informatyki na Politechnice Śląskiej. Pasjonuję się tworzeniem niestandardowych
 systemów - zarówno autonomicznych, jak i złożonych rozwiązań sieciowych. Mimo biegłej znajomości nowoczesnych

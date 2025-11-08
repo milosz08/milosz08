@@ -21,7 +21,7 @@ and also:
 ## About me
 
 {{badge 'projects$$232925$/projects'}}
-{{badge 'my blog (articles)$$0077B5$https://www.linkedin.com/in/miloszgilga/recent-activity/articles'}}
+{{badge 'my blog (articles)$$232925$https://blog.miloszgilga.pl'}}
 
 I am a Master of Science graduate in Computer Science from the Silesian University of Technology. I am passionate about
 creating custom systems, ranging from standalone applications to complex, network-based solutions. While highly
