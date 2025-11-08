@@ -72,7 +72,7 @@
 }
 
 .gallery__preview-navigation-link::after {
-	content: '';
+	display: none;
 }
 
 .gallery__preview-navigation-link--visible-off {
