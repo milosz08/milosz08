@@ -100,7 +100,7 @@ Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 * GCP (Google Cloud Platform: KMS, Compute Engine, GCS),
 * OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
 * Zarządzanie serwerami typu self-hosted (dystrybucje oparte na Debianie),
-* Monitorowanie (Prometheus z wtyczkami, Grafana, BetterStack, Portainer, Loki + Promtail),
+* Monitorowanie (Prometheus z rozszerzeniami, Grafana, BetterStack, Portainer, Loki + Promtail, Sentry),
 * DevOps (Cloudflare, CF Zero Trust, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
 * LaTeX (book, article, beamer).
 
