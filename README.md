@@ -17,9 +17,9 @@ A demonstration of communication capabilities in a highly distributed microservi
 ---
 
 <p align="center">
-    [<a href="https://miloszgilga.pl" target="_blank"><strong>Website</strong></a>]
+    [<a href="https://miloszgilga.pl" target="_blank">Website</a>]
     &nbsp; • &nbsp;
-    [<a href="https://blog.miloszgilga.pl" target="_blank"><strong>Blog</strong></a>]
+    [<a href="https://blog.miloszgilga.pl" target="_blank">Blog</a>]
     &nbsp; • &nbsp;
     [<a href="https://www.linkedin.com/in/miloszgilga" target="_blank">LinkedIn</a>]
     &nbsp; • &nbsp;
