@@ -1,6 +1,6 @@
 Master of Science in Engineering (MSc Eng), Computer Science, Silesian University of Technology.
 
-My primary area of expertise is **multimedia processing**, with a specific focus on:
+My primary area of interests is **multimedia processing**, with a specific focus on:
 
 - **Digital image processing:** Including medical imaging, wavelet algorithms and computer vision.
 - **Real-time data streaming:** Designing scalable audio, video or others transmission systems for distributed network environments.
