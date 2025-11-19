@@ -2,9 +2,9 @@ Master of Science in Engineering (MSc Eng), Computer Science, Silesian Universit
 
 My primary area of interests is **multimedia processing**, with a specific focus on:
 
-- **Digital image processing:** Including medical imaging, wavelet algorithms and computer vision.
-- **Real-time data streaming:** Designing scalable audio, video or others transmission systems for distributed network environments.
-- **Secure data transfer:** Implementing secure archiving and transfer protocols for multimedia using advanced encryption techniques.
+- digital image processing including medical imaging, wavelet algorithms and computer vision,
+- designing scalable audio, video or others real-time transmission systems for distributed network environments,
+- implementing secure archiving and transfer protocols for multimedia using advanced encryption techniques.
 
 ### 🎓 Academic & research background
 
