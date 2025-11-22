@@ -14,7 +14,7 @@ Analysis of a discrete wavelet transform without dyadic subsampling (SWT), augme
 **Engineering thesis:**
 A demonstration of communication capabilities in a highly distributed microservice infrastructure. The project utilized Apache Kafka and an event-driven architecture to build a real-time chat application in JVM environment and Netflix microservices stack. [Source code and Thesis (LaTeX)](https://github.com/visphere).
 
-### Selected project
+### Selected projects
 
 - [jwizard](https://github.com/jwizard-bot) - a highly distributed Discord music bot playing audio from various multimedia sources,
 - [event-proxy-system](https://github.com/milosz08/event-proxy-system) - a lightweight event proxy system with dummy SMTP service,
