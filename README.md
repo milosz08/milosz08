@@ -24,8 +24,8 @@ A demonstration of communication capabilities in a highly distributed microservi
 - [milosz08](https://github.com/milosz08/milosz08) - personal website build on top of the my own blazing fast and concurrency Java SSG engine,
 - [gemini-auto-temp-chat](https://github.com/milosz08/gemini-auto-temp-chat) - web extension for turn on or off Gemini temporary chat immediately after page load,
 - [vault-auto-initializer-image](https://github.com/milosz08/vault-auto-initializer-image) - creating KV engine, storage and secrets from environment variables (local envs),
-- [optic-nerve-disc-detector](https://github.com/milosz08/optic-nerve-disc-detector) - based on circle Hough transform, self-estimating best result fn and Canny's edge detector,
-- [turing-machine-simulator](https://github.com/milosz08/turing-machine-simulator) - a single-tape Turing Machine simulator with ASM syntax and own custom AoT compiler.
+- [optic-nerve-disc-detector](https://github.com/milosz08/optic-nerve-disc-detector) - based on circle Hough transform, self-est best result fn and Canny's edge detector,
+- [turing-machine-simulator](https://github.com/milosz08/turing-machine-simulator) - a single-tape Turing Machine with ASM syntax and own AoT compiler.
  
 ---
 
