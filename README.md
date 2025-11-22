@@ -23,6 +23,7 @@ A demonstration of communication capabilities in a highly distributed microservi
 - [image-encryption-lorenz-attractor](https://github.com/milosz08/image-encryption-lorenz-attractor) - encryption using chaotic Lorenz attractor with FFT spectrum analysis,
 - [milosz08](https://github.com/milosz08/milosz08) - personal website build on top of the my own blazing fast and concurrency Java SSG engine,
 - [gemini-auto-temp-chat](https://github.com/milosz08/gemini-auto-temp-chat) - web extension for turn on or off Gemini temporary chat immediately after page load,
+- [tv-archives-aggregator](https://github.com/milosz08/tv-archives-aggregator) - scrapping content and indexing it with more comfortable search system,
 - [vault-auto-initializer-image](https://github.com/milosz08/vault-auto-initializer-image) - creating KV engine, storage and secrets from environment variables (local envs),
 - [optic-nerve-disc-detector](https://github.com/milosz08/optic-nerve-disc-detector) - based on circle Hough transform, self-est best result fn and Canny's edge detector,
 - [turing-machine-simulator](https://github.com/milosz08/turing-machine-simulator) - a single-tape Turing Machine with ASM syntax and own AoT compiler.
