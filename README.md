@@ -16,8 +16,8 @@ A demonstration of communication capabilities in a highly distributed microservi
 
 ### Selected projects
 
-- [jwizard](https://github.com/jwizard-bot) - a highly distributed Discord music bot playing audio from various multimedia sources,
-- [event-proxy-system](https://github.com/milosz08/event-proxy-system) - a lightweight event proxy system with dummy SMTP service,
+- [jwizard](https://github.com/jwizard-bot) - highly distributed Discord music bot playing audio from various multimedia sources,
+- [event-proxy-system](https://github.com/milosz08/event-proxy-system) - lightweight event proxy system with dummy SMTP service,
 - [webrtc-hangout-app](https://github.com/milosz08/webrtc-hangout-app) - video hangout app using WebRTC together with signaling servers,
 - [screen-sharing-system](https://github.com/milosz08/screen-sharing-system) - mutithreading screen sharing system with my own RTP created from scratch,
 - [image-encryption-lorenz-attractor](https://github.com/milosz08/image-encryption-lorenz-attractor) - encryption using chaotic Lorenz attractor with FFT spectrum analysis,
@@ -26,7 +26,7 @@ A demonstration of communication capabilities in a highly distributed microservi
 - [tv-archives-aggregator](https://github.com/milosz08/tv-archives-aggregator) - scrapping content and indexing it with more comfortable search system,
 - [vault-auto-initializer-image](https://github.com/milosz08/vault-auto-initializer-image) - creating KV engine, storage and secrets from environment variables (local envs),
 - [optic-nerve-disc-detector](https://github.com/milosz08/optic-nerve-disc-detector) - based on circle Hough transform, self-est best result fn and Canny's edge detector,
-- [turing-machine-simulator](https://github.com/milosz08/turing-machine-simulator) - a single-tape Turing Machine with ASM syntax and own AoT compiler.
+- [turing-machine-simulator](https://github.com/milosz08/turing-machine-simulator) - single-tape Turing Machine with ASM syntax and own AoT compiler.
  
 ---
 
