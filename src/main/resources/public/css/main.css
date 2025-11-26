@@ -78,6 +78,10 @@ a:not(:has(img))::after {
 	background-position: center;
 }
 
+a.a--disabled-arrow::after {
+	display: none;
+}
+
 hr {
 	border-width: 0;
 	width: calc(var(--safety-width) - 40px);
