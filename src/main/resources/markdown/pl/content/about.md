@@ -121,5 +121,5 @@ Technologie, które znam i używałem w przeszłych projektach:
 
 ## Hobby
 
-Prywatnie domator, entuzjasta muzyki filmowej, klasycznej oraz wielogatunkowej, koneser niezależnych arthouse'owych
-produkcji filmowych oraz oprogramowania Open Source.
+Zajawkowicz automatyki domowej i systemów automatyki multimedialnej. Internetowy archeolog oraz oddany fan muzyki i
+niezależnych arthouse'owych produkcji filmowych. Aktywny archiwizator i użytkownik nośników analogowych.

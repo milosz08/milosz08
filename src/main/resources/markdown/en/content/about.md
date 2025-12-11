@@ -116,5 +116,5 @@ Technologies I know and have used in the past:
 
 ## Hobby
 
-Privately a homebody, an enthusiast of film music, classical, and cross-genre music, a connoisseur of independent
-arthouse movies and Open Source software.
+Home automation and multimedia automation systems geek. Internet archaeologist and devoted fan of independent music and
+arthouse independent motion picture productions. Active archivist and enthusiast of analog media.
