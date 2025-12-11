@@ -9,7 +9,7 @@ Znajdziesz mnie na:
 
 oraz:
 
-{{badge 'last.fm$last.fm$D51007$https://www.last.fm/user/milosz08'}}
+{{badge 'youtube music$youtubemusic$D51007$https://music.youtube.com/playlist?list=PLSBhmz5hcdUHv-fpRTYqh8uRf_GEXC_Dg'}}
 {{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
 {{badge 'discogs$discogs$E7E7E7$https://www.discogs.com/user/milosz80/collection'}}
 
