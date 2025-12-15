@@ -121,5 +121,5 @@ Technologie, które znam i używałem w przeszłych projektach:
 
 ## Hobby
 
-Pasjonat automatyki domowej i systemów multimedialnych. Internetowy archeolog, miłośnik kina arthouse'owego oraz brzmień
-alternatywnych. Aktywny archiwizator i użytkownik nośników analogowych.
+Pasjonat automatyki domowej i systemów automatyki multimedialnej. Internetowy archeolog, miłośnik kina arthouse'owego
+oraz brzmień alternatywnych. Aktywny archiwizator i użytkownik nośników analogowych.
