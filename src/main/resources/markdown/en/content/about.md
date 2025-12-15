@@ -116,5 +116,5 @@ Technologies I know and have used in the past:
 
 ## Hobby
 
-Home automation and multimedia automation systems geek. Internet archaeologist and devoted fan of independent music and
-arthouse independent motion picture productions. Active archivist and enthusiast of analog media.
+Home automation and multimedia systems enthusiast. Internet archaeologist, lover of arthouse cinema and alternative
+sounds. Active archivist and user of analog media.
