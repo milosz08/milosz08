@@ -9,7 +9,7 @@ You can find me on:
 
 and also:
 
-{{badge 'youtube music$youtubemusic$D51007$https://music.youtube.com/playlist?list=PLSBhmz5hcdUHv-fpRTYqh8uRf_GEXC_Dg'}}
+{{badge 'spotify$spotify$1ED760$https://open.spotify.com/user/31olokftm5lcfpwb5ka5muqr7u2a'}}
 {{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
 {{badge 'discogs$discogs$E7E7E7$https://www.discogs.com/user/milosz80/collection'}}
 
