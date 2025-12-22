@@ -56,7 +56,7 @@ microservices stack. [Source code and Thesis (LaTeX)](https://github.com/vispher
   &nbsp; • &nbsp;
   [<a href="https://m2.miloszgilga.pl" target="_blank">M2 OSS Central</a>]
   &nbsp; • &nbsp;
-  [<a href="https://music.youtube.com/playlist?list=PLSBhmz5hcdUHv-fpRTYqh8uRf_GEXC_Dg" target="_blank">Music</a>]
+  [<a href="https://open.spotify.com/user/31olokftm5lcfpwb5ka5muqr7u2a" target="_blank">Spotify</a>]
   &nbsp; • &nbsp;
   [<a href="https://letterboxd.com/xenomorph8" target="_blank">Letterboxd</a>]
 </p>
