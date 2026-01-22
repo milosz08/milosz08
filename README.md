@@ -22,8 +22,8 @@ microservices stack. [Source code and Thesis (LaTeX)](https://github.com/vispher
 
 - [jwizard](https://github.com/jwizard-bot) - highly distributed Discord music bot playing audio from various multimedia
   sources,
-- [home-theater-automation-system](https://github.com/home-theater-automation-system) - based on ESP32, ESP-IDF &
-  FreeRTOS, WSS (with CA cert), RS232/485, W5500 hardware and native Android app,
+- [home-theater-automation-system](https://github.com/home-theater-automation-system) - based on ESP32, FreeRTOS, WSS,
+  RS232/485 and Android app,
 - [event-proxy-system](https://github.com/milosz08/event-proxy-system) - lightweight event proxy system with dummy SMTP
   service,
 - [webrtc-hangout-app](https://github.com/milosz08/webrtc-hangout-app) - video hangout app using WebRTC together with
