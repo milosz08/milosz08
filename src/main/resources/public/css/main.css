@@ -1,8 +1,8 @@
 :root {
-	--main-bg: #fafafa;
-	--main-text: #101828;
-	--main-text-tint: #364153;
-	--separator: #e5e7eb;
+	--main-bg: #111111;
+	--main-text: #ffffff;
+	--main-text-tint: #d1d5dc;
+	--separator: #364153;
 	--safety-width: 926px;
 }
 
