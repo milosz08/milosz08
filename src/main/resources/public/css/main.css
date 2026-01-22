@@ -69,13 +69,18 @@ a {
 a:not(:has(img))::after {
 	content: '';
 	display: inline-block;
-	width: 0.8em;
-	height: 0.8em;
+	width: 1em;
+	height: 1em;
 	margin-left: 0.1em;
-	background-image: url('../icons/external-link.svg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
+	background-color: currentColor;
+	-webkit-mask-image: url('../icons/external-link.svg');
+	-webkit-mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: url('../icons/external-link.svg');
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-position: center;
 }
 
 a.a--disabled-arrow::after {
