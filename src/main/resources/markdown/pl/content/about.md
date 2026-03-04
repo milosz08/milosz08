@@ -91,7 +91,7 @@ innych języków (Scala, C++, Matlab, R) w tym tych _egzotycznych_ (wspomniany w
 Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 
 * JVM (Kotlin, Java, Scala; ekosystemy Spring'a oraz Spring Boot'a),
-* C/C++ (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów: SRT, OpenCV, LavaDSP),
+* C/C++ (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów: SRT, OpenCV, LavaDSP, IoT: ESP-IDF),
 * Python (automatyzacja procesów, cyfrowe przetwarzanie obrazów, symulacje naukowe: OpenCV, Pandas, PyWavelets,
   Matplotlib, Numpy, Scipy),
 * JavaScript/TypeScript (wraz z Next.js i ekosystemem React'a: Redux Toolkit, RTK Query oraz Tanstack Query; strony

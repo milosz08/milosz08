@@ -87,7 +87,7 @@ _exotic_ (the aforementioned [Elixir](https://elixir-lang.org) language).
 Technologies I am working with in my current projects:
 
 * JVM (Kotlin, Java, Scala; Spring and Spring Boot ecosystems),
-* C/C++ (JNI, DSP in field of audio modulation and multimedia processing: SRT, OpenCV, LavaDSP),
+* C/C++ (JNI, DSP in field of audio modulation and multimedia processing: SRT, OpenCV, LavaDSP, IoT: ESP-IDF),
 * Python (process automation, digital images processing, scientific simulations: OpenCV, Pandas, PyWavelets, Matplotlib,
   Numpy, Scipy),
 * JavaScript/TypeScript (with Next.js and React ecosystem: Redux Toolkit, RTK Query and Tanstack Query;
