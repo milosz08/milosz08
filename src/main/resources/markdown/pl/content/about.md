@@ -103,6 +103,7 @@ Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 * Analityka i monitorowanie (Prometheus z rozszerzeniami, Grafana, BetterStack, Portainer, Loki + Promtail, Umami,
   Sentry),
 * DevOps (Cloudflare, CF Zero Trust, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
+* Android (Jetpack compose, Kotlin coroutines),
 * LaTeX (book, article, beamer).
 
 Technologie, które znam i używałem w przeszłych projektach:
@@ -117,7 +118,7 @@ Technologie, które znam i używałem w przeszłych projektach:
 * AWS (EC2, Lambda, KMS, S3, DynamoDB),
 * Matlab (cyfrowe przetwarzanie sygnałów/obrazów),
 * PHP (natywny),
-* Android (Java).
+* Android (Java, XML view system).
 
 ## Hobby
 

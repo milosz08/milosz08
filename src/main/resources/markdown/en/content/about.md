@@ -98,6 +98,7 @@ Technologies I am working with in my current projects:
 * Self-hosted servers management (Debian based distributions),
 * Analytics and monitoring (Prometheus with plugins, Grafana, BetterStack, Portainer, Loki + Promtail, Umami, Sentry),
 * DevOps (Cloudflare, CF Zero Trust, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
+* Android (Jetpack compose, Kotlin coroutines),
 * LaTeX (book, article, beamer).
 
 Technologies I know and have used in the past:
@@ -112,7 +113,7 @@ Technologies I know and have used in the past:
 * AWS (EC2, Lambda, KMS, S3, DynamoDB),
 * Matlab (digital signals/images processing),
 * PHP (native),
-* Android (Java).
+* Android (Java, XML view system).
 
 ## Hobby
 
