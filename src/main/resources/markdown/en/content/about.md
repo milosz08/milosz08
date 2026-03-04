@@ -113,7 +113,7 @@ Technologies I know and have used in the past:
 * AWS (EC2, Lambda, KMS, S3, DynamoDB),
 * Matlab (digital signals/images processing),
 * PHP (native),
-* Android (Java, XML view system).
+* Android (Java, XML views system).
 
 ## Hobby
 

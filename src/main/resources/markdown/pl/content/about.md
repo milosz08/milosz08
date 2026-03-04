@@ -118,7 +118,7 @@ Technologie, które znam i używałem w przeszłych projektach:
 * AWS (EC2, Lambda, KMS, S3, DynamoDB),
 * Matlab (cyfrowe przetwarzanie sygnałów/obrazów),
 * PHP (natywny),
-* Android (Java, XML view system).
+* Android (Java, systemy widoków XML).
 
 ## Hobby
 
