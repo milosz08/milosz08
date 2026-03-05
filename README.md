@@ -1,4 +1,4 @@
-Master of Science in Engineering (MSc Eng), Computer Science, Silesian University of Technology.
+Master of Science in Engineering (MSc Eng), Computer Science. Cybersecurity student. Silesian University of Technology.
 
 My primary area of interests is **multimedia processing**, with a specific focus on:
 
