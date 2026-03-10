@@ -47,7 +47,7 @@ from application code and CI/CD pipeline configuration to the management of all 
 	* Grade: 5 (4.82).
 	* My master’s thesis focused on the analysis of a discrete wavelet transform without dyadic subsampling, augmented
 	  with a novel subband weight estimator, for the purpose of edge detection in digital images heavily corrupted by
-	  high-frequency noise. Presentation with results available on my [LinkedIn](https://www.linkedin.com/in/miloszgilga).
+	  high-frequency noise. Source code and thesis (in LaTeX) you find [here](https://github.com/milosz08/master-thesis).
 	* Additional achievements: awarded the Rector's Scholarship for outstanding academic performance.
 
 * **2020 - 2024**: (Eng) Computer Science, Silesian University of Technology,

@@ -48,8 +48,8 @@ chmurową i sieciową kończąc.
 	* Ocena: 5 (4.82).
 	* Moja praca magisterska skupiała się na analizie wykorzystania pozbawionej diadycznego podpróbkowania dyskretnej
 	  transformacji falkowej, wzbogaconej o autorski estymator wag podpasm dekompozycji w zastosowaniach detekcji krawędzi
-	  na obrazach silnie zakłóconych wysokoczęstotliwościowym szumem cyfrowym. Wyniki (w formie prezentacji) dostępne są
-	  na moim koncie [LinkedIn](https://www.linkedin.com/in/miloszgilga).
+	  na obrazach silnie zakłóconych wysokoczęstotliwościowym szumem cyfrowym. Treść (w LaTeX) oraz kod źródłowy mojej
+    pracy dyplomowej znajdziesz [tutaj](https://github.com/milosz08/master-thesis).
 	* Dodatkowe osiągnięcia: stypendium rektora za wybitne wyniki w nauce.
 
 * **2020 - 2024**: (inż.) Informatyka - profil ogólnoakademicki, Politechnika Śląska:
