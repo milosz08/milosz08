@@ -12,12 +12,12 @@ My primary area of interests is **multimedia processing**, with a specific focus
 **Master's thesis:**
 Analysis of a discrete wavelet transform without dyadic subsampling (SWT), augmented with a novel subband weight
 estimator, designed for edge detection in digital images heavily corrupted by high-frequency
-noise. [View presentation and results on LinkedIn](https://www.linkedin.com/in/miloszgilga).
+noise. [Source code and thesis (LaTeX)](https://github.com/milosz08/master-thesis).
 
 **Engineering thesis:**
 A demonstration of communication capabilities in a highly distributed microservice infrastructure. The project utilized
 Apache Kafka and an event-driven architecture to build a real-time chat application in JVM environment and Netflix
-microservices stack. [Source code and Thesis (LaTeX)](https://github.com/visphere).
+microservices stack. [Source code and thesis (LaTeX)](https://github.com/visphere).
 
 ### Selected projects
 
