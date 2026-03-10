@@ -3,8 +3,8 @@ Master of Science in Engineering (MSc Eng), Computer Science. Cybersecurity stud
 My primary area of interests is **multimedia processing**, with a specific focus on:
 
 - digital signal processing including medical imaging, wavelet algorithms and computer vision,
-- designing scalable audio, video or others real-time transmission systems for distributed network environments,
-- implementing secure archiving and transfer protocols for multimedia using advanced encryption techniques.
+- designing scalable audio, video or other real-time transmission systems for distributed network environments,
+- implementing secure archiving and transfer protocols using wavelet-based steganography and advanced encryption techniques.
 
 ### Academic & research background
 
