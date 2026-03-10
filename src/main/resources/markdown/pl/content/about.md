@@ -65,11 +65,11 @@ chmurową i sieciową kończąc.
 Moje zainteresowania skupiają się w głównej mierze wokół tematów związanych z przetwarzaniem danych multimedialnych,
 wliczając w to przede wszystkim:
 
-* cyfrowe przetwarzanie obrazu, w tym obrazowanie medyczne i wizja komputerowa,
-* projektowanie aplikacji do strumieniowego przesyłania audio/wideo w czasie rzeczywistym dla wysoce rozproszonych
-  środowisk,
-* bezpieczny transfer w sieci Internet oraz archiwizację danych multimedianych z wykorzystaniem wybranych technik
-  szyfrowania.
+* cyfrowe przetwarzanie sygnałów, w tym obrazowanie medyczne, algorytmy falkowe i wizja komputerowa,
+* projektowanie skalowalnych systemów transmisji audio/wideo w czasie rzeczywistym dla rozproszonych środowisk
+  sieciowych,
+* archiwizację i kodowanie multimediów (architektury typu embedder/extractor) z wykorzystaniem steganografii falkowej
+  oraz wybranych technik szyfrowania.
 
 Podczas mojej dotychczasowej edukacji nabyłem specjalistyczne umiejętności z zakresu:
 

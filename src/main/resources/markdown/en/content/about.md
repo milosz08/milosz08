@@ -62,9 +62,10 @@ from application code and CI/CD pipeline configuration to the management of all 
 
 My interests are mainly focused on topics related to multimedia data processing, primarily including:
 
-* digital image processing, including medical imaging and computer vision,
-* designing applications for real-time audio/video streaming in highly distributed environments,
-* secure internet transfer and archiving of multimedia data using selected encryption techniques.
+* digital signal processing including medical imaging, wavelet algorithms and computer vision,
+* designing scalable audio, video or other real-time transmission systems for distributed network environments,
+* archiving and multimedia encoding (embedder/extractor architectures) using wavelet-based steganography and selected
+  encryption techniques.
 
 Throughout my education, I have acquired specialized skills in:
 
