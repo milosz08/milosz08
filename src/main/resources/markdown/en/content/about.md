@@ -62,6 +62,22 @@ infrastructure maintenance.
 
 * **2017 - 2020**: High School, biology-chemistry profile.
 
+## Independent research
+
+* **Steganography in complex wavelet domains**: <br>
+  Research on leveraging fixed-point DTCWT, QAM modulation, and multimodal techniques (transient detection) for data
+  hiding in image signals. (2026 - current)
+* **Experimental stream cipher (Lorenz attractor)**: <br>
+  Custom cryptosystem leveraging chaos theory. Utilized differential equation solvers and Lyapunov exponents for
+  pseudorandom keystream generation. Image encryption security was mathematically validated via 2D-FFT spectral
+  analysis. (2025)
+* **Subband weight estimation in wavelet decomposition**: <br>
+  A noise reduction model utilizing an approximated Gaussian function to determine the weights of successive wavelet
+  decomposition subbands. This approach formed the basis of the master’s thesis. (2024 - 2025)
+* **Custom encrypted video streaming protocol**: <br>
+  Engineered a low-latency, encrypted (AES-CTR) real-time video protocol over UDP. Implemented application-layer (L7)
+  packet fragmentation respecting MTU limits. (2023)
+
 ## Interests and abilities
 
 My interests are mainly focused on topics related to multimedia data processing, primarily including:

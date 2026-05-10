@@ -62,6 +62,22 @@ procesów CI/CD, aż po utrzymanie infrastruktury chmurowej i sieciowej.
 
 * **2017 - 2020**: Liceum ogólnokształcące, profil biologiczno-chemiczny.
 
+## Niezależna działaność badawcza
+
+* **Steganografia w dziedzinie transformacji falkowych** <br>
+  Badania nad wykorzystaniem stałoprzecinkowej DTCWT, modulacji QAM oraz technik multimodalnych (detekcja transientów) w
+  celu ukrywania danych w sygnałach obrazowych. (2026 - obecnie)
+* **Eksperymentalny algorytm szyfrowania strumieniowego (atraktor Lorenza)**: <br>
+  Kryptosystem oparty na teorii chaosu. Zastosowano numeryczne solvery równań różniczkowych i analizę wykładnika
+  Lapunowa do generacji kluczy pseudolosowych. Skuteczność szyfrowania obrazów dowiedziono analizą widmową 2D-FFT.
+  (2025)
+* **Estymacja wag podpasm dekompozycji falkowej**: <br>
+  Model redukcji szumu, w którym aproksymowana funkcja Gaussa wyznaczała wagi kolejnych podpasm dekompozycji falkowej.
+  Rozwiązanie to posłużyło jako podstawa pracy magisterskiej. (2024 - 2025)
+* **Autorski protokół strumieniowania wideo**: <br>
+  Zaprojektowanie szyfrowanego (AES-CTR) protokołu czasu rzeczywistego opartego na UDP. Zaimplementowano autorską
+  fragmentację uwzględniającą limity MTU oraz obsługę utraty pakietów w warstwie aplikacji (L7). (2023)
+
 ## Zainteresowania i umiejętności
 
 Moje zainteresowania skupiają się w głównej mierze wokół tematów związanych z przetwarzaniem danych multimedialnych,
