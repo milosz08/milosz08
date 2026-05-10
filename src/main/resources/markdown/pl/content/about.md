@@ -20,25 +20,27 @@ oraz:
 
 ## O mnie
 
+{{badge 'pobierz cv$$C70039$https://cv.miloszgilga.pl?lang=pl'}}
 {{badge 'projekty$$232925$/pl/projects'}}
-{{badge 'blog (artykuły)$$232925$https://blog.miloszgilga.pl'}}
+{{badge 'blog (artykuły)$$6D498C$https://blog.miloszgilga.pl'}}
 
-Absolwent studiów magisterskich z Informatyki na Politechnice Śląskiej. Pasjonuję się tworzeniem niestandardowych
-systemów - zarówno autonomicznych, jak i złożonych rozwiązań sieciowych. Mimo biegłej znajomości nowoczesnych
-frameworków, takich jak Spring Boot, chętnie sięgam po autorskie rozwiązania, opierając się na dogłębnej znajomości
-fundamentalnych technologii. Posiadam doświadczenie w pracy z lekkimi, wbudowanymi kontenerami aplikacji (Jetty) oraz w
-niskopoziomowym programowaniu z użyciem surowych gniazd TCP/UDP.
+Absolwent studiów magisterskich z Informatyki na Politechnice Śląskiej, specjalizujący się w rozwoju oprogramowania i
+*platform engineeringu*. Pasjonat rozwiązań wymagających wejścia "pod maskę" systemu. Biegle korzystam z nowoczesnych
+standardów (Spring Boot), jednak fundamentem mojego warsztatu jest głęboka znajomość protokołów sieciowych, surowych
+gniazd TCP/UDP oraz lekkich serwerów wbudowanych (Jetty). Jako *platform engineer* łączę wiedzę z zakresu
+niskopoziomowej architektury z projektowaniem skalowalnej infrastruktury, protokołów i potoków CI/CD.
 
 Moje kompetencje w inżynierii oprogramowania uzupełniam o zainteresowania badawcze związane z przetwarzaniem danych
 multimedialnych. W ramach czasu wolnego poszerzam swoje umiejętności w zakresie praktycznego wykorzystania metod
-łączących głębokie sieci neuronowe z algorytmami falkowymi do przetwarzania sygnałów (obrazów i dźwięków), w kontekście
-automatycznej ekstrakcji cech (segmentacja, polifonia).
+łączących techniki steganograficzne z algorytmami falkowymi do przetwarzania sygnałów (obrazów i dźwięków), w kontekście
+zaszywania treści i szeroko pojętego watermarkingu.
 
-Obecnie skupiam się na rozwijaniu wysoce rozproszonej, modułowej, skalowalnej i odpornej na błędy platformy
-[JWizard](https://github.com/jwizard-bot) - otwartoźródłowego oprogramowania, opartego głównie o języki Kotlin, Python
-oraz Typescript umożliwiającego odtwarzanie treści audio na kanałach głosowych Discord. Osobiście odpowiadam za cały
-cykl życia projektu, począwszy od kodu aplikacji, poprzez konfigurację procesów CI/CD, a na zarządzaniu infrastrukturą
-chmurową i sieciową kończąc.
+Obecnie rozwijam [JWizard](https://github.com/jwizard-bot) - wysoce rozproszoną, skalowalną i odporną na błędy platformę
+open-source dostarczającą strumienie audio na kanały głosowe Discord (wykorzystującą Javę, Kotlin, Pythona i
+TypeScript). Projekt znajduje się w trzeciej iteracji, w ramach której przeprowadzam migrację z modularnego monolitu do
+architektury mikroserwisowej (architektura heksagonalna). Głównym celem tej zmiany jest maksymalizacja przepustowości i
+eliminacja wąskich gardeł systemu. Prowadzę ten projekt kompleksowo: od tworzenia kodu, przez automatyzację
+procesów CI/CD, aż po utrzymanie infrastruktury chmurowej i sieciowej.
 
 ## Edukacja
 
@@ -49,7 +51,7 @@ chmurową i sieciową kończąc.
 	* Moja praca magisterska skupiała się na analizie wykorzystania pozbawionej diadycznego podpróbkowania dyskretnej
 	  transformacji falkowej, wzbogaconej o autorski estymator wag podpasm dekompozycji w zastosowaniach detekcji krawędzi
 	  na obrazach silnie zakłóconych wysokoczęstotliwościowym szumem cyfrowym. Treść (w LaTeX) oraz kod źródłowy mojej
-    pracy dyplomowej znajdziesz [tutaj](https://github.com/milosz08/master-thesis).
+	  pracy dyplomowej znajdziesz [tutaj](https://github.com/milosz08/master-thesis).
 	* Dodatkowe osiągnięcia: stypendium rektora za wybitne wyniki w nauce.
 
 * **2020 - 2024**: (inż.) Informatyka - profil ogólnoakademicki, Politechnika Śląska:
@@ -80,47 +82,49 @@ Podczas mojej dotychczasowej edukacji nabyłem specjalistyczne umiejętności z 
 * podstaw biologii i chemii umożliwiających swobodne poruszanie się wśród zagadnień związanych z bioinformatyką i
   informatyką medyczną (cyfrowe przetwarzanie obrazów biomedycznych).
 
-Jestem entuzjastą języków działających na JVM takich jak Java, Kotlin i Scala, ale również bardziej _egzotycznych_
-jak [Elixir](https://elixir-lang.org). Posiadam znajomość wielu popularnych języków programowania w stopniu biegłym
-(Java, Kotlin, Javascript, Typescript, PHP, C#, C, Python) oraz w większym lub mniejszym stopniu znam podstawy kilku
-innych języków (Scala, C++, Matlab, R) w tym tych _egzotycznych_ (wspomniany wcześniej język
-[Elixir](https://elixir-lang.org)).
+Biegle programuję w takich językach jak Java, Kotlin, TypeScript, C#, C oraz Python. Posiadam również praktyczną
+znajomość Scali, C++, Matlaba i R. Obecnie poszerzam swoje kompetencje o paradygmat programowania funkcyjnego, aktywnie
+ucząc się języka [Elixir](https://elixir-lang.org).
 
 ## Technologie
 
 Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 
-* JVM (Kotlin, Java, Scala; ekosystemy Spring'a oraz Spring Boot'a),
-* C/C++ (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów: SRT, OpenCV, LavaDSP, IoT: ESP-IDF),
+* JVM (Kotlin, Java; ekosystemy Spring'a oraz Spring Boot'a),
+* C (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów: OpenCV, LavaDSP, IoT: ESP-IDF),
+* TCP, UDP, HTTP, REST, WebSocket, SSE, Protobuf, MQTT, AMQP, mDNS, RTMP, SRT, STUN/TURN,
 * Python (automatyzacja procesów, cyfrowe przetwarzanie obrazów, symulacje naukowe: OpenCV, Pandas, PyWavelets,
   Matplotlib, Numpy, Scipy),
-* JavaScript/TypeScript (wraz z Next.js i ekosystemem React'a: Redux Toolkit, RTK Query oraz Tanstack Query; strony
-  internetowe i szybkie prototypowanie),
+* TypeScript (wraz z Next.js i ekosystemem React'a: Redux Toolkit, RTK Query oraz Tanstack Query; strony internetowe i
+  szybkie prototypowanie), Electron,
+* MySQL, SQLite, PostgreSQL, Redis (KV, PubSub), Neo4j,
 * Brokerzy wiadomości (RabbitMQ),
-* GCP (Google Cloud Platform: KMS, Compute Engine, GCS),
+* GCP (Google Cloud Platform: KMS, Compute Engine, GCS, serverless),
 * OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
 * Zarządzanie serwerami typu self-hosted (dystrybucje oparte na Debianie),
 * Analityka i monitorowanie (Prometheus z rozszerzeniami, Grafana, BetterStack, Portainer, Loki + Promtail, Umami,
   Sentry),
-* DevOps (Cloudflare, CF Zero Trust, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
+* DevOps (Cloudflare, CF Zero Trust, CF Workers (serverless), Nginx, Caddy, HashiCorp Vault, HashiCorp Terraform, Minio,
+  GitHub Actions, Docker),
 * Android (Jetpack compose, Kotlin coroutines),
 * LaTeX (book, article, beamer).
 
 Technologie, które znam i używałem w przeszłych projektach:
 
 * .NET (C#, ASP.NET WebAPI, WinForms),
+* C++ (niskopoziomowe programowanie sieciowe),
 * ekosystem Angular'a (wraz z RxJS),
 * Apache Kafka (rozproszone strumienie danych, architektura sterowana zdarzeniami),
 * mikroserwisy (architektura Spring Cloud),
 * Scilab (symulacje obwodów),
 * Apache Cassandra,
-* Redis,
 * AWS (EC2, Lambda, KMS, S3, DynamoDB),
 * Matlab (cyfrowe przetwarzanie sygnałów/obrazów),
-* PHP (natywny),
+* PHP,
 * Android (Java, systemy widoków XML).
 
 ## Hobby
 
-Pasjonat automatyki domowej i systemów automatyki multimedialnej. Internetowy archeolog, miłośnik kina arthouse'owego
-oraz brzmień alternatywnych. Aktywny archiwizator i użytkownik nośników analogowych.
+Entuzjasta systemów automatyki domowej i systemów automatyki multimedialnej. Archeolog internetowy, miłośnik kina
+niezależnego i alternatywnych brzmień. Aktywny archiwista i użytkownik nośników analogowych. Czytelnik literatury
+science fiction, kosmologicznej i Lovecraft'owskiego horroru.

@@ -20,24 +20,28 @@ and also:
 
 ## About me
 
+{{badge 'download cv$$C70039$https://cv.miloszgilga.pl?lang=en'}}
 {{badge 'projects$$232925$/projects'}}
-{{badge 'my blog (articles)$$232925$https://blog.miloszgilga.pl'}}
+{{badge 'my blog (articles)$$6D498C$https://blog.miloszgilga.pl'}}
 
-I am a Master of Science graduate in Computer Science from the Silesian University of Technology. I am passionate about
-creating custom systems, ranging from standalone applications to complex, network-based solutions. While highly
-proficient in modern frameworks like Spring Boot, I often develop bespoke solutions, relying on a deep understanding of
-foundational technologies. I have hands-on experience with lightweight embedded application containers, such as Jetty,
-and low-level programming with raw TCP/UDP sockets.
+MSc in Computer Science graduate from the Silesian University of Technology, specializing in Software Development and
+Platform Engineering. I am driven by a passion for technical solutions that require a "deep dive" under the system's
+hood. While I am highly proficient in modern standards like Spring Boot, my engineering foundation is built on an
+in-depth understanding of network protocols, raw TCP/UDP socket programming, and lightweight embedded servers like
+Jetty. As a Platform Engineer, I bridge the gap between low-level system architecture and the design of scalable
+infrastructure, custom protocols, and robust CI/CD pipelines. I leverage this expertise to build reliable,
+high-performance environments that empower developers and ensure system resilience.
 
-I complement my software engineering skills with research interests in multimedia data processing. In my free time, I
-expand my skills in the practical application of methods that combine deep neural networks with wavelet algorithms for
-signal processing (images and audio), particularly in the context of automatic feature extraction (e.g., segmentation,
-polyphony).
+I combine my software engineering expertise with a strong research interest in multimedia data processing. Privately, I
+explore practical applications of combining steganographic techniques with wavelet algorithms for digital signal
+processing (image and audio), focusing on data hiding and digital watermarking.
 
-Currently, my focus is on developing [JWizard](https://github.com/jwizard-bot), a highly distributed, modular, scalable,
-and fault-tolerant platform. It is an open-source software solution, primarily based on Kotlin, Python, and Typescript,
-that enables audio playback on Discord voice channels. I am personally responsible for the entire project lifecycle,
-from application code and CI/CD pipeline configuration to the management of all cloud and network infrastructure.
+Currently, I am developing [JWizard](https://github.com/jwizard-bot) - a highly distributed, scalable, and
+fault-tolerant open-source platform that delivers audio streams to Discord voice channels (built with Java, Kotlin,
+Python, and TypeScript). The project is now in its third iteration, undergoing a migration from a modular monolith to a
+microservices-based hexagonal architecture. This architectural shift aims to maximize throughput and eliminate system
+bottlenecks. I manage this project end-to-end: from software development and CI/CD automation to cloud and network
+infrastructure maintenance.
 
 ## Education
 
@@ -76,47 +80,48 @@ Throughout my education, I have acquired specialized skills in:
 * fundamentals of biology and chemistry enabling work with bioinformatics and medical informatics (digital processing of
   biomedical images).
 
-I am enthusiastic of languages running on the JVM such as Java, Kotlin and Scala, but also more _exotic_ ones such as
+I am proficient in Java, Kotlin, TypeScript, C#, C, and Python. Additionally, I have practical experience with Scala,
+C++, MATLAB, and R. Currently, I am expanding my expertise into the functional programming paradigm by actively learning
 [Elixir](https://elixir-lang.org).
-
-I am proficient in a number of popular programming languages (Java, Kotlin, Javascript, Typescript, PHP, C#, C, Python)
-and to a greater or lesser extent I know the basics of several other languages (Scala, C++, Matlab, R) including those
-_exotic_ (the aforementioned [Elixir](https://elixir-lang.org) language).
 
 ## Technologies
 
 Technologies I am working with in my current projects:
 
-* JVM (Kotlin, Java, Scala; Spring and Spring Boot ecosystems),
-* C/C++ (JNI, DSP in field of audio modulation and multimedia processing: SRT, OpenCV, LavaDSP, IoT: ESP-IDF),
+* JVM (Kotlin, Java; Spring and Spring Boot ecosystems),
+* C (JNI, DSP in field of audio modulation and multimedia processing: OpenCV, LavaDSP, IoT: ESP-IDF),
+* TCP, UDP, HTTP, REST, WebSocket, SSE, Protobuf, MQTT, AMQP, mDNS, RTMP, SRT, STUN/TURN,
 * Python (process automation, digital images processing, scientific simulations: OpenCV, Pandas, PyWavelets, Matplotlib,
   Numpy, Scipy),
-* JavaScript/TypeScript (with Next.js and React ecosystem: Redux Toolkit, RTK Query and Tanstack Query;
-  websites and rapid prototyping),
+* TypeScript (with Next.js and React ecosystem: Redux Toolkit, RTK Query and Tanstack Query; websites and rapid
+  prototyping), Electron,
+* MySQL, SQLite, PostgreSQL, Redis (KV, PubSub), Neo4j,
 * Message brokers (RabbitMQ),
-* GCP (Google Cloud Platform: KMS, Compute Engine, GCS),
+* GCP (Google Cloud Platform: KMS, Compute Engine, GCS, serverless),
 * OCI (Oracle Cloud Infrastructure: Compute, VCN, Block Storage),
 * Self-hosted servers management (Debian based distributions),
 * Analytics and monitoring (Prometheus with plugins, Grafana, BetterStack, Portainer, Loki + Promtail, Umami, Sentry),
-* DevOps (Cloudflare, CF Zero Trust, Nginx, Caddy, Hashicorp Vault, Minio, GitHub Actions, Docker),
+* DevOps (Cloudflare, CF Zero Trust, CF Workers (serverless), Nginx, Caddy, HashiCorp Vault, HashiCorp Terraform, Minio,
+  GitHub Actions, Docker),
 * Android (Jetpack compose, Kotlin coroutines),
 * LaTeX (book, article, beamer).
 
 Technologies I know and have used in the past:
 
 * .NET (C#, ASP.NET WebAPI, WinForms),
+* C++ (low-level network programming),
 * Angular ecosystem (with RxJS),
 * Apache Kafka (fault tolerant distributed data streams, event-driven architecture),
 * microservices (Spring Cloud architecture),
 * Scilab (circuits simulations),
 * Apache Cassandra,
-* Redis,
 * AWS (EC2, Lambda, KMS, S3, DynamoDB),
 * Matlab (digital signals/images processing),
-* PHP (native),
+* PHP,
 * Android (Java, XML views system).
 
 ## Hobby
 
 Home automation and multimedia automation systems enthusiast. Internet archaeologist, lover of arthouse cinema and
-alternative sounds. Active archivist and user of analog media.
+alternative sounds. Active archivist and user of analog media. Reader of science fiction, cosmological literature, and
+Lovecraftian horror.
