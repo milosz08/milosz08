@@ -108,7 +108,7 @@ Technologie, z którymi pracuję przy rozwijanych przeze mnie projektach:
 
 * JVM (Kotlin, Java; ekosystemy Spring'a oraz Spring Boot'a),
 * C (JNI, DSP w zakresie modulacji dźwięku i przetwarzanie multimediów: OpenCV, LavaDSP, IoT: ESP-IDF),
-* TCP, UDP, HTTP, REST, WebSocket, SSE, Protobuf, MQTT, AMQP, mDNS, RTMP, SRT, STUN/TURN,
+* TCP, UDP, HTTP, REST, WebSocket, SSE, Protobuf, MQTT, AMQP, mDNS, RTMP, SRT, WebRTC, STUN/TURN,
 * Python (automatyzacja procesów, cyfrowe przetwarzanie obrazów, symulacje naukowe: OpenCV, Pandas, PyWavelets,
   Matplotlib, Numpy, Scipy),
 * TypeScript (wraz z Next.js i ekosystemem React'a: Redux Toolkit, RTK Query oraz Tanstack Query; strony internetowe i

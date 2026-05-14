@@ -106,7 +106,7 @@ Technologies I am working with in my current projects:
 
 * JVM (Kotlin, Java; Spring and Spring Boot ecosystems),
 * C (JNI, DSP in field of audio modulation and multimedia processing: OpenCV, LavaDSP, IoT: ESP-IDF),
-* TCP, UDP, HTTP, REST, WebSocket, SSE, Protobuf, MQTT, AMQP, mDNS, RTMP, SRT, STUN/TURN,
+* TCP, UDP, HTTP, REST, WebSocket, SSE, Protobuf, MQTT, AMQP, mDNS, RTMP, SRT, WebRTC, STUN/TURN,
 * Python (process automation, digital images processing, scientific simulations: OpenCV, Pandas, PyWavelets, Matplotlib,
   Numpy, Scipy),
 * TypeScript (with Next.js and React ecosystem: Redux Toolkit, RTK Query and Tanstack Query; websites and rapid
