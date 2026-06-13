@@ -142,5 +142,5 @@ Technologie, które znam i używałem w przeszłych projektach:
 ## Hobby
 
 Entuzjasta systemów automatyki domowej i systemów automatyki multimedialnej. Archeolog internetowy, miłośnik kina
-niezależnego i alternatywnych brzmień. Aktywny archiwista i użytkownik nośników analogowych. Czytelnik literatury
-science fiction, kosmologicznej i Lovecraft'owskiego horroru.
+niezależnego i alternatywnych brzmień. Prywatnie aktywny archiwista nośników analogowych i stały czytelnik literatury
+sci-fi, kosmologicznej, popularnonaukowej oraz opowiadań Lovecrafta.

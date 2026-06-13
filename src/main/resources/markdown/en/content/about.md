@@ -139,5 +139,5 @@ Technologies I know and have used in the past:
 ## Hobby
 
 Home automation and multimedia automation systems enthusiast. Internet archaeologist, lover of arthouse cinema and
-alternative sounds. Active archivist and user of analog media. Reader of science fiction, cosmological literature, and
-Lovecraftian horror.
+alternative sounds. Privately, an active archivist of analog media and a regular reader of sci-fi, cosmology, popular
+science, and Lovecraftian fiction.
