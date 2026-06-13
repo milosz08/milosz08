@@ -36,12 +36,12 @@ I combine my software engineering expertise with a strong research interest in m
 explore practical applications of combining steganographic techniques with wavelet algorithms for digital signal
 processing (image and audio), focusing on data hiding and digital watermarking.
 
-Currently, I am developing [JWizard](https://github.com/jwizard-bot) - a highly distributed, scalable, and
-fault-tolerant open-source platform that delivers audio streams to Discord voice channels (built with Java, Kotlin,
-Python, and TypeScript). The project is now in its third iteration, undergoing a migration from a modular monolith to a
-microservices-based hexagonal architecture. This architectural shift aims to maximize throughput and eliminate system
-bottlenecks. I manage this project end-to-end: from software development and CI/CD automation to cloud and network
-infrastructure maintenance.
+Currently, I am developing [NOISIF](https://github.com/noisif) (previously known as JWizard) - a highly distributed and
+scalable platform that delivers audio streams to Discord voice channels (built with Java, Kotlin, Python, and
+TypeScript). The project is now in its third iteration (after rebranding), undergoing a migration from a modular
+monolith to a microservices-based hexagonal architecture. This architectural shift aims to maximize throughput and
+eliminate system bottlenecks. I manage this project end-to-end: from software development and CI/CD automation to cloud
+and network infrastructure maintenance.
 
 ## Education
 

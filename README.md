@@ -21,7 +21,7 @@ microservices stack. [Source code and thesis (LaTeX)](https://github.com/vispher
 
 ### Selected projects
 
-- [jwizard](https://github.com/jwizard-bot) - highly distributed Discord audio platform and microservices with custom
+- [noisif](https://github.com/noisif) - highly distributed Discord audio platform and microservices with custom
   high-performance core framework,
 - [home-theater-automation-system](https://github.com/milosz08/home-theater-automation-system) - IoT project based on
   ESP32, FreeRTOS, WSS, RS232/485 and Android app,

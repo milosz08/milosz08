@@ -35,12 +35,12 @@ multimedialnych. W ramach czasu wolnego poszerzam swoje umiejętności w zakresi
 łączących techniki steganograficzne z algorytmami falkowymi do przetwarzania sygnałów (obrazów i dźwięków), w kontekście
 zaszywania treści i szeroko pojętego watermarkingu.
 
-Obecnie rozwijam [JWizard](https://github.com/jwizard-bot) - wysoce rozproszoną, skalowalną i odporną na błędy platformę
-open-source dostarczającą strumienie audio na kanały głosowe Discord (wykorzystującą Javę, Kotlin, Pythona i
-TypeScript). Projekt znajduje się w trzeciej iteracji, w ramach której przeprowadzam migrację z modularnego monolitu do
-architektury mikroserwisowej (architektura heksagonalna). Głównym celem tej zmiany jest maksymalizacja przepustowości i
-eliminacja wąskich gardeł systemu. Prowadzę ten projekt kompleksowo: od tworzenia kodu, przez automatyzację
-procesów CI/CD, aż po utrzymanie infrastruktury chmurowej i sieciowej.
+Obecnie rozwijam [NOISIF](https://github.com/noisif) (wcześniej znana jako JWizard) - wysoce rozproszoną i skalowalną
+platformę dostarczającą strumienie audio na kanały głosowe Discord (wykorzystującą Javę, Kotlin, Pythona i TypeScript).
+Projekt znajduje się w trzeciej iteracji (po rebrandingu), w ramach której przeprowadzam migrację z modularnego monolitu
+do architektury mikroserwisowej (architektura heksagonalna). Głównym celem tej zmiany jest maksymalizacja przepustowości
+i eliminacja wąskich gardeł systemu. Prowadzę ten projekt kompleksowo: od tworzenia kodu, przez automatyzację procesów
+CI/CD, aż po utrzymanie infrastruktury chmurowej i sieciowej.
 
 ## Edukacja
 
