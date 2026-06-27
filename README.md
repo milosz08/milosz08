@@ -9,7 +9,7 @@ My primary area of interests is **multimedia processing**, with a specific focus
 
 ### Academic & research background
 
-**Postgraduate thesis**
+**Postgraduate thesis:**
 Management strategy for application-level encryption and key lifecycle in IT infrastructure, compliant with the NIS2
 directive, in the face of post-quantum threats (ML-KEM, ML-DSA).
 
