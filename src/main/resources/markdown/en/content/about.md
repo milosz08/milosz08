@@ -46,6 +46,8 @@ and network infrastructure maintenance.
 ## Education
 
 * **2025 - current**: (postgraduate) Cyber Science - Cyber Management, NASK with Silesian University of Technology,
+	* My final thesis focused on management strategy for application-level encryption and key lifecycle in IT
+	  infrastructure, compliant with the NIS2 directive, in the face of post-quantum threats (ML-KEM, ML-DSA).
 
 * **2024 - 2025**: (MSc Eng) Computer Science, Silesian University of Technology,
 	* Grade: 5 (4.82).
