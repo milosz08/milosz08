@@ -10,7 +10,7 @@ Znajdziesz mnie na:
 oraz:
 
 {{badge 'spotify$spotify$1ED760$https://open.spotify.com/user/31olokftm5lcfpwb5ka5muqr7u2a'}}
-{{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
+{{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/milosz08'}}
 {{badge 'discogs$discogs$E7E7E7$https://www.discogs.com/user/milosz80/collection'}}
 
 ## Kontakt
