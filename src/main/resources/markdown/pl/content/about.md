@@ -67,6 +67,10 @@ CI/CD, aż po utrzymanie infrastruktury chmurowej i sieciowej.
 * **Steganografia w dziedzinie transformacji falkowych** <br>
   Badania nad wykorzystaniem stałoprzecinkowej DTCWT, modulacji QAM oraz technik multimodalnych (detekcja transientów) w
   celu ukrywania danych w sygnałach obrazowych. (2026 - obecnie)
+* **Badania wydajności hybrydowej bramy PQC-ZTNA (NIST FIPS 203/204)** <br>
+  Opracowanie hybrydowej postkwantowej architektury Zero Trust oraz przeprowadzenie badań wydajnościowych z użyciem
+  modelowania M/G/1 i analizy ECDF/KDE w celu wyznaczenia narzutu kryptograficznego i rekomendacji optymalizacji progów
+  skalowania HPA w środowisku K8s. (2026)
 * **Eksperymentalny algorytm szyfrowania strumieniowego (atraktor Lorenza)**: <br>
   Kryptosystem oparty na teorii chaosu. Zastosowano numeryczne solvery równań różniczkowych i analizę wykładnika
   Lapunowa do generacji kluczy pseudolosowych. Skuteczność szyfrowania obrazów dowiedziono analizą widmową 2D-FFT.

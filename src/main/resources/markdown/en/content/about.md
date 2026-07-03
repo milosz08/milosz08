@@ -67,6 +67,10 @@ and network infrastructure maintenance.
 * **Steganography in complex wavelet domains**: <br>
   Research on leveraging fixed-point DTCWT, QAM modulation, and multimodal techniques (transient detection) for data
   hiding in image signals. (2026 - current)
+* **Hybrid PQC-ZTNA gateway performance study (NIST FIPS 203/204)**: <br>
+  Development of a hybrid post-quantum Zero Trust architecture and execution of performance benchmarking using M/G/1
+  and ECDF/KDE statistical analysis to quantify cryptographic overhead and provide recommendations for optimizing K8s
+  HPA scaling thresholds. (2026)
 * **Experimental stream cipher (Lorenz attractor)**: <br>
   Custom cryptosystem leveraging chaos theory. Utilized differential equation solvers and Lyapunov exponents for
   pseudorandom keystream generation. Image encryption security was mathematically validated via 2D-FFT spectral
