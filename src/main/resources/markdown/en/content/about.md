@@ -10,7 +10,7 @@ You can find me on:
 and also:
 
 {{badge 'spotify$spotify$1ED760$https://open.spotify.com/user/31olokftm5lcfpwb5ka5muqr7u2a'}}
-{{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
+{{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/milosz08'}}
 {{badge 'discogs$discogs$E7E7E7$https://www.discogs.com/user/milosz80/collection'}}
 
 ## Contact
@@ -46,6 +46,8 @@ and network infrastructure maintenance.
 ## Education
 
 * **2025 - current**: (postgraduate) Cyber Science - Cyber Management, NASK with Silesian University of Technology,
+	* My final thesis focused on management strategy for application-level encryption and key lifecycle in IT
+	  infrastructure, compliant with the NIS2 directive, in the face of post-quantum threats (ML-KEM, ML-DSA).
 
 * **2024 - 2025**: (MSc Eng) Computer Science, Silesian University of Technology,
 	* Grade: 5 (4.82).

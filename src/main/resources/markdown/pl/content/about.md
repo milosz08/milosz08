@@ -10,7 +10,7 @@ Znajdziesz mnie na:
 oraz:
 
 {{badge 'spotify$spotify$1ED760$https://open.spotify.com/user/31olokftm5lcfpwb5ka5muqr7u2a'}}
-{{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/xenomorph8'}}
+{{badge 'letterboxd$letterboxd$202830$https://letterboxd.com/milosz08'}}
 {{badge 'discogs$discogs$E7E7E7$https://www.discogs.com/user/milosz80/collection'}}
 
 ## Kontakt
@@ -45,6 +45,8 @@ CI/CD, aż po utrzymanie infrastruktury chmurowej i sieciowej.
 ## Edukacja
 
 * **2025 - obecnie**: (podyplomowe) Cyber Science - Zarządzanie cyberbezpieczeństwem, NASK oraz Politechnika Śląska,
+	* Moja praca końcowa skupiała się na strategii zarządzania szyfrowaniem aplikacyjnym oraz cyklem życia kluczy w
+	  infrastrukturze IT zgodnej z NIS2 w obliczu zagrożeń postkwantowych (ML-KEM, ML-DSA).
 
 * **2024 - 2025**: (mgr inż.) Informatyka - profil ogólnoakademicki, Politechnika Śląska:
 	* Ocena: 5 (4.82).

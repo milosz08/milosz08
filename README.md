@@ -65,5 +65,5 @@ microservices stack. [Source code and thesis (LaTeX)](https://github.com/vispher
   &nbsp; • &nbsp;
   [<a href="https://open.spotify.com/user/31olokftm5lcfpwb5ka5muqr7u2a" target="_blank">Spotify</a>]
   &nbsp; • &nbsp;
-  [<a href="https://letterboxd.com/xenomorph8" target="_blank">Letterboxd</a>]
+  [<a href="https://letterboxd.com/milosz08" target="_blank">Letterboxd</a>]
 </p>
