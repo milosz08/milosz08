@@ -1,12 +1,3 @@
-Master of Science in Engineering (MSc Eng), Computer Science. Cybersecurity postgraduated. Silesian University of Technology.
-
-My primary area of interests is **multimedia processing**, with a specific focus on:
-
-- digital signal processing including medical imaging, wavelet algorithms and computer vision,
-- designing scalable audio, video or other real-time transmission systems for distributed network environments,
-- archiving and multimedia encoding (embedder/extractor architectures) using wavelet-based steganography and selected
-  encryption techniques.
-
 ### Academic & research background
 
 **Postgraduate thesis:**
