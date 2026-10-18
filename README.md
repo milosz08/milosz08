@@ -30,8 +30,8 @@ microservices stack. [Source code and thesis (LaTeX)](https://github.com/vispher
   my own RTP created from scratch,
 - [image-encryption-lorenz-attractor](https://github.com/milosz08/image-encryption-lorenz-attractor) - encryption using
   chaotic Lorenz attractor with FFT spectrum analysis,
-- [milosz08](https://github.com/milosz08/milosz08) - personal website build on top of the my own blazing fast and
-  concurrency Java SSG engine,
+- [milosz08](https://github.com/milosz08/milosz08) - personal website build on top of the JArgonaut - my own Java SSG
+  engine,
 - [gemini-auto-temp-chat](https://github.com/milosz08/gemini-auto-temp-chat) - web extension for turn on or off Gemini
   temporary chat immediately after page load,
 - [tv-archives-aggregator](https://github.com/milosz08/tv-archives-aggregator) - scraping content and indexing it with
