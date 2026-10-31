@@ -59,8 +59,6 @@ public class EducationHtmlGenerator extends HtmlGenerator<EducationMetadata> {
     pageAttributes.put("educationList", createEducationView(document));
     pageAttributes.put("researchList", createResearchView(document));
     pageAttributes.put("resume", document.metadata().getResume());
-
-    System.out.println();
   }
 
   private List<EducationView> createEducationView(ParsedDocument<EducationMetadata> document) {
