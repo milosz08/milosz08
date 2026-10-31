@@ -82,6 +82,7 @@ public class ConsoleUi implements EventBusListener {
 
   private void handlePhaseFinished() {
     if (progressBar != null) {
+      progressBar.stepTo(progressBar.getMax());
       progressBar.close();
       progressBar = null;
     }
