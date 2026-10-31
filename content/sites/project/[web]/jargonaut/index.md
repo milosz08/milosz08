@@ -20,6 +20,9 @@ pinned: true
 weight: 0
 repoUrls:
   - url: "https://github.com/milosz08/milosz08"
+downloadUrls:
+  - name: "Executable JAR file"
+    url: "https://m2.miloszgilga.pl/#/releases/pl/miloszgilga/jargonaut"
 demoUrls:
   - name: "Website"
     url: "https://miloszgilga.pl"
