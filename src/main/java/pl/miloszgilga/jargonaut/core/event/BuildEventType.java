@@ -1,0 +1,14 @@
+package pl.miloszgilga.jargonaut.core.event;
+
+public enum BuildEventType {
+  STAGE_STARTED,
+  SPINNER_STARTED,
+  SPINNER_FINISHED,
+  PHASE_STARTED,
+  ITEM_PROCESSED,
+  SPINNER_DETAIL,
+  PHASE_FINISHED,
+  BUILD_COMPLETED,
+  BUILD_FAILED,
+  ;
+}
