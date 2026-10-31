@@ -14,7 +14,7 @@
       <div class="footer__item">
         <a href="${langPrefix}/${seo.rssFeedUrl}" class="footer__link">RSS</a>
         &bullet;
-        <a href="${langPrefix}/privacy-policy">${i18n.privacyPolicy}</a>
+        <a href="${langPrefix}/privacy-policy">${i18n.footer.privacyPolicy}</a>
       </div>
     </div>
     <div class="footer__right">
