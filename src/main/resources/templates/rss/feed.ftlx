@@ -1,0 +1,33 @@
+<#-- @ftlvariable name="name" type="java.lang.String" -->
+<#-- @ftlvariable name="description" type="java.lang.String" -->
+<#-- @ftlvariable name="baseUrl" type="java.lang.String" -->
+<#-- @ftlvariable name="locale" type="java.lang.String" -->
+<#-- @ftlvariable name="rssFeedUrl" type="java.lang.String" -->
+<#-- @ftlvariable name="buildDate" type="java.lang.String" -->
+<#-- @ftlvariable name="projects" type="java.util.List<pl.miloszgilga.jargonaut.rss.model.RssProject>" -->
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>${name}</title>
+    <link>${baseUrl}</link>
+    <description>${description}</description>
+    <language>${locale}</language>
+    <atom:link href="${rssFeedUrl}" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>${buildDate}</lastBuildDate>
+    <#list projects as project>
+    <item>
+      <title><![CDATA[${project.title}]]></title>
+      <link>${project.url}</link>
+      <guid isPermaLink="true">${project.url}</guid>
+      <pubDate>${project.pubDate}</pubDate>
+      <description><![CDATA[${project.description}]]></description>
+      <#if project.tags??>
+        <#list project.tags as tag>
+          <category><![CDATA[${tag}]]></category>
+        </#list>
+      </#if>
+    </item>
+    </#list>
+  </channel>
+</rss>
