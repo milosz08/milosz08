@@ -12,7 +12,6 @@ import pl.miloszgilga.jargonaut.core.template.generator.HtmlGenerator;
 import pl.miloszgilga.jargonaut.core.template.generator.HtmlGeneratorFactory;
 import pl.miloszgilga.jargonaut.core.template.generator.RenderedTextContent;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
@@ -28,18 +27,17 @@ public class HtmlRendererProcessor implements TaskProcessor {
 
   @Override
   public void process(SiteBuildContext context) {
-    final List<RenderedTextContent> allContents = new ArrayList<>();
-    for (final PageRepresentation<?> page : context.getAllSinglePages().values()) {
-      renderPage(page, generatorContext, allContents);
-    }
-    for (final List<PageRepresentation<?>> pages : context.getAllCollectionPages().values()) {
-      if (pages == null) {
-        continue;
-      }
-      for (final PageRepresentation<?> page : pages) {
-        renderPage(page, generatorContext, allContents);
-      }
-    }
+    final Stream<PageRepresentation<?>> singlePages = context.getAllSinglePages().values().stream();
+    final Stream<PageRepresentation<?>> collectionPages = context.getAllCollectionPages().values().stream()
+      .filter(Objects::nonNull)
+      .flatMap(List::stream);
+
+    final List<RenderedTextContent> allContents = Stream.concat(singlePages, collectionPages)
+      .filter(page -> page != null && page.generatorFactory() != null)
+      .parallel()
+      .flatMap(page -> renderPageHelper(page, generatorContext).stream())
+      .toList();
+
     context.getRenderedTextContents().put(TextContentType.HTML, allContents);
   }
 
@@ -54,19 +52,12 @@ public class HtmlRendererProcessor implements TaskProcessor {
       .count();
   }
 
-  private void renderPage(PageRepresentation<?> page, GeneratorContext context, List<RenderedTextContent> output) {
-    if (page == null || page.generatorFactory() == null) {
-      return;
-    }
-    renderPageHelper(page, context, output);
-  }
-
-  private <T extends GenericPage> void renderPageHelper(PageRepresentation<T> page,
-                                                        GeneratorContext context,
-                                                        List<RenderedTextContent> output) {
+  private <T extends GenericPage> List<RenderedTextContent> renderPageHelper(PageRepresentation<T> page,
+                                                                             GeneratorContext context) {
     final HtmlGeneratorFactory<T> factory = page.generatorFactory();
     final HtmlGenerator<T> generator = factory.create(page, context);
+    final List<RenderedTextContent> rendered = generator.render();
     eventBus.publish(BuildEvent.progress());
-    output.addAll(generator.render());
+    return rendered;
   }
 }
