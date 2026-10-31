@@ -137,7 +137,7 @@ publishing {
   }
   repositories {
     maven {
-      name = "OSS-M2"
+      name = "M2"
       url = uri("https://m2.miloszgilga.pl/releases")
       credentials {
         username = env.fetchOrNull("OSS_M2_USER")
@@ -145,4 +145,17 @@ publishing {
       }
     }
   }
+}
+
+val buildVersionlessJar by tasks.registering(Copy::class) {
+  group = "build"
+  description = "Create jar copy without version in file name"
+
+  val shadowTask = tasks.named<ShadowJar>("shadowJar")
+  dependsOn(shadowTask)
+
+  from(shadowTask.flatMap { it.archiveFile })
+  into(layout.buildDirectory.dir("libs"))
+
+  rename { "jargonaut.jar" }
 }
