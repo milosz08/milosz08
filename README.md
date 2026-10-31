@@ -1,12 +1,3 @@
-Master of Science in Engineering (MSc Eng), Computer Science. Cybersecurity postgraduated. Silesian University of Technology.
-
-My primary area of interests is **multimedia processing**, with a specific focus on:
-
-- digital signal processing including medical imaging, wavelet algorithms and computer vision,
-- designing scalable audio, video or other real-time transmission systems for distributed network environments,
-- archiving and multimedia encoding (embedder/extractor architectures) using wavelet-based steganography and selected
-  encryption techniques.
-
 ### Academic & research background
 
 **Postgraduate thesis:**
@@ -29,6 +20,8 @@ microservices stack. [Source code and thesis (LaTeX)](https://github.com/vispher
   high-performance core framework,
 - [home-theater-automation-system](https://github.com/milosz08/home-theater-automation-system) - IoT project based on
   ESP32, FreeRTOS, WSS, RS232/485 and Android app,
+- [intelligent-doorbell-system](https://github.com/milosz08/intelligent-doorbell-system) - Fail-safe IoT platform based on
+	ESP32C3 (RISC-V), MQTT and custom Java relay server,
 - [event-proxy-system](https://github.com/milosz08/event-proxy-system) - lightweight event proxy system with dummy SMTP
   service,
 - [webrtc-hangout-app](https://github.com/milosz08/webrtc-hangout-app) - video hangout app using WebRTC together with
@@ -37,8 +30,8 @@ microservices stack. [Source code and thesis (LaTeX)](https://github.com/vispher
   my own RTP created from scratch,
 - [image-encryption-lorenz-attractor](https://github.com/milosz08/image-encryption-lorenz-attractor) - encryption using
   chaotic Lorenz attractor with FFT spectrum analysis,
-- [milosz08](https://github.com/milosz08/milosz08) - personal website build on top of the my own blazing fast and
-  concurrency Java SSG engine,
+- [milosz08](https://github.com/milosz08/milosz08) - personal website build on top of the JArgonaut - my own Java SSG
+  engine,
 - [gemini-auto-temp-chat](https://github.com/milosz08/gemini-auto-temp-chat) - web extension for turn on or off Gemini
   temporary chat immediately after page load,
 - [tv-archives-aggregator](https://github.com/milosz08/tv-archives-aggregator) - scraping content and indexing it with
