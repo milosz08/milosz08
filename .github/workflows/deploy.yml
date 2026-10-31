@@ -1,6 +1,10 @@
-name: Generate and deploy content to Vercel
+name: Generate content and deploy to Vercel
 
 on:
+  workflow_run:
+    workflows: [ "Build and publish generator to release and M2 OSS central" ]
+    types:
+      - completed
   push:
     branches:
       - "master"
@@ -13,6 +17,8 @@ on:
 
 jobs:
   generate-and-deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event.event_name != 'workflow_run' }}
+
     runs-on: ubuntu-latest
 
     steps:
