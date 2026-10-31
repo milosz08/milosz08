@@ -36,7 +36,7 @@
     <div class="navbar__right">
       <#list navLinks![] as navLink>
         <#if navLink.current>
-          <a class="navbar__text navbar__link navbar__link--active">
+          <a class="navbar__text navbar__link navbar__link--current">
             ${navLink.label}
           </a>
         <#else>
