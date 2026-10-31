@@ -1,33 +1,30 @@
 package pl.miloszgilga.jargonaut.config.model;
 
-import pl.miloszgilga.jargonaut.core.parser.validation.YamlNested;
 import pl.miloszgilga.jargonaut.core.parser.validation.YamlRequired;
 
 public class Parser {
   @YamlRequired
-  @YamlNested
-  private ParserLib syntax;
+  private String syntax;
 
   @YamlRequired
-  @YamlNested
-  private ParserLib math;
+  private String math;
 
   public Parser() {
   }
 
-  public ParserLib getSyntax() {
+  public String getSyntax() {
     return syntax;
   }
 
-  public void setSyntax(ParserLib syntax) {
+  public void setSyntax(String syntax) {
     this.syntax = syntax;
   }
 
-  public ParserLib getMath() {
+  public String getMath() {
     return math;
   }
 
-  public void setMath(ParserLib math) {
+  public void setMath(String math) {
     this.math = math;
   }
 }

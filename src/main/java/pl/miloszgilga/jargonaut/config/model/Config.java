@@ -3,6 +3,8 @@ package pl.miloszgilga.jargonaut.config.model;
 import pl.miloszgilga.jargonaut.core.parser.validation.YamlNested;
 import pl.miloszgilga.jargonaut.core.parser.validation.YamlRequired;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class Config {
@@ -46,6 +48,9 @@ public class Config {
 
   @YamlRequired
   private String rssOutput;
+
+  @YamlNested
+  private List<AdditionalAsset> additionalAssets = new ArrayList<>();
 
   public Config() {
   }
@@ -136,5 +141,13 @@ public class Config {
 
   public void setRssOutput(String rssOutput) {
     this.rssOutput = rssOutput;
+  }
+
+  public List<AdditionalAsset> getAdditionalAssets() {
+    return additionalAssets;
+  }
+
+  public void setAdditionalAssets(List<AdditionalAsset> additionalAssets) {
+    this.additionalAssets = additionalAssets;
   }
 }

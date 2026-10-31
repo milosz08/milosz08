@@ -201,8 +201,7 @@ public abstract class HtmlGenerator<T extends GenericPage> {
     pageAttributes.put("mdContent", document.htmlContent());
     pageAttributes.put("generator", config.getGenerator());
     pageAttributes.put("lastUpdatedAt", buildDateTime.format(DateTimeFormatter.ofPattern(globals.getDtfPattern())));
-    pageAttributes.put("syntaxParserAssets", config.getParser().getSyntax().getAdditionalAssets());
-    pageAttributes.put("mathParserAssets", config.getParser().getMath().getAdditionalAssets());
+    pageAttributes.put("additionalAssets", config.getAdditionalAssets());
     pageAttributes.put("languageLinks", createLanguageLinks(pageWebPath, locale));
     pageAttributes.put("navLinks", createNavLinks(globals, prependSlash(langPrefix), pageWebPath));
     pageAttributes.put("breadcrumbs", createBreadcrumbPoints(langPrefix, locale, pageWebPath));

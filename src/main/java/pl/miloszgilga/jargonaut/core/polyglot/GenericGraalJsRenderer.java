@@ -3,7 +3,6 @@ package pl.miloszgilga.jargonaut.core.polyglot;
 import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.Value;
 
-import pl.miloszgilga.jargonaut.config.model.ParserLib;
 import pl.miloszgilga.jargonaut.core.GenerationHaltedException;
 import pl.miloszgilga.jargonaut.core.SilentCloseable;
 import pl.miloszgilga.jargonaut.core.event.BuildEvent;
@@ -31,7 +30,7 @@ public class GenericGraalJsRenderer implements SilentCloseable {
     System.setProperty("polyglotimpl.DisableVersionChecks", "true");
   }
 
-  protected GenericGraalJsRenderer(ParserLib parserLib,
+  protected GenericGraalJsRenderer(String libUrl,
                                    SiteBuildContext context,
                                    BuildEventBus eventBus,
                                    String wrapperResourcePath) {
@@ -39,7 +38,7 @@ public class GenericGraalJsRenderer implements SilentCloseable {
     this.eventBus = eventBus;
     graalVmContext = Context.create("js");
     try {
-      loadExternalLibrary(parserLib.getLibUrl());
+      loadExternalLibrary(libUrl);
       functionValue = loadWrapperScript(wrapperResourcePath);
     } catch (Exception ex) {
       graalVmContext.close();
