@@ -5,5 +5,4 @@ public enum TextContentType {
   CSS,
   JS,
   XML,
-  ;
 }

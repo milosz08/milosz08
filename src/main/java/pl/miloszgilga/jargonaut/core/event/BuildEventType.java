@@ -10,5 +10,4 @@ public enum BuildEventType {
   PHASE_FINISHED,
   BUILD_COMPLETED,
   BUILD_FAILED,
-  ;
 }
