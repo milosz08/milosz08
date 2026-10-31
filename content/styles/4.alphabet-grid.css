@@ -1,0 +1,78 @@
+.alphabet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem 3rem;
+  align-items: start;
+  margin-top: 3vw;
+}
+
+.alphabet-group,
+.alphabet-group__header,
+.alphabet-group__list,
+.alphabet-group__link {
+  display: flex;
+}
+
+.alphabet-group,
+.alphabet-group__list {
+  flex-direction: column;
+}
+
+.alphabet-group__header,
+.alphabet-group__link {
+  justify-content: space-between;
+}
+
+.alphabet-group__header {
+  align-items: flex-end;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--alphabet-group-border);
+}
+
+.alphabet-group__letter {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+.alphabet-group__total {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.alphabet-group__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+.alphabet-group__link,
+.alphabet-group__link:hover .alphabet-group__name {
+  text-decoration: none;
+}
+
+.alphabet-group__link {
+  align-items: center;
+  padding: 0.25rem 0;
+}
+
+.alphabet-group__name {
+  text-decoration: underline;
+  color: var(--primary-link);
+}
+
+.alphabet-group__link:hover .alphabet-group__name {
+  color: #241;
+}
+
+.alphabet-group__count {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--primary-text);
+  background-color: var(--alphabet-group-surface-bg);
+  padding: 0.15rem 0.4rem;
+  border-radius: 5px;
+}

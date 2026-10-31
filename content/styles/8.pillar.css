@@ -1,0 +1,158 @@
+.pillar,
+.pillar-header__wrapper {
+  max-width: var(--safety-width);
+}
+
+.pillar {
+  margin: 1.2rem auto;
+  padding: 0 4vw;
+}
+
+.pillar-header,
+.pillar-download__btn {
+  color: var(--pillar-header-text);
+}
+
+.pillar-header {
+  background-color: var(--pillar-header-bg);
+}
+
+.pillar-header__wrapper,
+.pillar-caption,
+.pillar-reading-time,
+.pillar-download {
+  display: flex;
+}
+
+.pillar-header__wrapper,
+.pillar-caption,
+.pillar-download,
+.pillar-download__btn {
+  align-items: center;
+}
+
+.pillar-header__wrapper,
+.pillar-caption {
+  flex-direction: column;
+}
+
+.pillar-header__wrapper {
+  max-width: var(--safety-width);
+  width: 100%;
+  padding: 0.2rem 4vw;
+  margin: 0 auto;
+}
+
+.pillar-header__wrapper--abandoned {
+  opacity: .5;
+}
+
+.pillar-caption__head,
+.pillar-caption__name {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.pillar-caption__head {
+  margin: 2rem 0 1rem 0;
+}
+
+.pillar-caption__description {
+  line-height: 1.4rem;
+  margin: 0 0 1rem 0;
+  color: var(--pillar-header-muted);
+}
+
+.pillar-caption__description,
+.pillar-download__btn {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.pillar-caption--space-up {
+  margin-top: 2rem;
+}
+
+.pillar-caption--space-between {
+  margin: 2rem 0;
+}
+
+.pillar-caption__name {
+  margin: 0;
+}
+
+.pillar-caption__name--space-up {
+  margin-top: 2rem;
+}
+
+.pillar-caption__name--space-down {
+  margin-bottom: 2rem;
+}
+
+.pillar-caption__honorific-prefixes,
+.pillar-caption__honorific-suffixes {
+  color: var(--pillar-header-muted);
+}
+
+.pillar-caption__honorific-prefixes {
+  margin: 1rem 0 0.1rem;
+}
+
+.pillar-caption__honorific-suffixes {
+  margin: 0.1rem 0 1rem;
+}
+
+.pillar-wrapper {
+  margin: 2vw 0;
+}
+
+.pillar-reading-time {
+  margin-top: 1rem;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+}
+
+.pillar-reading-time__label {
+  color: var(--pillar-reading-time-label);
+  margin-right: 0.3rem;
+}
+
+.pillar-reading-time__value,
+.pillar-download__btn {
+  font-weight: bold;
+}
+
+.pillar-download {
+  justify-content: center;
+  margin: 1.5rem 0 2rem;
+}
+
+.pillar-download__btn {
+  display: inline-flex;
+  gap: 0.6rem;
+  padding: 0.8rem 1.8rem;
+  background-color: transparent;
+  border: 2px solid var(--pillar-header-text);
+  text-decoration: none;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.pillar-download__btn:hover,
+.pillar-download__btn:focus-visible {
+  background-color: var(--pillar-header-text);
+  color: var(--pillar-header-bg);
+}
+
+.pillar-download__icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: currentColor;
+  -webkit-mask-image: url('/~assets/download-icon.svg');
+  mask-image: url('/~assets/download-icon.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  flex-shrink: 0;
+}

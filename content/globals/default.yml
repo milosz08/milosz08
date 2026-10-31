@@ -1,0 +1,12 @@
+name: "Miłosz Gilga"
+honorificSuffixes:
+  - "MSc"
+  - "Eng"
+jobTitle: "Software Engineer"
+dtfPattern: "MM.dd.yyyy, hh:mm:ss a"
+rssDescription: "RSS feed notifying about new software engineering projects, research works, and portfolio updates."
+navLinks:
+  - label: "Blog"
+    url: "https://blog.miloszgilga.pl"
+  - label: "Edu"
+    url: "education"

@@ -1,0 +1,40 @@
+.toc {
+  position: sticky;
+  box-sizing: border-box;
+  float: right;
+  top: 2rem;
+  padding: 2.5em 2em 0 0;
+  width: calc((100% - var(--safety-width)) / 2);
+}
+
+.toc__list {
+  padding: 0.1em 0 0.3em 0.7em;
+  border-left: 2px solid #ccc;
+  margin: 0;
+}
+
+.toc__list--nested {
+  padding-left: 1em;
+  border-left: none;
+}
+
+.toc__item {
+  padding: 0.3em 0;
+  list-style-type: none;
+  line-height: 1.4;
+}
+
+.toc__link {
+  text-decoration: none;
+  color: var(--primary-link);
+}
+
+.toc__link:hover {
+  color: var(--primary-link-hover);
+}
+
+@media (max-width: 1600px) {
+  .toc {
+    display: none;
+  }
+}

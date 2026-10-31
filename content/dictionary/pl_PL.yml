@@ -1,0 +1,52 @@
+revealEmail: "Kliknij, aby pokazać e-mail"
+totalContributions: "Liczba kontrybucji w ostatnim roku"
+privacyPolicy: "Polityka Prywatności"
+status:
+  maintained: "Utrzymywany"
+  completed: "Ukończony"
+  abandoned: "Porzucony"
+  wip: "W trakcie tworzenia"
+  ongoing: "W trakcie"
+  updated: "Ostatnio zaktualizowany"
+nav:
+  caption: "Nawigacja"
+  home: "Start"
+timeline:
+  current: "obecnie"
+toc:
+  top: "Początek"
+education:
+  caption: "Edukacja"
+  grade: "Ocena"
+  sourceCodeAndOrThesis: "Kod źródłowy/praca dyplomowa"
+  table:
+    timeline: "Oś czasu"
+    degree: "Tytuł i kierunek"
+    institution: "Instytucja"
+    details: "Szczegóły i praca dyplomowa"
+research:
+  caption: "Niezależne prace badawcze"
+  readMore: "Czytaj więcej"
+  table:
+    timeline: "Oś czasu"
+    topic: "Temat badawczy"
+    methodology: "Metodologia i opis"
+project:
+  selectedProjects: "Wybrane projekty"
+  readingTime: "Czas czytania"
+  table:
+    project: "Projekt"
+    kind: "Typ"
+    description: "Opis"
+    technology: "Technologia"
+  technologies: "Wykorzystane technologie"
+  repositories: "Repozytoria"
+  documentation: "Dokumentacja"
+  download: "Pobieranie"
+gallery:
+  heading: "Galeria"
+  picture: "Obrazek"
+  magnified: "Powiększony obrazek"
+footer:
+  generatedBy: "Wygenerowane przez"
+  lastUpdatedAt: "Ostatnia aktualizacja"

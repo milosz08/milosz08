@@ -1,0 +1,48 @@
+defaultLocale: "en_US"
+minify: true
+seo:
+  domain: "https://miloszgilga.pl"
+  favicon: "favicon.png"
+  ogImage: "og-image.png"
+  sameAs:
+    - "https://blog.miloszgilga.pl"
+    - "https://github.com/milosz08"
+    - "https://www.linkedin.com/in/miloszgilga"
+analytics:
+  gtm: "${env:GTM_ID}"
+generator:
+  name: "JArgonaut"
+  url: "https://github.com/milosz08/milosz08"
+dir:
+  output: "output"
+  dictionary: "dictionary"
+  globals: "globals"
+  sites: "sites"
+  styles: "styles"
+  scripts: "scripts"
+cache:
+  enabled: true
+  cacheDir: ".jargonaut-cache"
+extractor:
+  github:
+    token: "${env:GITHUB_TOKEN}"
+parser:
+  syntax:
+    libUrl: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/highlight.min.js"
+    additionalAssets:
+      - "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/styles/idea.min.css"
+  math:
+    libUrl: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.19.0/katex.min.js"
+    additionalAssets:
+      - "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.19.0/katex.min.css"
+project:
+  rootCategoryId: "uncategorized"
+  modifierOrder:
+    - "featured"
+  statusOrder:
+    - "wip"
+    - "maintained"
+    - "completed"
+    - "abandoned"
+  recentlyUpdatedDeltaDays: 6
+rssOutput: "rss/feed.xml"

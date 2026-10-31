@@ -1,0 +1,41 @@
+.word-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin: 2em auto;
+  padding: 1.5em 1em;
+  background-color: var(--surface-bg);
+  border: 1px solid var(--surface-border);
+}
+
+.word-cloud__word {
+  line-height: 1.1;
+  padding: 0;
+  font-weight: 600;
+  margin: 0 0.3rem;
+  color: var(--primary-link, var(--tag-cloud-color-1));
+  white-space: nowrap;
+  text-decoration: none;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.word-cloud__word:nth-child(even) {
+  color: var(--tag-cloud-color-3);
+}
+
+.word-cloud__word:nth-child(3n) {
+  color: var(--tag-cloud-color-1);
+}
+
+.word-cloud__word:nth-child(4n) {
+  color: var(--tag-cloud-color-2);
+}
+
+.word-cloud__word:nth-child(5n) {
+  color: var(--tag-cloud-color-4);
+}

@@ -1,0 +1,42 @@
+.status-badge {
+  display: inline-block;
+  margin-top: 0.4em;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: var(--primary-text);
+  text-transform: uppercase;
+}
+
+.status-badge__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+
+.status-badge--completed {
+  background-color: var(--badge-completed-bg);
+}
+
+.status-badge--updated {
+  background-color: var(--badge-updated-bg);
+}
+
+.status-badge--wip {
+  background-color: var(--badge-wip-bg);
+}
+
+.status-badge--ongoing {
+  background-color: var(--badge-ongoing-bg);
+}
+
+.status-badge--maintained {
+  background-color: var(--badge-maintained-bg);
+}
+
+.status-badge--abandoned {
+  background-color: var(--badge-abandoned-bg);
+  color: var(--abandoned-primary-text);
+}

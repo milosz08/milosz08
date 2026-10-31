@@ -1,0 +1,8 @@
+honorificSuffixes: [ ]
+honorificPrefixes:
+  - "mgr"
+  - "inż."
+jobTitle: "Programista"
+dtfPattern: "dd.MM.yyyy, HH:mm:ss"
+rssDescription: "Kanał RSS informujący o nowych projektach programistycznych, pracach badawczych oraz aktualizacjach w portfolio."
+

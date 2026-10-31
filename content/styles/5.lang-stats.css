@@ -1,0 +1,54 @@
+.project-langs {
+  width: 100%;
+}
+
+.project-langs__bar,
+.project-langs__legend,
+.project-langs__item {
+  display: flex;
+}
+
+.project-langs__bar,
+.project-langs__dot {
+  height: 0.5rem;
+}
+
+.project-langs__bar {
+  overflow: hidden;
+  background-color: var(--lang-stats-bar-bg);
+  margin-bottom: 0.75rem;
+}
+
+.project-langs__segment {
+  display: block;
+  height: 100%;
+  outline: 2px solid transparent;
+}
+
+.project-langs__legend {
+  flex-wrap: wrap;
+  gap: 0.1rem 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-langs__item {
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8rem;
+}
+
+.project-langs__dot {
+  display: inline-block;
+  width: 0.5rem;
+  border-radius: 50%;
+}
+
+.project-langs__name {
+  font-weight: bold;
+}
+
+.project-langs__percent {
+  color: var(--lang-stats-percentage);
+}
