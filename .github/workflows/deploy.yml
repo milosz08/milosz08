@@ -1,0 +1,46 @@
+name: Generate and deploy content to Vercel
+
+on:
+  push:
+    branches:
+      - "master"
+    paths:
+      - ".github/workflows/deploy.yml"
+      - "content/**"
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up JRE 21
+        uses: actions/setup-java@v6
+        with:
+          java-version: "21"
+          distribution: "temurin"
+
+      - name: Download latest
+        run: curl -sL "https://github.com/milosz08/milosz08/releases/download/latest/jargonaut.jar" -o jargonaut.jar
+
+      - name: Generate static content
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GTM_ID: ${{ secrets.GTM_ID }}
+        run: java -jar jargonaut.jar
+
+      - name: Setup Node for Vercel CLI
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Deploy to Vercel
+        run: |
+          npx vercel deploy output --prod --yes \
+            --token ${{ secrets.VERCEL_TOKEN }} \
+            --name ${{ secrets.VERCEL_SITE_NAME }}
