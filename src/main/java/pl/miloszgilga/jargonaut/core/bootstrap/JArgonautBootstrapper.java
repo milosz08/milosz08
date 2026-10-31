@@ -34,6 +34,7 @@ import pl.miloszgilga.jargonaut.core.writer.AssetDiskWriter;
 import pl.miloszgilga.jargonaut.core.writer.PrepareDirectoryDiskWriter;
 import pl.miloszgilga.jargonaut.core.writer.TextContentDiskWriter;
 import pl.miloszgilga.jargonaut.rss.RssProcessor;
+import pl.miloszgilga.jargonaut.scripts.InlineScriptsProcessor;
 import pl.miloszgilga.jargonaut.scripts.ScriptsProcessor;
 import pl.miloszgilga.jargonaut.styles.StylesProcessor;
 
@@ -232,8 +233,13 @@ public class JArgonautBootstrapper {
     eventBus.publish(BuildEvent.endTask("Merged and rendered styles"));
 
     eventBus.publish(BuildEvent.startTask("Render scripts..."));
-    final TaskProcessor scriptsProcessor = new ScriptsProcessor(baseDir, siteBuildContext, jsMinifier);
-    scriptsProcessor.process(siteBuildContext);
+    final List<TaskProcessor> scriptsProcessors = List.of(
+      new ScriptsProcessor(baseDir, siteBuildContext, jsMinifier),
+      new InlineScriptsProcessor(baseDir, siteBuildContext)
+    );
+    for (final TaskProcessor scriptsProcessor : scriptsProcessors) {
+      scriptsProcessor.process(siteBuildContext);
+    }
     eventBus.publish(BuildEvent.endTask("Rendered scripts"));
 
     final GeneratorContext generatorContext = GeneratorContext.builder()

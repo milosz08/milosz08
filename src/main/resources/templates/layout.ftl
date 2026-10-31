@@ -1,5 +1,5 @@
-<#-- @ftlvariable name="syntaxParserAssets" type="java.util.List" -->
-<#-- @ftlvariable name="mathParserAssets" type="java.util.List" -->
+<#-- @ftlvariable name="additionalAssets" type="java.util.List<pl.miloszgilga.jargonaut.config.model.AdditionalAsset>" -->
+<#-- @ftlvariable name="inlineScripts" type="java.util.List<java.lang.String>" -->
 
 <#macro page seo>
   <!DOCTYPE html>
@@ -65,41 +65,27 @@
         firstScript.parentNode.insertBefore(gtmScript, firstScript);
       </script>
     </#if>
-    <#if syntaxParserAssets?has_content>
-      <#list syntaxParserAssets as assetUrl>
-        <link rel="stylesheet" href="${assetUrl}">
-      </#list>
-    </#if>
-    <#if mathParserAssets?has_content>
-      <#list mathParserAssets as assetUrl>
-        <link rel="stylesheet" href="${assetUrl}">
-      </#list>
-    </#if>
     <#if seo.styleFileNames?has_content>
       <#list seo.styleFileNames as styleFileName>
         <link rel="stylesheet" href="/${styleFileName}">
       </#list>
     </#if>
-    <script type="text/javascript">
-      const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      let theme;
-      let iconState;
-      if (savedTheme) {
-        theme = savedTheme;
-        iconState = savedTheme;
-      } else {
-        theme = prefersDark ? 'dark' : 'light';
-        iconState = 'system';
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-      document.addEventListener('DOMContentLoaded', () => {
-        const btn = document.getElementById('theme-toggle');
-        if (btn) {
-          btn.classList.add('is-' + iconState);
-        }
-      });
-    </script>
+    <#if additionalAssets?has_content>
+      <#list additionalAssets as asset>
+        <link rel="stylesheet" href="${asset.url}"
+        <#if asset.attributes??>
+          <#list asset.attributes as attrName, attrValue>
+            ${attrName}="${attrValue}"
+          </#list>
+        </#if>
+        >
+      </#list>
+    </#if>
+    <#if inlineScripts?has_content>
+      <#list inlineScripts as inlineScript>
+        <script type="text/javascript">${inlineScript?no_esc}</script>
+      </#list>
+    </#if>
     <#if seo.scriptFileNames?has_content>
       <#list seo.scriptFileNames as scriptFileName>
         <script type="text/javascript" src="/${scriptFileName}" defer></script>

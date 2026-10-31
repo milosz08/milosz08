@@ -1,5 +1,8 @@
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
+  document.querySelectorAll('link[data-theme-type]').forEach(link => {
+    link.disabled = (link.getAttribute('data-theme-type') !== theme);
+  });
 }
 
 function updateThemeButtonIcon(themeBtn, themeState) {

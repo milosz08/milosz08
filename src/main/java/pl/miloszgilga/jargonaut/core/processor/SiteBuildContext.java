@@ -34,6 +34,7 @@ public class SiteBuildContext {
 
   private final Map<TextContentType, List<RenderedTextContent>> renderedTextContents = new HashMap<>();
   private final Map<Path, AssetTarget> assetTargets = new HashMap<>();
+  private final List<String> inlineScripts = new ArrayList<>();
 
   public SiteBuildContext(BuildEventBus eventBus) {
     this.eventBus = eventBus;
@@ -103,5 +104,9 @@ public class SiteBuildContext {
 
   public Map<Path, AssetTarget> getAssetTargets() {
     return assetTargets;
+  }
+
+  public List<String> getInlineScripts() {
+    return inlineScripts;
   }
 }

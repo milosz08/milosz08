@@ -21,6 +21,9 @@ public class Dir {
   @YamlRequired
   private String scripts;
 
+  @YamlRequired
+  private String inlineScripts;
+
   public Dir() {
   }
 
@@ -70,5 +73,13 @@ public class Dir {
 
   public void setScripts(String scripts) {
     this.scripts = scripts;
+  }
+
+  public String getInlineScripts() {
+    return inlineScripts;
+  }
+
+  public void setInlineScripts(String inlineScripts) {
+    this.inlineScripts = inlineScripts;
   }
 }

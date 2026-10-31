@@ -20,6 +20,7 @@ dir:
   sites: "sites"
   styles: "styles"
   scripts: "scripts"
+  inlineScripts: "inline-scripts"
 cache:
   enabled: true
   cacheDir: ".jargonaut-cache"
