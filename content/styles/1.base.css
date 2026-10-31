@@ -1,0 +1,85 @@
+* {
+  transition: color 0.1s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: var(--primary-text);
+  background-color: var(--surface-bg);
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+h2 {
+  margin: 1.2em 0 0.5em 0;
+}
+
+h3,
+h4 {
+  margin: 1em 0 0.5em 0;
+}
+
+a {
+  color: var(--primary-link);
+}
+
+a:hover {
+  color: var(--primary-link-hover);
+  text-decoration: none;
+}
+
+a[href^="http://"]::after,
+a[href^="https://"]::after {
+  content: "";
+  display: inline-block;
+  width: round(nearest, 0.9em, 1px);
+  height: round(nearest, 0.9em, 1px);
+  margin-left: round(nearest, 0.2em, 1px);
+  vertical-align: baseline;
+  background-color: currentColor;
+  -webkit-mask-image: url('/~assets/external-link-icon.svg');
+  mask-image: url('/~assets/external-link-icon.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+pre,
+code:not(pre code) {
+  background: var(--surface-bg);
+  border: 0.1em solid var(--surface-border);
+  font-size: 1.1em;
+}
+
+code:not(pre code) {
+  padding: 0.1em 0.4em;
+}
+
+pre {
+  margin: 0;
+  padding: 1em;
+  white-space: pre-wrap;
+}
+
+pre code.hljs {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.25;
+}

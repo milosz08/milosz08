@@ -45,22 +45,27 @@
           </a>
         </#if>
       </#list>
-      <div class="navbar__dropdown dropdown">
-        <input id="lang-links-btn" class="dropdown__checkbox" type="checkbox">
-        <label for="lang-links-btn" class="dropdown__trigger" title="Language">
-          <span class="dropdown__icon dropdown__icon--lang"></span>&#x25BE;
-        </label>
-        <ul class="dropdown__menu">
-          <#list languageLinks as lang>
-            <li class="dropdown__item">
-              <#if lang.active>
-                <span class="dropdown__current">${lang.displayName}</span>
-              <#else>
-                <a href="${lang.url}" class="dropdown__link">${lang.displayName}</a>
-              </#if>
-            </li>
-          </#list>
-        </ul>
+      <div class="navbar__controls">
+        <button id="theme-toggle" class="navbar__theme-btn" title="${i18n.toggleTheme}">
+          <span class="theme-icon"></span>
+        </button>
+        <div class="navbar__dropdown dropdown">
+          <input id="lang-links-btn" class="dropdown__checkbox" type="checkbox">
+          <label for="lang-links-btn" class="dropdown__trigger" title="Language">
+            <span class="dropdown__icon dropdown__icon--lang"></span>&#x25BE;
+          </label>
+          <ul class="dropdown__menu">
+            <#list languageLinks as lang>
+              <li class="dropdown__item">
+                <#if lang.active>
+                  <span class="dropdown__current">${lang.displayName}</span>
+                <#else>
+                  <a href="${lang.url}" class="dropdown__link">${lang.displayName}</a>
+                </#if>
+              </li>
+            </#list>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

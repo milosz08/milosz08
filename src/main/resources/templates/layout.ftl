@@ -80,6 +80,26 @@
         <link rel="stylesheet" href="/${styleFileName}">
       </#list>
     </#if>
+    <script type="text/javascript">
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      let theme;
+      let iconState;
+      if (savedTheme) {
+        theme = savedTheme;
+        iconState = savedTheme;
+      } else {
+        theme = prefersDark ? 'dark' : 'light';
+        iconState = 'system';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('theme-toggle');
+        if (btn) {
+          btn.classList.add('is-' + iconState);
+        }
+      });
+    </script>
     <#if seo.scriptFileNames?has_content>
       <#list seo.scriptFileNames as scriptFileName>
         <script type="text/javascript" src="/${scriptFileName}" defer></script>

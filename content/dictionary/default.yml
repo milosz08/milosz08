@@ -1,6 +1,6 @@
 revealEmail: "Click to reveal email"
 totalContributions: "Count of contributions in last year"
-privacyPolicy: "Privacy Policy"
+toggleTheme: "Toggle theme"
 status:
   maintained: "Maintained"
   completed: "Completed"
