@@ -27,12 +27,10 @@ jobs:
         with:
           java-version: "21"
           distribution: "temurin"
+          cache: "gradle"
 
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
-
-      - name: Clean build dir
-        run: ./gradlew clean --no-daemon
 
       - name: Package to JAR and publish to M2
         env:
@@ -48,7 +46,7 @@ jobs:
         with:
           artifacts: "build/libs/jargonaut.jar"
           tag: "latest"
-          name: "Jargonaut Latest"
+          name: "Latest"
           body: |
             Automatically released for CI/CD pipelines.
             **Machine use only.**
