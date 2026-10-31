@@ -26,7 +26,7 @@
     </#list>
     <#if seo.rssFeedUrl??>
       <link rel="alternate" type="application/rss+xml" title="${seo.authorName} - RSS"
-            href="${seo.canonicalUrl}/${seo.rssFeedUrl}">
+            href="${seo.canonicalUrl}${seo.rssFeedUrl}">
     </#if>
     <#if seo.authorName??>
       <meta property="og:site_name" content="${seo.authorName}">
