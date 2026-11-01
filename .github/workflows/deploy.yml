@@ -13,12 +13,10 @@ on:
       - "content/**"
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"
+    - cron: "23 4 * * *"
 
 jobs:
   generate-and-deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event.event_name != 'workflow_run' }}
-
     runs-on: ubuntu-latest
 
     steps:
