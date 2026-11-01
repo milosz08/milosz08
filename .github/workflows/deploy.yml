@@ -2,7 +2,8 @@ name: Generate content and deploy to Vercel
 
 on:
   workflow_run:
-    workflows: [ "Build and publish generator to release and M2 OSS central" ]
+    workflows:
+      - "Build and publish generator to release and M2 OSS central"
     types:
       - completed
   push:
@@ -13,7 +14,7 @@ on:
       - "content/**"
   workflow_dispatch:
   schedule:
-    - cron: "34 4 * * *"
+    - cron: "54 4 * * *"
 
 jobs:
   generate-and-deploy:
