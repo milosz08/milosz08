@@ -41,9 +41,9 @@ jobs:
         run: java -jar jargonaut.jar
 
       - name: Setup Node for Vercel CLI
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Deploy to Vercel
         run: |
