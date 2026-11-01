@@ -24,7 +24,11 @@ public class ScriptsProcessor extends GenericScriptsProcessor<RenderedTextConten
       scriptRawContent = jsMinifier.minify(scriptContent);
     }
     final String fullFileName = scriptFile.getFileName().toString();
-    final String baseName = fullFileName.substring(0, fullFileName.lastIndexOf('.'));
+    String baseName = fullFileName.substring(0, fullFileName.lastIndexOf('.'));
+    final int firstDotIndex = baseName.indexOf('.');
+    if (firstDotIndex != -1) {
+      baseName = baseName.substring(firstDotIndex + 1);
+    }
     final String fileName = baseName + "." + HashUtils.generateTextHash(scriptRawContent) + ".js";
     return new RenderedTextContent(Path.of("scripts", fileName), scriptRawContent);
   }
