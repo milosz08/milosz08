@@ -13,7 +13,7 @@ on:
       - "content/**"
   workflow_dispatch:
   schedule:
-    - cron: "23 4 * * *"
+    - cron: "34 4 * * *"
 
 jobs:
   generate-and-deploy:
