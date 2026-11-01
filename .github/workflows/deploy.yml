@@ -12,8 +12,6 @@ on:
       - ".github/workflows/deploy.yml"
       - "content/**"
   workflow_dispatch:
-  schedule:
-    - cron: "0 3 * * *"
 
 jobs:
   generate-and-deploy:
