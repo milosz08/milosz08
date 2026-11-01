@@ -13,7 +13,7 @@ import pl.miloszgilga.jargonaut.core.parser.json.JsonParser;
 import java.time.DayOfWeek;
 import java.time.Instant;
 import java.time.LocalDate;
-import java.time.ZoneOffset;
+import java.time.ZoneId;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,12 +26,15 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class GithubRepoStatsExtractor extends GenericGithubDataExtractor implements RepoStatsExtractor {
-  protected static final Pattern GITHUB_REPO_URL_PATTERN = Pattern.compile(
+  private static final Pattern GITHUB_REPO_URL_PATTERN = Pattern.compile(
     "^https?://(?:www\\.)?github\\.com/([^/]+)/([^/]+?)(?:\\.git)?/?$"
   );
 
+  private final ZoneId timezone;
+
   public GithubRepoStatsExtractor(BuildEventBus eventBus, GithubExtractorConfig config, JsonParser jsonParser) {
     super(eventBus, config, jsonParser);
+    timezone = config.getTimezone();
   }
 
   @Override
@@ -44,9 +47,9 @@ public class GithubRepoStatsExtractor extends GenericGithubDataExtractor impleme
     if (matchedRepoUrls == null || matchedRepoUrls.isEmpty()) {
       return Map.of();
     }
-    final LocalDate today = LocalDate.now(ZoneOffset.UTC);
+    final LocalDate today = LocalDate.now(timezone);
     final LocalDate startGridDate = today.minusWeeks(52).with(TemporalAdjusters.previousOrSame(DayOfWeek.SUNDAY));
-    final String sinceIso = startGridDate.atStartOfDay(ZoneOffset.UTC).toInstant().toString();
+    final String sinceIso = startGridDate.atStartOfDay(timezone).toInstant().toString();
 
     final Map<String, List<LanguageStat>> repoLanguages = new HashMap<>();
     final Map<String, Instant> repoLastCommits = new HashMap<>();
@@ -200,7 +203,7 @@ public class GithubRepoStatsExtractor extends GenericGithubDataExtractor impleme
     int maxDaily = 0;
     for (final GithubRepoStatsGraphQlRes.CommitNode node : commitNodes) {
       if (node != null && node.committedDate() != null) {
-        final LocalDate date = Instant.parse(node.committedDate()).atZone(ZoneOffset.UTC).toLocalDate();
+        final LocalDate date = Instant.parse(node.committedDate()).atZone(timezone).toLocalDate();
         int currentDaySum = dailyCounts.merge(date, 1, Integer::sum);
         if (currentDaySum > maxDaily) {
           maxDaily = currentDaySum;
