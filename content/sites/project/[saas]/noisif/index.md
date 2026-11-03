@@ -30,6 +30,9 @@ repoUrls:
     url: "https://github.com/noisif/noisif-web-monorepo"
   - name: "Infra"
     url: "https://github.com/noisif/noisif-infra"
+docsUrls:
+  - name: "Platform (Dokka)"
+    url: "https://docs.noisif.xyz"
 demoUrls:
   - name: "Website"
     url: "https://noisif.xyz"
