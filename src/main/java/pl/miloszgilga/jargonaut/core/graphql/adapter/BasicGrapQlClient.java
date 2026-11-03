@@ -15,9 +15,15 @@ import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.TimeUnit;
 
 public class BasicGrapQlClient implements GraphQlClient {
+  private static final int MAX_RETRIES = 3;
+  private static final long INITIAL_RETRY_DELAY_MS = 1000;
+
   private final String endpointUrl;
   private final String authToken;
   private final JsonParser jsonParser;
@@ -63,14 +69,42 @@ public class BasicGrapQlClient implements GraphQlClient {
         .header("Accept", "application/json")
         .POST(HttpRequest.BodyPublishers.ofString(jsonPayload))
         .build();
-      final HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-      if (response.statusCode() != 200) {
-        throw new RuntimeException("GraphQL API returned status " + response.statusCode() + ": " + response.body());
+      return executeWithRetryAsync(request, responseType, 0, INITIAL_RETRY_DELAY_MS).join();
+    } catch (CompletionException ex) {
+      if (ex.getCause() instanceof RuntimeException) {
+        throw (RuntimeException) ex.getCause();
       }
-      return jsonParser.readValue(response.body(), responseType);
+      throw new GenerationHaltedException(ex.getCause());
     } catch (Exception ex) {
       throw new GenerationHaltedException(ex);
     }
+  }
+
+  private <T> CompletableFuture<T> executeWithRetryAsync(HttpRequest request,
+                                                         Class<T> responseType,
+                                                         int attempt,
+                                                         long delayMs) {
+    return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+      .thenCompose(response -> {
+        if (response.statusCode() == 200) {
+          try {
+            return CompletableFuture.completedFuture(
+              jsonParser.readValue(response.body(), responseType)
+            );
+          } catch (Exception ex) {
+            return CompletableFuture.failedFuture(new GenerationHaltedException(ex));
+          }
+        }
+        if (response.statusCode() >= 500 && attempt < MAX_RETRIES) {
+          return CompletableFuture.supplyAsync(
+            () -> null,
+            CompletableFuture.delayedExecutor(delayMs, TimeUnit.MILLISECONDS)
+          ).thenCompose(v -> executeWithRetryAsync(request, responseType, attempt + 1, delayMs * 2));
+        }
+        return CompletableFuture.failedFuture(
+          new RuntimeException("GraphQL API returned status " + response.statusCode() + ": " + response.body())
+        );
+      });
   }
 
   private String loadTemplate(String resourcePath) {
