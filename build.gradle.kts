@@ -147,7 +147,7 @@ publishing {
   }
 }
 
-val buildVersionlessJar by tasks.registering(Copy::class) {
+tasks.register<Copy>("buildVersionlessJar") {
   group = "build"
   description = "Create jar copy without version in file name"
 
