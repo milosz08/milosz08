@@ -30,12 +30,23 @@
   --abandoned-primary-text: #808080;
   --abandoned-secondary-text: #606060;
 
+  --badge-text: #2f2f2f;
   --badge-completed-bg: #e0e0e0;
   --badge-updated-bg: #e7c5f1;
   --badge-wip-bg: #f0e68c;
   --badge-ongoing-bg: #f0e68c;
   --badge-abandoned-bg: #e6e6e6;
+  --badge-abandoned-text: #808080;
   --badge-maintained-bg: #badfeb;
+
+  --badge-table-text: var(--badge-text);
+  --badge-table-completed-bg: var(--badge-completed-bg);
+  --badge-table-updated-bg: var(--badge-updated-bg);
+  --badge-table-wip-bg: var(--badge-wip-bg);
+  --badge-table-ongoing-bg: var(--badge-ongoing-bg);
+  --badge-table-abandoned-bg: var(--badge-abandoned-bg);
+  --badge-table-abandoned-text: var(--badge-abandoned-text);
+  --badge-table-maintained-bg: var(--badge-maintained-bg);
 
   --alphabet-group-border: #e0e0e0;
   --alphabet-group-surface-bg: #f0f0f0;
@@ -105,12 +116,14 @@
   --abandoned-primary-text: #7a7a7a;
   --abandoned-secondary-text: #5c5c5c;
 
-  --badge-completed-bg: #2a2a2a;
-  --badge-updated-bg: #4a3254;
-  --badge-wip-bg: #524a15;
-  --badge-ongoing-bg: #524a15;
-  --badge-abandoned-bg: #222222;
-  --badge-maintained-bg: #1b4252;
+  --badge-table-text: #e4e4e4;
+  --badge-table-completed-bg: #2a2a2a;
+  --badge-table-updated-bg: #4a3254;
+  --badge-table-wip-bg: #524a15;
+  --badge-table-ongoing-bg: #524a15;
+  --badge-table-abandoned-bg: #222222;
+  --badge-table-abandoned-text: #7a7a7a;
+  --badge-table-maintained-bg: #1b4252;
 
   --alphabet-group-border: #333333;
   --alphabet-group-surface-bg: #1c1c1c;

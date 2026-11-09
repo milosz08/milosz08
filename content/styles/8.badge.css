@@ -16,27 +16,68 @@
   gap: 0.4em;
 }
 
-.status-badge--completed {
+.status-badge--header.status-badge--completed,
+.status-badge--header.status-badge--updated,
+.status-badge--header.status-badge--wip,
+.status-badge--header.status-badge--ongoing,
+.status-badge--header.status-badge--maintained {
+  color: var(--badge-text);
+}
+
+.status-badge--header.status-badge--completed {
   background-color: var(--badge-completed-bg);
 }
 
-.status-badge--updated {
+.status-badge--header.status-badge--updated {
   background-color: var(--badge-updated-bg);
 }
 
-.status-badge--wip {
+.status-badge--header.status-badge--wip {
   background-color: var(--badge-wip-bg);
 }
 
-.status-badge--ongoing {
+.status-badge--header.status-badge--ongoing {
   background-color: var(--badge-ongoing-bg);
 }
 
-.status-badge--maintained {
+.status-badge--header.status-badge--maintained {
   background-color: var(--badge-maintained-bg);
 }
 
-.status-badge--abandoned {
+.status-badge--header.status-badge--abandoned {
   background-color: var(--badge-abandoned-bg);
-  color: var(--abandoned-primary-text);
+  color: var(--badge-abandoned-text);
+}
+
+.status-badge--completed,
+.status-badge--updated,
+.status-badge--wip,
+.status-badge--ongoing,
+.status-badge--maintained {
+  color: var(--badge-table-text);
+}
+
+.status-badge--completed {
+  background-color: var(--badge-table-completed-bg);
+}
+
+.status-badge--updated {
+  background-color: var(--badge-table-updated-bg);
+}
+
+.status-badge--wip {
+  background-color: var(--badge-table-wip-bg);
+}
+
+.status-badge--ongoing {
+  background-color: var(--badge-table-ongoing-bg);
+}
+
+.status-badge--maintained {
+  background-color: var(--badge-table-maintained-bg);
+}
+
+.status-badge--abandoned {
+  background-color: var(--badge-table-abandoned-bg);
+  color: var(--badge-table-abandoned-text);
 }

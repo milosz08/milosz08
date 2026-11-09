@@ -25,11 +25,11 @@
       </div>
       <div class="status-badge__container">
         <#if project.recentlyUpdated>
-          <span class="status-badge status-badge--updated">
+          <span class="status-badge status-badge--header status-badge--updated">
             ${i18n.status.updated}
           </span>
         </#if>
-        <div class="status-badge status-badge--${project.status}">
+        <div class="status-badge status-badge--header status-badge--${project.status}">
           ${i18n.status[project.status]}
         </div>
       </div>
