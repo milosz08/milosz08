@@ -9,6 +9,9 @@ public class Generator {
   @YamlRequired
   private String url;
 
+  @YamlRequired
+  private String m2Url;
+
   public Generator() {
   }
 
@@ -26,5 +29,13 @@ public class Generator {
 
   public void setUrl(String url) {
     this.url = url;
+  }
+
+  public String getM2Url() {
+    return m2Url;
+  }
+
+  public void setM2Url(String m2Url) {
+    this.m2Url = m2Url;
   }
 }

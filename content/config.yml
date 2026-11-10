@@ -13,6 +13,7 @@ analytics:
 generator:
   name: "JArgonaut"
   url: "https://github.com/milosz08/milosz08"
+  m2Url: "https://m2.miloszgilga.pl/#/releases/pl/miloszgilga/jargonaut"
 dir:
   output: "output"
   dictionary: "dictionary"

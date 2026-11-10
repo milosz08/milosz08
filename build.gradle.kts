@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "pl.miloszgilga"
-version = "1.1.5"
+version = "1.1.6"
 
 java {
   toolchain {
@@ -84,8 +84,11 @@ dependencies {
 
 tasks.jar {
   manifest {
-    attributes["Main-Class"] = "pl.miloszgilga.jargonaut.SsgMain"
-    attributes["Multi-Release"] = "true" // for multi-release support (fixing GraalVM issues on FatJar)
+    attributes(
+      "Main-Class" to "pl.miloszgilga.jargonaut.SsgMain",
+      "Multi-Release" to "true", // for multi-release support (fixing GraalVM issues on FatJar)
+      "Implementation-Version" to project.version.toString()
+    )
   }
 }
 

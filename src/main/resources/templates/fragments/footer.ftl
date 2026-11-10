@@ -1,5 +1,6 @@
 <#-- @ftlvariable name="i18n" type="java.util.Map" -->
 <#-- @ftlvariable name="generator" type="pl.miloszgilga.jargonaut.config.model.Generator" -->
+<#-- @ftlvariable name="softwareVersion" type="pl.miloszgilga.jargonaut.core.template.generator.dto.SoftwareVersion" -->
 <#-- @ftlvariable name="lastUpdatedAt" type="java.lang.String" -->
 <#-- @ftlvariable name="seo" type="pl.miloszgilga.jargonaut.core.template.generator.dto.PageSeo" -->
 <#-- @ftlvariable name="currentYear" type="java.lang.Integer" -->
@@ -19,7 +20,8 @@
     </div>
     <div class="footer__right">
       <div class="footer__item">
-        ${i18n.footer.generatedBy}: <a href="${generator.url}" class="footer__link">${generator.name}</a>
+        ${i18n.footer.generatedBy}: <a href="${generator.url}" class="footer__link">${generator.name}</a> (<a
+          href="${softwareVersion.m2Url}">${softwareVersion.version}</a>)
       </div>
       <div class="footer__item">
         ${i18n.footer.lastUpdatedAt} (UTC): <span class="footer__last-update">${lastUpdatedAt}</span>

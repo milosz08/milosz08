@@ -17,6 +17,7 @@ import pl.miloszgilga.jargonaut.core.template.generator.dto.LanguageView;
 import pl.miloszgilga.jargonaut.core.template.generator.dto.NavLinkView;
 import pl.miloszgilga.jargonaut.core.template.generator.dto.PageSeo;
 import pl.miloszgilga.jargonaut.core.template.generator.dto.SitemapNodeView;
+import pl.miloszgilga.jargonaut.core.template.generator.dto.SoftwareVersion;
 import pl.miloszgilga.jargonaut.globals.model.GlobalsMetadata;
 import pl.miloszgilga.jargonaut.rss.RssProcessor;
 
@@ -200,6 +201,7 @@ public abstract class HtmlGenerator<T extends GenericPage> {
     pageAttributes.put("langPrefix", prependSlash(langPrefix));
     pageAttributes.put("mdContent", document.htmlContent());
     pageAttributes.put("generator", config.getGenerator());
+    pageAttributes.put("softwareVersion", getSoftwareVersion(config));
     pageAttributes.put("lastUpdatedAt", buildDateTime.format(DateTimeFormatter.ofPattern(globals.getDtfPattern())));
     pageAttributes.put("additionalAssets", config.getAdditionalAssets());
     pageAttributes.put("inlineScripts", siteBuildContext.getInlineScripts());
@@ -225,6 +227,14 @@ public abstract class HtmlGenerator<T extends GenericPage> {
       htmlContent = inlineJsMinifier.minify(htmlContent);
     }
     return new RenderedTextContent(buildOutputPath(langPrefix, pageWebPath, document.metadata()), htmlContent);
+  }
+
+  private SoftwareVersion getSoftwareVersion(Config config) {
+    final String jarVersion = getClass().getPackage().getImplementationVersion();
+    if (jarVersion == null) {
+      return new SoftwareVersion("unknown", config.getGenerator().getM2Url());
+    }
+    return new SoftwareVersion("v" + jarVersion, config.getGenerator().getM2Url() + "/" + jarVersion);
   }
 
   private List<LanguageView> createLanguageLinks(String pageWebPath, Locale locale) {
