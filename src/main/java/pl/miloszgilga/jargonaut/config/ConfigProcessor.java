@@ -15,7 +15,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ConfigProcessor extends ResourceCheckerProcessor {
-  private static final Pattern ENV_PATTERN = Pattern.compile("\\$\\{env:([A-Za-z0-9_]+)}");
+  private static final Pattern ENV_PATTERN = Pattern.compile("\\$\\{env:([A-Za-z0-9_]+)(?::([^}]*))?}");
 
   private final YamlParser yamlParser;
   private final Dotenv dotenv;
@@ -47,7 +47,11 @@ public class ConfigProcessor extends ResourceCheckerProcessor {
     final StringBuilder result = new StringBuilder();
     while (matcher.find()) {
       final String envKey = matcher.group(1);
-      final String envValue = dotenv.get(envKey);
+      final String defaultValue = matcher.group(2);
+      String envValue = dotenv.get(envKey);
+      if (envValue == null && defaultValue != null) {
+        envValue = defaultValue;
+      }
       if (envValue == null) {
         throw new GenerationHaltedException("Missing environment variable: '" + envKey + "' declared in file: " +
           resourcePath);
