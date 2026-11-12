@@ -43,21 +43,3 @@ microservices stack. [Source code and thesis (LaTeX)](https://github.com/vispher
   self-est best result fn and Canny's edge detector,
 - [turing-machine-simulator](https://github.com/c0ifl4x/turing-machine-simulator) - single-tape Turing Machine with ASM
   syntax and own AoT compiler.
-
----
-
-<p align="center">
-  [<a href="https://miloszgilga.pl" target="_blank">Website</a>]
-  &nbsp; • &nbsp;
-  [<a href="https://blog.miloszgilga.pl" target="_blank">Blog</a>]
-  &nbsp; • &nbsp;
-  [<a href="https://www.linkedin.com/in/miloszgilga" target="_blank">LinkedIn</a>]
-  &nbsp; • &nbsp;
-  [<a href="https://hub.docker.com/u/milosz08" target="_blank">DockerHub</a>]
-  &nbsp; • &nbsp;
-  [<a href="https://m2.miloszgilga.pl" target="_blank">M2 OSS Central</a>]
-  &nbsp; • &nbsp;
-  [<a href="https://open.spotify.com/user/31olokftm5lcfpwb5ka5muqr7u2a" target="_blank">Spotify</a>]
-  &nbsp; • &nbsp;
-  [<a href="https://letterboxd.com/c0ifl4x" target="_blank">Letterboxd</a>]
-</p>
