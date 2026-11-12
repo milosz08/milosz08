@@ -107,7 +107,7 @@ publishing {
       pom {
         name.set("JArgonaut SSG")
         description.set("Java-based portfolio static site generator with CLI and configuration management.")
-        url.set("https://github.com/milosz08/milosz08")
+        url.set("https://github.com/c0ifl4x/c0ifl4x")
         inceptionYear.set("2024")
         licenses {
           license {
@@ -118,7 +118,7 @@ publishing {
         }
         developers {
           developer {
-            id.set("milosz08")
+            id.set("c0ifl4x")
             name.set("Miłosz Gilga")
             email.set("miloszgilga@gmail.com")
             url.set("https://miloszgilga.pl")
@@ -127,13 +127,13 @@ publishing {
           }
         }
         scm {
-          connection.set("scm:git:git://github.com/milosz08/milosz08.git")
-          developerConnection.set("scm:git:ssh://git@github.com:milosz08/milosz08.git")
-          url.set("https://github.com/milosz08/milosz08")
+          connection.set("scm:git:git://github.com/c0ifl4x/c0ifl4x.git")
+          developerConnection.set("scm:git:ssh://git@github.com:c0ifl4x/c0ifl4x.git")
+          url.set("https://github.com/c0ifl4x/c0ifl4x")
         }
         issueManagement {
           system.set("GitHub Issues")
-          url.set("https://github.com/milosz08/milosz08/issues")
+          url.set("https://github.com/c0ifl4x/c0ifl4x/issues")
         }
       }
     }

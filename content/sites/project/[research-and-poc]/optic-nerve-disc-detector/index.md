@@ -13,5 +13,5 @@ status: "completed"
 pinned: true
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/optic-nerve-disc-detector"
+  - url: "https://github.com/c0ifl4x/optic-nerve-disc-detector"
 ---

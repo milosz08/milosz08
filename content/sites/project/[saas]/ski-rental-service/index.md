@@ -34,7 +34,7 @@ modifiers:
 pinned: false
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/ski-rental-service"
+  - url: "https://github.com/c0ifl4x/ski-rental-service"
 downloadUrls:
   - name: "Docker image"
     url: "https://hub.docker.com/r/milosz08/ski-rental-service-app"

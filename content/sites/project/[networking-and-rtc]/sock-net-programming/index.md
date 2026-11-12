@@ -13,5 +13,5 @@ status: "completed"
 pinned: false
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/sock-net-programming"
+  - url: "https://github.com/c0ifl4x/sock-net-programming"
 ---

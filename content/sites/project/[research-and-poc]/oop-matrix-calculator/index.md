@@ -13,5 +13,5 @@ status: "completed"
 pinned: false
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/oop-matrix-calculator"
+  - url: "https://github.com/c0ifl4x/oop-matrix-calculator"
 ---

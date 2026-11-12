@@ -30,7 +30,7 @@ jobs:
           distribution: "temurin"
 
       - name: Download latest
-        run: curl -sL "https://github.com/milosz08/milosz08/releases/download/latest/jargonaut.jar" -o jargonaut.jar
+        run: curl -sL "https://github.com/c0ifl4x/c0ifl4x/releases/download/latest/jargonaut.jar" -o jargonaut.jar
 
       - name: Generate static content
         env:

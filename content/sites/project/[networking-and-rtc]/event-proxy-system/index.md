@@ -19,10 +19,10 @@ modifiers:
 pinned: true
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/event-proxy-system"
+  - url: "https://github.com/c0ifl4x/event-proxy-system"
 downloadUrls:
   - name: "Desktop client"
-    url: "https://github.com/milosz08/event-proxy-system/releases/latest"
+    url: "https://github.com/c0ifl4x/event-proxy-system/releases/latest"
   - name: "Proxy server"
     url: "https://hub.docker.com/r/milosz08/event-proxy-server"
 ---

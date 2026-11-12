@@ -20,7 +20,7 @@ modifiers:
 pinned: false
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/personal-blog"
+  - url: "https://github.com/c0ifl4x/personal-blog"
 demoUrls:
   - name: "Website"
     url: "https://blog.miloszgilga.pl"

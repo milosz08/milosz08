@@ -11,7 +11,7 @@ techDetails:
   - "kontenery Docker (wykorzystywane tylko w fazie rozwojowej)"
 repoUrls:
   - name: "Serwer"
-    url: "https://github.com/milosz08/air-hub-master-server"
+    url: "https://github.com/c0ifl4x/air-hub-master-server"
   - name: "Klient"
     url: "https://github.com/Lettulouz/AirHubMaster"
 downloadUrls:
@@ -24,7 +24,7 @@ zgodny ze specyfikacją Rest API. Zapewnia podstawowe funkcje: logowanie, rejest
 e-mail i inne specyficzne wymagania aplikacji. Wszystkie dane aplikacji są przechowywane w relacyjnej bazie danych
 MySQL. Więcej informacji o tym projekcie można znaleźć [tutaj](https://github.com/Lettulouz/AirHubMaster).
 
-Ta aplikacja korzysta z najnowszej stabilnej wersji biblioteki [JMPS](https://github.com/milosz08/jmpsl) (użyte moduły:
+Ta aplikacja korzysta z najnowszej stabilnej wersji biblioteki [JMPS](https://github.com/c0ifl4x/jmpsl) (użyte moduły:
 communication, core, security).
 
 ## Wsparcie dla wielu języków

@@ -10,7 +10,7 @@ repoUrls:
   - name: "Serwer"
     url: "https://github.com/Lettulouz/StarsMagnet"
   - name: "Klient"
-    url: "https://github.com/milosz08/stars-magnet-client"
+    url: "https://github.com/c0ifl4x/stars-magnet-client"
 downloadUrls:
   - name: "Obraz docker"
     url: "https://hub.docker.com/r/milosz08/stars-magnet-client"

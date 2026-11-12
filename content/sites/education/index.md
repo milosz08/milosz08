@@ -34,7 +34,7 @@ education:
     grade: "5 (4.82) - A"
     thesis:
       description: "My master’s thesis focused on the analysis of a discrete wavelet transform without dyadic subsampling, augmented with a novel subband weight estimator, for the purpose of edge detection in digital images heavily corrupted by high-frequency noise."
-      url: "https://github.com/milosz08/master-thesis"
+      url: "https://github.com/c0ifl4x/master-thesis"
     additionalAchievements:
       - "Awarded the Rector's Scholarship for outstanding academic performance."
   - spec: "Computer Science"
@@ -85,7 +85,7 @@ research:
       year: 2025
       month: 07
     org: "Silesian University of Technology"
-    url: "https://github.com/milosz08/master-thesis"
+    url: "https://github.com/c0ifl4x/master-thesis"
   - name: "Custom encrypted video streaming protocol"
     description: "Engineered a low-latency, encrypted (AES-CTR) real-time video protocol over UDP. Implemented application-layer (L7) packet fragmentation respecting MTU limits."
     start:

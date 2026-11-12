@@ -18,7 +18,7 @@ education:
     type: "Mgr inż."
     thesis:
       description: "Moja praca magisterska dotyczyła analizy dyskretnej transformaty falkowej bez próbkowania diadycznego, rozszerzonej o nowatorski estymator wag podpasm, w celu detekcji krawędzi na obrazach cyfrowych silnie zaszumionych szumem o wysokiej częstotliwości."
-      url: "https://github.com/milosz08/master-thesis"
+      url: "https://github.com/c0ifl4x/master-thesis"
     additionalAchievements:
       - "Stypendium Rektora za wybitne osiągnięcia w nauce."
   - spec: "Informatyka"

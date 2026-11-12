@@ -16,10 +16,10 @@ modifiers:
 pinned: true
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/screen-sharing-system"
+  - url: "https://github.com/c0ifl4x/screen-sharing-system"
 downloadUrls:
   - name: "Host & client"
-    url: "https://github.com/milosz08/screen-sharing-system/releases/latest"
+    url: "https://github.com/c0ifl4x/screen-sharing-system/releases/latest"
 demoUrls:
   - name: "YouTube"
     url: "https://www.youtube.com/watch?v=zfW8Ah0KPZM"

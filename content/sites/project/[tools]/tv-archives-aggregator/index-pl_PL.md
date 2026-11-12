@@ -10,7 +10,7 @@ techDetails:
   - "biblioteka komponentów MUI"
 downloadUrls:
   - name: "Ekstraktor danych"
-    url: "https://github.com/milosz08/tv-archives-aggregator/releases/latest"
+    url: "https://github.com/c0ifl4x/tv-archives-aggregator/releases/latest"
   - name: "Obraz docker (wizualizer danych)"
     url: "https://hub.docker.com/r/milosz08/tv-archives-aggregator-client"
 ---

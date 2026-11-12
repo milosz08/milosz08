@@ -16,7 +16,7 @@ status: "completed"
 pinned: false
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/library-app-tai"
+  - url: "https://github.com//library-app-tai"
 downloadUrls:
   - name: "Docker image"
     url: "https://hub.docker.com/r/milosz08/library-app-tai"

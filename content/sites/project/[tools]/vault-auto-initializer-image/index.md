@@ -15,7 +15,7 @@ status: "completed"
 pinned: false
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/vault-auto-initializer-image"
+  - url: "https://github.com/c0ifl4x/vault-auto-initializer-image"
 downloadUrls:
   - name: "Docker image"
     url: "https://hub.docker.com/r/milosz08/vault-dev"

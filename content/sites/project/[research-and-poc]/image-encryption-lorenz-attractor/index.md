@@ -14,5 +14,5 @@ status: "completed"
 pinned: true
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/image-encryption-lorenz-attractor"
+  - url: "https://github.com/c0ifl4x/image-encryption-lorenz-attractor"
 ---

@@ -18,9 +18,9 @@ pinned: false
 weight: 0
 repoUrls:
   - name: "Server"
-    url: "https://github.com/milosz08/schedule-management-server"
+    url: "https://github.com/c0ifl4x/schedule-management-server"
   - name: "Client"
-    url: "https://github.com/milosz08/schedule-management-client"
+    url: "https://github.com/c0ifl4x/schedule-management-client"
 downloadUrls:
   - name: "Docker image (server)"
     url: "https://hub.docker.com/r/milosz08/schedule-management-server"

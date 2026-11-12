@@ -4,7 +4,7 @@ pageDescription: "Przegląd projektów informatycznych, aplikacji oraz rozwiąza
 ---
 
 Niniejsza strona stanowi kompendium moich projektów programistycznych, prac badawczych oraz innych inicjatyw z obszaru
-informatyki. Kod źródłowy większości z nich udostępniam na swoim profilu [GitHub](https://github.com/milosz08). W
+informatyki. Kod źródłowy większości z nich udostępniam na swoim profilu [GitHub](https://github.com/c0ifl4x). W
 poniższej tabeli wyróżniłem wybrane oraz obecnie rozwijane realizacje, natomiast pełne zestawienie znajduje się w
 sekcji [wszystkich projektów](/pl/project). Poszczególne pozycje można wygodnie przeglądać
 według [kategorii](/pl/category) lub wykorzystanych [technologii (tagów)](/pl/tag).

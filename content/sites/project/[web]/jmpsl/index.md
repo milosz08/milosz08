@@ -16,5 +16,5 @@ status: "abandoned"
 pinned: true
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/jmpsl"
+  - url: "https://github.com/c0ifl4x/jmpsl"
 ---

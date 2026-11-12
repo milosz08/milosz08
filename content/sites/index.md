@@ -5,11 +5,11 @@ pageDescription: "Portfolio of software development projects, web applications, 
 listable: true
 #
 contributionsGraph:
-  - "https://github.com/milosz08"
+  - "https://github.com/c0ifl4x"
 ---
 
 This page serves as a compendium of my software engineering projects, research papers, and other computer science
-initiatives. The source code for most of them is available on my [GitHub](https://github.com/milosz08) profile. The
+initiatives. The source code for most of them is available on my [GitHub](https://github.com/c0ifl4x) profile. The
 table below highlights selected and currently active projects, while the complete list can be found in
 the [all projects](/project) section. You can conveniently browse individual entries by [category](/category) or
 the [technologies (tags)](/tag) used.

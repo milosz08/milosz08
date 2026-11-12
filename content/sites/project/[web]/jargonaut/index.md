@@ -19,7 +19,7 @@ status: "maintained"
 pinned: true
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/milosz08"
+  - url: "https://github.com/c0ifl4x/c0ifl4x"
 downloadUrls:
   - name: "Executable JAR file"
     url: "https://m2.miloszgilga.pl/#/releases/pl/miloszgilga/jargonaut"

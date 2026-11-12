@@ -14,5 +14,5 @@ status: "completed"
 pinned: false
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/gemini-auto-temp-chat"
+  - url: "https://github.com/c0ifl4x/gemini-auto-temp-chat"
 ---

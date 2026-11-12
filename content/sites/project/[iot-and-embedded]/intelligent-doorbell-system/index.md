@@ -20,10 +20,10 @@ modifiers:
 pinned: true
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/intelligent-doorbell-system"
+  - url: "https://github.com/c0ifl4x/intelligent-doorbell-system"
 downloadUrls:
   - name: "Firmware"
-    url: "https://github.com/milosz08/intelligent-doorbell-system/releases/latest"
+    url: "https://github.com/c0ifl4x/intelligent-doorbell-system/releases/latest"
   - name: "Relay server"
-    url: "https://github.com/milosz08/intelligent-doorbell-system/pkgs/container/intelligent-doorbell-relay-server"
+    url: "https://github.com/c0ifl4x/intelligent-doorbell-system/pkgs/container/intelligent-doorbell-relay-server"
 ---

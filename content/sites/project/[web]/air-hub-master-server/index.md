@@ -25,7 +25,7 @@ pinned: false
 weight: 0
 repoUrls:
   - name: "Server"
-    url: "https://github.com/milosz08/air-hub-master-server"
+    url: "https://github.com/c0ifl4x/air-hub-master-server"
   - name: "Client"
     url: "https://github.com/Lettulouz/AirHubMaster"
 downloadUrls:
@@ -38,7 +38,7 @@ with the Rest API specifications. Provide basic functionalities: signing, passwo
 specific application requirements. All application data are stored in MySQL relational database. More info about this
 project you will find [here](https://github.com/Lettulouz/AirHubMaster).
 
-This application use the newest stable [JMPS library](https://github.com/milosz08/jmpsl) (used modules: communication,
+This application use the newest stable [JMPS library](https://github.com/c0ifl4x/jmpsl) (used modules: communication,
 core, security).
 
 ## Multi-language support

@@ -22,7 +22,7 @@ status: "completed"
 pinned: true
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/turing-machine-simulator"
+  - url: "https://github.com/c0ifl4x/turing-machine-simulator"
 downloadUrls:
   - name: "Docker image"
     url: "https://hub.docker.com/r/milosz08/turing-machine-simulator-app"

@@ -6,13 +6,13 @@ seo:
   ogImage: "og-image.png"
   sameAs:
     - "https://blog.miloszgilga.pl"
-    - "https://github.com/milosz08"
+    - "https://github.com/c0ifl4x"
     - "https://www.linkedin.com/in/miloszgilga"
 analytics:
   gtm: "${env:GTM_ID}"
 generator:
   name: "JArgonaut"
-  url: "https://github.com/milosz08/milosz08"
+  url: "https://github.com/c0ifl4x/c0ifl4x"
   m2Url: "https://m2.miloszgilga.pl/#/releases/pl/miloszgilga/jargonaut"
 dir:
   output: "output"

@@ -26,10 +26,10 @@ status: "maintained"
 pinned: true
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/tv-archives-aggregator"
+  - url: "https://github.com/c0ifl4x/tv-archives-aggregator"
 downloadUrls:
   - name: "Data extractor"
-    url: "https://github.com/milosz08/tv-archives-aggregator/releases/latest"
+    url: "https://github.com/c0ifl4x/tv-archives-aggregator/releases/latest"
   - name: "Docker image (data visualiser)"
     url: "https://hub.docker.com/r/milosz08/tv-archives-aggregator-client"
 ---

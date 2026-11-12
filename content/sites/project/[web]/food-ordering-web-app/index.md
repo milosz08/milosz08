@@ -22,7 +22,7 @@ status: "completed"
 pinned: true
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/food-ordering-web-app"
+  - url: "https://github.com/c0ifl4x/food-ordering-web-app"
 downloadUrls:
   - name: "Docker image"
     url: "https://hub.docker.com/r/milosz08/food-ordering-web-app"

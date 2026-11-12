@@ -13,5 +13,5 @@ status: "completed"
 pinned: false
 weight: 0
 repoUrls:
-  - url: "https://github.com/milosz08/audio-processing"
+  - url: "https://github.com/c0ifl4x/audio-processing"
 ---
