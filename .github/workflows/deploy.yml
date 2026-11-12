@@ -2,7 +2,8 @@ name: Generate content and deploy to Vercel
 
 on:
   workflow_run:
-    workflows: [ "Build and publish generator to release and M2 OSS central" ]
+    workflows:
+      - "Build and publish generator to release and M2 OSS central"
     types:
       - completed
   push:
